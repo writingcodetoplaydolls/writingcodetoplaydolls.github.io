@@ -24,7 +24,8 @@
         document.body.appendChild(renderer.domElement);
 
         let controls = new THREE.OrbitControls(camera);
-        controls.addEventListener('change', renderer);
+        //controls.addEventListener('change', renderer);
+        controls.addEventListener('change', () => renderer.render(scene, camera));
 
         let materialArray = [];
         let texture_ft = new THREE.TextureLoader().load('arid_ft.jpg');
@@ -41,8 +42,8 @@
         materialArray.push(new THREE.MeshBasicMaterial({map: texture_rt}));
         materialArray.push(new THREE.MeshBasicMaterial({map: texture_lf}));
 
-      //  for(let i=0;i<6;i++)
-       //   materialArray[i].side = THREE.BackSide;
+        for(let i=0;i<6;i++)
+          materialArray[i].side = THREE.BackSide;
         
         let skyboxGeo = new THREE.BoxGeometry(10000, 10000, 10000);
         let skybox = new THREE.Mesh(skyboxGeo, materialArray);
