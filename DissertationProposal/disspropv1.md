@@ -4,7 +4,7 @@ title: "Dissertation Proposal: Rough Draft Version 1"
 # Dissertation Proposal: Rough Draft Version 1
 October 7, 2026
 
-The original plan behind it is in [Proposal Scaffold](./proposalscaffold.md/)
+This draft is assembled by copy and paste, with nothing cropped. Each block is labeled with its source in italics, and **\[Note\]** lines mark joins and places that need new writing. The original plan behind it is in [Proposal Scaffold](./proposalscaffold.md/)
 
 ## Chapter 1: Introduction
 
