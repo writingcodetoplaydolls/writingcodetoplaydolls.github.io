@@ -12,3 +12,73 @@ highlighter: rouge
 exclude:
   - README.md
   - Gemfile
+
+# Dissertation proposal pages: glossary highlighting + collapsible headings
+# (ported from amytraylor.github.io). Every file named disspropv*.md in
+# DissertationProposal/ gets these settings. Edit glossary_terms here to
+# change which terms are highlighted; definitions live in _data/glossary.yml.
+defaults:
+  - scope:
+      path: "DissertationProposal/disspropv*.md"
+    values:
+      layout: course
+      course_title: "Dissertation Proposal"
+      course_root: /DissertationProposal
+      course_back_label: "All versions"
+      hide_title: true
+      collapsible: true
+      glossary_terms:
+        - thing-power
+        - assemblage
+        - actant
+        - agency
+        - agential
+        - materiality
+        - material
+        - matter
+        - materialism
+        - materialists
+        - vibrant matter
+        - nonhuman
+        - human
+        - object
+        - subject
+        - swerve
+        - void
+        - flow
+        - ecology
+        - ecological
+        - ontology
+        - ontological
+        - epistemology
+        - recalcitrance
+        - artifact
+        - Spinoza
+        - Kafka
+        - Bergson
+        - Deleuze
+        - Latour
+        - Kant
+        - Hegel
+        - Augustine
+        - nonidentity
+        - Marx
+        - Adorno
+        - aleatory
+        - hylozoism
+        - Lucretius
+        - efficacy
+        - capacity
+        - clinamen
+        - dual
+        - representational
+        - entangle
+        - nature
+        - culture
+        - vitalist
+        - immanent
+        - recursive
+        - Cartesian
+        - transposition
+        - cartography
+        - apparatus
