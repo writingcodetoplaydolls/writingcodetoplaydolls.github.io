@@ -18,6 +18,11 @@ exclude:
 # DissertationProposal/ gets these settings. Edit glossary_terms here to
 # change which terms are highlighted; definitions live in _data/glossary.yml.
 defaults:
+  # Every other page: the site layout (name in the top bar, page margins).
+  - scope:
+      path: ""
+    values:
+      layout: base
   - scope:
       path: "DissertationProposal/disspropv*.md"
     values:
