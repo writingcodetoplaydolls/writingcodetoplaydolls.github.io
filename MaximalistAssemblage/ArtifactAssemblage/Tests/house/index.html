@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>House</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #111; overflow: hidden; }
+    canvas { display: block; touch-action: none; }
+    #overlay {
+      position: fixed; left: 16px; top: 16px; color: #eee; font: 14px system-ui, sans-serif;
+      user-select: none; text-shadow: 0 1px 3px rgba(0,0,0,.9), 0 0 8px rgba(0,0,0,.5);
+    }
+    #overlay a { color: #9cc7ff; text-decoration: none; margin-right: 12px; }
+    #overlay a:hover { text-decoration: underline; }
+    #hint { margin-top: 6px; pointer-events: none; }
+  </style>
+  <script type="importmap">
+  { "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/",
+      "lil-gui": "https://cdn.jsdelivr.net/npm/lil-gui@0.21.0/dist/lil-gui.esm.min.js"
+  } }
+  </script>
+</head>
+<body>
+  <div id="overlay">
+    <nav><a href="../">&larr; Tests</a><a href="../mixamo/">Capoeira</a></nav>
+    <div id="hint">loading…</div>
+  </div>
+  <script type="module">
+    import { run } from '../harness.js'
+    import * as sketch from './sketch.js'
+    run(sketch, { title: "House" })
+  </script>
+</body>
+</html>
