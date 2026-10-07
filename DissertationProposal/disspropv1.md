@@ -1,8 +1,5 @@
-# Dissertation Proposal: Rough Draft
-
-Oct 5, 2026 · @Greg von Winckel
-
-This draft is assembled by copy and paste, with nothing cropped. Each block is labeled with its source in italics, and **\[Note\]** lines mark joins and places that need new writing. The plan behind it is in Doc.
+# Dissertation Proposal: Rough Draft Version 1
+October 7, 2026
 
 ## Chapter 1: Introduction
 
