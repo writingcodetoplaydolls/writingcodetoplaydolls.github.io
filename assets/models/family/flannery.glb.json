@@ -1,0 +1,15 @@
+{
+ "src": "K:\\Unity\\Family\\Assets\\Models\\NewFlanneryStandingmitGame\\untitled.obj",
+ "dst": "K:\\OneDrive\\WebXR\\public\\models\\family\\flannery.glb",
+ "faces_in": 200286,
+ "faces_out": 40000,
+ "ratio": 0.1997,
+ "images": [],
+ "dimensions_units": [
+  0.511,
+  1.586,
+  0.494
+ ],
+ "glb_bytes": 3239700,
+ "seconds": 3.1
+}

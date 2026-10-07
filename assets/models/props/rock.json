@@ -1,0 +1,23 @@
+{
+ "src": "K:\\Unity\\TryTeleportAgain\\Assets\\Models\\rock\\model_mesh.obj",
+ "dst": "K:\\OneDrive\\WebXR\\public\\models\\props\\rock.glb",
+ "faces_in": 43774,
+ "faces_out": 20000,
+ "ratio": 0.4569,
+ "images": [
+  [
+   "model_texture.jpg",
+   [
+    2048,
+    2048
+   ]
+  ]
+ ],
+ "dimensions_units": [
+  0.093,
+  0.082,
+  0.083
+ ],
+ "glb_bytes": 2504388,
+ "seconds": 1.2
+}

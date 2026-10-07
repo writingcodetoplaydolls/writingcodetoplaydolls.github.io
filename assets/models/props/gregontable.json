@@ -1,0 +1,23 @@
+{
+ "src": "K:\\Unity\\TryTeleportAgain\\Assets\\Models\\gregontable\\model_mesh.obj",
+ "dst": "K:\\OneDrive\\WebXR\\public\\models\\props\\gregontable.glb",
+ "faces_in": 199928,
+ "faces_out": 39999,
+ "ratio": 0.2001,
+ "images": [
+  [
+   "model_texture.jpg",
+   [
+    2048,
+    2048
+   ]
+  ]
+ ],
+ "dimensions_units": [
+  0.96,
+  1.028,
+  0.711
+ ],
+ "glb_bytes": 4819348,
+ "seconds": 5.3
+}

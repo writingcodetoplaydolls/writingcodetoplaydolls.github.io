@@ -1,0 +1,15 @@
+{
+ "src": "K:\\Unity\\Family\\Assets\\Models\\washing machine\\washer.obj",
+ "dst": "K:\\OneDrive\\WebXR\\public\\models\\family\\washer.glb",
+ "faces_in": 41038,
+ "faces_out": 15099,
+ "ratio": 0.3655,
+ "images": [],
+ "dimensions_units": [
+  33.324,
+  13.775,
+  14.0
+ ],
+ "glb_bytes": 1108244,
+ "seconds": 1.2
+}

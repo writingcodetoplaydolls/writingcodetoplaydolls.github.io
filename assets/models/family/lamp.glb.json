@@ -1,0 +1,15 @@
+{
+ "src": "K:\\Unity\\Family\\Assets\\Models\\lamp\\Porta romana Lens Lamp.obj",
+ "dst": "K:\\OneDrive\\WebXR\\public\\models\\family\\lamp.glb",
+ "faces_in": 34732,
+ "faces_out": 35690,
+ "ratio": 0.5758,
+ "images": [],
+ "dimensions_units": [
+  232.871,
+  279.825,
+  233.313
+ ],
+ "glb_bytes": 659536,
+ "seconds": 1.3
+}

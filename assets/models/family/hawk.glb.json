@@ -1,0 +1,15 @@
+{
+ "src": "K:\\Unity\\Family\\Assets\\Models\\Model hawk WOAH 2\\Model.obj",
+ "dst": "K:\\OneDrive\\WebXR\\public\\models\\family\\hawk.glb",
+ "faces_in": 103001,
+ "faces_out": 29999,
+ "ratio": 0.2913,
+ "images": [],
+ "dimensions_units": [
+  1.364,
+  1.576,
+  1.903
+ ],
+ "glb_bytes": 785592,
+ "seconds": 1.8
+}

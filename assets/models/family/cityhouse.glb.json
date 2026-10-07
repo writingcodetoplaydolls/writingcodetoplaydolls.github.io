@@ -1,0 +1,15 @@
+{
+ "src": "K:\\Unity\\Family\\Assets\\Models\\city_house_01_obj\\city_house_01.obj",
+ "dst": "K:\\OneDrive\\WebXR\\public\\models\\family\\cityhouse.glb",
+ "faces_in": 2192,
+ "faces_out": 2192,
+ "ratio": 1.0,
+ "images": [],
+ "dimensions_units": [
+  11.85,
+  5.7,
+  20.557
+ ],
+ "glb_bytes": 259260,
+ "seconds": 0.9
+}

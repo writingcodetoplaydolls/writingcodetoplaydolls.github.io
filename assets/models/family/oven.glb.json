@@ -1,0 +1,15 @@
+{
+ "src": "K:\\Unity\\Family\\Assets\\Models\\Metal Oven\\0005.obj",
+ "dst": "K:\\OneDrive\\WebXR\\public\\models\\family\\oven.glb",
+ "faces_in": 11574,
+ "faces_out": 11574,
+ "ratio": 1.0,
+ "images": [],
+ "dimensions_units": [
+  2.056,
+  3.541,
+  2.25
+ ],
+ "glb_bytes": 832384,
+ "seconds": 1.0
+}
