@@ -1,3 +1,6 @@
+---
+title: "Dissertation Proposal: Rough Draft Version 1"
+---
 # Dissertation Proposal: Rough Draft Version 1
 October 7, 2026
 
