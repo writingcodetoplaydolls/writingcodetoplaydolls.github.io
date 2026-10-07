@@ -1,5 +1,7 @@
 ## Maximalist Assemblage
 
+### [Dissertation Proposal](../DissertationProposal/)
+
 ### The Artifact/Assemblage
 
 #### Tests/Nodes/Parts
