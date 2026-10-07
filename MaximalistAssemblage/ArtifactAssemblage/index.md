@@ -1,6 +1,5 @@
-#### Tests/Nodes/Parts
 
+### [Tests/Nodes/Parts](./Tests/)
 
-### [Skybox](./skybox/)
-#### Learning Three.js to feed ongoing perseverations/stims in a new language
+#### Learning Three.js to feed ongoing perseverations/stims in a new language.
 
