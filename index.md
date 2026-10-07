@@ -1,6 +1,6 @@
 
 
-### [MaximalistAssemblage](./MaximalistAssemblage/)
+### [Maximalist Assemblage](./MaximalistAssemblage/)
 
 
 
