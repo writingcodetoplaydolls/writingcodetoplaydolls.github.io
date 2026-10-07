@@ -11,6 +11,7 @@ Support entails:
 
 
 [Notes on Comps Exam version 35 and final submitted comps exam](./contrastcomps_v35_final.md/)
+Version 35 of my comps exam was much longer than my final draft. Some important concepts were cut as well as a large section on the entwined history of art/quantum/anthropology/posthuman/new material.
 
 [Proposal Scaffold](./proposalscaffold.md/)
 
