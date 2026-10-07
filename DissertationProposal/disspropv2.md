@@ -2,7 +2,7 @@
 
 Oct 7, 2026 · Amy Traylor
 
-This draft is assembled by copy and paste, with nothing cropped. Each block is labeled with its source in italics, and **\[Note\]** lines mark joins and places that need new writing. The plan behind it is in Doc.
+This draft is assembled by copy and paste, with nothing cropped. Each block is labeled with its source in italics, and **\[Note\]** lines mark joins and places that need new writing. The plan behind it is in [Proposal Scaffold](./proposalscaffold.md/)
 
 ## Chapter 1: Introduction
 
