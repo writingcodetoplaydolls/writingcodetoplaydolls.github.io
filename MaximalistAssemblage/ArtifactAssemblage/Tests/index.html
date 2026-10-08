@@ -5,16 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tests</title>
   <style>
-    body { max-width: 48rem; margin: 0 auto; padding: 2rem 1.5rem; font: 16px/1.5 system-ui, sans-serif; background: #111; color: #fff; }
-    a { color: #FFFFFF; } h1 { font-size: 1.4rem; } li { margin: .6rem 0; } p { margin: .2rem 0 0; color: #aaa; }
+    body { max-width: 48rem; margin: 0 auto; padding: 2rem 1.5rem; font: 16px/1.5 system-ui, sans-serif; background: #111; color: #ddd; }
+    a { color: #9cc7ff; } h1 { font-size: 1.4rem; } h2 { font-size: 1.1rem; margin-top: 2.2rem; } li { margin: .6rem 0; } p { margin: .2rem 0 0; color: #aaa; } .intro { margin-bottom: 1.2rem; }
   </style>
 </head>
 <body>
   <h1>Tests</h1>
+  <p class="intro">Small scripts, each recreating one feature in Three.js.</p>
   <ul>
-    <li><a href="skybox/">Skybox</a><p>The ubiquitous sky box. Use the mouse to click and drag for a look around.</p></li>
     <li><a href="mixamo/">Capoeira</a><p>A scanned figure, rigged in Mixamo, running capoeira clips. Click her to switch moves.</p></li>
     <li><a href="house/">House</a><p>The SketchUp house and the scanned treehouse under a physically based sky with sun shadows.</p></li>
+    <li><a href="ik/">Reach</a><p>No clips: drag a sphere and the hand reaches for it, solved on the joints every frame by a two-bone solve with a pole, within joint limits measured on the rig and around a solid body; feet too if you like, and in a headset the controllers carry the spheres.</p></li>
+    <li><a href="puppet/">Puppet</a><p>The capoeira movement with the Mixamo skin thrown away: every joint is a plain object addressed by name, and a body of spheres and struts, a lamp in one hand, a trail from the other and two sliders that bend joints are written in code on top of it.</p></li>
+  </ul>
+  <h2><a href="../Works/">Works</a></h2>
+  <p class="intro">Free-standing pieces: entire previous works and proto-assemblages.</p>
+  <ul>
+    <li><a href="../Works/proto-assemblage/">Proto-assemblage</a><p>The Unity house scene rebuilt: day-night sun, interior lights, the rock and Greg, a video projector on the living-room wall, teleport by clicking a floor.</p></li>
+    <li><a href="../Works/family/">Family</a><p>The December 2018 Unity scene: giant figures, a lamp, an oven and a hawk all wearing quilt animations under a video sky, and the city house with a doorway cut in, a hall inside and a projector throwing out of it.</p></li>
   </ul>
 </body>
 </html>

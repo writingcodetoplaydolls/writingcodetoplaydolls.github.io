@@ -98,13 +98,14 @@ async function loadModel(name) {
       // keep a colour the file supplied; fall back to the palette for plain-white named materials
       const own = m.color && m.color.getHex() !== 0xffffff
       const color = map ? 0xffffff : own ? m.color.getHex() : (PALETTE[m.name] ?? 0xdcdcdc)
-      return new T.MeshStandardMaterial({ map, color, roughness: 0.9, metalness: 0, side: T.DoubleSide })
+      // SketchUp exports already carry a back copy of every face, so those render single-sided; scans do not
+      return new T.MeshStandardMaterial({ map, color, roughness: 0.9, metalness: 0, side: spec.edges ? T.FrontSide : T.DoubleSide })
     })
     o.material = Array.isArray(o.material) ? replaced : replaced[0]
     o.castShadow = o.receiveShadow = true
     if (spec.edges) {
       const lines = new T.LineSegments(new T.EdgesGeometry(o.geometry, 25), new T.LineBasicMaterial({ color: 0x1a1a1a, transparent: true, opacity: 0.45 }))
-      lines.visible = params.edges; o.add(lines); edgeLines.push(lines)
+      lines.visible = params.edges; lines.raycast = () => {}; o.add(lines); edgeLines.push(lines)
     }
   })
   model = obj
@@ -123,9 +124,9 @@ export async function setup({ THREE, scene, renderer, camera, controls, selectab
   renderer.toneMappingExposure = params.exposure
   renderer.shadowMap.enabled = true
   renderer.shadowMap.type = THREE.PCFShadowMap
-  camera.far = 5000; camera.updateProjectionMatrix()           // room for the sky dome (harness default is 200 m)
+  camera.near = 0.1; camera.far = 450; camera.updateProjectionMatrix()   // the sky pins itself to the far plane, so this only needs to reach the ground
 
-  sky = new Sky(); sky.scale.setScalar(2000)
+  sky = new Sky(); sky.scale.setScalar(2000); sky.frustumCulled = false
   const u = sky.material.uniforms
   u.turbidity.value = 3.5; u.rayleigh.value = 2.2; u.mieCoefficient.value = 0.004; u.mieDirectionalG.value = 0.8
   scene.add(sky)
