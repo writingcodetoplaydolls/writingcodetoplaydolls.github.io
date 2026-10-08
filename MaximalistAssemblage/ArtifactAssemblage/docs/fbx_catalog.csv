@@ -1,0 +1,132 @@
+file,kb,format,version,status,error,meshes,vertices,bones,height_units,unit_guess,hips_rest_y,clips,clip_name,clip_seconds,clip_tracks,hips_track_y
+2021\brokendefeated.fbx,779,binary,7400,ok,,1,8088,78,1.59,m,-0.07,1,Armature|Armature|mixamo.com|Layer0,4.83,198,-0.07
+2021\defeatedhead.fbx,650,binary,7400,ok,,1,1935,78,0.36,m,-0.61,1,Armature|Armature|mixamo.com|Layer0,4.83,198,-0.61
+2021\defeatedhead2.fbx,650,binary,7400,ok,,1,1935,78,0.4,m,-0.59,1,Armature|Armature|mixamo.com|Layer0,4.83,198,-0.59
+2021\defeatedhead3.fbx,650,binary,7400,ok,,1,1935,78,0.43,m,-0.59,1,Armature|Armature|mixamo.com|Layer0,4.83,198,-0.59
+2021\dodgebroken.fbx,653,binary,7400,ok,,1,1983,78,0.74,m,-0.04,1,Armature|Armature|mixamo.com|Layer0,5.73,198,-0.14
+armada to esquiva.fbx,336,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,4.07,29,0.68
+armada.fbx,202,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,1.6,29,0.68
+au to role.fbx,335,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,3.97,29,0.68
+au.fbx,271,binary,7400,error,THREE.FBXLoader: Unknown property type ,0,0,0,,,,0,,,,
+bencao.fbx,191,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,1.37,29,0.68
+capoeira (2).fbx,825,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,17.7,29,0.69
+capoeira (3).fbx,345,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,4.8,29,0.73
+Capoeira(1).fbx,1421,binary,7400,ok,,1,41190,33,1.68,m,0.88,1,mixamo.com,3.42,29,0.79
+capoeira.fbx,298,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,3.43,29,0.79
+chapa 2.fbx,188,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,1.37,29,0.68
+chapa giratoria 2.fbx,244,binary,7400,error,THREE.FBXLoader: Unknown property type ,0,0,0,,,,0,,,,
+chapa-giratoria.fbx,270,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,3,29,0.68
+chapaeu de couro.fbx,305,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,3.4,29,0.68
+Climbing Ladder.fbx,865,binary,7400,ok,,1,17985,65,1.64,m,0.04,1,mixamo.com,3.07,53,1.76
+Climbing Ladder_2.fbx,918,binary,7400,ok,,1,17985,78,1.67,m,-0.15,1,Armature|Armature|mixamo.com|Layer0,3.07,198,-0.15
+Climbing Ladder_3.fbx,908,binary,7400,ok,,1,17985,78,1.21,m,-0.14,1,Armature|Armature|mixamo.com|Layer0,3.07,198,-0.14
+Climbing Ladder_4.fbx,908,binary,7400,ok,,1,17985,78,0.72,m,-0.14,1,Armature|Armature|mixamo.com|Layer0,3.07,198,-0.14
+Climbing.fbx,1022,binary,7400,ok,,1,17985,65,1.64,m,0.04,1,mixamo.com,5.6,53,0.65
+Dancing.fbx,2017,binary,7400,ok,,1,17970,65,1.65,m,0.88,1,mixamo.com,29.33,53,0.89
+Dying.fbx,24020,binary,7400,ok,,19,1524639,620,1.66,m,0,1,mixamo.com,34.13,53,0.08
+esquiva 1.fbx,337,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,4.6,29,0.68
+esquiva 2.fbx,235,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,2.23,29,0.68
+esquiva 3.fbx,226,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,2.17,29,0.68
+esquiva 4.fbx,259,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,2.8,29,0.68
+esquiva 5.fbx,232,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,2.1,29,0.68
+Fall Flat(2).fbx,1007,binary,7400,ok,,1,17985,65,1.64,m,0.04,1,mixamo.com,5.07,53,0.78
+Female Dynamic Pose(7).fbx,514,binary,7400,ok,,1,17970,65,1.65,m,0.88,1,mixamo.com,0.03,53,1.11
+Female Laying Pose(1).fbx,514,binary,7400,ok,,1,17970,65,1.65,m,0.88,1,mixamo.com,0.03,53,0.13
+Female Standing Pose(3).fbx,514,binary,7400,ok,,1,17970,65,1.65,m,0.88,1,mixamo.com,0.03,53,0.86
+Floating.fbx,1093,binary,7400,ok,,1,17985,65,1.64,m,0.04,1,mixamo.com,6.87,53,1.17
+Flying (2).fbx,816,binary,7400,ok,,1,17985,65,1.64,m,0.04,1,mixamo.com,3.13,53,0.87
+Flying (2)_2.fbx,1066,binary,7400,ok,,2,35946,78,44.37,cm,,1,Armature|ArmatureAction,3,198,
+Flying (2)_3.fbx,1065,binary,7400,ok,,2,35946,78,44.37,cm,,1,Armature|ArmatureAction,3,198,
+Flying (2)_4.fbx,855,binary,7400,ok,,1,17985,78,0.5,m,,1,Armature|ArmatureAction,3,198,
+Flying(1).fbx,1053,binary,7400,ok,,1,17970,65,1.65,m,0.88,1,mixamo.com,10.23,53,0.84
+Flying(1)_fixed.fbx,1198,binary,7400,ok,,1,17970,78,0.46,m,0.84,2,Armature.001|Armature.001|mixamo.com|Layer0,10.23,198,0.84
+Flying(1)_fixed2.fbx,1198,binary,7400,ok,,1,17970,78,1.89,m,0.84,2,Armature.001|Armature.001|mixamo.com|Layer0,10.23,198,0.84
+Flying(1)_fixed3.fbx,1198,binary,7400,ok,,1,17970,78,1.89,m,0.84,2,Armature.001|Armature.001|mixamo.com|Layer0,10.23,198,0.84
+Flying(1)_fixed4.fbx,1198,binary,7400,ok,,1,17970,78,1.89,m,0.84,2,Armature.001|Armature.001|mixamo.com|Layer0,10.23,198,0.84
+Flying.fbx,788,binary,7400,ok,,1,17970,65,1.65,m,0.88,1,mixamo.com,3.53,53,0.84
+Flying_Final.fbx,962,binary,7400,ok,,1,17961,104,0.66,m,0.08,1,Armature|Armature|Armature|Armature|Armature|Armature|mixamo.com|Layer0|,3.53,276,0.08
+Flying_Final2.fbx,962,binary,7400,ok,,1,17961,104,0.66,m,0.08,1,Armature|Armature|Armature|Armature|Armature|Armature|mixamo.com|Layer0|,3.53,276,0.08
+Flying_overdrive.fbx,791,binary,7400,ok,,1,17961,65,1.65,m,0.9,1,mixamo.com,3.53,53,0.85
+Flying_overdrive2.fbx,772,binary,7400,ok,,1,17961,65,1.64,m,0.04,1,mixamo.com,3.53,53,0.89
+Flying_overdrive2_down.fbx,774,binary,7400,ok,,1,17961,78,1.88,m,0.89,1,Armature|Armature|mixamo.com|Layer0,3.53,198,0.89
+Flying_overdrive2_down2.fbx,774,binary,7400,ok,,1,17961,78,1.97,m,0.89,1,Armature|Armature|mixamo.com|Layer0,3.53,198,0.89
+Flying_overdrive2_down3.fbx,774,binary,7400,ok,,1,17961,78,0.66,m,0.89,1,Armature|Armature|mixamo.com|Layer0,3.53,198,0.89
+Flying_overdrive2_down3again.fbx,886,binary,7400,ok,,1,17961,91,0.66,m,0.08,1,Armature|Armature|Armature|Armature|mixamo.com|Layer0|Armature|Armature|,3.53,237,0.08
+Flying_overdrive2_down4.fbx,868,binary,7400,ok,,1,17961,91,0.66,m,0.01,1,Armature|Armature|Armature|Armature|mixamo.com|Layer0|Armature|Armature|,3.53,237,0.01
+Flying_overdrive2_down5.fbx,868,binary,7400,ok,,1,17961,91,0.66,m,0.01,1,Armature|Armature|Armature|Armature|mixamo.com|Layer0|Armature|Armature|,3.53,237,0.01
+Flying_overdrive2_down6.fbx,868,binary,7400,ok,,1,17961,91,0.66,m,0.01,1,Armature|Armature|Armature|Armature|mixamo.com|Layer0|Armature|Armature|,3.53,237,0.01
+ginga backward.fbx,178,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,1.13,29,0.68
+ginga forward.fbx,181,binary,7400,error,THREE.FBXLoader: Unknown property type ,0,0,0,,,,0,,,,
+ginga sideways 1.fbx,205,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,1.67,29,0.68
+ginga sideways 2.fbx,237,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,2.23,29,0.68
+ginga sideways to au.fbx,315,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,3.63,29,0.68
+ginga variation 1.fbx,308,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,3.53,29,0.68
+ginga variation 2.fbx,319,binary,7400,error,THREE.FBXLoader: Unknown property type ,0,0,0,,,,0,,,,
+ginga variation 3.fbx,270,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,2.9,29,0.68
+Hanging Idle.fbx,1534,binary,7400,ok,,1,17985,65,1.64,m,0.04,1,mixamo.com,18.27,53,1.03
+Jumping Down(1).fbx,952,binary,7400,ok,,1,17985,65,1.64,m,0.04,1,mixamo.com,6.03,53,1.61
+Laying Breathless.fbx,767,binary,7400,ok,,1,17970,65,1.65,m,0.88,1,mixamo.com,3.27,53,0.93
+Laying Idle.fbx,783,binary,7400,ok,,1,17970,65,1.65,m,0.88,1,mixamo.com,3.47,53,0.95
+Laying Idle_fixed.fbx,751,binary,7400,ok,,1,17970,78,0.51,m,0.95,1,Armature|Armature|mixamo.com|Layer0,3.47,198,0.95
+Laying Idle_fixed2.fbx,751,binary,7400,ok,,1,17970,78,0.55,m,0.95,1,Armature|Armature|mixamo.com|Layer0,3.47,198,0.95
+Laying Idle_fixed3.fbx,743,binary,7400,ok,,1,17970,78,0.54,m,0.96,1,Armature|Armature|mixamo.com|Layer0,2.1,198,0.96
+Laying Idle_fixed4.fbx,743,binary,7400,ok,,1,17970,78,0.69,m,0.96,1,Armature|Armature|mixamo.com|Layer0,2.1,198,0.96
+Laying Sleeping.fbx,927,binary,7400,ok,,1,17970,65,1.65,m,0.88,1,mixamo.com,6.73,53,0.94
+Laying Vomiting.fbx,1014,binary,7400,ok,,1,17970,65,1.65,m,0.88,1,mixamo.com,6.47,53,0.94
+Lifting Object(0)_2.fbx,2453,binary,7400,ok,,1,17985,78,1.47,m,0.01,4,Armature.001|Armature|mixamo.com|Layer0.001,3.63,198,-0.06
+Lifting Object(0)_3.fbx,2908,binary,7400,ok,,1,17985,78,1.32,m,0.61,5,Armature|Armature.001|Armature.001|Armature.001|mixamo.com|Layer0|Armatu,14.5,198,0.54
+Lifting Object(1).fbx,946,binary,7400,ok,,1,17985,65,1.64,m,0.04,1,mixamo.com,3.63,53,0.55
+Lifting Object(1)_2.fbx,2015,binary,7400,ok,,1,17985,78,1.12,m,-0.06,3,Armature|Armature|mixamo.com|Layer0,8.97,198,-0.06
+Lifting Object(2).fbx,1603,binary,7400,ok,,1,17985,65,1.64,m,0.04,1,mixamo.com,14.5,53,0.54
+Lifting Object(2)_2.fbx,1608,binary,7400,ok,,1,17985,78,1.04,m,-0.01,2,Armature.001|Armature|mixamo.com|Layer0,8.97,198,-0.01
+Lifting Object(3).fbx,1220,binary,7400,ok,,1,17985,65,1.64,m,0.04,1,mixamo.com,8.97,53,0.54
+Lifting Object(3)_2.fbx,994,binary,7400,ok,,1,17985,78,1.15,m,-0.03,1,Armature|Armature|mixamo.com|Layer0,8.97,198,-0.03
+Lifting Object(3)_3.fbx,1580,binary,7400,ok,,1,17985,91,1.2,m,0.61,2,Armature.001|Armature|mixamo.com|Layer0,5.3,237,0.68
+Lifting Object.fbx,1004,binary,7400,ok,,1,17985,65,1.64,m,0.04,1,mixamo.com,5.3,53,0.61
+macaco side.fbx,296,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,3.3,29,0.68
+martelo 2.fbx,187,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,1.3,29,0.68
+martelo 3.fbx,221,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,1.97,29,0.68
+martelo do chau sem mao.fbx,285,binary,7400,error,THREE.FBXLoader: Unknown property type ,0,0,0,,,,0,,,,
+martelo do chau.fbx,277,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,3.03,29,0.68
+meia lua de compasso back.fbx,237,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,2.2,29,0.68
+meia lua de compasso.fbx,212,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,1.67,29,0.68
+meia lua de frente.fbx,252,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,2.47,29,0.68
+Orc Walk.fbx,836,binary,7400,ok,,1,17970,65,1.65,m,0.88,1,mixamo.com,4.13,53,0.85
+Petting Animal(1).fbx,3171,binary,7400,ok,,1,17985,65,1.64,m,0.04,1,mixamo.com,49.87,53,0.87
+Petting Animal(2).fbx,2933,binary,7400,ok,,1,17985,65,1.64,m,0.04,1,mixamo.com,45.93,53,0.32
+Petting Animal(3).fbx,1142,binary,7400,ok,,1,17985,65,1.64,m,0.04,1,mixamo.com,8.97,53,0.33
+Petting Animal(4).fbx,1228,binary,7400,ok,,1,17985,65,1.64,m,0.04,1,mixamo.com,11.03,53,0.87
+Petting Animal(5).fbx,1142,binary,7400,ok,,1,17985,65,1.64,m,0.04,1,mixamo.com,9.07,53,0.68
+Petting Animal(6).fbx,1144,binary,7400,ok,,1,17985,65,1.64,m,0.04,1,mixamo.com,9.17,53,0.68
+Petting Animal(6)_2.fbx,1632,binary,7400,ok,,1,17985,78,1.38,m,-0.07,2,Armature.001|Armature|mixamo.com|Layer0,9.17,198,-0.07
+Petting Animal(6)_3.fbx,1633,binary,7400,ok,,1,17985,78,1.38,m,0.05,2,Armature.001|Armature|mixamo.com|Layer0,9.17,198,0.05
+Petting Animal(6)_4.fbx,1632,binary,7400,ok,,1,17985,78,1.37,m,0.1,2,Armature.001|Armature|mixamo.com|Layer0,9.17,198,0.1
+Petting Animal(6)_5.fbx,1631,binary,7400,ok,,1,17985,78,1.37,m,0.11,2,Armature.001|Armature|mixamo.com|Layer0,9.17,198,0.11
+Petting Animal.fbx,3541,binary,7400,ok,,1,17985,65,1.64,m,0.04,1,mixamo.com,56.67,53,0.87
+Petting Animal_2.fbx,3271,binary,7400,ok,,1,17985,78,1.63,m,0.01,3,Armature|Armature.001|mixamo.com|Layer0,9.17,198,0.02
+Petting Animal_Standing.fbx,3271,binary,7400,ok,,1,17985,78,1.63,m,0.01,3,Armature|Armature.001|mixamo.com|Layer0,9.17,198,0.02
+Petting Animal_Standing_2.fbx,2128,binary,7400,ok,,1,17985,78,1.63,m,-0.03,1,Armature|Armature|mixamo.com|Layer0,56.67,198,-0.03
+Playing The Violin.fbx,8917,binary,7400,ok,,1,17970,65,1.65,m,0.88,1,mixamo.com,109.47,53,0.88
+pontera.fbx,188,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,1.37,29,0.68
+pregnant4_14k.fbx,1271,binary,7400,ok,,1,41190,33,1.68,m,0.88,1,mixamo.com,0.03,29,0.88
+PregnantNormalCentered2Flying.fbx,816,binary,7400,ok,,1,17985,65,1.64,m,0.04,1,mixamo.com,3.13,53,0.87
+queshada 1.fbx,255,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,2.57,29,0.68
+queshada 2.fbx,227,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,2,29,0.68
+rasteira 1.fbx,215,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,1.87,29,0.68
+rasteira 2.fbx,242,binary,7400,error,THREE.FBXLoader: Unknown property type ,0,0,0,,,,0,,,,
+Rumba Dancing.fbx,1182,binary,7400,ok,,1,17985,65,1.64,m,0.04,1,mixamo.com,10.2,53,0.85
+still poses\Female Action Pose(2).fbx,513,binary,7400,ok,,1,17970,65,1.65,m,0.9,1,mixamo.com,0.03,53,0.81
+still poses\Female Dance Pose(3).fbx,513,binary,7400,ok,,1,17970,65,1.65,m,0.9,1,mixamo.com,0.03,53,0.91
+still poses\Female Dynamic Pose(10).fbx,513,binary,7400,ok,,1,17970,65,1.65,m,0.9,1,mixamo.com,0.03,53,0.91
+still poses\Female Dynamic Pose(11).fbx,513,binary,7400,ok,,1,17970,65,1.65,m,0.9,1,mixamo.com,0.03,53,1.13
+still poses\Female Dynamic Pose(7).fbx,513,binary,7400,ok,,1,17970,65,1.65,m,0.9,1,mixamo.com,0.03,53,1.13
+still poses\Female Dynamic Pose(8).fbx,513,binary,7400,ok,,1,17970,65,1.65,m,0.9,1,mixamo.com,0.03,53,0.89
+still poses\Female Dynamic Pose(9).fbx,513,binary,7400,ok,,1,17970,65,1.65,m,0.9,1,mixamo.com,0.03,53,0.65
+still poses\Male Dynamic Pose(2).fbx,513,binary,7400,ok,,1,17970,65,1.65,m,0.9,1,mixamo.com,0.03,53,1.01
+Swimming.fbx,1323,binary,7400,ok,,1,17985,65,1.64,m,0.04,1,mixamo.com,12.53,53,0.61
+Swing To Land(1).fbx,725,binary,7400,ok,,1,17985,65,1.64,m,0.04,1,mixamo.com,1.53,53,1.43
+troca 1.fbx,362,binary,7400,ok,,0,0,33,,m,0.88,1,mixamo.com,5.17,29,0.68
+
+SOURCE_FILE,K:\Fodder\objects\pregnant\fbx
+SOURCE,Three.js FBXLoader r186 parse of each file; height from bind-pose bounding box
+NOTES,"unit_guess: >10 units tall = centimetres (Mixamo default); hips_track_y is the first Hips position keyframe of clip 0, compare with hips_rest_y of the character to confirm matching units"
