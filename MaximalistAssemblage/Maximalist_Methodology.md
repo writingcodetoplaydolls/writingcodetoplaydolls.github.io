@@ -10,13 +10,26 @@ date: "October 14-22, 2026"
 A Maximalist Assemblage needs a maximalist methodology and maximalist
 methods.
 
-## Purpose and scope of this section
+A maximalist methodology grew from the creation of tools for maximalist methods to:
+- search the existing literature
+- examine the scope and breadth of the corpus
+- place permeable breathable boundaries around texts to include and texts to exclude
+- read with and through the texts word by word and phrase by phrase
+- to work the texts like clay
+- massage an amorphous non-linear body without organs into linear flow
+- to chunk and rework, assemble and disassemble
+- to root back to ground by ensuring providence to source
+
+## Collecting Materials
+### Purpose and scope of this section
 
 This section documents the guiding philosophy, methodology, and methods by
 which the literature underlying this dissertation was located, screened,
 retrieved, indexed, verified, and incorporated into text. The methodology for
-a maximalist assemblage developed over four search rounds across eighteen
-months. Search terms and focus expanded and contracted, as a Deleuzian (and
+a maximalist assemblage developed over numerous search rounds. This document 
+covers searches starting in spring 2025, but the end date is open until the final 
+christening of the submitted PhD thesis.
+Search terms and focus expanded and contracted, as a Deleuzian (and
 Guattari?) body without organs, along with the guiding research questions,
 with a key narrowing in fall 2025 after the selection of three comprehensive
 exam questions. After the submission of the comprehensive exam in April 2026,
