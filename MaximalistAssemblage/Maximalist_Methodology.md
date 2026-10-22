@@ -103,167 +103,32 @@ October 2026.
 
 
 <style>
-.cal{display:grid;grid-template-columns:1fr 360px;grid-auto-rows:112px;gap:0 28px}
-.cal .mo{border-top:1px solid #D3C2CD;padding-top:6px;position:relative;overflow:hidden}
-.cal .mo .lbl{font-size:11px;letter-spacing:0.06em;color:#92A2A6}
-.cal .tx{border-top:1px solid transparent;padding-top:6px;font-size:13.5px;position:relative;overflow:visible}
-.cal .tx.has{border-top:1px solid #D3C2CD}
-.cal .tx p{margin:0 0 8px}
-.cal .quiet{font-size:12px;color:#92A2A6;font-style:italic}
-.calcap{font-size:12px;color:#92A2A6;margin:14px 0 24px;max-width:760px;line-height:1.45}
+iframe.fig{width:100%;border:0;display:block;overflow:hidden}
+.figrow{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start}
+.figtext{flex:1 1 380px;min-width:300px}
+.figviz{flex:0 1 340px;min-width:270px}
+.figcap{font-size:0.78em;color:#92A2A6;line-height:1.45;max-width:46em}
 </style>
 
-<div class="cal" id="cal"></div>
+<iframe class="fig" src="./figures/calendar_months.html"
+        title="Keyword searches placed on the months they were run"
+        scrolling="no"></iframe>
 
-<p class="calcap">Figure 1. The 56 keyword queries of instrument one placed on the
-months they were run, May 2025 to October 2026. One bubble per query, area
-proportional to the records that query returned. 27,260 records across 56
-queries; 9 of the 18 months carried searches and 9 carried none. Hover a bubble
-for its query. Counts are per query as issued, before deduplication, and a count
-of exactly 1,000 is Google Scholar's retrieval ceiling rather than a true total.
+Figure 1. The 56 keyword queries of instrument one placed on the months they
+were run, May 2025 to October 2026. One bubble per query, area proportional to
+the records that query returned. 27,260 records across 56 queries; 9 of the 18
+months carried searches and 9 carried none. Hover a bubble for its query and
+count. Counts are per query as issued, before deduplication, and a count of
+exactly 1,000 is Google Scholar's retrieval ceiling rather than a true total.
 The forward-citation sweeps of 16 and 17 May 2026 are not shown here. Colour
 marks the round, not a value. Source: search_results_all_rounds.csv, built from
-the sweep CSVs under K:\OneDrive\Processing\Web Scrapers.</p>
-
-<script>
-
-(function(){
-  // keyword searches only. The forward-citation sweeps of May 2026 are held
-  // out until that analysis is done.
-  var MONTHS=[
-    ["2025-05","May 2025",[
-      ["positionality AND intersectionality",1968],["“arts based research” AND posthuman*",1917],
-      ["evocative object*",1837],["“POST QUALITATIVE” HAS NO END ALWAYS becomings",1180],
-      ["assemblage as methodology",1158],["Sherry Turkle",1195],["bourdieuANDhabitus",920],
-      ["“post qualitative”",890],["Turkle AND Papert",794],["Braidotti AND apparat*",768],
-      ["“Karen Barad”",760],["positionality",608],["arts based research*",542],
-      ["Sherry Turkle AND “evocative object”",464],["Donna Haraway",462],
-      ["Erving Goffmann*",384],["Turkle AND Braidotti",358],["Seymour Papert",235],
-      ["M.Scott Peck AND “map”",195],["Papert AND Braidotti",162],["assemblage",128],
-      ["beings AND exist AND phenomena AND Barad",113],["Barad AND apparat*",81],
-      ["Rosa Braidotti",80],["“sitting betwixt”",59],["critical auto-ethnography",40],
-      ["beings AND exist phenomena",22],["“sitting betwixt” AND Papert",20],
-      ["beings exist phenomena",19],["“sitting betwixt” AND Turkle",3]],0],
-    ["2025-06","June 2025",[],0],
-    ["2025-07","July 2025",[],0],
-    ["2025-08","August 2025",[["math education AND arts based research",60]],0],
-    ["2025-09","September 2025",[
-      ["new materialism art education",1245],["Rosi Braidotti AND diffracti*",1134],
-      ["Barad AND diffracti*",1040],["new materialism art practice research",1011],
-      ["Deleuze AND diffracti*",983],["bourdieu AND quantum AND field AND entanglement",958],
-      ["Jane Bennett vibrant matter",860],["graeme sullivan",427],
-      ["new materialism makerspaces",281],["bourdieu AND quantum",127]],1],
-    ["2025-10","October 2025",[["recode AND computer AND art",535]],1],
-    ["2025-11","November 2025",[],0],
-    ["2025-12","December 2025",[],0],
-    ["2026-01","January 2026",[],0],
-    ["2026-02","February 2026",[],0],
-    ["2026-03","March 2026",[],0],
-    ["2026-04","April 2026",[
-      ["'Marcel Duchamp' AND quantum",976],["'Robert Rauschenberg' AND quantum",575],
-      ["Duchamp AND quantum",175]],2],
-    ["2026-05","May 2026",[
-      ["'Merce Cunningham' AND quantum",667],["'Leonard Shlain'",316]],2],
-    ["2026-06","June 2026",[],0],
-    ["2026-07","July 2026",[],0],
-    ["2026-08","August 2026",[
-      ["Braidotti AND Papert",194],
-      ["Papert AND transposition AND diffraction AND Braidotti AND computation AND Barad AND transcorporeality",37]],3],
-    ["2026-09","September 2026",[
-      ["possibility space",2023],["possibility space” AND posthum",755],
-      ["transcorporeal AND transposition",717],["nexus theory",310],
-      ["possibility space” AND posthumanANDtransposition",74]],3],
-    ["2026-10","October 2026",[
-      ["feminist AND location AND body AND posthuman* AND “Adrienne Rich”",1074],
-      ["“feminist location”",80]],3]
-  ];
-
-  var TEXT={
-    "2025-05":"<p>This round featured theories/theorists and notions already present in my academic life before the PhD program, with a few new notions layered on top as old theorists and new began to congregate.</p><p>As the code converses with the website and collects the citations page by page, I watch and scroll through the results as the code politely waits before attempting a new page. Frequently phrases will glimmer and speak, later becoming their own search terms.</p>",
-    "2025-08":"<p><strong>[TO WRITE: the single August search, math education and arts based research, three months after the May block.]</strong></p>",
-    "2025-09":"<p><strong>[TO WRITE: Sullivan on the 1st, Bourdieu against quantum on the 2nd, then the examination sweeps from the 24th. The narrowing.]</strong></p>",
-    "2025-10":"<p><strong>[TO WRITE: recode and computer and art, alone in October.]</strong></p>",
-    "2026-04":"<p><strong>[TO WRITE: the examination submitted, and the opening to mid-century artists at the moment quantum physics entered general culture.]</strong></p>",
-    "2026-05":"<p><strong>[TO WRITE: Cunningham and Shlain by keyword. The forward-citation sweeps of the 16th and 17th are held out of this calendar until that analysis is done.]</strong></p>",
-    "2026-08":"<p><strong>[TO WRITE: Braidotti and Papert together, and the seven-term query.]</strong></p>",
-    "2026-09":"<p><strong>[TO WRITE: searching my own vocabulary.]</strong></p>",
-    "2026-10":"<p><strong>[TO WRITE: feminist location and Adrienne Rich.]</strong></p>"
-  };
-
-  var FILL=["#6777B6","#849E15","#D8560E","#B28622"];
-  var cal=document.getElementById("cal");
-  function E(s,a){var e=document.createElementNS("http://www.w3.org/2000/svg",s);
-    for(var k in a)e.setAttribute(k,a[k]);return e;}
-
-  var gmax=0,i,j;
-  for(i=0;i<MONTHS.length;i++)for(j=0;j<MONTHS[i][2].length;j++)
-    if(MONTHS[i][2][j][1]>gmax)gmax=MONTHS[i][2][j][1];
-  var K=17/Math.sqrt(gmax);
-
-  var W=352,BH=84;
-  for(i=0;i<MONTHS.length;i++){
-    var key=MONTHS[i][0],name=MONTHS[i][1],qs=MONTHS[i][2],band=MONTHS[i][3];
-
-    var tx=document.createElement("div");
-    tx.className="tx"+(TEXT[key]?" has":"");
-    tx.innerHTML=TEXT[key]||"";
-    cal.appendChild(tx);
-
-    var mo=document.createElement("div");
-    mo.className="mo";
-    var lbl=document.createElement("div");
-    lbl.className="lbl";lbl.textContent=name;mo.appendChild(lbl);
-
-    if(!qs.length){
-      var q=document.createElement("div");
-      q.className="quiet";q.textContent="no searches";mo.appendChild(q);
-    } else {
-      var svg=E("svg",{viewBox:"0 0 "+W+" "+BH,role:"img",
-        "aria-label":name+": "+qs.length+" search"+(qs.length>1?"es":"")+", sized by records returned."});
-      svg.setAttribute("style","width:100%;height:auto;display:block");
-      var n=qs.map(function(d,ix){
-        var r=Math.max(3,K*Math.sqrt(d[1]));
-        return {label:d[0],v:d[1],r:r,
-                x:20+(ix*37)%(W-40),y:BH/2+((ix%3)-1)*16+(Math.random()-0.5)*6};
-      });
-      n.sort(function(a,b){return b.r-a.r;});
-      for(var t=0;t<420;t++){
-        for(var a1=0;a1<n.length;a1++){
-          var a=n[a1];
-          a.y+=(BH/2-a.y)*0.05;
-          for(var b1=a1+1;b1<n.length;b1++){
-            var b=n[b1],dx=b.x-a.x,dy=b.y-a.y,d=Math.sqrt(dx*dx+dy*dy)||0.01,m=a.r+b.r+2.2;
-            if(d<m){var o=(m-d)/d*0.5;dx*=o;dy*=o;a.x-=dx;a.y-=dy;b.x+=dx;b.y+=dy;}
-          }
-          a.x=Math.max(a.r+1,Math.min(W-a.r-1,a.x));
-          a.y=Math.max(a.r+1,Math.min(BH-a.r-1,a.y));
-        }
-      }
-      n.forEach(function(d){
-        var c=E("circle",{cx:d.x,cy:d.y,r:d.r,fill:FILL[band],
-                          "fill-opacity":0.85,stroke:"#ffffff","stroke-width":1});
-        var ti=E("title",{});ti.textContent=d.label;c.appendChild(ti);
-        svg.appendChild(c);
-      });
-      mo.appendChild(svg);
-    }
-    cal.appendChild(mo);
-  }
-})();
-
-</script>
-
+the sweep CSVs under K:\OneDrive\Processing\Web Scrapers.
+{: .figcap}
 
 #### Round one: 9 to 13 May 2025, with a coda on 21 August
 
-<style>
-.railfig{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start}
-.railtext{flex:1 1 380px;min-width:300px}
-.railviz{flex:0 1 340px;min-width:270px}
-</style>
-
-<div class="railfig">
-<div class="railtext" markdown="1">
+<div class="figrow">
+<div class="figtext" markdown="1">
 
 This round featured theories/theorists and notions already present in my
 academic life before the PhD program, with a few new notions layered on top
@@ -289,197 +154,23 @@ later becoming their own search terms. Thus begat the search for "sitting
 betwixt" and "post qualitative has no end always becomings." Also note the
 early rumblings of "assemblage as methodology."
 
-var max=0,i;for(i=0;i<DATA.length;i++)if(DATA[i][1]>max)max=DATA[i][1];
-  var K=50/Math.sqrt(max);
-  var n=DATA.map(function(d,ix){
-    var r=Math.max(5,K*Math.sqrt(d[1]));
-    return {label:d[0],v:d[1],day:d[2],r:r,
-            x:W/2+(ix%7-3)*70+(Math.random()-0.5)*30,
-            y:120+Math.floor(ix/7)*70+(Math.random()-0.5)*30,
-            ph:Math.random()*6.28};
-  });
-  n.sort(function(a,b){return b.r-a.r;});
-
-for(var t=0;t<800;t++){
-    for(i=0;i<n.length;i++){
-      var a=n[i];
-      a.x+=(W/2-a.x)*0.012; a.y+=(H/2+10-a.y)*0.016;
-      for(var j=i+1;j<n.length;j++){
-        var b=n[j],dx=b.x-a.x,dy=b.y-a.y,d=Math.sqrt(dx*dx+dy*dy)||0.01,m=a.r+b.r+9;
-        if(d<m){var o=(m-d)/d*0.5;dx*=o;dy*=o;a.x-=dx;a.y-=dy;b.x+=dx;b.y+=dy;}
-      }
-      a.x=Math.max(a.r+2,Math.min(W-a.r-2,a.x));
-      a.y=Math.max(a.r+26,Math.min(H-a.r-2,a.y));
-    }
-  }
-
-var x0=1e9,x1=-1e9,y0=1e9,y1=-1e9;
-  for(i=0;i<n.length;i++){var q=n[i];
-    if(q.x-q.r<x0)x0=q.x-q.r; if(q.x+q.r>x1)x1=q.x+q.r;
-    if(q.y-q.r<y0)y0=q.y-q.r; if(q.y+q.r>y1)y1=q.y+q.r;}
-  var PAD=6,BAND=30;
-  var vx=x0-PAD, vy=y0-BAND;
-  svg.setAttribute("viewBox", vx+" "+vy+" "+((x1-x0)+PAD*2)+" "+((y1-y0)+BAND+PAD));
-  var legendX=vx+8, legendY=vy+14;
-
-for(i=0;i<DAYS.length;i++){
-    svg.appendChild(E("circle",{cx:legendX+6+i*96,cy:legendY,r:5,fill:FILL[i]}));
-    var lt=E("text",{x:legendX+16+i*96,y:legendY+4,"font-size":11,fill:"currentColor"});
-    lt.textContent=DAYS[i];svg.appendChild(lt);
-  }
-
-var nodes=n.map(function(q){
-    var c=E("circle",{cx:q.x,cy:q.y,r:q.r,fill:FILL[q.day],
-                      "fill-opacity":0.82,stroke:"#ffffff","stroke-width":1.2});
-    var ti=E("title",{});ti.textContent=q.label+": "+q.v.toLocaleString()+" records, "+DAYS[q.day];
-    c.appendChild(ti);svg.appendChild(c);
-    var tx=null;
-    if(q.r>=26){
-      tx=E("text",{x:q.x,y:q.y+4,"text-anchor":"middle","font-size":(q.r>=40?12:10),
-                   fill:"#ffffff","pointer-events":"none"});
-      tx.textContent=q.v.toLocaleString();svg.appendChild(tx);
-    }
-    return {q:q,c:c,tx:tx};
-  });
-
-var byDay=[[],[],[],[]];
-  for(i=0;i<nodes.length;i++)byDay[nodes[i].q.day].push(nodes[i]);
-  var h='<table style="border-collapse:collapse;width:100%">';
-  h+='<caption style="text-align:left;font-size:11px;opacity:0.65;padding-bottom:6px">'
-   + 'Records returned per query</caption>';
-  for(var dd=0;dd<4;dd++){
-    if(!byDay[dd].length)continue;
-    byDay[dd].sort(function(p,r){return r.q.v-p.q.v;});
-    h+='<tr><th colspan="2" style="text-align:left;padding:9px 0 3px;font-size:11px;'
-     + 'border-bottom:1px solid #D3C2CD;font-weight:normal;letter-spacing:0.04em">'
-     + '<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:'
-     + FILL[dd]+';margin-right:6px"></span>'+DAYS[dd]+' 2025</th></tr>';
-    for(i=0;i<byDay[dd].length;i++){
-      var q=byDay[dd][i].q;
-      h+='<tr data-q="'+q.label.replace(/"/g,"&quot;")+'">'
-       + '<td style="padding:2px 8px 2px 14px">'+q.label.replace(/</g,"&lt;")+'</td>'
-       + '<td style="padding:2px 0;text-align:right;white-space:nowrap">'
-       + q.v.toLocaleString()+'</td></tr>';
-    }
-  }
-  h+='</table>';
-  var list=document.getElementById("r1list");
-  list.innerHTML=h;
-
-function mark(nd,row,on){
-    nd.c.setAttribute("fill-opacity",on?1:0.82);
-    nd.c.setAttribute("stroke",on?"#2B2B23":"#ffffff");
-    nd.c.setAttribute("stroke-width",on?2:1.2);
-    row.style.background=on?"#F8CABA":"";
-  }
-  var rows=list.querySelectorAll("tr[data-q]");
-  for(i=0;i<rows.length;i++){
-    (function(row){
-      var nd=null,k;
-      for(k=0;k<nodes.length;k++)if(nodes[k].q.label===row.getAttribute("data-q"))nd=nodes[k];
-      if(!nd)return;
-      row.addEventListener("mouseenter",function(){mark(nd,row,true);});
-      row.addEventListener("mouseleave",function(){mark(nd,row,false);});
-      nd.c.addEventListener("mouseenter",function(){mark(nd,row,true);});
-      nd.c.addEventListener("mouseleave",function(){mark(nd,row,false);});
-    })(rows[i]);
-  }
-
 Round one ran on three days in May 2025 with a coda in August. Thirty-one
 queries returned 17,422 records. The calendar at the right carries every one
 of them in the order it was run.
 
 </div>
-<div class="railviz">
-<svg id="rail1" role="img"
-     aria-label="The thirty-one queries of round one in the order they were run, 9 May to 21 August 2025, sized by records returned."
-     style="width:100%;height:auto"></svg>
+<div class="figviz">
+<iframe class="fig" src="./figures/round_one_rail.html"
+        title="The thirty-one queries of round one in the order they were run"
+        scrolling="no"></iframe>
 </div>
 </div>
 
-<script>
-(function(){
-  var DATA=[
-   ["9 May 2025",[
-     ["evocative object*",1837],["Sherry Turkle",1195],["Turkle AND Papert",794],
-     ["Sherry Turkle AND “evocative object”",464],["Donna Haraway",462],
-     ["Turkle AND Braidotti",358],["Seymour Papert",235],["M.Scott Peck AND “map”",195],
-     ["Papert AND Braidotti",162],["Rosa Braidotti",80]]],
-   ["12 May 2025",[
-     ["bourdieuANDhabitus",920],["positionality",608],["arts based research*",542],
-     ["Erving Goffmann*",384]]],
-   ["13 May 2025",[
-     ["positionality AND intersectionality",1968],["“arts based research” AND posthuman*",1917],
-     ["“POST QUALITATIVE” HAS NO END ALWAYS becomings",1180],
-     ["assemblage as methodology",1158],["“post qualitative”",890],
-     ["Braidotti AND apparat*",768],["“Karen Barad”",760],["assemblage",128],
-     ["beings AND exist AND phenomena AND Barad",113],["Barad AND apparat*",81],
-     ["“sitting betwixt”",59],["critical auto-ethnography",40],
-     ["beings AND exist phenomena",22],["“sitting betwixt” AND Papert",20],
-     ["beings exist phenomena",19],["“sitting betwixt” AND Turkle",3]]],
-   ["21 August 2025",[
-     ["math education AND arts based research",60]]]
-  ];
-  var FILL=["#6777B6","#849E15","#D8560E","#B28622"];
-  var W=330, SPINE=34, RMAX=22, GAP=7;
-  var svg=document.getElementById("rail1");
-  function E(s,a){var e=document.createElementNS("http://www.w3.org/2000/svg",s);
-    for(var k in a)e.setAttribute(k,a[k]);return e;}
-
-  var max=0,g,i;
-  for(g=0;g<DATA.length;g++)for(i=0;i<DATA[g][1].length;i++)
-    if(DATA[g][1][i][1]>max)max=DATA[g][1][i][1];
-  var K=RMAX/Math.sqrt(max);
-
-  // lay out downward, measuring as we go
-  var items=[], y=0;
-  for(g=0;g<DATA.length;g++){
-    y+=(g?18:6);
-    items.push({kind:"band",label:DATA[g][0],y:y,day:g});
-    y+=14;
-    for(i=0;i<DATA[g][1].length;i++){
-      var v=DATA[g][1][i][1], r=Math.max(3.5,K*Math.sqrt(v));
-      var slot=Math.max(2*r, 15)+GAP;
-      y+=slot/2;
-      items.push({kind:"dot",label:DATA[g][1][i][0],v:v,r:r,y:y,day:g});
-      y+=slot/2;
-    }
-  }
-  var H=y+10;
-  svg.setAttribute("viewBox","0 0 "+W+" "+H);
-
-  // the spine
-  svg.appendChild(E("line",{x1:SPINE,y1:10,x2:SPINE,y2:H-6,
-                            stroke:"#D3C2CD","stroke-width":1}));
-
-  for(i=0;i<items.length;i++){
-    var it=items[i];
-    if(it.kind==="band"){
-      svg.appendChild(E("line",{x1:SPINE-9,y1:it.y,x2:SPINE+9,y2:it.y,
-                                stroke:"#92A2A6","stroke-width":1.5}));
-      var bt=E("text",{x:SPINE+14,y:it.y+4,"font-size":11,fill:"currentColor",
-                       "letter-spacing":"0.05em"});
-      bt.textContent=it.label;svg.appendChild(bt);
-    } else {
-      var c=E("circle",{cx:SPINE,cy:it.y,r:it.r,fill:FILL[it.day],
-                        "fill-opacity":0.85,stroke:"#ffffff","stroke-width":1});
-      var ti=E("title",{});ti.textContent=it.label;c.appendChild(ti);
-      svg.appendChild(c);
-      var tx=E("text",{x:SPINE+Math.max(it.r,6)+8,y:it.y+3.5,"font-size":10.5,
-                       fill:"currentColor"});
-      tx.textContent=it.label;svg.appendChild(tx);
-    }
-  }
-
-  // widen the frame if any label runs past it
-  var right=W, ts=svg.querySelectorAll("text");
-  for(i=0;i<ts.length;i++){
-    var bb=ts[i].getBBox(); if(bb.x+bb.width>right) right=bb.x+bb.width;
-  }
-  svg.setAttribute("viewBox","0 0 "+Math.ceil(right+6)+" "+H);
-})();
-</script>
-
+Figure 2. The 31 queries of round one on a single spine, top to bottom in the
+order they were issued, 9 May to 21 August 2025. 17,422 records across 31
+queries. Circle area is proportional to records returned; colour marks the day.
+Source: search_results_all_rounds.csv.
+{: .figcap}
 #### Round two: 1 September to 13 October 2025
 
 ##### Graeme Sullivan, 1 September
