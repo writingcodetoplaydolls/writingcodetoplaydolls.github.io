@@ -5,7 +5,7 @@ author: "Amy Traylor"
 date: "October 14-22, 2026"
 ---
 
-# Literature Review Methodology and Methods for a Maximalist Assemblage
+# Maximalist Methods for a Maximalist Assemblage
 
 A Maximalist Assemblage needs a maximalist methodology and maximalist
 methods.
