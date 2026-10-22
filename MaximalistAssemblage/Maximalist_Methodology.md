@@ -698,3 +698,5 @@ phenomena` 22. `"sitting betwixt" AND Papert` 20. `beings exist phenomena`
 
 - make more sophisticated visualizations, try a word network and other js
   libraries <https://districtdatalabs.silvrback.com/beyond-the-word-cloud>
+  <https://www.researchgate.net/figure/The-network-of-connections-between-characters-ideas-innovations-and-events-for-the_fig3_324602688>
+  <http://drewconway.com/zia/2013/3/29/the-value-of-edges-in-complex-network-visualization>
