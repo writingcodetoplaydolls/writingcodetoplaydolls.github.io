@@ -12,7 +12,7 @@ rather than overwrite them.
 
 {% assign drafts = site.pages | where_exp: "p", "p.path contains 'MaximalistAssemblage/drafts/'" | sort: "path" %}
 {% for d in drafts %}
-- [{{ d.title | default: d.name }}]({{ d.url | relative_url }})
+- [{{ d.name | remove: "MMfaMA_" | remove: ".md" }}]({{ d.url | relative_url }})
 {% endfor %}
 
 #### [MMfaMA, latest]({{ '/MaximalistAssemblage/Maximalist_Methodology.html' | relative_url }})
