@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Round one, the thirty-one queries in order</title>
+<style>
+ html,body{margin:0;padding:0;background:transparent}
+ body{color:#1F2937;font:400 16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+ svg{width:100%;height:auto;display:block}
+</style>
+</head>
+<body>
+<svg id="rail1" role="img"
+     aria-label="The thirty-one queries of round one in the order they were run, 9 May to 21 August 2025, sized by records returned."></svg>
+<script>
+(function(){
+  var DATA=[
+   ["9 May 2025",[
+     ["evocative object*",1837],["Sherry Turkle",1195],["Turkle AND Papert",794],
+     ["Sherry Turkle AND \u201cevocative object\u201d",464],["Donna Haraway",462],
+     ["Turkle AND Braidotti",358],["Seymour Papert",235],["M.Scott Peck AND \u201cmap\u201d",195],
+     ["Papert AND Braidotti",162],["Rosa Braidotti",80]]],
+   ["12 May 2025",[
+     ["bourdieuANDhabitus",920],["positionality",608],["arts based research*",542],
+     ["Erving Goffmann*",384]]],
+   ["13 May 2025",[
+     ["positionality AND intersectionality",1968],["\u201carts based research\u201d AND posthuman*",1917],
+     ["\u201cPOST QUALITATIVE\u201d HAS NO END ALWAYS becomings",1180],
+     ["assemblage as methodology",1158],["\u201cpost qualitative\u201d",890],
+     ["Braidotti AND apparat*",768],["\u201cKaren Barad\u201d",760],["assemblage",128],
+     ["beings AND exist AND phenomena AND Barad",113],["Barad AND apparat*",81],
+     ["\u201csitting betwixt\u201d",59],["critical auto-ethnography",40],
+     ["beings AND exist phenomena",22],["\u201csitting betwixt\u201d AND Papert",20],
+     ["beings exist phenomena",19],["\u201csitting betwixt\u201d AND Turkle",3]]],
+   ["21 August 2025",[
+     ["math education AND arts based research",60]]]
+  ];
+  var FILL=["#6777B6","#849E15","#D8560E","#B28622"];
+  var W=330, SPINE=34, RMAX=22, GAP=7;
+  var svg=document.getElementById("rail1");
+  function E(s,a){var e=document.createElementNS("http://www.w3.org/2000/svg",s);
+    for(var k in a)e.setAttribute(k,a[k]);return e;}
+  var max=0,g,i;
+  for(g=0;g<DATA.length;g++)for(i=0;i<DATA[g][1].length;i++)
+    if(DATA[g][1][i][1]>max)max=DATA[g][1][i][1];
+  var K=RMAX/Math.sqrt(max);
+  var items=[], y=0;
+  for(g=0;g<DATA.length;g++){
+    y+=(g?18:6);
+    items.push({kind:"band",label:DATA[g][0],y:y,day:g});
+    y+=14;
+    for(i=0;i<DATA[g][1].length;i++){
+      var v=DATA[g][1][i][1], r=Math.max(3.5,K*Math.sqrt(v));
+      var slot=Math.max(2*r, 15)+GAP;
+      y+=slot/2;
+      items.push({kind:"dot",label:DATA[g][1][i][0],v:v,r:r,y:y,day:g});
+      y+=slot/2;
+    }
+  }
+  var H=y+10;
+  svg.setAttribute("viewBox","0 0 "+W+" "+H);
+  svg.appendChild(E("line",{x1:SPINE,y1:10,x2:SPINE,y2:H-6,
+                            stroke:"#D3C2CD","stroke-width":1}));
+  for(i=0;i<items.length;i++){
+    var it=items[i];
+    if(it.kind==="band"){
+      svg.appendChild(E("line",{x1:SPINE-9,y1:it.y,x2:SPINE+9,y2:it.y,
+                                stroke:"#92A2A6","stroke-width":1.5}));
+      var bt=E("text",{x:SPINE+14,y:it.y+4,"font-size":11,fill:"currentColor",
+                       "letter-spacing":"0.05em"});
+      bt.textContent=it.label;svg.appendChild(bt);
+    } else {
+      var c=E("circle",{cx:SPINE,cy:it.y,r:it.r,fill:FILL[it.day],
+                        "fill-opacity":0.85,stroke:"#ffffff","stroke-width":1});
+      var ti=E("title",{});ti.textContent=it.label+": "+it.v.toLocaleString()+" records";
+      c.appendChild(ti);
+      svg.appendChild(c);
+      var tx=E("text",{x:SPINE+Math.max(it.r,6)+8,y:it.y+3.5,"font-size":10.5,
+                       fill:"currentColor"});
+      tx.textContent=it.label;svg.appendChild(tx);
+    }
+  }
+  var right=W, ts=svg.querySelectorAll("text");
+  for(i=0;i<ts.length;i++){
+    var bb=ts[i].getBBox(); if(bb.x+bb.width>right) right=bb.x+bb.width;
+  }
+  svg.setAttribute("viewBox","0 0 "+Math.ceil(right+6)+" "+H);
+  function fit(){
+    if(window.frameElement)
+      window.frameElement.style.height=(document.documentElement.scrollHeight+2)+"px";
+  }
+  fit();
+  window.addEventListener("resize",fit);
+  window.addEventListener("load",fit);
+})();
+</script>
+</body>
+</html>
