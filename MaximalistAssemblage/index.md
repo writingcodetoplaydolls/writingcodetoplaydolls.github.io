@@ -7,5 +7,5 @@
 
 ### Maximalist Methods for a Maximalist Assemblage (MMfaMA)
 
-#### [MMfaMA, latest](/Maximalist_Methodology.md/)
+#### [MMfaMA](/Maximalist_Methodology.md/)
 
