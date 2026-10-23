@@ -107,7 +107,8 @@ iframe.fig{width:100%;border:0;display:block;overflow:hidden}
 .figrow{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start}
 .figtext{flex:1 1 380px;min-width:300px}
 .figviz{flex:0 1 340px;min-width:270px}
-.figcap{font-size:0.78em;color:#92A2A6;line-height:1.45;max-width:46em}
+.figcap{font-size:0.86em;color:#2B2B23;line-height:1.5;max-width:46em}
+@media (prefers-color-scheme: dark){.figcap{color:#E5E7EB}}
 </style>
 
 <iframe class="fig" src="./figures/calendar_months.html"
