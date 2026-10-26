@@ -349,7 +349,7 @@ This section answers the second question: how have posthumanist theorists concep
 **\[Note\]** This section needs to say how sources entered the review, how they were read, how they were selected and organized, and what the review leaves out, in enough detail that a reader can trace it. Diffractive reading answers the “how they were read” part; the other parts still need a record. Questions only you can answer:
 
 - How did sources enter: database searches (which databases, which terms, which dates), citation trails, committee and colleague recommendations, chance?
-- Reading record: answered October 6. You built the site that auto-highlights glossary terms, first as thick-text support for your freshman course, then for your own reading. Your words, and what they connect, are just below this list.
+- Add this to instruments_Reading record: answered October 6. You built the site that auto-highlights glossary terms, first as thick-text support for your freshman course, then for your own reading. Your words, and what they connect, are just below this list.
 - What did you leave out, and why? That is the cut the review is accountable for, and the scarcity claim in 1.6 depends on it.
 
 *Your words from our chat, October 6*
