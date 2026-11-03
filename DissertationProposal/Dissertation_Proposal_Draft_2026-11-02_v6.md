@@ -409,7 +409,10 @@ This section answers the second question: how have posthumanist theorists concep
 
 **\[Note\]** Narrowing criteria, to adjust: keep an example or history if it (a) works in the own media or apparatus (photography, 3D scanning, code, generative or interactive work, installation); (b) carries the genealogy of erasure; (c) bears on pedagogy or literacy; or (d) is a site of documented enactment, which the contribution claim depends on. Leave the rest in the comps and cite it there.
 
-### 2.0 Literature review method: reading diffractively
+### See Maximalist Methodology for a Maximalist Assemblage for the latest approach to method
+[Maximalist Methodology](./MaximalistAssemblage/Maximalist_Methodology.md/)
+
+### 2.0 Literature review method: reading diffractively (partially deprecated)
 
 **\[Note\]** This section needs to say how sources entered the review, how they were read, how they were selected and organized, and what the review leaves out, in enough detail that a reader can trace it. Diffractive reading answers the “how they were read” part; the other parts still need a record. Questions only I can answer:
 
