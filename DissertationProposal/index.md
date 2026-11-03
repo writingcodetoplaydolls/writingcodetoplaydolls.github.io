@@ -18,3 +18,5 @@ Version 35 of my comps exam was much longer than my final draft. Some important 
 [V1   Oct 7, 2026](./disspropv1.md/)
 
 [V2   Oct 7, 2026](./disspropv2.md/)
+
+[Version 6_November 2, 2026](./Dissertation_Proposal_Draft_2026-11-02_v6.md/)
