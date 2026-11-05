@@ -1,0 +1,18 @@
+﻿year,title,her_role,pages,words,avg_chars_per_sampled_page,text_layer,replacement_chars,pdf_producer,file
+1984,The Cosmic Web,author,209,78852,2604,native,0,Acrobat 11.0.2 Paper Capture Plug-in wit,Hayles_N_Katherine_The_Cosmic_Web_Scientific_Field_Models_and_Literary_Strategies_in_the_Twentieth_Century_1984.pdf
+1990,Chaos Bound,author,331,122373,2164,native,0,Acrobat 11.0.2 Paper Capture Plug-in wit,Chaos_Bound.pdf
+1991,Chaos and Order,editor,317,130156,2547,native,0,Adobe Acrobat 9.55 Paper Capture Plug-in,Hayles_N_Katherine_ed_Chaos_and_Order_Complex_Dynamics_in_Literature_and_Science_1991(1).pdf
+1999,How We Became Posthuman,author,366,155915,3053,native,0,,Hayles_N_Katherine_How_We_Became_Posthuman_Virtual_Bodies_in_Cybernetics_Literature_and_Informatics.pdf
+2002,Writing Machines,author,145,34057,957,native,0,,Hayles_N_Katherine_Writing_Machines.pdf
+2004,Nanoculture,editor,244,101626,3194,native,0,Adobe Acrobat 7.08 Image Conversion Plug,Nanoculture_ Implications of the New Techn - N. Katherine Hayles.pdf
+2005,My Mother Was a Computer,author,301,129351,2871,native,0,Adobe Acrobat 9.3 Paper Capture Plug-in ,My Mother Was a Computer_ Digital Subjects - N. Katherine Hayles.pdf
+2008,Electronic Literature,author,240,65482,1886,native,0,QuarkXPress(tm) 6.5,Electronic Literature_ New Hori - N. Katherine Hayles.pdf
+2012,How We Think,author,296,106737,2555,native,0,Adobe PDF Library 7.0; modified using iT,How We Think_ Digital Media and Contempora - N. Katherine Hayles.pdf
+2013,Comparative Textual Media,editor with Pressman,369,120674,,native,0,calibre (1.29.0),Comparative Textual Media_ Transforming th - N. Katherine Hayles.pdf
+2017,Unthought,author,263,96049,2742,native,0,Adobe PDF Library 15.0,Unthought_ The Power of the Cognitive Nonc - N. Katherine Hayles.pdf
+2021,Postprint,author,246,75513,1564,native,0,Acrobat Distiller 9.5.5 (Windows),Postprint_ Books and Becoming Computationa - N. Katherine Hayles.pdf
+2025,Bacteria to AI,author,294,128387,3172,native,0,Adobe PDF Library 9.9; modified using iT,Bacteria to AI_ Human Futures W - N. Katherine Hayles.pdf
+
+SOURCE_FILE,K:\OneDrive\UNM\Dissertation\todo October 26\HAYLES_books_inventory_2026-10-30_v2.csv
+SOURCE,"The thirteen PDFs inventoried 30 Oct 2026 with PyMuPDF; page counts, word counts and a text-layer sample at six points per volume."
+NOTES,"Population: 13 volumes, 3,621 pages, 1,345,172 words. Word counts include front matter, notes, bibliography and index, so they are upper bounds on body text. The text-layer test does NOT detect ClearScan reconstruction: The Cosmic Web reads as native and is not, and no page image is recoverable from it. Three of the thirteen are edited collections."
