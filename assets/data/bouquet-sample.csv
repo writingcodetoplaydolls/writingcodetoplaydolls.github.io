@@ -1,0 +1,30 @@
+search_term,group,kind,hits_all,hits_distinct,hits_overlapping,on_disk,used_in_comps
+assemblage,1. concepts,keyword,1420,1221,61,16,3
+assemblage theory,1. concepts,keyword,610,524,48,12,2
+assemblage art,1. concepts,keyword,388,333,30,5,1
+assemblage art education,1. concepts,keyword,97,83,22,4,1
+superposition,1. concepts,keyword,1190,1023,18,2,0
+superposition art,1. concepts,keyword,214,184,15,1,0
+quantum superposition metaphor,1. concepts,keyword,142,122,9,0,0
+new materialism,2. social theory,keyword,2260,1943,140,57,6
+new materialism art education,2. social theory,keyword,1245,1070,118,53,4
+new materialism pedagogy,2. social theory,keyword,540,464,52,9,1
+positionality,2. social theory,keyword,1530,1315,66,4,0
+positionality AND intersectionality,2. social theory,keyword,1968,1692,89,2,0
+evocative object*,2. social theory,keyword,1837,1579,247,7,2
+maximalism,3. method,keyword,420,361,12,1,1
+maximalist aesthetics,3. method,keyword,160,137,9,1,0
+maximalist art practice,3. method,keyword,46,39,7,0,0
+possibility space,3. method,keyword,2023,1739,34,0,0
+possibility space design,3. method,keyword,330,283,20,0,0
+arts-based research,3. method,keyword,3100,2666,210,22,5
+arts-based research dissertation,3. method,keyword,710,610,74,8,2
+arts-based research AND new materialism,3. method,keyword,215,184,61,5,1
+gatekeeping,4. belonging,keyword,980,842,11,0,0
+gatekeeping higher education,4. belonging,keyword,355,305,8,0,0
+belonging,4. belonging,keyword,2600,2236,23,1,0
+belonging AND outcast,4. belonging,keyword,120,103,6,0,0
+"Meeting the Universe Halfway, cited by",5. forward citation,forward citation,9184,4778,161,11,17
+SOURCE_FILE,bouquet-sample.csv (made up),,,,,,
+SOURCE,a sample shaped like LitReviewProtocol/bouquet_states_<date>.csv: a term and its group with one number per state (all hits; hits also returned under another term; files downloaded; titles used in the comps); narrowings are inferred from the words,,,,,,
+NOTES,numbers are invented; rows whose first number is not a number are notes and are skipped,,,,,,
