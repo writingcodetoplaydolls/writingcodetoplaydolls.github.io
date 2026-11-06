@@ -9,3 +9,7 @@
 
 #### [MMfaMA](./Maximalist_Methodology.md/)
 
+#### [Comps Knowledge Graph](./CompsGraph/)
+
+#### [Search-term Bouquet](./Bouquet/)
+

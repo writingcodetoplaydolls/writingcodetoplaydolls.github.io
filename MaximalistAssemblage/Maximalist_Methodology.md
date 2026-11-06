@@ -173,6 +173,11 @@ queries. Circle area is proportional to records returned; colour marks the day.
 Source: search_results_all_rounds.csv.
 {: .figcap}
 
+> **[LINK ADDED 6 November 2026: [Search-term Bouquet](./Bouquet/). The 57
+> search terms (55 keyword, 2 forward-citation) and the snowball as balloons
+> sized by their hits, the 168 pairs that share hits, and the 1,582 shared works
+> behind them. Caption to write.]**
+
 #### Round two: 1 September to 13 October 2025
 
 ##### Graeme Sullivan, 1 September
@@ -502,6 +507,9 @@ submitted examination. 22 texts in the corpus match no graph entity at all.
 
 The full procedure is documented separately in the Knowledge-Graph
 Visualization Protocol.
+
+> **[LINK ADDED 6 November 2026: [Comps Knowledge Graph](./CompsGraph/), the
+> interactive map with its index back into the source pages.]**
 
 > **[TO WRITE: turning my own document into a corpus, and what the entities
 > that match nothing tell me.]**
