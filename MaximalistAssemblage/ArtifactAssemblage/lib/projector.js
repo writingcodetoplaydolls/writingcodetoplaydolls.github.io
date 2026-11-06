@@ -29,6 +29,14 @@ export function createMedia(src, { loop = true } = {}) {
     toggle() { video && (video.paused ? media.play() : media.pause()) },
     get muted() { return video ? video.muted : true },
     set muted(v) { if (video) video.muted = v },
+    // 0 is silent (and muted, which browsers allow before any click); anything above unmutes.
+    get volume() { return video && !video.muted ? video.volume : 0 },
+    set volume(v) {
+      if (!video) return
+      v = Math.min(1, Math.max(0, v))
+      video.volume = v; video.muted = v === 0
+      if (v > 0 && video.paused) media.play()
+    },
     get playing() { return !!video && !video.paused },
   }
   if (video) media.play()

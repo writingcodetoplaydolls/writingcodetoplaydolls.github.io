@@ -40,6 +40,13 @@ export function createTeleport({ renderer, camera, rig, controls, floors = [], f
         const dy = point.y + eye - camera.position.y
         camera.position.y += dy; controls?.target.setY(controls.target.y + dy)
       }
+      if (controls) {                          // land standing: the gaze levelled, the orbit point a few strides ahead
+        delta.subVectors(controls.target, camera.position); delta.y = 0
+        if (delta.lengthSq() < 1e-6) delta.set(0, 0, -1).applyQuaternion(camera.quaternion).setY(0)
+        if (delta.lengthSq() < 1e-6) delta.set(0, 0, -1)
+        controls.target.copy(camera.position).addScaledVector(delta.normalize(), 3)
+        controls.minDistance = Math.min(controls.minDistance, 0.5)
+      }
     }
     marker.position.copy(point).y += 0.01
     marker.visible = true
@@ -52,6 +59,8 @@ export function createTeleport({ renderer, camera, rig, controls, floors = [], f
     // call from onSelect; returns true when it consumed the hit
     onSelect(hit) {
       if (!hit || !floorSet.has(hit.object) || busy) return false
+      camera.getWorldPosition(head)
+      if (hit.point.y > head.y - 0.3) return false   // a surface over the eyes is a ceiling or a roof's underside, not a floor to stand on
       if (renderer.xr.isPresenting) { moveTo(hit.point); return true }
       busy = true
       fade.style.opacity = 1

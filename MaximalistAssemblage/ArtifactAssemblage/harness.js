@@ -1,5 +1,5 @@
 // Standalone harness for the published site. Same contract as src/main.js in the dev project
-// (a sketch exports setup / draw / onSelect / onEnterXR / onExitXR and receives the same ctx),
+// (a sketch exports setup / draw / afterRender / onSelect / onEnterXR / onExitXR and receives the same ctx),
 // but with no sketch picker and no bundler: the page's import map supplies 'three',
 // 'three/addons/' and 'lil-gui' from a CDN. Exported to the site by tools/export_site.mjs.
 
@@ -63,7 +63,7 @@ export async function run(sketch, { title = 'Sketch' } = {}) {
   const rot = new THREE.Matrix4()
   const select = (origin, direction) => {
     raycaster.set(origin, direction)
-    sketch.onSelect?.(raycaster.intersectObjects(selectables, true)[0] ?? null, ctx)
+    sketch.onSelect?.(raycaster.intersectObjects(selectables, true)[0] ?? null, ctx, raycaster.ray)
   }
   let downX = 0, downY = 0
   renderer.domElement.addEventListener('pointerdown', e => { downX = e.clientX; downY = e.clientY })
@@ -73,7 +73,7 @@ export async function run(sketch, { title = 'Sketch' } = {}) {
     if (Math.hypot(e.clientX - downX, e.clientY - downY) > 6) return
     pointer.set((e.clientX / window.innerWidth) * 2 - 1, -(e.clientY / window.innerHeight) * 2 + 1)
     raycaster.setFromCamera(pointer, camera)
-    sketch.onSelect?.(raycaster.intersectObjects(selectables, true)[0] ?? null, ctx)
+    sketch.onSelect?.(raycaster.intersectObjects(selectables, true)[0] ?? null, ctx, raycaster.ray)
   })
   const controllerModels = new XRControllerModelFactory()
   const handModels = new XRHandModelFactory()
@@ -123,5 +123,6 @@ export async function run(sketch, { title = 'Sketch' } = {}) {
     if (!renderer.xr.isPresenting) controls.update()
     sketch.draw?.(ctx, dt, timer.getElapsed())
     renderer.render(scene, camera)
+    sketch.afterRender?.(ctx, dt)         // extra passes over the finished frame: more viewports, overlays
   })
 }

@@ -1,5 +1,6 @@
 // The Unity house scene (K:\Unity\TryTeleportAgain, MainScene) rebuilt from its parts:
-//   house        NewHouseGroups.fbx placed as the scene had it, with its Floor / Walls / Ceiling colours
+//   house        NewHouseGroups.fbx placed as the scene had it, with its Floor / Walls / Ceiling colours,
+//                plus the porch cut out of the earlier export House_edit2.fbx and fitted onto its west wall
 //   sun          DayNightController: one day per minute, sunrise 0.25, sunset 0.75, interior lights at night
 //   props        the rock (a 90× boulder out in the yard) and Greg on his table, with the spotlight over him
 //   projector    the Cell Division video on the living-room wall, as a screen or as a thrown beam
@@ -23,6 +24,50 @@ const CLIPS = {
   'VideoProjector DR': '/assets/video/cell-division.mp4',
   'VideoProjector BR': '/assets/video/sunsets.mp4',
 }
+// The porch. The scene's house, NewHouseGroups.fbx, is a rebuild of the SketchUp house that lost
+// its porch; the earlier export House_edit2.fbx still has it. Both come from the same model at the
+// same numbers, but the export is turned 90° and offset, so the porch is cut out of the export
+// (everything beyond the wall line, minus the scale figure) and fitted onto the rebuild's west wall.
+const PORCH = {
+  file: '/assets/models/house/House_edit2.fbx',
+  cut: 0.5,                                               // keep what lies beyond z = 0.5 in the export's own units (the wall itself is at z = 0)
+  fit: { rotationY: Math.PI / 2, offset: [316, 0, 0] },   // export units → rebuild units, measured 2026-10-08 from both files' bounding boxes
+}
+
+// Cut the porch out of the export: every triangle clipped to the half-space z >= cut, skipping the
+// figure. Returns one flat-shaded mesh in the export's own units.
+async function buildPorch(THREE) {
+  const { object } = await loadModel(PORCH.file)
+  object.updateMatrixWorld(true)
+  const out = [], v = [new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()]
+  const clip = (poly) => {                                 // Sutherland–Hodgman against z >= cut
+    const res = []
+    for (let i = 0; i < poly.length; i++) {
+      const a = poly[i], b = poly[(i + 1) % poly.length], ina = a.z >= PORCH.cut, inb = b.z >= PORCH.cut
+      if (ina) res.push(a)
+      if (ina !== inb) { const t = (PORCH.cut - a.z) / (b.z - a.z); res.push(a.clone().lerp(b, t)) }
+    }
+    return res
+  }
+  object.traverse(o => {
+    if (!o.isMesh) return
+    const mats = Array.isArray(o.material) ? o.material : [o.material]
+    if (mats.some(m => /^Marc_/.test(m.name))) return
+    const g = o.geometry, pos = g.attributes.position, idx = g.index
+    const n = idx ? idx.count : pos.count
+    for (let i = 0; i < n; i += 3) {
+      for (let k = 0; k < 3; k++) v[k].fromBufferAttribute(pos, idx ? idx.getX(i + k) : i + k).applyMatrix4(o.matrixWorld)
+      if (v.every(p => p.z < PORCH.cut)) continue
+      const poly = v.every(p => p.z >= PORCH.cut) ? v.map(p => p.clone()) : clip(v)
+      for (let k = 1; k + 1 < poly.length; k++) out.push(...poly[0].toArray(), ...poly[k].toArray(), ...poly[k + 1].toArray())
+    }
+  })
+  const geo = new THREE.BufferGeometry()
+  geo.setAttribute('position', new THREE.Float32BufferAttribute(out, 3))
+  geo.computeVertexNormals()
+  const mesh = new THREE.Mesh(geo); mesh.name = 'porch'
+  return mesh
+}
 const ASSETS = {                                   // Unity asset path → file in public/
   'Models/NewHouseGroups.fbx': '/assets/models/house/NewHouseGroups.fbx',
   'Models/rock/model_mesh.obj': '/assets/models/props/rock.glb',
@@ -34,7 +79,7 @@ const MATERIALS = {                                // Unity .mat colours (gamma 
   'Materials/Ceiling.mat': [0.9622642, 0.9622642, 0.9622642],
 }
 
-const params = { view: 'walk', eyeHeight: 1.6, solidWalls: true, time: 0.35, dayLength: 60, paused: false, exposure: 0.45, greg: true, gregSpot: false, rock: true, edges: false }
+const params = { view: 'walk', eyeHeight: 1.6, solidWalls: true, volume: 1, time: 0.35, dayLength: 60, paused: false, exposure: 0.45, greg: true, gregSpot: false, rock: true, edges: false }
 let T, scene_, renderer_, camera_, controls_, hint_
 let sky, sun, hemi, dayNight, teleport, walk, houseCenter, markers = [], edgeLines = []
 const devices = []                                  // the wall screen and the projectors
@@ -92,29 +137,37 @@ export async function setup(ctx) {
   applyTransform(house, houseRec)
   houseFbx.scale.setScalar(fbxUnitScale(houseFbx))                 // file units → metres; the prefab's 2.75 is on the group
   houseFbx.rotation.y = IMPORTED_MODEL_SPIN_Y                      // see unity.js: Unity mirrored X on import, we mirror Z
-  const floors = []
+  const floors = [], walkFloors = []
   // SketchUp exported every face twice, front and back, in the same plane, and the ceiling exists
   // in two meshes (the painted Mesh3 and an unnamed duplicate in Mesh8). So: single-sided
   // materials, since the back copies are already there, and the painted surfaces pulled a hair
   // toward the camera so they win over the duplicates instead of flickering against them.
+  const painted = (color) => new THREE.MeshStandardMaterial({ color, roughness: 0.9, side: THREE.FrontSide, polygonOffset: true, polygonOffsetFactor: -1, polygonOffsetUnits: -1 })
+  const addEdges = o => {
+    const lines = new THREE.LineSegments(new THREE.EdgesGeometry(o.geometry, 25), new THREE.LineBasicMaterial({ color: 0x1a1a1a, transparent: true, opacity: 0.4 }))
+    lines.visible = params.edges; lines.raycast = () => {}; o.add(lines); edgeLines.push(lines)   // lines must never catch a click
+  }
   houseFbx.traverse(o => {
     if (!o.isMesh) return
     const override = houseRec.materialOverrides[o.name]
     if (override && MATERIALS[override]) {
-      o.material = new THREE.MeshStandardMaterial({
-        color: unityColor(MATERIALS[override]), roughness: 0.9, side: THREE.FrontSide,
-        polygonOffset: true, polygonOffsetFactor: -1, polygonOffsetUnits: -1,
-      })
+      o.material = painted(unityColor(MATERIALS[override]))
       if (override.includes('Floor')) floors.push(o)
     } else {
       const mats = Array.isArray(o.material) ? o.material : [o.material]
       const conv = mats.map(m => new THREE.MeshStandardMaterial({ color: m.color ?? 0xffffff, roughness: 0.9, side: THREE.FrontSide }))
       o.material = Array.isArray(o.material) ? conv : conv[0]
     }
-    const lines = new THREE.LineSegments(new THREE.EdgesGeometry(o.geometry, 25), new THREE.LineBasicMaterial({ color: 0x1a1a1a, transparent: true, opacity: 0.4 }))
-    lines.visible = params.edges; lines.raycast = () => {}; o.add(lines); edgeLines.push(lines)   // lines must never catch a click
+    addEdges(o)
   })
-  const triangles = prepareMeshes(houseFbx)
+  // the porch from the other export, in the wall colour, fitted onto the rebuild's west wall
+  const porch = await buildPorch(THREE)
+  porch.material = painted(unityColor(MATERIALS['Materials/Walls.mat']))
+  porch.rotation.y = PORCH.fit.rotationY; porch.position.fromArray(PORCH.fit.offset)
+  const porchFit = new THREE.Group(); porchFit.add(porch); house.add(porchFit)
+  porchFit.scale.setScalar(fbxUnitScale(houseFbx)); porchFit.rotation.y = IMPORTED_MODEL_SPIN_Y   // the same placement as the house
+  addEdges(porch); walkFloors.push(porch)                           // its deck is walked on; its posts are walls
+  const triangles = prepareMeshes(houseFbx) + prepareMeshes(porch)
   scene.add(selectable(house))
   const houseBox = new THREE.Box3().setFromObject(house)
   houseCenter = houseBox.getCenter(new THREE.Vector3())
@@ -184,7 +237,7 @@ export async function setup(ctx) {
   teleport = createTeleport({ renderer, camera, rig, controls, floors: [ground, ...floors] })
   scene.add(teleport.marker)
   walk = createWalkControls({
-    camera, domElement: renderer.domElement, controls, floors: [ground, ...floors], eyeHeight: params.eyeHeight,
+    camera, domElement: renderer.domElement, controls, floors: [ground, ...floors, ...walkFloors], eyeHeight: params.eyeHeight,
     obstacles: [house, rockObj, gregObj].filter(Boolean), solidWalls: params.solidWalls,
   })
   const setView = v => { params.view = v; v === 'walk' ? walk.enable() : walk.disable() }
@@ -196,7 +249,11 @@ export async function setup(ctx) {
   dayNight.update(0); refreshEnvironment()
 
   // ---- start outside the front at eye level, looking at the house ------------
-  const start = { position: new THREE.Vector3(houseCenter.x + 6, params.eyeHeight, houseBox.max.z + 9), target: houseCenter.clone().setY(params.eyeHeight), view: params.view }
+  // The front door: the 1 m doorway in the west wall, under the porch (ray scan 2026-10-08: wall at
+  // x −0.08, door centred at z −6.75; the porch edge is at x −2.5). Start 2.5 m outside the porch,
+  // at eye level, looking through it at the door.
+  const DOOR = new THREE.Vector3(-0.08, 0, -6.75), PORCH_EDGE_X = -2.5
+  const start = { position: new THREE.Vector3(PORCH_EDGE_X - 2.5, params.eyeHeight, DOOR.z), target: new THREE.Vector3(DOOR.x, 1.2, DOOR.z), view: params.view }
   let viewCtl = null
   const reset = () => {                                               // the beginning, for anyone who gets lost
     walk.disable(); camera.position.copy(start.position); controls.target.copy(start.target); camera.lookAt(start.target)
@@ -211,18 +268,21 @@ export async function setup(ctx) {
   viewCtl = gui.add(params, 'view', ['walk', 'orbit']).name('view').onChange(setView)
   gui.add(params, 'eyeHeight', 1.0, 2.1, 0.01).name('eye height m').onChange(v => { walk.state.eyeHeight = v })
   gui.add(params, 'solidWalls').name('solid walls').onChange(v => { walk.state.solidWalls = v })
+  const applyVolume = dev => { dev.api.media.volume = (dev.st?.volume ?? 0) * params.volume }   // each device's own level, scaled by the master
+  gui.add(params, 'volume', 0, 1, 0.05).name('master volume').onChange(() => devices.forEach(applyVolume))
   const fSun = gui.addFolder('sun')
   fSun.add(params, 'time', 0, 1, 0.001).name('time of day').listen().onChange(v => { dayNight.time = v; refreshEnvironment() })
   fSun.add(params, 'dayLength', 10, 600, 1).name('seconds per day').onChange(v => { dayNight.state.secondsInFullDay = v })
   fSun.add(params, 'paused').onChange(v => { dayNight.state.paused = v })
   for (const dev of devices) {
     const f = gui.addFolder(dev.name); f.close()
-    const st = { on: dev.on, sound: false, lightPath: dev.api.lightPath ?? false }
+    const st = { on: dev.on, volume: 0, lightPath: dev.api.lightPath ?? false }
+    dev.st = st
     dev.api.visible = dev.on
     if (!dev.on) dev.api.media.pause()                                  // a hidden projector should not keep decoding video
     f.add(st, 'on').onChange(v => { dev.api.visible = v; v ? dev.api.media.play() : dev.api.media.pause() })
     f.add({ playPause: () => dev.api.media.toggle() }, 'playPause').name('play / pause')
-    f.add(st, 'sound').onChange(v => { dev.api.media.muted = !v; if (v) dev.api.media.play() })
+    f.add(st, 'volume', 0, 1, 0.05).onChange(() => applyVolume(dev))   // 0 is silent; the master scales it
     if ('lightPath' in dev.api && dev.api.spot) f.add(st, 'lightPath').name('light path').onChange(v => { dev.api.lightPath = v })
   }
   const fProps = gui.addFolder('props')
@@ -256,8 +316,8 @@ export function draw(ctx, dt) {
   if (clock !== lastClock) {
     lastClock = clock
     hint_(params.view === 'walk'
-      ? `${clock} · drag to look · W A S D to walk, Shift to hurry · click a floor to teleport`
-      : `${clock} · drag to orbit, wheel to zoom · click a floor to teleport, anything else to mark it`)
+      ? `${clock} · left drag turns, right drag pans, wheel steps · W A S D to walk, Shift to hurry · click a floor to teleport`
+      : `${clock} · drag to orbit, wheel to zoom, W A S D Q E to fly · click a floor to teleport, anything else to mark it`)
   }
 }
 
