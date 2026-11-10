@@ -1,0 +1,244 @@
+<title>Braidotti Root System</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: an inverted time-tree — a vertical trunk (newest top, oldest bottom);
+   each text is a node whose roots (citations / terms / phrasing / index) unfurl beneath it. */
+:root{
+  --bg:#f3f5f1; --surface:#ffffff; --surface-2:#eef1ec; --fg:#1a211c; --muted:#5d6a60;
+  --line:#d4dcd3; --trunk:#b98a3e; --trunk-soft:#e7d7b6; --accent:#8a6a2a;
+  --cite:#3f72b0; --term:#2f8d63; --phrase:#8858b0; --index:#c06a2f;
+  --cite-bg:#eaf1f9; --term-bg:#e6f3ec; --phrase-bg:#f1eafa; --index-bg:#f9efe6;
+  --shadow:0 1px 2px rgba(20,30,22,.06),0 6px 20px rgba(20,30,22,.05);
+  --display:"Fraunces",Georgia,serif; --body:"Spline Sans",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#11140f; --surface:#191e16; --surface-2:#1f261c; --fg:#e8ece4; --muted:#9bab9d;
+  --line:#2c362b; --trunk:#c79a4d; --trunk-soft:#50401f; --accent:#d8b265;
+  --cite:#6fa3dd; --term:#5cc08b; --phrase:#b58ddf; --index:#e0996a;
+  --cite-bg:#15202e; --term-bg:#14241b; --phrase-bg:#201a2c; --index-bg:#2a1d12;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 22px rgba(0,0,0,.28); color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#11140f; --surface:#191e16; --surface-2:#1f261c; --fg:#e8ece4; --muted:#9bab9d;
+  --line:#2c362b; --trunk:#c79a4d; --trunk-soft:#50401f; --accent:#d8b265;
+  --cite:#6fa3dd; --term:#5cc08b; --phrase:#b58ddf; --index:#e0996a;
+  --cite-bg:#15202e; --term-bg:#14241b; --phrase-bg:#201a2c; --index-bg:#2a1d12;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 22px rgba(0,0,0,.28); color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);line-height:1.5;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0}
+header{padding-block:32px 18px}
+h1{font-family:var(--display);font-weight:560;font-size:clamp(1.9rem,4.5vw,2.9rem);
+  margin:0 0 .3em;letter-spacing:-.01em;text-wrap:balance;font-optical-sizing:auto}
+.sub{color:var(--muted);max-width:60ch;font-size:1rem;margin:0}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;margin-top:20px}
+.btn{font-family:var(--body);font-size:.84rem;color:var(--fg);background:var(--surface);
+  border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer;
+  box-shadow:var(--shadow)}
+.btn:hover{border-color:var(--trunk)}
+.chip{font-size:.82rem;border:1px solid var(--line);background:var(--surface);color:var(--muted);
+  border-radius:999px;padding:6px 13px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.legend{display:flex;flex-wrap:wrap;gap:12px;margin-left:auto;align-items:center}
+.lg{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;color:var(--muted);
+  font-family:var(--mono)}
+.dot{width:10px;height:10px;border-radius:50%}
+.lg.cite .dot{background:var(--cite)} .lg.term .dot{background:var(--term)}
+.lg.phrase .dot{background:var(--phrase)} .lg.index .dot{background:var(--index)}
+
+/* tree */
+.tree{margin:10px 0 60px}
+.era{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);margin:26px 0 8px 84px}
+.node-row{display:grid;grid-template-columns:62px 28px 1fr;align-items:stretch}
+.year{font-family:var(--mono);font-size:.82rem;color:var(--muted);text-align:right;
+  padding:18px 10px 0 0;font-variant-numeric:tabular-nums}
+.rail{position:relative}
+.rail::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;
+  transform:translateX(-50%);background:var(--trunk-soft)}
+.knot{position:absolute;left:50%;top:22px;width:13px;height:13px;border-radius:50%;
+  transform:translate(-50%,-50%);background:var(--surface);border:2.5px solid var(--trunk);
+  cursor:pointer;z-index:2;transition:transform .15s}
+.node.open .knot{background:var(--trunk);transform:translate(-50%,-50%) scale(1.12)}
+.branch{position:absolute;left:50%;top:22px;height:2px;width:14px;background:var(--trunk-soft)}
+.card{margin:8px 0 8px 6px;background:var(--surface);border:1px solid var(--line);
+  border-radius:12px;box-shadow:var(--shadow);overflow:hidden}
+.head{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;padding:13px 16px;
+  cursor:pointer;user-select:none}
+.head:hover .ttl{color:var(--accent)}
+.ttl{font-family:var(--display);font-size:1.12rem;font-weight:540;margin:0;
+  font-optical-sizing:auto;transition:color .15s}
+.badge{font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--muted);border:1px solid var(--line);border-radius:5px;padding:2px 6px}
+.badge.co{color:var(--trunk);border-color:var(--trunk-soft)}
+.counts{display:flex;gap:6px;margin-left:auto;flex-wrap:wrap}
+.cnt{font-family:var(--mono);font-size:.7rem;padding:2px 7px;border-radius:999px;
+  font-variant-numeric:tabular-nums}
+.cnt.cite{color:var(--cite);background:var(--cite-bg)} .cnt.term{color:var(--term);background:var(--term-bg)}
+.cnt.phrase{color:var(--phrase);background:var(--phrase-bg)} .cnt.index{color:var(--index);background:var(--index-bg)}
+
+/* roots */
+.roots{display:none;border-top:1px dashed var(--line);padding:4px 16px 18px}
+.node.open .roots{display:grid}
+.roots{grid-template-columns:repeat(4,1fr);gap:18px}
+.rootcol{min-width:0;position:relative;padding-top:16px}
+.rootcol::before{content:"";position:absolute;top:0;left:10px;width:2px;height:12px;border-radius:2px}
+.rootcol.cite::before{background:var(--cite)} .rootcol.term::before{background:var(--term)}
+.rootcol.phrase::before{background:var(--phrase)} .rootcol.index::before{background:var(--index)}
+.rootcol h3{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;
+  margin:0 0 10px;color:var(--muted)}
+.rootcol.cite h3{color:var(--cite)} .rootcol.term h3{color:var(--term)}
+.rootcol.phrase h3{color:var(--phrase)} .rootcol.index h3{color:var(--index)}
+.rlist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:5px}
+.rlist li{font-size:.85rem;line-height:1.35;color:var(--fg);display:flex;gap:6px;
+  align-items:baseline;justify-content:space-between}
+.rlist .n{font-family:var(--mono);font-size:.72rem;color:var(--muted);
+  font-variant-numeric:tabular-nums;flex:none}
+.rlist a{color:var(--cite);text-decoration:none;border-bottom:1px solid transparent}
+.rlist a:hover{border-bottom-color:currentColor}
+.rlist .t{min-width:0;overflow-wrap:anywhere}
+.empty{color:var(--muted);font-size:.8rem;font-style:italic}
+.conf{font-family:var(--mono);font-size:.6rem;opacity:.7}
+footer{color:var(--muted);font-size:.78rem;padding:0 0 50px;max-width:70ch}
+footer code{font-family:var(--mono);background:var(--surface-2);padding:1px 5px;border-radius:4px}
+@media (max-width:720px){
+  .roots{grid-template-columns:1fr 1fr}
+  .era{margin-left:0}
+}
+@media (max-width:480px){
+  .node-row{grid-template-columns:40px 22px 1fr}
+  .year{font-size:.72rem;padding-right:6px}
+  .roots{grid-template-columns:1fr}
+  .legend{width:100%;margin-left:0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Rosi Braidotti — Root System</h1>
+    <p class="sub">An inverted tree of the corpus: time grows upward, oldest at the bottom. Each
+      text is a node on the trunk — open one to unfurl its roots, the citations, key terms,
+      phrasing, and index terms that feed it. Connections between roots, across texts and over
+      time, come next.</p>
+    <div class="toolbar">
+      <button class="btn" id="expand">Open all roots</button>
+      <button class="btn" id="collapse">Collapse</button>
+      <span class="chip" data-filter="all" aria-pressed="true">All</span>
+      <span class="chip" data-filter="solo" aria-pressed="false">Solo</span>
+      <span class="chip" data-filter="co" aria-pressed="false">Co-authored</span>
+      <span class="legend">
+        <span class="lg cite"><span class="dot"></span>citations</span>
+        <span class="lg term"><span class="dot"></span>terms</span>
+        <span class="lg phrase"><span class="dot"></span>phrasing</span>
+        <span class="lg index"><span class="dot"></span>index</span>
+      </span>
+    </div>
+  </header>
+  <div class="tree" id="tree"></div>
+  <footer id="foot"></footer>
+</div>
+
+<script id="data" type="application/json">{"author": "Rosi Braidotti", "generated": "braidotti-voice pipeline", "nodes": [{"id": "2005-affirming-the-affirmative-on-nomadic-affectivity", "title": "Affirming the Affirmative On Nomadic Affectivity", "year": 2005, "coauthored": false, "role": "sole", "kind": "essay", "citations": [{"author": "Colebrook", "year": 2000, "n": 4, "openalex_id": "W4210995418", "resolved_title": "Is Sexual Difference a Problem?"}, {"author": "Parisi", "year": 2004, "n": 4, "openalex_id": "W2284532106", "resolved_title": "Abstract Sex: Philosophy, Biotechnology and the Mutations of Desire"}, {"author": "Braidotti", "year": 2002, "n": 2, "openalex_id": "", "resolved_title": ""}, {"author": "Bukatman", "year": 1993, "n": 2, "openalex_id": "W4229994798", "resolved_title": "Terminal Identity"}, {"author": "Fall", "year": 2005, "n": 1, "openalex_id": "", "resolved_title": ""}, {"author": "Fukuyama", "year": 2002, "n": 1, "openalex_id": "", "resolved_title": ""}, {"author": "Haraway", "year": 1997, "n": 1, "openalex_id": "W74819520", "resolved_title": "Modest_Witness@Second_Millennium. FemaleMan_Meets_OncoMouse"}, {"author": "Sobchack", "year": 1995, "n": 1, "openalex_id": "", "resolved_title": ""}, {"author": "Gatens and Lloyd", "year": 1999, "n": 1, "openalex_id": "W607303544", "resolved_title": "Collective Imaginings: Spinoza, Past and Present"}, {"author": "Shiva", "year": 1997, "n": 1, "openalex_id": "W3021807209", "resolved_title": "Biopiracy: The Plunder of Nature and Knowledge"}, {"author": "Wilson", "year": 1998, "n": 1, "openalex_id": "", "resolved_title": ""}, {"author": "Grosz", "year": 2005, "n": 1, "openalex_id": "", "resolved_title": ""}, {"author": "Bryld and Lykke", "year": 1999, "n": 1, "openalex_id": "", "resolved_title": ""}, {"author": "Balsamo", "year": 1996, "n": 1, "openalex_id": "", "resolved_title": ""}], "terms": [{"term": "rhizomes", "score": 0.0037}, {"term": "html", "score": 0.0035}, {"term": "utm", "score": 0.0035}, {"term": "chatgpt", "score": 0.0035}, {"term": "parisi", "score": 0.0019}, {"term": "genetic", "score": 0.0013}, {"term": "guattari's", "score": 0.0013}, {"term": "machinic", "score": 0.0011}, {"term": "inter-connections", "score": 0.0011}, {"term": "metaphysics", "score": 0.001}, {"term": "becomings", "score": 0.0009}, {"term": "metaphysical", "score": 0.0009}, {"term": "sex", "score": 0.0008}, {"term": "evolution", "score": 0.0008}], "phrases": [{"term": "sexual difference", "count": 17}, {"term": "posthuman bodies", "count": 4}, {"term": "external forces", "count": 3}, {"term": "lacanian psychoanalysis", "count": 2}, {"term": "advanced world", "count": 2}, {"term": "terminal identity", "count": 2}, {"term": "real bodies", "count": 2}, {"term": "genetic determinism", "count": 2}, {"term": "molecular biology", "count": 2}, {"term": "new age", "count": 2}, {"term": "humanistic subject", "count": 2}, {"term": "metaphysical question", "count": 2}], "index": [], "counts": {"citations": 14, "terms": 14, "phrases": 12, "index": 0}}, {"id": "2006-affirmation-versus-vulnerability-on-contemporary-ethical-debates", "title": "Affirmation versus Vulnerability On Contemporary Ethical Debates", "year": 2006, "coauthored": false, "role": "sole", "kind": "essay", "citations": [{"author": "Lloyd", "year": 1996, "n": 2, "openalex_id": "", "resolved_title": ""}, {"author": "Braidotti", "year": 2002, "n": 2, "openalex_id": "", "resolved_title": ""}, {"author": "Critchley", "year": 1992, "n": 1, "openalex_id": "", "resolved_title": ""}, {"author": "Ansell-Pearson", "year": 1997, "n": 1, "openalex_id": "", "resolved_title": ""}, {"author": "Lloyd", "year": 1994, "n": 1, "openalex_id": "", "resolved_title": ""}, {"author": "Griffin and Braidotti", "year": 2002, "n": 1, "openalex_id": "", "resolved_title": ""}, {"author": "Haraway", "year": 1997, "n": 1, "openalex_id": "W74819520", "resolved_title": "Modest_Witness@Second_Millennium. FemaleMan_Meets_OncoMouse"}, {"author": "Balibar", "year": 2002, "n": 1, "openalex_id": "", "resolved_title": ""}, {"author": "Gilroy", "year": 2000, "n": 1, "openalex_id": "", "resolved_title": ""}, {"author": "Laplanche", "year": 1976, "n": 1, "openalex_id": "", "resolved_title": ""}, {"author": "Grosz", "year": 2004, "n": 1, "openalex_id": "W4233334313", "resolved_title": "The Nick of Time"}, {"author": "Bauman", "year": 1993, "n": 1, "openalex_id": "", "resolved_title": ""}], "terms": [{"term": "affirmation", "score": 0.0032}, {"term": "versus", "score": 0.0023}, {"term": "compensation", "score": 0.0017}, {"term": "vulnerability", "score": 0.0017}, {"term": "pain", "score": 0.0014}, {"term": "kantian", "score": 0.0014}, {"term": "freedom", "score": 0.0013}, {"term": "behavior", "score": 0.0012}, {"term": "morality", "score": 0.0012}, {"term": "limits", "score": 0.0011}, {"term": "affirmative", "score": 0.0008}, {"term": "wound", "score": 0.0008}, {"term": "subject's", "score": 0.0008}, {"term": "duration", "score": 0.0007}], "phrases": [{"term": "versus vulnerability", "count": 16}, {"term": "affirmation versus", "count": 15}, {"term": "nomadic ethics", "count": 5}, {"term": "poststructuralist philosophy", "count": 4}, {"term": "eternal return", "count": 4}, {"term": "positive passions", "count": 6}, {"term": "ethical behavior", "count": 3}, {"term": "temporal dimension", "count": 3}, {"term": "negative affects", "count": 3}, {"term": "ethical question", "count": 3}, {"term": "moral philosophy", "count": 4}, {"term": "negative passions", "count": 5}], "index": [], "counts": {"citations": 12, "terms": 14, "phrases": 12, "index": 0}}, {"id": "2006-posthuman-all-too-human-towards-a-new-process-ontology", "title": "Posthuman, All Too Human Towards a New Process Ontology", "year": 2006, "coauthored": false, "role": "sole", "kind": "essay", "citations": [{"author": "Haraway", "year": 1991, "n": 2, "openalex_id": "", "resolved_title": ""}, {"author": "Haraway", "year": 1997, "n": 1, "openalex_id": "W74819520", "resolved_title": "Modest_Witness@Second_Millennium. FemaleMan_Meets_OncoMouse"}, {"author": "Deleuze and Guattari", "year": 1980, "n": 1, "openalex_id": "", "resolved_title": ""}, {"author": "Penley and Ross", "year": 1991, "n": 1, "openalex_id": "", "resolved_title": ""}, {"author": "Braidotti", "year": 2002, "n": 1, "openalex_id": "", "resolved_title": ""}, {"author": "Boundas and Olkowski", "year": 1994, "n": 1, "openalex_id": "W3006429420", "resolved_title": "Gilles Deleuze and the Theater of Philosophy"}, {"author": "Haraway", "year": 2000, "n": 1, "openalex_id": "W640700074", "resolved_title": "How Like a Leaf: An Interview with Thyrza Nichols Goodeve"}], "terms": [{"term": "haraway's", "score": 0.0049}, {"term": "oedipal", "score": 0.0021}, {"term": "oncomouse", "score": 0.0021}, {"term": "scienti", "score": 0.0018}, {"term": "companion", "score": 0.0016}, {"term": "post-human", "score": 0.0016}, {"term": "guration", "score": 0.0016}, {"term": "gurations", "score": 0.0016}, {"term": "nity", "score": 0.0012}, {"term": "rede", "score": 0.0011}, {"term": "nition", "score": 0.0011}, {"term": "unconscious", "score": 0.0011}, {"term": "becoming-animal", "score": 0.0011}, {"term": "ction", "score": 0.0011}], "phrases": [{"term": "companion species", "count": 9}, {"term": "culture society", "count": 6}, {"term": "haraway's work", "count": 5}, {"term": "science ction", "count": 5}, {"term": "theory culture", "count": 6}, {"term": "af nity", "count": 4}, {"term": "rede nition", "count": 3}, {"term": "af rmative", "count": 3}, {"term": "process ontology", "count": 4}, {"term": "donna haraway's", "count": 4}, {"term": "kinship system", "count": 4}, {"term": "nature culture", "count": 6}], "index": [], "counts": {"citations": 7, "terms": 14, "phrases": 12, "index": 0}}, {"id": "2011-nomadic-theory-the-portable-rosi-braidotti", "title": "Nomadic Theory The Portable Rosi Braidotti", "year": 2011, "coauthored": false, "role": "sole", "kind": "book", "citations": [{"author": "Braidotti", "year": 2011, "n": 20, "openalex_id": "", "resolved_title": ""}, {"author": "Braidotti", "year": 2002, "n": 17, "openalex_id": "", "resolved_title": ""}, {"author": "Braidotti", "year": 2006, "n": 12, "openalex_id": "W210467782", "resolved_title": "Transpositions: On Nomadic Ethics"}, {"author": "Deleuze and Guattari", "year": 1980, "n": 9, "openalex_id": "", "resolved_title": ""}, {"author": "Rose", "year": 2001, "n": 8, "openalex_id": "", "resolved_title": ""}, {"author": "Colebrook", "year": 2000, "n": 8, "openalex_id": "W4210995418", "resolved_title": "Is Sexual Difference a Problem?"}, {"author": "Gilroy", "year": 2000, "n": 8, "openalex_id": "", "resolved_title": ""}, {"author": "Braidotti", "year": 1991, "n": 7, "openalex_id": "W1499635458", "resolved_title": "Patterns of Dissonance: A Study of Women in Contemporary Philosophy"}, {"author": "Haraway", "year": 1997, "n": 7, "openalex_id": "W74819520", "resolved_title": "Modest_Witness@Second_Millennium. FemaleMan_Meets_OncoMouse"}, {"author": "Grosz", "year": 2004, "n": 7, "openalex_id": "W4233334313", "resolved_title": "The Nick of Time"}, {"author": "Braidotti", "year": 1994, "n": 6, "openalex_id": "", "resolved_title": ""}, {"author": "Lloyd", "year": 1996, "n": 6, "openalex_id": "", "resolved_title": ""}, {"author": "Deleuze and Guattari", "year": 1972, "n": 5, "openalex_id": "", "resolved_title": ""}, {"author": "Hayles", "year": 1999, "n": 5, "openalex_id": "W1601400566", "resolved_title": "How We Became Posthuman"}], "terms": [{"term": "postsecular", "score": 0.0009}, {"term": "affirmation", "score": 0.0006}, {"term": "vita", "score": 0.0006}, {"term": "center", "score": 0.0005}, {"term": "citizenship", "score": 0.0005}, {"term": "secularism", "score": 0.0005}, {"term": "nonunitary", "score": 0.0004}, {"term": "minorities", "score": 0.0004}, {"term": "religious", "score": 0.0004}, {"term": "specific", "score": 0.0003}, {"term": "nomadic", "score": 0.0003}, {"term": "flows", "score": 0.0003}, {"term": "diana", "score": 0.0003}, {"term": "christian", "score": 0.0003}], "phrases": [{"term": "nomadic thought", "count": 52}, {"term": "subject positions", "count": 23}, {"term": "european union", "count": 37}, {"term": "life itself", "count": 36}, {"term": "critical theory", "count": 42}, {"term": "advanced capitalism", "count": 59}, {"term": "sexual difference", "count": 57}, {"term": "positive passions", "count": 26}, {"term": "intensive genre", "count": 14}, {"term": "oppositional consciousness", "count": 14}, {"term": "bios zoe", "count": 13}, {"term": "political subjectivity", "count": 22}], "index": [{"term": "Deleuze, Gilles, 1, 28, 36, 136–37, 150, 151, 162, 203, 209, 222, 267, 271, 275–76, 290; on addiction", "pages": "17"}, {"term": "Foucault, Michel, 19, 52, 62–63, 142, 205, 211, 251, 267, 269–71, 316, 328–30; on sexuality", "pages": "15"}, {"term": "Haraway, Donna, 105, 122, 171, 198, 220, 237, 243, 328–30; on cyborgs, 65–66, 68–69; on “informatics of", "pages": "13"}, {"term": "Guattari, Felix, 5–6, 31, 37, 150, 162, 209, 222, 267, 271; on allopoietic and autopoietic systems", "pages": "12"}, {"term": "13, 20, 121, 129, 216, 271–72; nomadic thought and, 3–5, 8, 19; political compared to, 269; positive", "pages": "12"}, {"term": "Becoming-minoritarian, 32, 35, 36–43; community and, 53; in EU, 240, 242–45, 257–59; figurations of", "pages": "11"}, {"term": "Ethics: accountability and, 300; of affirmation, 162–63, 286, 288, 292, 294, 304, 314; with animals", "pages": "11"}, {"term": "276–77; politics of, 137, 271–72; postmodern, 129–30; postsecularism’s challenge for", "pages": "11"}, {"term": "Affirmation: becoming and, 31; Deleuze on, 281–84; eros of, 162–65; ethics of", "pages": "10"}, {"term": "29, 31, 42; meditation and, 234–35; minorities of, 29–30; music and, 110; politics of, 202–3; potentia", "pages": "10"}, {"term": "and, 352–53; as event, 343; freedom in, 344; future and, 340, 351; in life, 348–49; necessity of", "pages": "10"}, {"term": "239–40, 249–50, 253; feminism and, 248–49, 259; flexible citizenship within, 257–59; globalization", "pages": "10"}, {"term": "and, 248–49, 259; in Europe, 184–85, 191–96; figurations of, 216–17; global diaspora and", "pages": "10"}, {"term": "and, 186, 190–91; idealized, 187; paradoxes of, 193–94; politics and, 180; religion and", "pages": "10"}, {"term": "Becoming: affirmation and, 31; body and, 162; desire and, 154–55, 167–68, 313; dissymmetry and", "pages": "9"}, {"term": "Cyborgs, 57; body of, 66–67; figurations of, 66; gender of, 68; Haraway on, 65–66, 68–69; nomadic", "pages": "9"}, {"term": "96; of bioegalitarianism, 112–14, 210, 305; chaosmosis and, 114–15; of compassion, 219, 341; in", "pages": "9"}, {"term": "1; protection of, 317; of respect, 238; of sexual difference, 147–48; of sustainability", "pages": "9"}], "counts": {"citations": 14, "terms": 14, "phrases": 12, "index": 18}}, {"id": "2014-writing-as-a-nomadic-subject", "title": "Writing as a Nomadic Subject", "year": 2014, "coauthored": false, "role": "sole", "kind": "essay", "citations": [], "terms": [{"term": "writing", "score": 0.0035}, {"term": "writer", "score": 0.0012}, {"term": "globalized", "score": 0.0009}, {"term": "nomadic", "score": 0.0008}, {"term": "in-depth", "score": 0.0008}, {"term": "woolf's", "score": 0.0008}, {"term": "style", "score": 0.0008}, {"term": "nomadism", "score": 0.0008}, {"term": "intransitive", "score": 0.0007}, {"term": "rmation", "score": 0.0007}, {"term": "speci", "score": 0.0007}, {"term": "cation", "score": 0.0007}, {"term": "post-colonial", "score": 0.0007}, {"term": "mobility", "score": 0.0006}], "phrases": [{"term": "nomadic subject", "count": 19}, {"term": "nomadic subjectivity", "count": 10}, {"term": "conceptual creativity", "count": 4}, {"term": "george eliot", "count": 3}, {"term": "af nity", "count": 3}, {"term": "globalized world", "count": 3}, {"term": "nomadic becoming", "count": 3}, {"term": "virginia woolf", "count": 4}, {"term": "advanced capitalism", "count": 8}, {"term": "rede nition", "count": 2}, {"term": "cosmic energy", "count": 2}, {"term": "de ne", "count": 2}], "index": [], "counts": {"citations": 0, "terms": 14, "phrases": 12, "index": 0}}, {"id": "2019-a-theoretical-framework-for-the-critical-posthumanities", "title": "A Theoretical Framework for the Critical Posthumanities", "year": 2019, "coauthored": false, "role": "sole", "kind": "essay", "citations": [{"author": "Braidotti", "year": 2013, "n": 4, "openalex_id": "", "resolved_title": ""}, {"author": "Braidotti", "year": 2002, "n": 4, "openalex_id": "", "resolved_title": ""}, {"author": "Braidotti", "year": 2011, "n": 4, "openalex_id": "", "resolved_title": ""}, {"author": "Braidotti", "year": 2006, "n": 4, "openalex_id": "W210467782", "resolved_title": "Transpositions: On Nomadic Ethics"}, {"author": "Parikka", "year": 2015, "n": 3, "openalex_id": "", "resolved_title": ""}, {"author": "Braidotti", "year": 1994, "n": 3, "openalex_id": "", "resolved_title": ""}, {"author": "Deleuze", "year": 1988, "n": 2, "openalex_id": "W593697089", "resolved_title": "Spinoza: Practical Philosophy"}, {"author": "Protevi", "year": 2013, "n": 2, "openalex_id": "W4210913059", "resolved_title": "Life, War, Earth"}, {"author": "Haraway", "year": 1997, "n": 2, "openalex_id": "W74819520", "resolved_title": "Modest_Witness@Second_Millennium. FemaleMan_Meets_OncoMouse"}, {"author": "Stimpson", "year": 2016, "n": 2, "openalex_id": "", "resolved_title": ""}, {"author": "Deleuze and Guattari", "year": 1994, "n": 2, "openalex_id": "", "resolved_title": ""}, {"author": "Macfarlane", "year": 2016, "n": 1, "openalex_id": "W4312963107", "resolved_title": "Generation Anthropocene"}, {"author": "Moore", "year": 2015, "n": 1, "openalex_id": "", "resolved_title": ""}, {"author": "Tsing", "year": 2015, "n": 1, "openalex_id": "W3185892935", "resolved_title": "The Mushroom at the End of the World"}], "terms": [{"term": "posthumanities", "score": 0.0035}, {"term": "erent", "score": 0.0034}, {"term": "minor", "score": 0.0022}, {"term": "humanities", "score": 0.002}, {"term": "studies", "score": 0.0019}, {"term": "missing", "score": 0.0018}, {"term": "ective", "score": 0.0016}, {"term": "pro", "score": 0.0015}, {"term": "eld", "score": 0.0015}, {"term": "rmative", "score": 0.0015}, {"term": "posthuman", "score": 0.0014}, {"term": "neo-materialist", "score": 0.0012}, {"term": "science", "score": 0.0011}, {"term": "elds", "score": 0.0011}], "phrases": [{"term": "critical posthumanities", "count": 33}, {"term": "culture society", "count": 12}, {"term": "minor science", "count": 10}, {"term": "theory culture", "count": 12}, {"term": "cognitive capitalism", "count": 12}, {"term": "royal science", "count": 6}, {"term": "knowledge production", "count": 15}, {"term": "de ne", "count": 5}, {"term": "media studies", "count": 5}, {"term": "environmental humanities", "count": 5}, {"term": "missing links", "count": 5}, {"term": "missing people", "count": 8}], "index": [], "counts": {"citations": 14, "terms": 14, "phrases": 12, "index": 0}}, {"id": "2020-we-are-in-this-together-but-we-are-not-one-and-the-same", "title": "We Are In This Together, But We Are Not One and the Same", "year": 2020, "coauthored": false, "role": "sole", "kind": "essay", "citations": [{"author": "Braidotti", "year": 2013, "n": 1, "openalex_id": "", "resolved_title": ""}, {"author": "Braidotti and Hlavajova", "year": 2018, "n": 1, "openalex_id": "", "resolved_title": ""}], "terms": [{"term": "covid", "score": 0.0031}, {"term": "pandemic", "score": 0.0024}, {"term": "exhaustion", "score": 0.0024}, {"term": "inexhaustible", "score": 0.0024}, {"term": "bioethical", "score": 0.0019}, {"term": "man-made", "score": 0.0014}, {"term": "sixth", "score": 0.0014}, {"term": "inquiry", "score": 0.0014}, {"term": "indigenous", "score": 0.0011}, {"term": "fourth", "score": 0.001}, {"term": "fatigue", "score": 0.001}, {"term": "affirmative", "score": 0.0009}, {"term": "disaster", "score": 0.0008}, {"term": "contagion", "score": 0.0008}], "phrases": [{"term": "covid pandemic", "count": 3}, {"term": "fourth industrial", "count": 3}, {"term": "public health", "count": 3}, {"term": "living entities", "count": 3}, {"term": "ecological balance", "count": 2}, {"term": "first place", "count": 2}, {"term": "sixth extinction", "count": 2}, {"term": "uu nl", "count": 2}, {"term": "climate change", "count": 3}, {"term": "affirmative ethics", "count": 3}, {"term": "cognitive capitalism", "count": 2}, {"term": "industrial revolution", "count": 2}], "index": [], "counts": {"citations": 2, "terms": 14, "phrases": 12, "index": 0}}, {"id": "2022-posthuman-feminism", "title": "Posthuman Feminism", "year": 2022, "coauthored": false, "role": "sole", "kind": "book", "citations": [{"author": "Irigaray", "year": 1985, "n": 10, "openalex_id": "W1590850396", "resolved_title": "Speculum of the Other Woman"}, {"author": "Braidotti", "year": 1994, "n": 10, "openalex_id": "", "resolved_title": ""}, {"author": "Braidotti", "year": 2002, "n": 10, "openalex_id": "", "resolved_title": ""}, {"author": "Cooper", "year": 2008, "n": 8, "openalex_id": "", "resolved_title": ""}, {"author": "Repo", "year": 2016, "n": 7, "openalex_id": "W1498247841", "resolved_title": "The Biopolitics of Gender"}, {"author": "Braidotti", "year": 2013, "n": 6, "openalex_id": "", "resolved_title": ""}, {"author": "Hayward and Weinstein", "year": 2015, "n": 6, "openalex_id": "", "resolved_title": ""}, {"author": "Braidotti", "year": 2006, "n": 6, "openalex_id": "W210467782", "resolved_title": "Transpositions: On Nomadic Ethics"}, {"author": "Braidotti", "year": 1991, "n": 5, "openalex_id": "W1499635458", "resolved_title": "Patterns of Dissonance: A Study of Women in Contemporary Philosophy"}, {"author": "Halberstam and Livingston", "year": 1995, "n": 5, "openalex_id": "W7113063550", "resolved_title": "Posthuman Bodies"}, {"author": "Gaard", "year": 1997, "n": 5, "openalex_id": "W1971550571", "resolved_title": "Toward a Queer Ecofeminism"}, {"author": "Braidotti", "year": 2019, "n": 4, "openalex_id": "", "resolved_title": ""}, {"author": "Wynter", "year": 2015, "n": 4, "openalex_id": "W3082922874", "resolved_title": "Unparalleled Catastrophe for Our Species?"}, {"author": "Braidotti", "year": 2011, "n": 4, "openalex_id": "", "resolved_title": ""}], "terms": [{"term": "lgbtq", "score": 0.0025}, {"term": "posthuman", "score": 0.0018}, {"term": "ecofeminism", "score": 0.0017}, {"term": "indigenous", "score": 0.0011}, {"term": "new-materialist", "score": 0.0011}, {"term": "ecofeminists", "score": 0.0011}, {"term": "feminism", "score": 0.0011}, {"term": "reproductive", "score": 0.0011}, {"term": "technoscience", "score": 0.0011}, {"term": "ecofeminist", "score": 0.0011}, {"term": "re-naturalization", "score": 0.0009}, {"term": "cent", "score": 0.0008}, {"term": "socialist", "score": 0.0008}, {"term": "racialized", "score": 0.0007}], "phrases": [{"term": "posthuman feminism", "count": 121}, {"term": "posthuman convergence", "count": 67}, {"term": "new materialism", "count": 35}, {"term": "posthuman feminist", "count": 30}, {"term": "viveiros de", "count": 16}, {"term": "de castro", "count": 16}, {"term": "posthuman turn", "count": 20}, {"term": "non-human entities", "count": 13}, {"term": "feminist materialism", "count": 12}, {"term": "posthuman bodies", "count": 16}, {"term": "living systems", "count": 11}, {"term": "reproductive technologies", "count": 11}], "index": [{"term": "methods", "pages": "15"}, {"term": "and reproduction/fertility", "pages": "10"}, {"term": "COVID", "pages": "10"}, {"term": "and posthuman feminism", "pages": "10"}, {"term": "and posthuman feminism", "pages": "10"}, {"term": "and ecofeminism", "pages": "10"}, {"term": "heterosexuality", "pages": "10"}, {"term": "and Eurocentrism", "pages": "10"}, {"term": "zoe", "pages": "10"}, {"term": "and environment", "pages": "10"}, {"term": "and multiplicity", "pages": "10"}, {"term": "and ecofeminism", "pages": "10"}, {"term": "and capitalism", "pages": "10"}, {"term": "bacteria", "pages": "9"}, {"term": "biology", "pages": "9"}, {"term": "and environment", "pages": "9"}, {"term": "and ecofeminism", "pages": "9"}, {"term": "and technoscience", "pages": "9"}], "counts": {"citations": 14, "terms": 14, "phrases": 12, "index": 18}}, {"id": "2024-foreword-a-becoming-world-of-collective-knowledge-practices", "title": "Foreword A Becoming-world of Collective Knowledge Practices", "year": 2024, "coauthored": false, "role": "sole", "kind": "essay", "citations": [{"author": "Tsing et al", "year": 2017, "n": 1, "openalex_id": "", "resolved_title": ""}, {"author": "Braidotti", "year": 2013, "n": 1, "openalex_id": "", "resolved_title": ""}, {"author": "Lloyd", "year": 1984, "n": 1, "openalex_id": "W1550369092", "resolved_title": "The Man of Reason: Male and Female in Western Philosophy"}, {"author": "Midgley", "year": 1996, "n": 1, "openalex_id": "W383098915", "resolved_title": "Utopias, Dolphins and Computers"}, {"author": "Plumwood", "year": 1993, "n": 1, "openalex_id": "W4230862955", "resolved_title": "Feminism and the Mastery of Nature"}, {"author": "Braidotti", "year": 2011, "n": 1, "openalex_id": "", "resolved_title": ""}, {"author": "Pepperell", "year": 2003, "n": 1, "openalex_id": "", "resolved_title": ""}, {"author": "Braidotti", "year": 2019, "n": 1, "openalex_id": "", "resolved_title": ""}, {"author": "Moulier-Boutang", "year": 2012, "n": 1, "openalex_id": "", "resolved_title": ""}, {"author": "Cooper", "year": 2008, "n": 1, "openalex_id": "", "resolved_title": ""}, {"author": "Said", "year": 2004, "n": 1, "openalex_id": "", "resolved_title": ""}, {"author": "Deleuze and Guattari", "year": 1987, "n": 1, "openalex_id": "W3158445523", "resolved_title": "A Thousand Plateaus"}, {"author": "Alaimo", "year": 2010, "n": 1, "openalex_id": "W4409478296", "resolved_title": "Bodily Natures"}, {"author": "Braidotti", "year": 2006, "n": 1, "openalex_id": "W210467782", "resolved_title": "Transpositions: On Nomadic Ethics"}], "terms": [{"term": "foreword", "score": 0.0061}, {"term": "neo-materialist", "score": 0.0028}, {"term": "neo-materialism", "score": 0.0023}, {"term": "posthuman", "score": 0.0014}, {"term": "affirmative", "score": 0.0012}, {"term": "covid", "score": 0.0011}, {"term": "pandemic", "score": 0.0011}, {"term": "relational", "score": 0.0009}, {"term": "becoming-world", "score": 0.0008}, {"term": "volume", "score": 0.0008}, {"term": "academic", "score": 0.0008}, {"term": "differential", "score": 0.0008}, {"term": "multi-species", "score": 0.0008}, {"term": "humanities", "score": 0.0007}], "phrases": [{"term": "knowledge practices", "count": 4}, {"term": "posthuman convergence", "count": 4}, {"term": "public health", "count": 3}, {"term": "lived experience", "count": 4}, {"term": "human normality", "count": 2}, {"term": "materialist feminist", "count": 2}, {"term": "computational networks", "count": 2}, {"term": "knowledge production", "count": 4}, {"term": "critical posthumanities", "count": 2}, {"term": "posthuman knowledge", "count": 2}, {"term": "race gender", "count": 2}, {"term": "cognitive capitalism", "count": 2}], "index": [], "counts": {"citations": 14, "terms": 14, "phrases": 12, "index": 0}}]}</script>
+<script>
+const DATA = JSON.parse(document.getElementById("data").textContent);
+const esc = s => String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const tree = document.getElementById("tree");
+
+// newest at top, oldest at bottom; undated grouped at the very top
+const nodes = DATA.nodes.slice().sort((a,b)=>{
+  if(a.year==null && b.year==null) return a.title.localeCompare(b.title);
+  if(a.year==null) return -1; if(b.year==null) return 1;
+  return b.year - a.year || a.title.localeCompare(b.title);
+});
+
+function li(main, aside){
+  return `<li><span class="t">${main}</span>${aside?`<span class="n">${aside}</span>`:""}</li>`;
+}
+function col(kind, title, items, render){
+  const body = items && items.length
+    ? `<ul class="rlist">${items.map(render).join("")}</ul>`
+    : `<p class="empty">—</p>`;
+  return `<div class="rootcol ${kind}"><h3>${title}</h3>${body}</div>`;
+}
+function roots(n){
+  const cites = col("cite","Citations", n.citations, c=>{
+    const who = c.openalex_id
+      ? `<a href="https://openalex.org/${esc(c.openalex_id)}" target="_blank" rel="noopener" title="${esc(c.resolved_title||"")}">${esc(c.author)} ${esc(c.year)}</a>`
+      : `${esc(c.author)} ${esc(c.year)}`;
+    return li(who, c.n);
+  });
+  const terms = col("term","Key terms", n.terms, t=>li(esc(t.term)));
+  const phr = col("phrase","Phrasing", n.phrases, p=>li(esc(p.term), p.count));
+  const idx = col("index","Index terms", n.index, i=>li(esc(i.term), i.pages));
+  return `<div class="roots">${cites}${terms}${phr}${idx}</div>`;
+}
+
+let lastEra=null; let html="";
+for(const n of nodes){
+  const era = n.year==null ? "n.d." : (n.year>=2019?"2019 – present":(n.year>=2011?"2011 – 2018":"2005 – 2010"));
+  if(era!==lastEra){ html+=`<div class="era">${era}</div>`; lastEra=era; }
+  const co = n.coauthored ? `<span class="badge co">${esc(n.role==="interviewee"?"interview":n.role==="editor"?"editorial":"co-authored")}</span>` : "";
+  const c=n.counts;
+  html += `<div class="node-row node" data-co="${n.coauthored?1:0}">
+    <div class="year">${n.year==null?"n.d.":n.year}</div>
+    <div class="rail"><span class="branch"></span><span class="knot" role="button" tabindex="0" aria-label="toggle"></span></div>
+    <div>
+      <div class="card">
+        <div class="head">
+          <h2 class="ttl">${esc(n.title)}</h2>
+          <span class="badge">${esc(n.kind)}</span>${co}
+          <span class="counts">
+            <span class="cnt cite">${c.citations} cite</span>
+            <span class="cnt term">${c.terms} term</span>
+            <span class="cnt phrase">${c.phrases} phr</span>
+            <span class="cnt index">${c.index} idx</span>
+          </span>
+        </div>
+        ${roots(n)}
+      </div>
+    </div>
+  </div>`;
+}
+tree.innerHTML = html;
+
+// interactions
+function toggle(nodeEl){ nodeEl.classList.toggle("open"); }
+tree.addEventListener("click", e=>{
+  const h=e.target.closest(".head"); const k=e.target.closest(".knot");
+  if(e.target.closest("a")) return;
+  const row=(h||k)?.closest(".node"); if(row) toggle(row);
+});
+tree.addEventListener("keydown", e=>{
+  if((e.key==="Enter"||e.key===" ") && e.target.classList.contains("knot")){
+    e.preventDefault(); toggle(e.target.closest(".node"));
+  }
+});
+document.getElementById("expand").onclick=()=>tree.querySelectorAll(".node").forEach(n=>{
+  if(getComputedStyle(n).display!=="none") n.classList.add("open");});
+document.getElementById("collapse").onclick=()=>tree.querySelectorAll(".node").forEach(n=>n.classList.remove("open"));
+
+document.querySelectorAll(".chip").forEach(chip=>chip.onclick=()=>{
+  document.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed","false"));
+  chip.setAttribute("aria-pressed","true");
+  const f=chip.dataset.filter;
+  tree.querySelectorAll(".node").forEach(n=>{
+    const co=n.dataset.co==="1";
+    n.hidden = f==="solo"&&co ? true : f==="co"&&!co ? true : false;
+  });
+});
+
+// open the two anchor books by default so the first frame shows a real root system
+const seed=new Set(["2022-posthuman-feminism","2011-nomadic-theory"]);
+nodes.forEach((n,i)=>{ if(seed.has(n.id)) tree.querySelectorAll(".node")[i]?.classList.add("open"); });
+
+const yrs=nodes.filter(n=>n.year).map(n=>n.year);
+document.getElementById("foot").innerHTML =
+  `${nodes.length} texts · ${Math.min(...yrs)}–${Math.max(...yrs)} · from the <code>braidotti-voice</code> pipeline. `+
+  `Citation counts are in-text occurrences; linked sources resolve to OpenAlex. Index page-counts show how much each concept is foregrounded.`;
+</script>

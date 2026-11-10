@@ -1,0 +1,9 @@
+entry_type,term_or_phrase,your_note,example_quote,source_text,year,importance,also_found_by_pipeline
+key term,,"what it means / why it matters for this author",,,,,
+phrase,,"the exact construction and what it does",,,,,
+voice feature,,"a habit of style or rhetoric (tone, sentence shape, punctuation, self-reference)",,,,,
+concept,,"a big idea that organizes a text or the whole corpus",,,,,
+citation note,,"a source that matters and how the author uses them",,,,,
+key term (EXAMPLE — delete),nomadic subject,"central figure: a non-unitary, embodied subject in process",,Nomadic Subjects,1994,high,yes
+phrase (EXAMPLE — delete),becoming-woman,"Deleuzian becoming reworked through sexual difference",,Metamorphoses,2002,high,yes
+voice feature (EXAMPLE — delete),affirmative turn,"converts critique/negativity into affirmative ethics",,Transpositions,2006,medium,no
