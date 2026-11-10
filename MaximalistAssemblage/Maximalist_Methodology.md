@@ -522,7 +522,7 @@ Visualization Protocol.
 
 ### Instrument ten: author voice citation mapping tree
 
-[Sharing Author Voice Citation Mapping Tree Protocol](./DissertationProposal/SHARING-GUIDE.md/)
+[Sharing Author Voice Citation Mapping Tree Protocol](././DissertationProposal/SHARING-GUIDE.md/)
 
 > **[TO WRITE]**
 
