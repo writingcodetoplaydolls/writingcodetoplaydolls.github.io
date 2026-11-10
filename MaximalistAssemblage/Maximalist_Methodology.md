@@ -520,7 +520,12 @@ Visualization Protocol.
 
 ## 4. Reproducibility
 
+### Instrument ten: author voice citation mapping tree
+
+[Sharing Author Voice Citation Mapping Tree Protocol](./DissertationProposal/SHARING-GUIDE.md/)
+
 > **[TO WRITE]**
+
 
 ## Appendix: records returned per query
 
