@@ -1,0 +1,688 @@
+/* The reading layout for a digital-first dissertation.
+ *
+ * One grid, four columns wide: a left rail for the contents, the text column
+ * (a 34rem measure, which is where a serif at 18px reads best), a right gutter
+ * for sidenotes, and the room outside both for figures that need to be bigger
+ * than the text. A figure says how wide it wants to be and the grid gives it
+ * that width without taking it out of the flow of the reading:
+ *
+ *   .fig--column   inside the measure, like a paragraph
+ *   .fig--wide     the measure plus the sidenote gutter
+ *   .fig--full     edge to edge, the rails included
+ *
+ * Colours are the twelve from MaximalistMethodology\PALETTE.md and nothing
+ * else. Every one is a token on :root, so a figure drawn in WebGL can read the
+ * same value out of the stylesheet and match the page.
+ */
+
+:root {
+  /* the palette, by its own names */
+  --mauve:      #D3C2CD;
+  --olive:      #849E15;
+  --greyblue:   #92A2A6;
+  --ochre:      #B28622;
+  --peach:      #F8CABA;
+  --orange:     #D8560E;
+  --sand:       #EFCE7B;
+  --amber:      #E1903E;
+  --periwinkle: #6777B6;
+  --nearblack:  #2B2B23;
+  --rose:       #D17089;
+  --lightolive: #CBD183;
+
+  /* The roles those colours play.
+     The document has two rooms. Dark is the default: the pages are sheets of
+     near-black over a room running behind them (lib/world.js), with windows
+     cut through. Light is the room the floating-skin viewers use — 0xeef1f6
+     over a 0xdfe3ea floor — and it is the one with a floor for her shadow to
+     fall on. The toggle is in the top bar and sets data-theme on <html>.
+     --page-alpha is the other slider: 0 is glass, 1 is a wall. Print has its
+     own rules at the foot of this file and is neither theme. */
+  --world:     #2b2b2b;   /* the room she is in */
+  --page-alpha: 0.86;
+  --page:      rgba(0, 0, 0, var(--page-alpha));
+  --bg:        #000000;
+  --bg-raised: rgba(255, 255, 255, .05);
+  --bg-sunk:   rgba(255, 255, 255, .07);
+  --ink:       #ffffff;
+  --ink-soft:  #b6b2a8;
+  --ink-faint: #837f76;
+  --rule:      rgba(255, 255, 255, .26);
+  --rule-soft: rgba(255, 255, 255, .13);
+  --link:      #9aa6dd;   /* the periwinkle, lifted to read on black */
+  --mark:      #e8762f;   /* the burnt orange, the same */
+  --highlight: rgba(248, 202, 186, .18);
+
+  /* the chrome: what the reading furniture is made of, so the other room can
+     be made of the opposite without rewriting a rule */
+  --chrome:      rgba(0, 0, 0, .78);    /* the top bar over the room */
+  --chrome-firm: rgba(0, 0, 0, .92);    /* the rail, a sticky heading */
+  --scrim:       rgba(0, 0, 0, .3);     /* behind the contents drawer */
+  --inset:       rgba(0, 0, 0, .55);    /* the lip inside an opening */
+  --inset-glow:  rgba(0, 0, 0, .35);
+  --drop:        rgba(0, 0, 0, .45);    /* what a raised thing casts */
+  --legend:      #d8d4c8;               /* type laid over a figure */
+  --legend-edge: rgba(0, 0, 0, .85);
+
+  /* type */
+  --serif: Georgia, "Iowan Old Style", "Times New Roman", serif;
+  --sans:  "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono:  Consolas, "SF Mono", ui-monospace, monospace;
+
+  /* the grid */
+  --rail:    15rem;   /* contents, left */
+  --measure: 34rem;   /* the text column */
+  --gutter:  15rem;   /* sidenotes, right */
+  --gap:     2rem;
+}
+
+/* ---- the light room -------------------------------------------------------
+ * The same twelve colours, read the other way up. The background and the floor
+ * are the two the floating-skin viewers use, so the figure sits in the light
+ * she was built in rather than in one invented here. */
+:root[data-theme="light"] {
+  --world:     #eef1f6;
+  --page:      rgba(255, 255, 255, var(--page-alpha));
+  --bg:        #eef1f6;
+  --bg-raised: rgba(43, 43, 35, .04);
+  --bg-sunk:   rgba(43, 43, 35, .06);
+  --ink:       #2B2B23;   /* the near-black, as itself */
+  --ink-soft:  #5c594e;
+  --ink-faint: #74726a;
+  --rule:      rgba(43, 43, 35, .28);
+  --rule-soft: rgba(43, 43, 35, .13);
+  --link:      #5f6fb0;   /* the periwinkle, a shade down: 4.6:1 on the page, WCAG AA */
+  --mark:      #c24d0c;   /* the burnt orange, the same: 4.7:1 */
+  --highlight: rgba(248, 202, 186, .55);
+
+  --chrome:      rgba(255, 255, 255, .82);
+  --chrome-firm: rgba(255, 255, 255, .94);
+  --scrim:       rgba(43, 43, 35, .25);
+  --inset:       rgba(43, 43, 35, .3);
+  --inset-glow:  rgba(43, 43, 35, .1);
+  --drop:        rgba(43, 43, 35, .18);
+  --legend:      #3a382f;
+  --legend-edge: rgba(255, 255, 255, .85);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 3.5rem; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+html { background: var(--world); }      /* what shows if the room never starts */
+body {
+  margin: 0;
+  background: transparent;              /* the world canvas is behind this */
+  color: var(--ink);
+  font: 1.125rem/1.7 var(--serif);
+  -webkit-text-size-adjust: 100%;
+}
+
+/* ---- the room ------------------------------------------------------------
+ * One canvas, fixed under everything, running for as long as the document is
+ * open. lib/world.js owns it. */
+canvas.world {
+  position: fixed; inset: 0; z-index: 0;
+  width: 100%; height: 100%; display: block;
+  pointer-events: none;                 /* the reader is reading, not steering */
+}
+
+/* ---- a page, as a sheet over the room -----------------------------------
+ * The black is this element, not the page's own background, because windows
+ * are cut out of it with clip-path (lib/windows.js) and the writing must not
+ * be cut with them. It sits behind the text and in front of the world. */
+.sheet {
+  position: absolute; inset: 0; z-index: 0;
+  background: var(--page);
+  pointer-events: none;
+}
+
+/* ---- the grid ------------------------------------------------------------
+ * Named lines, so a figure spans by name and never by a pixel count. */
+/* The sheet is the page's black. It cannot live inside the grid below: an
+   absolutely positioned grid child is sized to its grid area, not to the page,
+   so it would come out the width of one column and no height at all. */
+.sheetbox { position: relative; z-index: 1; }
+
+.page {
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(1rem, 1fr)
+    [main-start] minmax(0, var(--measure))
+    [main-end side-start] minmax(0, var(--gutter))
+    [side-end] minmax(1rem, 1fr)
+    [full-end];
+  column-gap: var(--gap);
+  padding: 0 0 6rem;
+}
+/* With no room for a gutter the grid loses it rather than squeezing the text:
+   main takes everything between the margins, and `wide` is the same as main. */
+@media (max-width: 62rem) {
+  .page {
+    grid-template-columns:
+      [full-start] max(1rem, 3vw)
+      [main-start] minmax(0, 1fr)
+      [main-end side-start side-end] max(1rem, 3vw)
+      [full-end];
+    column-gap: 0;
+  }
+}
+@media (max-width: 40rem) {
+  body { font-size: 1.05rem; line-height: 1.65; }
+}
+/* with no gutter to put her in she comes back into the measure, as a block:
+   a float in a column this narrow would leave four words to the line */
+@media (max-width: 62rem) {
+  .page > figure.window { grid-column: main-start / main-end; width: auto; }
+  .page > figure.window .fig-stage { margin-inline: auto; }
+}
+
+.page > * { grid-column: main-start / main-end; position: relative; z-index: 1; }
+.page > .wide { grid-column: main-start / side-end; }
+.page > .full { grid-column: full-start / full-end; }
+.page > .sidenote { grid-column: side-start / side-end; }
+/* A window in the scrolling layout goes in the margin beside the writing,
+   where the sidenotes are. A float would be the obvious thing and does not
+   work here: the page is a grid, and a grid item ignores float. The gutter is
+   15rem and the aperture 60 mm, so it sits in it with room to spare. */
+.page > figure.window {
+  grid-column: side-start / side-end; float: none;
+  width: var(--win-size); margin: .2rem 0 1.2rem;
+  /* she stands across three rows of the grid, so the writing goes past
+     her rather than stopping at her. `grid-auto-flow: dense` would fill
+     the margin better and is not an option: it hoists the window into
+     the first empty cell it can find, a thousand pixels from the text it
+     was written beside. */
+  grid-row: span 3; align-self: start;
+}
+.page > figure.window.wide, .page > figure.window.full { width: auto; }
+.page > figure.window.wide { grid-column: main-start / side-end; }
+.page > figure.window.full { grid-column: full-start / full-end; }
+
+/* ---- running head -------------------------------------------------------- */
+.topbar {
+  position: sticky; top: 0; z-index: 40;
+  backdrop-filter: blur(6px);
+  grid-column: full-start / full-end;
+  display: flex; align-items: center; gap: .75rem;
+  padding: .5rem max(1rem, 2vw);
+  background: var(--chrome);
+  border-bottom: 1px solid var(--rule-soft);
+  font: .8rem/1.4 var(--sans);
+}
+.topbar .where { color: var(--ink-soft); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.topbar .where b { color: var(--ink); font-weight: 600; }
+.topbar .spacer { flex: 1 1 auto; }
+.topbar button, .topbar a.btn {
+  font: inherit; color: var(--ink-soft); background: none; cursor: pointer;
+  border: 1px solid var(--rule); border-radius: 999px; padding: .2rem .7rem;
+  text-decoration: none; white-space: nowrap;
+}
+.topbar button:hover, .topbar a.btn:hover { color: var(--ink); border-color: var(--ink-faint); background: var(--bg-raised); }
+.topbar .alpha { display: flex; align-items: center; gap: .4rem; color: var(--ink-faint); white-space: nowrap; }
+.topbar .alpha input[type="range"] {
+  width: 6rem; height: 1rem; accent-color: var(--mark); background: none; cursor: pointer;
+}
+.progress { position: absolute; left: 0; bottom: -1px; height: 2px; background: var(--mark); width: 0; }
+
+/* ---- her panel -----------------------------------------------------------
+   The controls for the room behind the page. Collapsed it is a pill in the
+   corner saying what she is doing; open it is a small card. It is fixed to the
+   viewport rather than placed in the text, because what it controls is behind
+   every page rather than on any one of them. */
+.panel[hidden] { display: none; }          /* details ignores [hidden] without this */
+.panel-keep { border-top: 1px solid var(--rule-soft); padding-top: .45rem; margin-top: .15rem; }
+.panel {
+  position: fixed; right: max(.75rem, 2vw); bottom: max(.75rem, 2vw); z-index: 35;
+  width: max-content; max-width: min(19rem, calc(100vw - 2rem));
+  /* short viewports: it scrolls inside itself rather than running off the top,
+     and stops clear of the running head */
+  max-height: calc(100vh - 4.5rem); overflow-y: auto; overscroll-behavior: contain;
+  font: .78rem/1.4 var(--sans); color: var(--ink-soft);
+  background: var(--chrome-firm); backdrop-filter: blur(8px);
+  border: 1px solid var(--rule-soft); border-radius: 12px;
+  box-shadow: 0 6px 24px var(--drop);
+}
+.panel > summary {
+  display: flex; align-items: center; gap: .45rem;
+  padding: .4rem .7rem; cursor: pointer; list-style: none;
+  border-radius: 11px; white-space: nowrap;
+}
+.panel > summary::-webkit-details-marker { display: none; }
+.panel > summary:hover, .panel > summary:focus-visible { color: var(--ink); }
+.panel[open] > summary {
+  border-bottom: 1px solid var(--rule-soft); border-radius: 11px 11px 0 0;
+  position: sticky; top: 0; z-index: 1; background: var(--chrome-firm);
+}
+.panel-name { font-variant: small-caps; letter-spacing: .04em; }
+.panel-read { color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+.panel-dot {
+  width: .5rem; height: .5rem; border-radius: 50%; flex: 0 0 auto;
+  background: var(--ink-faint); transition: background .3s ease;
+}
+.panel-dot.watching { background: var(--mark); }
+.panel-dot.coming, .panel-dot.going { background: var(--link); }
+.panel-dot.off { background: transparent; border: 1px solid var(--ink-faint); }
+
+.panel-body { padding: .55rem .7rem .7rem; display: grid; gap: .4rem; }
+/* grid children refuse to shrink below their content unless told to, which is
+   what pushed the readouts past the edge on a narrow viewport */
+.panel-body > *, .panel-sub > div > * { min-width: 0; }
+.panel-body h3 {
+  font: 600 .66rem/1 var(--sans); letter-spacing: .09em; text-transform: uppercase;
+  color: var(--ink-faint); margin: .3rem 0 .1rem; padding: 0; border: 0;
+}
+.panel-body h3:first-child { margin-top: 0; }
+.panel-body label { display: flex; align-items: center; gap: .45rem; white-space: nowrap; }
+.panel-body input[type="range"] {
+  flex: 1 1 auto; min-width: 0; height: 1rem; accent-color: var(--mark); background: none; cursor: pointer;
+}
+.panel-body output { color: var(--ink-faint); font-variant-numeric: tabular-nums; flex: 0 0 3.3rem; text-align: right; }
+.panel-row { display: flex; flex-wrap: wrap; gap: .3rem; }
+.panel-row button {
+  font: inherit; color: var(--ink-soft); background: none; cursor: pointer;
+  border: 1px solid var(--rule); border-radius: 999px; padding: .16rem .55rem; white-space: nowrap;
+}
+.panel-row button:hover { color: var(--ink); border-color: var(--ink-faint); background: var(--bg-raised); }
+.panel-row button[aria-pressed="true"] { color: var(--bg); background: var(--mark); border-color: var(--mark); }
+body.no-world .panel-her, body.no-world [data-still] { display: none; }
+
+/* her surface: the body module's own tuning, built from what it advertises */
+.panel-sub { margin-top: .2rem; border-top: 1px solid var(--rule-soft); padding-top: .35rem; }
+.panel-sub > summary {
+  cursor: pointer; list-style: none; color: var(--ink-faint);
+  font: 600 .66rem/1.6 var(--sans); letter-spacing: .09em; text-transform: uppercase;
+}
+.panel-sub > summary::-webkit-details-marker { display: none; }
+.panel-sub > summary::before { content: "+ "; }
+.panel-sub[open] > summary::before { content: "\2212 "; }
+.panel-sub > summary:hover { color: var(--ink-soft); }
+.panel-sub > div { display: grid; gap: .3rem; padding-top: .3rem; }
+.panel-sub h4 {
+  font: 400 .68rem/1 var(--sans); letter-spacing: .04em; font-variant: small-caps;
+  color: var(--ink-faint); margin: .35rem 0 .05rem;
+}
+.panel-sub h4:first-child { margin-top: 0; }
+.panel-note { margin: .3rem 0 0; color: var(--mark); font-size: .72rem; line-height: 1.35; white-space: normal; }
+.panel-label { flex: 0 1 5.2rem; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.panel-toggle { display: flex; align-items: center; gap: .45rem; cursor: pointer; }
+.panel-toggle input { accent-color: var(--mark); margin: 0; }
+.panel-toggle .panel-label { flex: 1 1 auto; }
+.panel-reset {
+  justify-self: start; margin-top: .35rem;
+  font: inherit; color: var(--ink-faint); background: none; cursor: pointer;
+  border: 1px solid var(--rule-soft); border-radius: 999px; padding: .12rem .5rem;
+}
+.panel-reset:hover { color: var(--ink); border-color: var(--ink-faint); }
+
+@media (max-width: 48rem) {
+  .panel .panel-read { display: none; }
+}
+
+/* ---- contents rail ------------------------------------------------------- */
+.rail {
+  position: fixed; left: 0; top: 2.6rem; bottom: 0; width: var(--rail); z-index: 30;
+  overflow-y: auto; overscroll-behavior: contain;
+  padding: 1.25rem 1rem 3rem;
+  font: .82rem/1.45 var(--sans);
+  border-right: 1px solid var(--rule-soft);
+  background: var(--chrome-firm);
+  backdrop-filter: blur(6px);
+}
+.rail h2 { font: 600 .7rem/1 var(--sans); letter-spacing: .09em; text-transform: uppercase; color: var(--ink-faint); margin: 1.4rem 0 .5rem; border: 0; padding: 0; }
+.rail h2:first-child { margin-top: 0; }
+.rail ol { list-style: none; margin: 0; padding: 0; }
+.rail li { margin: .1rem 0; }
+.rail a { display: block; padding: .22rem .5rem; color: var(--ink-soft); text-decoration: none; border-radius: 4px; border-left: 2px solid transparent; }
+.rail a:hover { background: var(--bg-sunk); color: var(--ink); }
+.rail a.here { color: var(--ink); background: var(--bg-sunk); border-left-color: var(--mark); font-weight: 600; }
+.rail .lvl3 a { padding-left: 1.4rem; font-size: .95em; }
+.rail .num { color: var(--ink-faint); font-variant-numeric: tabular-nums; margin-right: .4em; }
+.rail-close { display: none; }
+
+@media (min-width: 78rem) {
+  body.has-rail .page { padding-left: var(--rail); }
+}
+@media (max-width: 78rem) {
+  .rail {
+    transform: translateX(-100%); transition: transform .18s ease-out;
+    width: min(20rem, 85vw); top: 0; box-shadow: 0 0 40px var(--drop);
+  }
+  body.rail-open .rail { transform: none; }
+  .rail-close { display: block; float: right; font: inherit; background: none; border: 0; color: var(--ink-soft); cursor: pointer; }
+  body.rail-open::after { content: ""; position: fixed; inset: 0; background: var(--scrim); z-index: 29; }
+}
+@media (prefers-reduced-motion: reduce) { .rail { transition: none; } }
+
+/* ---- front matter -------------------------------------------------------- */
+.titlepage { margin: 4rem 0 3rem; }
+.titlepage .kicker { font: .78rem/1.4 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint); }
+.titlepage h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; margin: .6rem 0 .4rem; font-weight: 400; }
+.titlepage .subtitle { font-size: 1.3rem; color: var(--ink-soft); font-style: italic; margin: 0 0 1.2rem; }
+.titlepage .byline { font: .95rem/1.6 var(--sans); color: var(--ink-soft); }
+
+.chapter-head { margin: 3.5rem 0 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--rule); }
+.chapter-head .kicker { font: .78rem/1.4 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--mark); }
+.chapter-head h1 { font-size: clamp(1.7rem, 4vw, 2.4rem); line-height: 1.15; font-weight: 400; margin: .5rem 0 0; }
+.chapter-head .abstract { font-size: 1.05rem; color: var(--ink-soft); margin: 1rem 0 0; }
+
+/* ---- prose --------------------------------------------------------------- */
+h2, h3, h4 { font-weight: 600; line-height: 1.25; }
+h2 { font-size: 1.5rem; margin: 3rem 0 .8rem; }
+h3 { font-size: 1.2rem; margin: 2.2rem 0 .6rem; }
+h4 { font-size: 1.05rem; margin: 1.8rem 0 .4rem; font-family: var(--sans); color: var(--ink-soft); }
+p { margin: 0 0 1.1rem; }
+p.lead { font-size: 1.22rem; color: var(--ink-soft); }
+a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: var(--mark); }
+ul, ol { margin: 0 0 1.1rem; padding-left: 1.5rem; }
+li { margin: .3rem 0; }
+blockquote {
+  margin: 1.5rem 0; padding: .2rem 0 .2rem 1.2rem;
+  border-left: 3px solid var(--rule); color: var(--ink-soft); font-style: italic;
+}
+blockquote p:last-child { margin-bottom: 0; }
+blockquote cite { display: block; font: .85rem/1.5 var(--sans); font-style: normal; color: var(--ink-faint); margin-top: .5rem; }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+.epigraph { margin: 2rem 0 2.5rem; font-style: italic; color: var(--ink-soft); }
+.epigraph p { margin-bottom: .3rem; }
+.epigraph cite { font: .85rem/1.5 var(--sans); font-style: normal; color: var(--ink-faint); }
+
+code { font: .9em/1.4 var(--mono); background: var(--bg-sunk); padding: .1em .35em; border-radius: 3px; }
+pre {
+  margin: 1.4rem 0; padding: 1rem 1.1rem; overflow-x: auto;
+  background: var(--bg-sunk); border: 1px solid var(--rule-soft); border-radius: 6px;
+  font: .84rem/1.6 var(--mono); tab-size: 2;
+}
+pre code { background: none; padding: 0; font-size: 1em; }
+.codeblock { margin: 1.4rem 0; }
+.codeblock .filename { display: block; font: .74rem/1.4 var(--sans); letter-spacing: .04em; color: var(--ink-faint); margin-bottom: .25rem; }
+.codeblock pre { margin: 0; }
+
+table { border-collapse: collapse; font: .92rem/1.5 var(--sans); width: 100%; }
+.tablewrap { overflow-x: auto; margin: 1.4rem 0; }
+th, td { border-bottom: 1px solid var(--rule-soft); padding: .45rem .6rem; text-align: left; vertical-align: top; }
+th { font-weight: 600; border-bottom: 1px solid var(--rule); white-space: nowrap; }
+tbody tr:hover { background: var(--highlight); }
+
+/* ---- anchors on headings ------------------------------------------------- */
+.anchor {
+  float: left; margin-left: -1.1em; width: 1.1em;
+  color: var(--ink-faint); text-decoration: none; opacity: 0;
+  font-family: var(--sans); font-weight: 400;
+}
+h2:hover .anchor, h3:hover .anchor, .anchor:focus { opacity: 1; }
+
+/* ---- sidenotes ----------------------------------------------------------- */
+.noteref {
+  font: 600 .7em/1 var(--sans); vertical-align: super;
+  color: var(--mark); text-decoration: none; padding: 0 .1em; cursor: pointer;
+}
+.sidenote {
+  font: .82rem/1.55 var(--sans); color: var(--ink-soft);
+  margin: 0 0 1rem; padding-left: .6rem; border-left: 1px solid var(--rule);
+}
+.sidenote .n { color: var(--mark); font-weight: 600; margin-right: .35em; }
+.sidenote p { margin: 0 0 .4rem; }
+.sidenote p:last-child { margin-bottom: 0; }
+/* With no room for a gutter the note folds under its paragraph and opens on a tap. */
+@media (max-width: 62rem) {
+  .page > .sidenote {
+    grid-column: main-start / main-end; display: none;
+    background: var(--bg-sunk); border-left: 2px solid var(--mark);
+    padding: .6rem .8rem; border-radius: 0 4px 4px 0;
+  }
+  .page > .sidenote.open { display: block; }
+}
+
+/* ---- figures ------------------------------------------------------------- */
+figure { margin: 2rem 0; }
+figure.fig--wide, figure.fig--full { margin: 2.5rem 0; }
+/* A figure's stage is a window: the sheet behind it is cut away, so until a
+   sketch starts there is nothing in it but the room. The border and the inner
+   line are the edge of the opening, the one thing that says it is a window and
+   not a hole in the rendering. */
+.fig-stage {
+  position: relative; overflow: hidden; z-index: 1;
+  background: transparent;
+  border: 1px solid var(--rule); border-radius: 6px;
+  box-shadow: inset 0 0 0 1px var(--inset), inset 0 0 24px var(--inset-glow);
+  /* the build sets --fig-aspect or --fig-height per figure; book mode
+     overrides both, because there a figure is the shape of its box */
+  aspect-ratio: var(--fig-aspect, 16 / 10);
+  height: var(--fig-height, auto);
+}
+figure.fig--full .fig-stage { border-radius: 0; border-left: 0; border-right: 0; }
+.fig-stage canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+.fig-stage iframe { display: block; width: 100%; height: 100%; border: 0; }
+/* The still is for paper and for a browser that cannot draw: on screen the
+   opening shows the room instead, which is the whole point of the design. */
+.fig-poster { display: none; position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.fig-stage.no-webgl .fig-poster { display: block; }
+/* A figure that is its still and nothing else — written as an image, or a
+   sketch with no module to run in this build, which is what a site: false
+   sketch becomes — shows that still. It is the figure here rather than a
+   stand-in behind one, so it is shown whole instead of cropped to fill. */
+[data-fig="image"] .fig-poster:not([hidden]) { display: block; object-fit: contain; }
+
+/* the bar across the top of a live figure: title, hint, controls */
+.fig-bar {
+  position: absolute; left: 0; right: 0; top: 0; z-index: 3;
+  display: flex; align-items: center; gap: .5rem;
+  padding: .4rem .55rem;
+  font: .74rem/1.3 var(--sans);
+  color: #f2f0ea;
+  background: linear-gradient(to bottom, rgba(16, 16, 12, .72), rgba(16, 16, 12, 0));
+  pointer-events: none;
+}
+.fig-bar > * { pointer-events: auto; }
+.fig-bar .fig-title { font-weight: 600; text-shadow: 0 1px 3px var(--legend-edge); }
+.fig-bar .fig-hint { color: var(--legend); text-shadow: 0 1px 3px var(--legend-edge); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; pointer-events: none; }
+.fig-bar .spacer { flex: 1 1 auto; pointer-events: none; }
+.fig-bar button, .fig-bar a {
+  font: inherit; color: #f2f0ea; background: rgba(16, 16, 12, .55); cursor: pointer;
+  border: 1px solid rgba(242, 240, 234, .35); border-radius: 4px; padding: .15rem .45rem;
+  text-decoration: none; white-space: nowrap;
+}
+.fig-bar button:hover, .fig-bar a:hover { background: rgba(16, 16, 12, .85); border-color: #f2f0ea; }
+
+/* the start plate for a figure that does not boot by itself */
+.fig-start {
+  position: absolute; inset: 0; z-index: 2;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .6rem;
+  background: transparent; border: 0; cursor: pointer;
+  color: #f8f6f0; font: .9rem/1.4 var(--sans); text-align: center; padding: 1.5rem;
+}
+.fig-start:hover { background: var(--scrim); }
+.fig-start .play {
+  width: 3.2rem; height: 3.2rem; border-radius: 50%;
+  border: 1px solid rgba(248, 246, 240, .7); background: rgba(16, 16, 12, .5);
+  display: grid; place-items: center; font-size: 1.1rem;
+}
+.fig-start .what { max-width: 26rem; text-shadow: 0 1px 4px var(--legend-edge); }
+.fig-start .weight { color: #cfcabb; font-size: .78rem; }
+.fig-start[hidden] { display: none; }
+
+.fig-fallback {
+  position: absolute; inset: 0; z-index: 1; display: none;
+  align-items: center; justify-content: center; padding: 1.5rem;
+  font: .85rem/1.5 var(--sans); color: var(--ink-soft); text-align: center;
+}
+.fig-stage.no-webgl .fig-fallback { display: flex; }
+
+/* A window with nothing in it: an opening onto the room, where she may come
+   and stand. Written in a chapter as  :::window
+   The aperture is square and 60 by 60 mm, the frame of a twin-lens reflex,
+   given in real units so that it is that size on paper too. The corner marks
+   are the finder's.
+
+   It is a float, so the writing runs beside her instead of stopping for her:
+   a portrait set into the measure, the way a plate is set into a page. It
+   floats to the outer edge, or to the other one with  side=left . A window
+   asked for a width -- wide, full, spread -- is not an opening in this sense
+   but a place, and stays a block in the flow. */
+:root { --win-size: 60mm; }
+figure.window {
+  float: inline-end;
+  width: min(var(--win-size), 46%);
+  margin: .3rem 0 .9rem 1.6rem;
+}
+figure.window.win--left { float: inline-start; margin: .3rem 1.6rem .9rem 0; }
+figure.window + figure.window { clear: both; }
+figure.window.wide, figure.window.full { float: none; width: auto; margin: 2.5rem 0; }
+figure.window .fig-stage {
+  width: 100%; height: var(--fig-height, auto);
+  aspect-ratio: var(--fig-aspect, 1 / 1);
+  max-width: var(--win-size); margin-inline: auto;
+  box-shadow: inset 0 0 0 1px var(--inset), inset 0 0 32px var(--inset-glow);
+}
+/* a place takes the width it was given, and whatever shape with it */
+figure.window.wide .fig-stage, figure.window.full .fig-stage { max-width: none; }
+figure.window .fig-stage::after {
+  content: ""; position: absolute; inset: 5px; pointer-events: none; z-index: 2;
+  background:
+    linear-gradient(var(--rule), var(--rule)) 0 0 / 9px 1px no-repeat,
+    linear-gradient(var(--rule), var(--rule)) 0 0 / 1px 9px no-repeat,
+    linear-gradient(var(--rule), var(--rule)) 100% 0 / 9px 1px no-repeat,
+    linear-gradient(var(--rule), var(--rule)) 100% 0 / 1px 9px no-repeat,
+    linear-gradient(var(--rule), var(--rule)) 0 100% / 9px 1px no-repeat,
+    linear-gradient(var(--rule), var(--rule)) 0 100% / 1px 9px no-repeat,
+    linear-gradient(var(--rule), var(--rule)) 100% 100% / 9px 1px no-repeat,
+    linear-gradient(var(--rule), var(--rule)) 100% 100% / 1px 9px no-repeat;
+  opacity: .7;
+}
+figure.window figcaption { color: var(--ink-faint); font-style: italic; }
+
+figcaption {
+  font: .85rem/1.55 var(--sans); color: var(--ink-soft);
+  margin-top: .6rem; padding-left: .1rem;
+}
+figcaption .label { color: var(--mark); font-weight: 600; margin-right: .4em; }
+figcaption a.permalink { color: var(--ink-faint); text-decoration: none; margin-left: .4em; }
+figcaption a.permalink:hover { color: var(--mark); }
+figcaption .liveat { display: none; }
+
+/* a figure blown up to the window: the stage goes fullscreen, bar and all */
+.fig-stage:fullscreen { aspect-ratio: auto; width: 100vw; height: 100vh; border-radius: 0; }
+.fig-stage:fullscreen canvas { height: 100%; }
+
+/* lil-gui, scoped inside the figure instead of fixed to the window corner.
+   Both class names: lil-gui calls the outer panel .lil-root in 0.21 and .root
+   in earlier releases. */
+.fig-stage > .lil-gui.lil-root,
+.fig-stage > .lil-gui.root {
+  position: absolute; top: 2rem; right: .5rem; z-index: 4;
+  max-height: calc(100% - 2.6rem); overflow-y: auto;
+  --width: 240px; --font-size: 11px; --name-width: 44%;
+}
+
+/* ---- the navigator -------------------------------------------------------
+ * lib/navigator.js draws it: one circle to a place, on a lattice whose spacing
+ * is the radius, so the figure is the Seed of Life at seven places and the
+ * Flower at nineteen. A disc at a centre is a place read; the lens between two
+ * circles fills once both have been. */
+.nav-host { margin: 0 0 1.1rem; }
+.nav-host--large { max-width: 26rem; margin: 1.6rem 0 .6rem; }
+.nav-figure { display: block; width: 100%; height: auto; overflow: visible; }
+.nav-ring {
+  fill: none; stroke: var(--rule-soft); stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+.nav-ring.seen { stroke: var(--rule); }
+.nav-ring.here { stroke: var(--mark); }
+.nav-lens { fill: none; stroke: none; }
+.nav-lens.seen { fill: rgba(154, 166, 221, .16); }     /* the membrane two cells share */
+.nav-node { cursor: pointer; }
+.nav-hit { fill: transparent; }
+.nav-dot { fill: var(--ink-faint); }
+.nav-node.seen .nav-dot { fill: var(--ink); }
+.nav-node.here .nav-dot { fill: var(--mark); }
+.nav-node:hover .nav-dot, .nav-node:focus-visible .nav-dot { fill: var(--mark); }
+.nav-node:focus-visible { outline: none; }
+.nav-key { font: .74rem/1.45 var(--sans); color: var(--ink-faint); max-width: 26rem; }
+
+/* while a chapter is being fetched and swapped in */
+body.turning .sheetbox, body.turning .book-shell { opacity: .4; transition: opacity .12s; }
+
+/* ---- asides -------------------------------------------------------------- */
+.aside {
+  margin: 1.8rem 0; padding: .9rem 1.1rem;
+  background: var(--bg-raised); border: 1px solid var(--rule-soft);
+  border-left: 3px solid var(--periwinkle); border-radius: 0 5px 5px 0;
+  font: .95rem/1.6 var(--sans);
+}
+.aside > :last-child { margin-bottom: 0; }
+.aside .aside-title { font-weight: 700; display: block; margin-bottom: .3rem; font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; color: var(--periwinkle); }
+.aside.method { border-left-color: var(--olive); }
+.aside.method .aside-title { color: var(--olive); }
+.aside.caution { border-left-color: var(--orange); }
+.aside.caution .aside-title { color: var(--orange); }
+
+/* ---- chapter navigation -------------------------------------------------- */
+.chapter-nav {
+  display: flex; gap: 1rem; justify-content: space-between;
+  margin: 4rem 0 0; padding-top: 1.2rem; border-top: 1px solid var(--rule);
+  font: .9rem/1.4 var(--sans);
+}
+.chapter-nav a { display: block; max-width: 48%; text-decoration: none; color: var(--ink); }
+.chapter-nav a span { display: block; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: .2rem; }
+.chapter-nav a:hover { color: var(--mark); }
+.chapter-nav .next { text-align: right; margin-left: auto; }
+
+.colophon { margin-top: 3rem; font: .8rem/1.6 var(--sans); color: var(--ink-faint); }
+
+/* contents page: the whole document in one list */
+.toc-list { list-style: none; padding: 0; font: 1rem/1.5 var(--sans); }
+.toc-list > li { margin: 0 0 1.2rem; padding-bottom: 1.2rem; border-bottom: 1px solid var(--rule-soft); }
+.toc-list .ch { font-size: 1.15rem; font-weight: 600; text-decoration: none; color: var(--ink); }
+.toc-list .ch:hover { color: var(--mark); }
+.toc-list .num { color: var(--mark); font-variant-numeric: tabular-nums; margin-right: .5em; }
+.toc-list .blurb { color: var(--ink-soft); font-size: .9rem; margin: .3rem 0 .4rem; }
+.toc-list .figs { color: var(--ink-faint); font-size: .8rem; }
+
+/* ---- print ---------------------------------------------------------------
+ * The committee reads paper, and paper is the other way round: white, with
+ * black type and no room behind it. The sheets and the world go; every window
+ * prints as its still with the address of the live one underneath, so nothing
+ * in the argument is reachable only on a screen. */
+@media print {
+  :root {
+    --bg: #fff; --bg-raised: #fff; --bg-sunk: #fff; --world: #fff; --page: #fff;
+    --ink: #000; --ink-soft: #333; --ink-faint: #555;
+    --rule: #999; --rule-soft: #ccc; --link: #000; --mark: #000; --highlight: #fff;
+  }
+  @page { margin: 1in 1in 1in 1.25in; }
+  html { background: #fff; }
+  body { font-size: 11.5pt; line-height: 1.6; background: #fff; color: #000; }
+  .topbar, .rail, .panel, .fig-bar, .fig-start, .chapter-nav, .anchor, .nav-host, .nav-key,
+  .sheet, canvas.world,
+  .fig-stage canvas, .fig-stage iframe { display: none !important; }
+  body.has-rail .page { padding-left: 0; }
+  .sheetbox { position: static; }
+  .page { display: block; padding: 0; }
+  .fig-stage {
+    aspect-ratio: auto; height: auto; border: 1px solid #999;
+    background: #fff; box-shadow: none; break-inside: avoid;
+  }
+  .fig-poster { display: block; position: static; height: auto; max-height: 4.5in; object-fit: contain; }
+  /* a window with nothing in it is a screen-only thing: on paper it is a gap */
+  figure.window { display: none; }
+  /* no still means nothing to print: the caption carries the live address,
+     and an empty hairline frame on the page is worse than no frame */
+  .fig--noposter .fig-stage { display: none; }
+  /* a sidenote prints as a note under its paragraph, wherever it is being
+     held — the scrolling column, or a page of the book */
+  .page > .sidenote, .leaf-body .sidenote {
+    display: block; font-size: 9.5pt; border-left: 0; padding-left: 0;
+  }
+  figure { break-inside: avoid; }
+  figcaption { font-size: 9.5pt; }
+  figcaption .liveat { display: block; color: #333; word-break: break-all; }
+  figcaption .liveat::before { content: "Live: "; }
+  figcaption .permalink { display: none; }
+  h1, h2, h3, h4 { break-after: avoid; }
+  pre, blockquote, table { break-inside: avoid; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 85%; color: #555; word-break: break-all; }
+  .noteref { color: #000; }
+}
