@@ -3,4 +3,4 @@
 
 [Proposal Scaffolding and Drafts](./ProposalDrafts.md/)
 
-[Proposal Template with Writing/Interactives Draft](././MaximalistAssemblage/ThesisTemplate/build.mjs/
+[Proposal Template with Writing/Interactives Draft](././MaximalistAssemblage/ThesisTemplate/build.mjs/)
