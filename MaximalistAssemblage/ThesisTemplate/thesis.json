@@ -1,0 +1,32 @@
+{
+  "title": "Maximalist Methods for a Maximalist Assemblage",
+  "shortTitle": "Maximalist Assemblage",
+  "author": "Amy Traylor",
+  "affiliation": "University of New Mexico · Language, Literacy & Sociocultural Studies",
+  "date": "Draft — November 2026",
+  "chapters": [
+    {
+      "file": "01-maximalist-methods.md",
+      "slug": "maximalist-methods",
+      "number": "1"
+    },
+    {
+      "file": "02-artifact-assemblage.md",
+      "slug": "artifact-assemblage",
+      "number": "2"
+    }
+  ],
+  "world": {
+    "module": "floating-skin/skin.js",
+    "colour": "#2b2b2b",
+    "figure": "pregnant.fbx",
+    "clips": [
+      "ginga.fbx",
+      "esquiva.fbx",
+      "armada.fbx",
+      "meia-lua-de-compasso.fbx",
+      "martelo.fbx"
+    ],
+    "waiting": "ginga"
+  }
+}
