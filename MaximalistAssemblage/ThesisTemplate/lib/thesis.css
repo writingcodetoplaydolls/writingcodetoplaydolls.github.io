@@ -686,3 +686,31 @@ body.turning .sheetbox, body.turning .book-shell { opacity: .4; transition: opac
   a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 85%; color: #555; word-break: break-all; }
   .noteref { color: #000; }
 }
+
+/* ---- the version chooser -------------------------------------------------
+ * The page someone is handed when they are shown the draft: it has to say
+ * what it is and get out of the way. Not the contents page's chapter markup,
+ * which runs the id into the title and numbers a list whose items are
+ * already named. */
+.versions { list-style: none; padding: 0; margin: 1.5rem 0 0; }
+.versions li + li { margin-top: .9rem; }
+.versions a {
+  display: flex; align-items: baseline; gap: .9rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--rule-soft); border-radius: 5px;
+  background: var(--chrome);
+  text-decoration: none; color: var(--ink);
+}
+.versions a:hover, .versions a:focus-visible {
+  border-color: var(--mark); background: var(--chrome-firm);
+}
+.versions .v-id {
+  flex: 0 0 auto;
+  font: .72rem/1 var(--sans); letter-spacing: .12em; text-transform: uppercase;
+  color: var(--mark);
+}
+.versions .v-title { font-size: 1.15rem; }
+.versions .v-note {
+  margin: .5rem 0 0 .4rem; color: var(--ink-soft);
+  font-size: .95rem; max-width: var(--measure);
+}
