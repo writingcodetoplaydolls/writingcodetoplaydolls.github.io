@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dissertation Proposal — Notes</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<style>
+:root{
+  --bg:#faf8f4; --panel:#fff; --ink:#1c1a17; --muted:#6b645b; --line:#e4ddd2;
+  --accent:#8a5a2b; --accentbg:#f0e6d8; --shadow:0 1px 3px rgba(0,0,0,.08);
+}
+:root:not([data-theme="light"]){}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#17150f; --panel:#201d16; --ink:#ece6da; --muted:#9a9184; --line:#352f24;
+    --accent:#d6a564; --accentbg:#2c2619; --shadow:0 1px 3px rgba(0,0,0,.4);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#17150f; --panel:#201d16; --ink:#ece6da; --muted:#9a9184; --line:#352f24;
+  --accent:#d6a564; --accentbg:#2c2619; --shadow:0 1px 3px rgba(0,0,0,.4);
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--ink);
+  font:16px/1.65 Georgia,"Iowan Old Style",'Times New Roman',serif;}
+.app{display:flex;height:100vh;overflow:hidden}
+.sidebar{width:340px;flex:0 0 340px;background:var(--panel);border-right:1px solid var(--line);
+  display:flex;flex-direction:column;height:100%}
+.shead{padding:16px 16px 10px;border-bottom:1px solid var(--line)}
+.shead h1{margin:0 0 2px;font-size:17px;letter-spacing:.2px}
+.shead .sub{color:var(--muted);font-size:12.5px;font-family:system-ui,sans-serif}
+.search{margin-top:10px;width:100%;padding:8px 10px;border:1px solid var(--line);
+  border-radius:8px;background:var(--bg);color:var(--ink);font:13px system-ui,sans-serif}
+.list{overflow-y:auto;flex:1;padding:6px}
+.list a{display:block;padding:7px 10px;border-radius:7px;color:var(--ink);
+  text-decoration:none;font:13px/1.35 system-ui,sans-serif;cursor:pointer;
+  border:1px solid transparent}
+.list a small{display:block;color:var(--muted);font-size:11px;margin-top:1px;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.list a:hover{background:var(--accentbg)}
+.list a.active{background:var(--accentbg);border-color:var(--line);color:var(--accent);font-weight:600}
+.list .empty{padding:14px 10px;color:var(--muted);font:13px system-ui,sans-serif}
+.main{flex:1;overflow-y:auto;height:100%}
+.content{max-width:760px;margin:0 auto;padding:40px 28px 120px}
+.content h1,.content h2,.content h3{line-height:1.25;font-family:Georgia,serif}
+.content h1{font-size:28px;margin:.2em 0 .6em;border-bottom:1px solid var(--line);padding-bottom:.3em}
+.content h2{font-size:21px;margin:1.6em 0 .5em}
+.content h3{font-size:17px;margin:1.3em 0 .4em}
+.content a{color:var(--accent)}
+.content code{background:var(--accentbg);padding:.1em .35em;border-radius:4px;
+  font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88em}
+.content pre{background:var(--panel);border:1px solid var(--line);border-radius:8px;
+  padding:14px;overflow-x:auto;box-shadow:var(--shadow)}
+.content pre code{background:none;padding:0}
+.content blockquote{margin:1em 0;padding:.3em 1em;border-left:3px solid var(--accent);
+  color:var(--muted)}
+.content table{border-collapse:collapse;margin:1em 0;font-size:.92em}
+.content th,.content td{border:1px solid var(--line);padding:6px 10px;text-align:left}
+.content img{max-width:100%}
+.menu-btn{display:none}
+@media (max-width:760px){
+  .app{flex-direction:column}
+  .sidebar{width:100%;flex:0 0 auto;max-height:45vh}
+  .content{padding:22px 16px 90px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="shead">
+      <h1>Dissertation Proposal — Notes</h1>
+      <div class="sub">103 notes · type to filter</div>
+      <input id="q" class="search" placeholder="Search titles & filenames…" autocomplete="off"/>
+    </div>
+    <nav id="list" class="list"></nav>
+  </aside>
+  <main class="main"><div id="content" class="content"></div></main>
+</div>
+<script>
+const NOTES = [{"file": "APPARATUS_vs_ASSEMBLAGE.md", "title": "Bolt 2004, and a comparison: apparatus against assemblage"}, {"file": "BARAD_pages_pulled.md", "title": "Barad, the mapped pages, pulled and checked"}, {"file": "BARAD_three_texts_read.md", "title": "Barad, the three held texts, read"}, {"file": "BARAD_transmaterialities_read.md", "title": "Barad, \"TransMaterialities\", read"}, {"file": "BEATTY_2017_close_read.md", "title": "Beatty 2017, *Contemporary Photographic Landscape Practices and the Affective Gaze*: close read"}, {"file": "BETTERTON_2006_PromisingMonsters_read_2026-11-02.md", "title": "Betterton 2006, \"Promising Monsters\""}, {"file": "BRAIDOTTI_WritingAsANomadicSubject_deepread.md", "title": "Braidotti, \"Writing as a Nomadic Subject\" (deep read)"}, {"file": "BUTLER_1993_BodiesThatMatter_read_in_full_2026-11-02.md", "title": "Butler, *Bodies That Matter*, read in full"}, {"file": "BUTLER_1993_endnotes_read_2026-11-02.md", "title": "Butler, *Bodies That Matter*: the endnotes"}, {"file": "BUTLER_catachresis_and_the_real_read.md", "title": "Butler, *Bodies That Matter*: catachresis, and arguing with the real"}, {"file": "CHAT_NOTES_2026-10-28_29.md", "title": "Notes from the chat, 28 and 29 Oct 2026"}, {"file": "CITATION_CHECK_Dissertation_2026-11-01.md", "title": "Citation check, dissertation lane"}, {"file": "CITATION_CHECK_Dissertation_2026-11-03_v11.md", "title": "Citation check, dissertation lane"}, {"file": "COLMAN_2023_close_read.md", "title": "Colman 2023, \"Quantum Feminicity: Modes of Countermanding Time\": close read"}, {"file": "COMPARISON_COUNTS_CORRECTION.md", "title": "Which of your texts I compared against, and a correction to the counts"}, {"file": "COMPS_lens_pass.md", "title": "The Comps corpus: lens pass"}, {"file": "DONNARUMMA_2025_AIandCorporealKnowledge_read_2026-11-02.md", "title": "Donnarumma 2025, \"AI and corporeal knowledge\""}, {"file": "FAHEY_2020_ch1_ch2_ch3_read_2026-11-02.md", "title": "Fahey, *Unruly Encounters*: chapters 1, 2 and 3"}, {"file": "FAHEY_2020_ch4_ch5_glitch_and_assemblage_read_2026-11-01.md", "title": "Fahey, *Unruly Encounters*, chapters 4 and 5, read"}, {"file": "FAHEY_2020_UnrulyEncounters_read_2026-11-01.md", "title": "Fahey, *Unruly Encounters*, read"}, {"file": "FERRANDO_deep_read_2012-2016.md", "title": "Francesca Ferrando: close read of the four texts in the folder (2012 to 2016)"}, {"file": "FITJE_MetaphorsOfModernPhysics_read.md", "title": "Fitje, \"Transposing the Unseen: The Metaphors of Modern Physics\", read in full"}, {"file": "FRIES_2017_artworks_read_2026-11-02.md", "title": "Fries, *Touching Impermanence*: the artworks"}, {"file": "FRIES_2017_ch1_ch2_ch4_ch5_read_2026-11-02.md", "title": "Fries, *Touching Impermanence*, chapters one, two, four and five, read"}, {"file": "FRIES_2017_her_other_works_read_2026-11-02.md", "title": "Fries, *Touching Impermanence*: her other six works"}, {"file": "FRIES_2017_TouchingImpermanence_read_2026-11-02.md", "title": "Fries, *Touching Impermanence*, read"}, {"file": "HANDOFF_Hayles_deep_read_2026-10-30_v3.md", "title": "Handoff: deep read of the complete Hayles monographs (v3)"}, {"file": "HAYLES_BORGES_fold_PYNCHON_Bateson.md", "title": "Hayles's Borges read through the Leibnizian fold, and Hayles's Pynchon read through Bateson's difference that makes a difference"}, {"file": "HAYLES_ch1_additions_for_the_proposal.md", "title": "Eleven additions from Hayles chapter 1, keyed to the proposal, plus where Heisenberg's philosophy book is"}, {"file": "HAYLES_CosmicWeb_ch1_ch3_closeread.md", "title": "Hayles, *The Cosmic Web*: Introduction, chapter 1 and chapter 3, read closely"}, {"file": "HAYLES_CosmicWeb_ch2_ch4_ch5_ch6_closeread.md", "title": "Hayles, *The Cosmic Web*: the four remaining chapters, and the positivist purification of language read through Trinh"}, {"file": "HAYLES_deep_read_1984-2025.md", "title": "Hayles, the thirteen volumes, 1984 to 2025: one file for the deep read"}, {"file": "HAYLES_field_theory_of_culture_uptake_2026-10-30.md", "title": "Hayles's \"field theory of culture\": did anyone ever pick it up"}, {"file": "HAYLES_field_without_direct_connection_SOURCES_2026-10-30.md", "title": "Influence without a direct connection: the passages, and the Kundera question"}, {"file": "HAYLES_handoff_WHICH_VERSION_2026-11-02.md", "title": "Which Hayles handoff to use, and a check of what it claims"}, {"file": "HEISENBERG_1970_beauty_connections_2026-11-01.md", "title": "Heisenberg, \"The Meaning of Beauty in Exact Natural Science\": where it touches the project"}, {"file": "HEISENBERG_PhysicsAndPhilosophy_connections_2026-10-31.md", "title": "Heisenberg, *Physics and Philosophy*: connections"}, {"file": "IVINSON_RENOLD_camera_chase.md", "title": "Ivinson and Renold, the camera chapter: chase result"}, {"file": "IVINSON_RENOLD_three_close_read.md", "title": "Three Ivinson and Renold papers, close read"}, {"file": "JACKSON_2003_MAZZEI_2013_voice_read_2026-11-02.md", "title": "Jackson 2003, \"Rhizovocality\", and Mazzei 2013, \"A voice without organs\""}, {"file": "JACKSON_MAZZEI_2008_experience_and_I_read_2026-11-03.md", "title": "Jackson and Mazzei 2008, \"Experience and 'I' in Autoethnography: A Deconstruction\""}, {"file": "JACKSON_MAZZEI_2013_MAZZEI_2014_read_2026-11-03.md", "title": "Jackson and Mazzei (2013) and Mazzei (2014), read in full"}, {"file": "JACKSON_MAZZEI_STPIERRE_five_read_2026-11-02.md", "title": "Five on method: Mazzei and McCoy 2010, Mazzei 2010, Jackson 2013, Jackson and Mazzei 2024, St. Pierre 2009"}, {"file": "JACKSON_plasticity_sources.md", "title": "Jackson's sources for plasticity, and where transmogrification sits among them"}, {"file": "JONKER_2024_close_read.md", "title": "Jonker 2024, *Towards Response-able Arts-based Practices in Higher Education*: close read"}, {"file": "KIRBY_2017_collection_close_read.md", "title": "Kirby (ed.) 2017, *What if Culture was Nature all Along?*: close read, with chapter 3 in full"}, {"file": "KIRBY_2017_collection_FULL_read.md", "title": "Kirby (ed.) 2017, *What if Culture was Nature all Along?*: the whole collection, read"}, {"file": "KIRBY_QuantumAnthropologies_close_read.md", "title": "Kirby 2011, *Quantum Anthropologies: Life at Large*: close read"}, {"file": "KOTZE_2017_analyses_ch5_read_2026-11-02.md", "title": "Kotzé, *A Diffractive Analysis of a Grade 10 Art Project*: the three analyses, and chapter 5"}, {"file": "KOTZE_2017_Tygerberg_diffractive_analysis_read_2026-11-01.md", "title": "Kotzé, a diffractive analysis of a Grade 10 art project, read"}, {"file": "MALABOU_sources.md", "title": "Malabou: what is already here"}, {"file": "MANNING_AlwaysMoreThanOne_ch1-6_close_read.md", "title": "*Always More Than One*, chapters 1 to 6: close read"}, {"file": "MANNING_AlwaysMoreThanOne_close_read.md", "title": "Manning 2013, *Always More Than One*: close read"}, {"file": "MANNING_library_what_arrived.md", "title": "The Manning library: what arrived, and what it closes"}, {"file": "MATERIAL_FEMINISMS_2008_read.md", "title": "Alaimo & Hekman (eds) 2008, *Material Feminisms*: read"}, {"file": "MAZET_BrainIsTheScreen_closeread.md", "title": "Mazet, \"Gilles Deleuze's 'the Brain is the Screen' in Digital Culture\" (close read)"}, {"file": "MCKNIGHT_WHITBURN_2017_FetishOfTheLens_read_2026-11-02.md", "title": "McKnight and Whitburn 2017, \"The fetish of the lens\""}, {"file": "METAPHOR_and_the_real_search2.md", "title": "Metaphor and the real: a second search"}, {"file": "METAPHOR_where_it_is_discussed.md", "title": "Where metaphor's standing is discussed, candidates"}, {"file": "METHODS_proposed_alternatives.md", "title": "The proposed alternatives to critique, looked at properly"}, {"file": "MURRAY_2022_GIBSON_2025_read_2026-11-02.md", "title": "Murray 2022, \"Disability Embodiment, Speculative Fiction, and the Testbed of Futurity\", and Gibson et al 2025, \"Differences as potentials\""}, {"file": "NEIMANIS_2017_ch2_ch4_read_2026-11-02.md", "title": "Neimanis, *Bodies of Water*: chapters 2 and 4"}, {"file": "NEIMANIS_BodiesOfWater_read.md", "title": "Neimanis, *Bodies of Water*, read"}, {"file": "NEUROMORPHIC_CAMERA_lens.md", "title": "Neuromorphic cameras and their algorithms"}, {"file": "NIEUWENHUIS_2019_PorousSkin_read_2026-11-02.md", "title": "Nieuwenhuis, \"Porous Skin\", read"}, {"file": "Nomadic_Subjectivities_and_Art_Practice_as_Research.md", "title": "Research Documentation: Nomadic Subjectivities, Art Practice as Research, and Braidottian Cartographies"}, {"file": "Nomadic_Subjectivities_Resource_Texts_v3.md", "title": "Resource Texts for Nomadic Subjectivities: Female / Mother / Computational / Poor / Appalachian-Rural South / Autistic"}, {"file": "NOTES_to_chase.md", "title": "Notes to chase"}, {"file": "NOV2_inventory_CORRECTED_2026-11-03.md", "title": "The November 2 folder: corrected inventory"}, {"file": "NOV2_recount_2026-11-03.md", "title": "November 2 folder: recount after the zips were extracted and Jackson/Mazzei 2008 added"}, {"file": "PERMEABLE_BODIES_research_notes.md", "title": "Permeable Bodies: Research Notes"}, {"file": "Posthuman_FirstPerson_Anthropocentrism_Notes.md", "title": "First person + posthuman theory: notes on the anthropocentrism problem"}, {"file": "Posthuman_FirstPerson_Gap_Sources.md", "title": "Sources for the three gaps"}, {"file": "PROPOSAL_SUPPORT_MAP_with_concepts_2026-11-03.md", "title": "The support map rebuilt on v9, with every concept in play"}, {"file": "PROPOSAL_v10_LABELS_ADDED_2026-11-05.md", "title": "The 13 provenance labels added in v10"}, {"file": "PROPOSAL_VERSION_AUDIT_2026-11-03.md", "title": "Is anything missing from the proposal draft chain"}, {"file": "QUANTUM_AND_DUCHAMP_lens.md", "title": "Quantum and Duchamp as lenses, plus Horse-girl found"}, {"file": "QUANTUM_PERMEABILITY_lens.md", "title": "Quantum physics and the permeability of bodies"}, {"file": "RAVISANKAR_close_read.md", "title": "Ravisankar 2019, close read"}, {"file": "READING_PLAN.md", "title": "Reading plan for the todo folder"}, {"file": "READING_PLAN_2026-10-27.md", "title": "Reading plan, rebuilt"}, {"file": "REREAD_against_reading_list_2026-10-29.md", "title": "The four Barad texts reread against the reading list"}, {"file": "RERUN_2026-11-01_absence_claims_rechecked.md", "title": "The absence claims re-run against the recovered corpus"}, {"file": "ROMERO_2022_ch4_ch5_read_2026-11-02.md", "title": "*Contemporary Materialism*: chapters 4 and 5"}, {"file": "ROMERO_ContemporaryMaterialism_read.md", "title": "Romero, Pérez-Jara and Camprubí (eds), *Contemporary Materialism*, assessed"}, {"file": "SANTA_CRUZ_place_and_people.md", "title": "Santa Cruz as a place: mapping people and place"}, {"file": "SHANNON_2021_2025_Aautisms_read_2026-11-02.md", "title": "Shannon, \"A/autisms\""}, {"file": "SHARING-GUIDE.md", "title": "Author Voice & Citation Analysis — A Guide You Can Hand to Someone Else"}, {"file": "SHILDRICK_2015_WhyShouldOurBodiesEndAtTheSkin_read_2026-11-02.md", "title": "Shildrick, \"Why Should Our Bodies End at the Skin?\""}, {"file": "SHILDRICK_2022_VisceralProstheses_read_in_full_2026-11-02.md", "title": "Shildrick 2022, *Visceral Prostheses*"}, {"file": "SKIN_SCALE_lens.md", "title": "Second skin, transcorporeality, possibility space, nexus, transmogrification"}, {"file": "STIM_etymology_and_root.md", "title": "Stim, stimulation, proprioception; and the Arlander chapter"}, {"file": "SWEEP_FINDINGS_2026-10-27.md", "title": "Full-corpus sweep: findings"}, {"file": "SWEEP_FINDINGS_OCR_COMPLETE.md", "title": "OCR complete: the final sweep, and four claims it overturns"}, {"file": "THIRD_CORPUS_lens.md", "title": "The third corpus: ResearchRepository and Leonardo"}, {"file": "TRANSMOGRIFICATION_sources.md", "title": "Transmogrification: the sources, and how each one frames it"}, {"file": "TRINH_NotYouLikeYou_read.md", "title": "Trinh, \"Not You/Like You\", found and read in full"}, {"file": "TRINH_reference_form_and_clarity.md", "title": "Trinh T. Minh-ha: which name is which, how she is referenced, and the four texts held"}, {"file": "Verbatim_Chat_Record_theory questions.md", "title": "Verbatim Chat Record"}, {"file": "VOICE_THREAD_five_more_read_2026-11-03.md", "title": "Five more: Mazzei and Jackson 2017, Jackson 2010, Jackson 2003, Somerville 2004, Kairienė et al 2026"}, {"file": "VOLUMES_referenced.md", "title": "The volumes referenced, and a correction about *Transpositions*"}, {"file": "WALES_APPALACHIA_thread.md", "title": "Wales, rurality, class: what the new files carry"}, {"file": "YERGEAU_PracticingPlasticity_closeread.md", "title": "Yergeau, \"Coda: Practicing Plasticity\" (close read)"}];
+const listEl = document.getElementById('list');
+const contentEl = document.getElementById('content');
+const qEl = document.getElementById('q');
+let active = null;
+
+marked.setOptions({gfm:true, breaks:false});
+
+function render(items){
+  listEl.innerHTML = '';
+  if(!items.length){ listEl.innerHTML = '<div class="empty">No matches.</div>'; return; }
+  for(const it of items){
+    const a = document.createElement('a');
+    a.href = '#'+encodeURIComponent(it.file);
+    a.dataset.file = it.file;
+    a.innerHTML = '<span></span><small></small>';
+    a.querySelector('span').textContent = it.title;
+    a.querySelector('small').textContent = it.file;
+    if(it.file===active) a.classList.add('active');
+    a.onclick = e=>{ e.preventDefault(); location.hash = encodeURIComponent(it.file); };
+    listEl.appendChild(a);
+  }
+}
+
+async function load(file){
+  active = file;
+  for(const a of listEl.children){ if(a.dataset) a.classList.toggle('active', a.dataset.file===file); }
+  const hit = NOTES.find(n=>n.file===file);
+  contentEl.innerHTML = '<p style="color:var(--muted);font-family:system-ui">Loading…</p>';
+  try{
+    const r = await fetch('./'+encodeURIComponent(file), {cache:'no-cache'});
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    const md = await r.text();
+    contentEl.innerHTML = marked.parse(md);
+    document.querySelector('.main').scrollTop = 0;
+    document.title = (hit? hit.title : file) + ' — Notes';
+  }catch(err){
+    contentEl.innerHTML = '<h1>Could not load</h1><p style="font-family:system-ui">'+
+      file+' — '+err.message+'</p><p style="font-family:system-ui;color:var(--muted)">'+
+      'If you are viewing this from a local file:// path, run it through a web server '+
+      '(the notes fetch needs http). On GitHub Pages it will work.</p>';
+  }
+  const link = [...listEl.children].find(a=>a.dataset && a.dataset.file===file);
+  if(link) link.scrollIntoView({block:'nearest'});
+}
+
+function filter(){
+  const q = qEl.value.trim().toLowerCase();
+  render(!q ? NOTES : NOTES.filter(n=>
+    n.title.toLowerCase().includes(q) || n.file.toLowerCase().includes(q)));
+}
+
+function fromHash(){
+  const h = decodeURIComponent((location.hash||'').replace(/^#/,''));
+  if(h && NOTES.some(n=>n.file===h)) load(h);
+  else if(NOTES.length) load(NOTES[0].file);
+}
+
+qEl.addEventListener('input', filter);
+window.addEventListener('hashchange', fromHash);
+render(NOTES);
+fromHash();
+</script>
+</body>
+</html>
