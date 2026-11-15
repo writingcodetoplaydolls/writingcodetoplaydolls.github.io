@@ -1,0 +1,196 @@
+---
+published: false      # the pages are built from this; Jekyll should not render it
+title: Possibilities for Nomadic Subjectivities: How do we navigate?
+---
+
+## Locate the self
+
+### Start with the feminist location in the body
+
+Adrienne Rich
+
+Transcorporeality
+
+Gut/Brain
+
+Skin
+
+Epigenetics/DNA
+
+Motherhood
+
+### Cartography
+
+### Nomadic Subjectivities
+
+I write from a particular location. I am an artist, educator, researcher, parent, and neurodiverse person. My background is in anthropology and art (BA), art education (MA), and experimental art and technology (MFA). My PhD research entangles posthumanism and new materialism with each of these. Adrienne Rich’s poetry has been with me for thirty-five years; encountering her as the locational ground of feminist materialism reads, to me, as coming home. The same is true of Trinh T. Minh-ha, whose work I almost pursued in graduate study in visual anthropology before the path turned. My study of quantum science shows me that the relational, indeterminate character of the world has been repeatedly obscured to maintain authoritarian controls governed by the Platonic dualism this document traces and refuses.
+
+The form of the document is part of its argument. Multiple overlapping descriptions are not redundancy but posthumanist method: each frame produces what the others foreclose, and no single account exhausts the phenomenon. The reader who expects a single line of argument, exhaustively defended, will read this against the grain. The reader who reads it as a set of overlapping cuts on a shared ground will see what it is doing.
+
+When I first began trying to write for academic audiences, to fit all my thoughts into twenty-five linear pages of careful citations that moved with military precision into the field of battle, where I must fight to prove I can make sense (not to my immediate colleagues and mentors, but to the academic world at large), I struggled with the enormity of the field, the sheer volume of words and ideas and becomings and connections. I could see them all, all at once, always. In the first chapter of Jane Bennett's Vibrant Matter, she asks how to help people learn to see the vibrancy of matter, to open themselves up to the agential swarm, the primordial swerve, to notice, to linger in the world of material becomings. I was struck and annoyed, because I already live in the world of vibrancy and frequently I am exhausted with people who don't see as I see, because they frequently have no idea what I am going on about, like maybe there is a giant rabbit behind my shoulder whispering into my ear (or at least they think that I think there is a giant rabbit behind my shoulder whispering into my ear).
+
+After months of wrangling and too many to count false starts in organizing my thoughts so they made sense in twenty five linear pages, I realized the audience I care most about making sense to is the audience I should be writing for, and then I had a vision, a lens, a path that was clear. I would write to my students, for my students, past/present/future students. The classroom for me, for the past twenty-two-ish years (and maybe before that when my hat leaned towards student), is like an art gallery (my experience/perception/invention of an art gallery). My favorite thing about making art and showing my art is when my work, my thought babies, get to go live with other people's thought babies and have conversations and make new thought babies. Sending my art out to play with other art is like watching my own children on the playground exploring their surroundings, testing out their limits, timidly for some of my children, and boldly for others, making gestures towards the other children, birds, trees, rocks, grass, babies bunnies just born under the mulch that the kind grounds keeper surrounded with temporary fencing to keep them safe until the mommy bunny could move them. Because of the nature of the classroom, or at least my classroom, the humans that entered the space, physical or metaphysical, brought their own art, their own thought babies. And it was my greatest joy and honor to share my thoughts with them and for them to bless me by sharing their own. So when I write that I write for my students, it is with the same eagerness to show my new friend the beautiful caterpillar, the roly poly just unfurled after I dug it from the mud under the rock, or to co-create/participate/feel/make the connection, see the interrelatedness of all things shimmer and glow and our hearts and our brains light up with the happy chemicals of connection.
+
+During my initial presentation to my comprehensive exam committee I was reminded that in the beginning as researchers we lay the foundation, present the ground of what has come before from which our seeds will grow. We save analysis for later, for comprehensive exams we report. I honor that intention by carefully listening to the voices of each author and trying not to assert my own already always thinking. With that said, it would be irresponsible to not state clearly that I come with a framing that influences the agential cuts I make and the marks I leave on bodies.
+
+I have been teaching philosophy alongside every other subject I have taught since 2009. I began with introducing M. Scott Peck's Making a Map for Life, Plato's Allegory of the Cave, and the Simulacra work underpinning the Matrix. Prior to 2009 I had multiple experiences working with young people with noted mental health struggles that made it difficult for them to navigate expectations in traditional school settings. As a person who suffered from PTSD since childhood, I noticed in them what could be similar difficulties I had in being in the world with other people without such histories. (I checked my ethical boundaries of projecting onto students my own constructs, and after reconciling that growing an ability for meta-cognition, self-reflection, and the understanding of thinking errors (controversial) was a healthy practice for everyone, despite their background, I continued)
+
+"We are entangled, until we are not." — Boris Keifer. Before we can apply diffractive practice to the field, we must first define that field and what exists within it.
+
+My position grounds me in:
+
+art history, art education, art making
+
+computer science, computational art, computer science education,
+
+belonging in science, computing, math history
+
+anthropology
+
+Words are neither my first or my primary language. First I reach out through the body, the skin, sound, sight, proprioception. Meaning has to be explicitly translated into word. There is a tangible exertion, a transposition, trying to decompose and recompose into containers of representation of that which was originally felt.
+
+My 6-yo walks in and asks me to play a learning game with her on a phone. When I defer, and ask her to please wait while I finish my thoughts, she leaves, but leaves behind the phone, right next to my keyboard, loudly playing music intended to motivate children to practice reading.
+
+A cinematic viewport/viewpoint is a useful construct through which to imagine a structure for nomadic subjectivities. Add to this structure a sense of everything, everywhere, all at once, not in a fixed state, but an ongoing already always becoming. Multiple viewports tilt, pan, dolly around their shared target, perpetually shifting perspective, like a multi layered/multi dimensional tilt-a-whirl. I coded this movement once (attempted to recreate the sensation of the movement via writing instructions for a computer to rotate, translate, oscillate), while waiting for my kids to navigate the amusement park. I get too motion sick to actually go on rides, but I can, and enjoy, imagining the experience.
+
+### Ontology has a structure
+
+A tilt-a-whirl has its own finite levels of movement. I imagine the joints of a body in a similar navigable, explorable construct, with each joint its own node and accompanying planes of oscillation. Always oscillation because there is an end and a beginning to each range of motion, and every moment state must exist somewhere within that oscillation.
+
+My husband starts typing loudly in the next room. He has a computer keyboard designed to provide auditory and haptic feedback like an actual typewriter. I shut my door. He responds by practicing his trumpet.
+
+The veracity of the illustration of structure does not depend on the exact movement chosen to illustrate the point, but it is understood that there is a movement that has its own logic, is continuous, contiguous, harmonious, and smooth. Smooth like water running, with stops/staccato that feel more like water hitting a rock or other obstacle rather than a human body hitting a wall.
+
+What is a word that expresses the relationship of illustration to sight/visual stimuli, as to show is to more visceral sensory understanding like touch, movement, temperature, centripetal forces?
+
+I imagine a skeleton of defined joints with a curve applied.
+
+**\[Note\]** Frame also sketches the apparatus for 3.3–3.4: viewports that tilt, pan, and dolly around a shared target; joints with planes of oscillation; a skeleton with a curve applied.
+
+Many parts of the cut history section are important to me because they detail the history of what I perceive as violence, violence committed in the erasure of complexity, the insistence on the word, the one truth, and the erasure of the female body. That violence, sense of erasure, and feeling of being intentionally excluded is important to my nomadic subjectivities. Especially violent for someone who feels their 2nd or 3rd mode of understanding, knowledge, communication, is word, and that lives so fully via proprioception.
+
+The critique of researcher bias has traveled a specific arc across fields. The positivist ideal -- the view from nowhere, the neutral observer, the God's trick Haraway names -- gave way, under pressure from feminist, postcolonial, and interpretive traditions, to the demand for positionality disclosure. The researcher was asked to name her location: her race, gender, institutional affiliation, theoretical commitments. This disclosure was framed as a corrective -- a way of flagging potential distortion so that readers could adjust. The assumption remained that bias was a contamination to be acknowledged and, where possible, minimized. Research was still understood as something that would ideally happen without a situated subject in the way.
+
+Posthumanist and new materialist frameworks reject the premise. If the world is always-becoming through intra-action, if there is no phenomenon prior to the apparatus that produces it, if matter and meaning co-constitute each other through specific material-discursive arrangements -- then there is no view from outside. The researcher is not adjacent to the research. She is part of the apparatus. Her situatedness does not introduce error into an otherwise clean process; it is constitutive of the process itself. Barad is unequivocal: the apparatuses that produce phenomena are not separate from what they produce. The agential cut that makes a phenomenon legible is always already enacted from within the entanglement, never from outside it. On this account, the demand that a researcher minimize her bias is a demand that she pretend to be something the ontology says she cannot be.
+
+This move -- from situatedness as contamination to situatedness as constitutive -- was not invented by posthumanism. It was worked out first in feminist practice. Rich's "politics of location" is its founding gesture: the demand to begin not with a pretense of neutrality but with the body, the specific geography closest in, as the only honest epistemological starting point. Braidotti traces the line from Rich directly into new materialism's situated epistemology (*New Materialism*, p. 22), and Mąkowska (2022) shows that what Rich was enacting in her poetics -- mapping her own flesh as medical history, sociopolitical inscription, and epistemological ground simultaneously -- is structurally identical to what Barad will later formalize as the researcher's position within the apparatus. The apparatus argument is not a posthumanist novelty. It is feminist body theory formalized. Haraway's "God's trick" critique is the same critique Rich was making in 1984 when she insisted that there is no speaking from outside one's location, only from within it. What changes between Rich and Barad is vocabulary and philosophical frame. The underlying claim -- that the knower is always already inside what she studies, that this is not a problem to be corrected but a condition to be worked -- is continuous.
+
+The artist-researcher takes this one step further, but the move is not toward greater centrality -- it is toward a more precise account of her position within a distributed apparatus. Braidotti's cartography is not the map one neutral observer makes of a pre-existing terrain. It is the specific trajectory of a specific nomadic subject moving through a specific configuration of forces, in intra-action with the other human and nonhuman actants that constitute the apparatus alongside her. The knowledge produced is not generalizable in the traditional sense. It does not claim to represent what any researcher would find. It claims something more precise and more honest: this is what became thinkable through this particular assemblage -- this subject, this material, this set of encounters, this configuration of time/space/matter -- and the research artifact produced through it is offered as evidence to other entities capable of perceiving it. The situated cartography is not the packaging around the findings. It is the findings.
+
+What the artist-researcher brings specifically is a transposition framework -- the unique mediation through which the assemblage produces a research artifact that can be shared as evidence with other perceiving entities. She is one actant within the apparatus, not its sovereign. She does not produce the research phenomenon alone; she enters into intra-action with materials, spaces, other bodies, institutional structures, and the accumulated force of prior encounters, all of which participate with equal ontological weight in what gets made. Her situatedness is the particular node through which the apparatus becomes this inquiry, generating this knowledge, for this community of reception. Specificity is not a limitation on generalizability. It is the condition of possibility for any knowledge at all.
+
+Positionality and accountability for one's unique nomadic position is not a methodological add-on. It is constitutive of how artists especially do research and participate in knowledge work. The artist-researcher is always already an embodied transpositional apparatus -- as Rauschenberg was, as Cage was, as Cézanne was -- enacting the ontological ground before and beyond any vocabulary available to name it. What changes with the vocabulary is not the practice but its legibility: to other practitioners, to institutions, to the broader knowledge community.
+
+The distinction between posthumanism and new materialism established across Part One is a theoretical distinction -- it maps different emphases, genealogies, and methodological centers of gravity. What confirms it from the direction of practice is that the protocols researchers have developed under the posthumanist and new materialist umbrella reproduce exactly the division of labor the theoretical account predicts. Lambert (submitted) uses NM concepts -- intra-action, assemblage, spacetimemattering -- to operationalize the PH ethical stance of refusing the humanist reflective practitioner. Hill (2017) frames the three modes of becoming-diffractive in explicitly PH terms -- the decentered subject, the refusal of the individual teacher as autonomous agent -- but operationalizes them through NM conceptual tools: intra-action, becoming-with, assemblage, affect. Martin, Sayers, and Carroll (2025) develop their six transposition practices on the PH side of the distinction -- critique of Man, nomadic subject, affirmative ethics -- but anchor them in a NM ontology of relational becoming. In each case, PH provides the critical-ethical vector that says why the practice matters and what is at stake, and NM provides the material-ontological vector that says what the world is made of and how phenomena are constituted. Neither framework can do the other's work. The practice texts confirm the theoretical distinction not by citing it but by enacting it.
+
+This is where Part One opens onto Part Two. If posthumanism and new materialism together establish that the world is relational, processual, and virtual before it is actual, then the question becomes how to inhabit and work within that world as a researcher and practitioner. Diffractive practice is the response to that question -- and it is the subject of what follows.
+
+### Hayles: the point from which to view, and Braidotti
+
+Hayles: the point from which to view, and Braidotti
+
+*Hayles, The Cosmic Web (1984), via HAYLES_ch1_additions_for_the_proposal.md, 29 Oct 2026*
+
+Hayles describes the loss of the single viewpoint as the central issue of modernism: "It would be possible to write the history of the modern novel using similar terms, starting from a Jamesian theory of point of view and progressing to post-modern literature in which **the assumption that there is a 'point' from which to 'view' is called into question**. Shifting viewpoints that are mutually exclusive but all in some sense true; experiments that involve making the subject-object split in different places; the radical questioning of what it means to be 'objective'" (Hayles, 1984, p. 55). She reaches this from Bohr, directly: the paragraph follows four pages on complementarity and the limits of viewpoint, recorded in 1.5.
+
+Braidotti takes the same loss as a starting condition rather than a predicament, and makes a method of it. Style is "a navigational tool" that "negotiates our path across sets of material ('matter-real') coordinates"; the cartographer's accuracy is held together with "the hyper-sensitivity of the sensualist"; perception works by "the folding in and out"; and a figuration "is a living map, a transformative account of the self; it's no metaphor" (Braidotti, 2014). Where Hayles records the question of whether there is a point from which to view, Braidotti answers it: there is a point, it is a located body, and locating it is the work.
+
+My note, 29 Oct 2026: **the Bohr passage connects Braidotti to quantum physics, which I have never seen her explicitly do.**
+
+**\[Note\]** The counts support that. Across Braidotti's own single-authored books held here, **Bohr appears once and quantum twice**, and the one Bohr sentence attributes the engagement to somebody else: "Karen Barad (2007) takes on the physics of the universe as a whole by engaging with the theories of physicist Niels Bohr; Vicky Kirby also refers to quantum anthropology (2011)" (*Posthuman Feminism*, 2022, 107,208 words; Bohr 1, quantum 2, Barad 6, Heisenberg 0, Einstein 1 in the Freud correspondence only). The other "quantum" is a reference-list entry for Kirby. Both occurrences of "complementarity" in that book are **not Bohr's**: one is Wynter's "paradox of the complementarity of European modernity and colonialism," one is Ingold's "complementarity of the biogenetic and socio-cultural dimensions." *Nomadic Theory* (2011, 148,962 words) has Bohr 0, quantum 0, Heisenberg 0, Barad 7. "Writing as a Nomadic Subject" (2014) has Barad 0 and diffraction 0. "Nomadic Ethics" (2013) has physics 1 and the rest 0. The Barad-heavy counts in the *Posthuman Glossary* are other contributors' entries, not her prose. So the join through Bohr is one to make, not one to cite her for.
+
+### The contribution: reading Braidotti through Bohr
+
+The contribution: reading Braidotti through Bohr
+
+*Hayles, The Cosmic Web (1984), via HAYLES_ch1_additions_for_the_proposal.md, 29 Oct 2026*
+
+My claim, 29 Oct 2026: **Reading Braidotti through Bohr and quantum physics is mine. It is novel because she never made the claim explicitly herself. She talks about other sci3nce fields extensively but never veers into physics.**
+
+*Second Braidotti sweep over all 1,760 PDFs under K:\OneDrive\UNM, 29-30 Oct 2026, via BRAIDOTTI_texts_held_2026-10-29.csv and NOTES_to_chase.md section 15*
+
+The evidence for the second half of that, from the texts held here. Braidotti's engagement with the sciences is wide and sustained, and physics is not in it. Every PDF under the dissertation and comprehensive-exam folders was searched for her name: **1,760 files scanned, 44 carrying her name in their first three pages, twelve of them written by her and one more edited by her.** Across the twelve she wrote, spanning 1994 to 2024 and **324,041 words**, the counts are **1,781 occurrences of other-science terms against 16 for physics**, four for quantum, one for Bohr and **none at all for Heisenberg or field theory**. The thirteenth, the *Posthuman Glossary* (2018), is edited rather than written and is left out of those totals. Counts are taken over the full extracted text of each file with hyphenation across line breaks repaired and whitespace collapsed, and physics is counted with a word boundary so that the adjective physical is excluded.
+
+The two books carry most of it. In *Posthuman Feminism* (2022), **107,208 words**: species 154, technoscience 124, biology 107, ecology 96, genetics and genomics 73, climate 73, evolution 71, cognition 61, reproductive technologies 40, bacteria and microbes 24, immunity 24, medicine and the clinical 24, neuro and neural 23, molecular 20, geology 18, algorithms and computation 18, hormones and the endocrine 14, life sciences 9, epigenetics 3, artificial intelligence 3. **Total 954.** Against that: **physics or physicist 7, quantum 2, Bohr 1, Heisenberg 0, relativity 0, field theory 0, thermodynamics 0**, Einstein 1 and that is the *Why War?* correspondence with Freud, entropy 1. In *Nomadic Theory* (2011), **148,986 words**: genetics and genomics 98, cognition 97, evolution 95, species 60, molecular 50, ecology 44, biology 28, neuro and neural 14, climate 12, medicine 10. **Total 518.** Against that: **physics 3, quantum 0, Bohr 0, Heisenberg 0, Einstein 0, field theory 0**, relativity 1, thermodynamics 1.
+
+The ten shorter pieces hold the pattern steady across thirty years, and none of them breaks it. "Sexual Difference as a Nomadic Political Project" (1994, a chapter of *Nomadic Subjects*), 3,876 words, other sciences 8, every physics term 0. "Affirming the Affirmative: On Nomadic Affectivity" (2005/06), 7,585 words, other sciences 58, physics 1. "Posthuman, All Too Human: Towards a New Process Ontology" (2006), 5,374 words, other sciences 29, physics 0. "Affirmation versus Vulnerability" (2006), 8,176 words, other sciences 9, physics 1. "Writing as a Nomadic Subject" (2014), 8,910 words, other sciences 6, every physics term 0 and Barad 0. "A Theoretical Framework for the Critical Posthumanities" (2018), 12,753 words, other sciences 77, physics 0, quantum 2. "'We' Are In This Together, But We Are Not One and the Same" (2020), 3,271 words, other sciences 15, every physics term 0. "Affirmative Ethics, New Materialism and the Posthuman Convergence" (2023), 7,326 words, other sciences 65, physics 3. "Foreword: A Becoming-world of Collective Knowledge Practices" (2024), 4,444 words, other sciences 28, every physics term 0. And "Nomadic Ethics" (undated), 7,142 words, other sciences 14, physics 1.
+
+**Those 16 occurrences were read in place, and not one of them is an engagement with physics as a theory.** They fall into three kinds. The first is **the physics of a body**, used as a name for material constitution and always Spinozist: "better knowledge of ethology, the physics of bodies as well as the validity of ideas" and "the physics of its organic stratum" in *Posthuman Feminism*, "his theory of affectivity is connected to the physics of motion" in *Nomadic Theory*, and Foucault's "micro-physics of power" in "Nomadic Ethics." The second is **a report that somebody else does physics**: "Karen Barad (2007) takes on the physics of the universe as a whole by engaging with the theories of physicist Niels Bohr; Vicky Kirby also refers to quantum anthropology (2011)" (*Posthuman Feminism*), and "Deleuze can be read alongside the new science of today, not only in the sense of maths and physics (see respectively Arkady Plotnitsky and Manuel de Landa), but also alongside the new biology" (Rhizomes, 2005). The third is **a reference-list entry**, which is what both occurrences of quantum in the 2018 article are: Barad's subtitle *Quantum Physics and the Entanglement of Matter and Meaning* and Kirby's *Quantum Anthropologies*.
+
+**\[Note\]** The nearest she comes to a physicist of her own is **Carlo Rovelli**, quoted in 2022 and again in 2023, and both times the quotation is doing Spinoza's work rather than physics': "the world is a continuous, restless swarming of things," and "I am, as Spinoza maintained, my body and what happens in my brain and heart." Elementary particles and the laws of physics enter her prose as a monist claim about one substance, not as a claim about quantum theory. Rovelli is the citation to have ready if anyone objects that she does touch physics: she touches a physicist who is restating Spinoza.
+
+**\[Note\]** A second qualification that strengthens rather than weakens the claim. **The ten occurrences of entropy and entropic in *Nomadic Theory* are not thermodynamic**: every one is psychoanalytic or economic, "the entropic and negative theory of desire in Hegel, Freud, and Lacan," "desire is deployed along an entropic curve for Freud," "from entropic to generative notions of desire," advanced capitalism as "all-consuming entropic energy," "the entropic model built into psychoanalytic theory." She borrows the word as a figure for lack and never as physics. Likewise **both occurrences of complementarity in *Posthuman Feminism* are somebody else's term**, Wynter's "paradox of the complementarity of European modernity and colonialism" and Ingold's "complementarity of the biogenetic and socio-cultural dimensions."
+
+**\[Note\]** So the route cannot be cited to Braidotti, and it cannot be routed through Barad either, since Barad reaches Bohr by way of agential realism, which Braidotti names from outside rather than adopts. The passage that supplies the join is Hayles at p. 55, recorded above: she arrives at the shifting-viewpoints paragraph directly out of four pages on Bohr and complementarity. The limit of the evidence, stated plainly: these are counts over the texts held here, not over everything Braidotti has written. **Six of her books are not held** and should be run against the claim before it is defended: *Patterns of Dissonance* (1991), *Nomadic Subjects* (1994) apart from the one chapter counted above, *Metamorphoses* (2002), *Transpositions: On Nomadic Ethics* (2006), *The Posthuman* (2013) and *Posthuman Knowledge* (2019). The two files named Transpositions in the comprehensive-exam folder are Michael Schwab's 2018 artistic-research book of the same name, not hers. The full inventory, with paths and per-text counts, is `BRAIDOTTI_texts_held_2026-10-29.csv`.
+
+## Instruments for a maximalist assemblage
+
+### Search tools
+
+### Investigation tools/watch for data that glows
+
+### Visions for interconnectedness
+
+**\[Note\]** Comps report; a proposal argues. Condense once the chapter’s argument is settled, ending each section on what it lets you do in Chapter 3.
+
+**\[Note\]** Narrowing criteria, to adjust: keep an example or history if it (a) works in your own media or apparatus (photography, 3D scanning, code, generative or interactive work, installation); (b) carries the genealogy of erasure; (c) bears on pedagogy or literacy; or (d) is a site of documented enactment, which your contribution claim depends on. Leave the rest in the comps and cite it there.
+
+**\[Note\]** This section needs to say how sources entered the review, how they were read, how they were selected and organized, and what the review leaves out, in enough detail that a reader can trace it. Diffractive reading answers the “how they were read” part; the other parts still need a record. Questions only you can answer:
+
+How did sources enter: database searches (which databases, which terms, which dates), citation trails, committee and colleague recommendations, chance?
+
+Reading record: answered October 6. You built the site that auto-highlights glossary terms, first as thick-text support for your freshman course, then for your own reading. Your words, and what they connect, are just below this list.
+
+What did you leave out, and why? That is the cut the review is accountable for, and the scarcity claim in 1.6 depends on it.
+
+I did build that website. The first iteration was creating thick text support for student readings for my college freshman course. I then picked it up again for my own work as a way to navigate/build relationships with/through the text.
+
+**\[Note\]** The site is your literature review method in material form. It also connects three parts of the proposal:
+
+**Method (here, 2.0).** It is a reading apparatus. Highlighting each glossary term wherever it recurs lets a reading build relationships across texts instead of summarizing them one at a time. Describe it here as the apparatus of your diffractive reading: what it highlights, what it links, and what it leaves out (its cut).
+
+**Pedagogy ([1.6](#m6jbyx8zdwp.48646)).** It began as thick-text support for freshmen: the reading support you would have needed, built for every student. That is facilitated becoming made into a tool.
+
+**The artifact ([3.3–3.4](#m6jbyx8zdwp.176051)).** It is the first iteration of the website as corpus. The dissertation site can be described as its third iteration (students, then your own reading, then the corpus/body), not as something new.
+
+The v35 file is itself evidence: its front matter (`layout: course`, `permalink: /work/comprehensive_exam/`, and the glossary term list) shows the comps draft was written as a page on that site.
+
+To document: screenshots or archived versions of both iterations, dates, the course name, the full glossary term list, and the site's URL or repository if you want the committee to see it.
+
+Reading texts through one another rather than one by one: Barad, Hill’s diffractive reading (2.2 §3.3), differences that make a difference (2.2 §2).
+
+Reading theory through practice and practice through theory, including your own works (the bridge at the end of 2.3).
+
+Following what glows: sources that kept grabbing attention (Somerville’s “data that glow,” 2.3 §1.3), and returning to them, with perseveration as method (1.4).
+
+Organizing by levels of resolution rather than by separate fields, with theorists appearing across sections (the v35 note below).
+
+Form as argument: overlapping descriptions as method (the comps final introduction, in 1.2).
+
+Accountability to the cut: the diffractive practice notebook questions (3.6) applied to reading.
+
+The question is answered not by forcing a clean taxonomy --- which would betray what both frameworks insist about the world --- but by tracing the different emphases, genealogies, and methodological centers of gravity that make the two frameworks distinguishable even as they remain entangled. That distinction matters because it determines what kind of lens Part Two and Part Three can offer: the nuance of what each framework contributes to practice depends on being able to say, while approaching specificity, what each one is and what it is for.
+
+To tease them apart is to follow the diffractive practices we will later discuss, to search for the differences that make a difference (Barad, 2007, citing Bateson, 1972; developed further in \[link to Deleuze Called for a Diffractive Practice\]). We begin (now it is we because the reader is also participating. As my thoughts unfold/refold so does the reader's and a thought-baby, an entanglement is made) with recognition that all things are co-constituted together through the continuous becomings of the protean flow, zoe, the primordial swerve, the entanglement, the void, the virtual, the immanence, the Wild, non-identity, a life, the absolute, and ever shifting assemblages both cosmic and atomic and everywhere, everything, all at once. These are not synonyms in the strict sense --- each carries the specific weight of the theoretical tradition from which it comes. But they are pointing at the same thing, or rather, at the same absence of a thing, not nothing, not chaos, the deviation from the straight line that generates all actual things, the condition of possibility for all swerving/becoming. These notions form the ground and set the tone, revealing themselves more fully in the sections that follow, and again in Part Two \[link\], where specific terms are grounded in their theoretical traditions.
+
+The point of this teasing apart is to find a place and time to stand, to stake a position (metaphorical or literal) in the entanglement from which to explore/ponder/make sense (a gathering of diffractions coalesced into an accessible whole --- not too large, not too small) and to most importantly connect to other travelers in the protean flow. Without a position, how would they find you? How would you find them? See Henri Matisse's series of paintings and cut paper compositions from early 1900's Paris, that for many viewers evoke a feeling of human connection in the protean flow. [Dance I](https://www.moma.org/collection/works/79124)
+
+As I neared the end of researching and started to write, I realized the questions would be better introduced in a different order, from the introduction of the larger field of theory, to specific methods, to theory/methods in a specific context. So the questions will be presented in this order:
+
+What are the theoretical and methodological distinctions between posthumanism and new materialism?
+
+How have other posthumanist theorists conceptualized diffractive practice?
+
+How have new materialist theorists conceptualized art practice as research?
+
+A note on how theorists are situated across these three questions. New materialism is a specific movement within the posthumanist theoretical scenario (Ferrando, 2013, p. 30; Ibrisim, 2020, p. 11, citing Ferrando, 2013), not a parallel or competing framework. This means the three questions are not sequenced as three separate fields but as three levels of resolution of the same theoretical and methodological project: from the broad ontological commitments shared across the field (Q1), to their operationalization as diffractive practice (Q2), to their instantiation in art practice as research (Q3). Because new materialism is nested within posthumanism rather than external to it, theorists appear across all three questions. Barad is the central figure of Q2 even though she identifies primarily as a new materialist, because NM is part of the posthumanist theoretical scenario. Braidotti, Haraway, and Bennett appear across all three, because their work operates at every level of resolution simultaneously. Practitioners in the APAR field — Bolt, Borgdorff, Hill, Lambert, Hillary, Andersen — are included under Q3 not because they self-identify as new materialist theorists but because their accounts of art practice as research are grounded in or accountable to NM ontological commitments, whether or not they deploy NM vocabulary. The question structure comes from the committee; the answer recognizes that the field does not partition along those lines, and says so explicitly here rather than negotiating the classification at every turn.
+
+*From Andersen (2017), Making Magic Machines, p. 17: a model for describing a diffractive reading practice*
+
+Like most designers, I oscillate between reading and making. Often the objects I make can be seen as diagrams of ideas, or manifestations of the relationships between one notion and another. In a similar way I don’t read texts properly, instead the texts are like images, like scraps of colour and texture. I carry them with me, take them out, rearrange them, and reconsider them. Most snippets of texts are with me for years, worn and known. Arriving in this manner from a materialist or things-based understanding of the world, my way of reading has similarities to Karen Barad’s practices of diffractive reading: the reading of one text through another
+
+**\[Note\]** Andersen quotes Barad: “A diffractive methodology provides a way of attending to entanglements in reading important insights and approaches through one another,” and dates it 2003. As far as I know the line is in *Meeting the Universe Halfway* (2007, p. 30); check before citing.
+
+**\[Note\]** Leads to check, from my knowledge rather than a search: Barad (2014), “Diffracting diffraction: Cutting together-apart,” *Parallax*, on reading insights through one another; Bozalek and Zembylas (2017), “Diffraction or reflection? Sketching the contours of two methodologies in educational research,” *International Journal of Qualitative Studies in Education*; Murris and Bozalek (2019), “Diffraction and response-able reading of texts,” same journal; Mazzei (2014), “Beyond an easy sense: A diffractive analysis,” *Qualitative Inquiry*; MacLure (2013) on data that glow. The education-journal pieces will be familiar to an LLSS committee.
+
+**\[Note\]** The arbitrary-restrictions material in 2.2 bears directly on this section: a restriction set in advance on what may count as meaningful is also a restriction on what a literature review may contain. Hayles's account of the positivist programme, pp. 37 to 40, is the worked case, and Bohr's method at pp. 54 to 55 is the procedural alternative.
