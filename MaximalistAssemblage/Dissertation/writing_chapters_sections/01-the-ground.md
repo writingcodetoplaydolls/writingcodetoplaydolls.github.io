@@ -31,11 +31,7 @@ Haudenosaunee and Anishinaabe scholar Vanessa Watts names the same ground throug
 
 Trinh T. Minh-ha articulated the same ground in her 1989 text, Woman, Native, Other: Writing Postcoloniality and Feminism. Writing from Taoist, Zen, and Vietnamese frames against the Western mirror ontology, in the book section titled “The infinite play of empty mirrors,” she writes that “reality is not reconstituted, it is put into pieces so as to allow another world to rebuild (keep on unbuilding and rebuilding) itself with its debris” (Minh-ha, 1989, p. 23). The mirror is not the symbol of a pre-given vision but, in the Asian traditions she draws on, “the ‘symbol of the very void of symbols’”; “the perfect man’s mind is like a mirror,” Chuang Tzu observed, “it reflects things but does not retain them” (Minh-ha, 1989, p. 23) (citing Chuang Tzu). Trinh’s formulation, written from within artistic practice rather than from the philosophy of matter, is contemporaneous with Haraway’s 1988 “Situated Knowledges” and predates by more than a decade the posthumanist/new materialist vocabulary that would name what she was already articulating. Like Watts’s Place-Thought and Todd’s account of Indigenous engagement with sentient environments, Trinh’s relational ontology is part of the genealogy the standard origin story has tended to omit.
 
-### Bohr's viewpoint theory (Hayles, pp. 52 to 55)
-
-Bohr's viewpoint theory (Hayles, pp. 52 to 55)
-
-*Hayles, The Cosmic Web (1984), via HAYLES_ch1_additions_for_the_proposal.md, 29 Oct 2026*
+### Bohr's viewpoint theory
 
 Hayles gives Bohr's position in five moves, and the sequence is the argument. **One**, the Uncertainty Relation is about language and not disturbance: Bohr "never endorsed the 'disturbance' concept of Heisenberg. Rather, in his view, **the Uncertainty Relation was deeply bound up with the limitations of language**," and Aage Petersen recounts that Bohr loved to repeat "**we are suspended in language**" (Hayles, 1984, p. 52).
 
@@ -45,7 +41,9 @@ Hayles gives Bohr's position in five moves, and the sequence is the argument. **
 
 **Five**, and this is what makes it a method rather than a lament: "For Bohr, the fact that we remain 'suspended in language' does not mean that we cannot make progress . . . we progressively refine our viewpoints not by attempting the impossible, that is, **observing without a viewpoint, but by recognizing the ways in which our description of reality depends on the viewpoint we have chosen**" (pp. 54 to 55). Bohr's own account of the regress: even the most elementary concepts are "based on assumptions initially unnoticed," and an "explicit consideration" of them yields "a classification of more extended domains of experience" which in turn rests on further "unrecognized presuppositions" (quoted, p. 54). Hayles's conclusion: "**Thus progress is made not by ignoring or underplaying limitations of viewpoint, but by systematically examining and exploiting them**" (pp. 54 to 55).
 
-**\[Note\]** This is the same claim as Barad's complementarity, which means "simultaneously 'mutually exclusive' and 'mutually necessary'," arriving from Bohr through a literary critic rather than through Barad. It also states the commitment about divergent readings in its procedural form, with an instruction attached: the divergence is not to be resolved, it is to be examined and exploited. Carries into 1.2 (Braidotti) and 2.2.
+### Bohr's viewpoint theory (Hayles, pp. 52 to 55)
+
+This is the same claim as Barad's complementarity, which means "simultaneously 'mutually exclusive' and 'mutually necessary'," arriving from Bohr through a literary critic rather than through Barad. It also states the commitment about divergent readings in its procedural form, with an instruction attached: the divergence is not to be resolved, it is to be examined and exploited. Carries into 1.2 (Braidotti) and 2.2.
 
 ### Becoming rather than Being (Hayles, p. 49 n. 32)
 
@@ -53,9 +51,9 @@ Becoming rather than Being (Hayles, p. 49 n. 32)
 
 *Hayles, The Cosmic Web (1984), via HAYLES_ch1_additions_for_the_proposal.md, 29 Oct 2026*
 
-In a footnote, not in the body: "The partiality of our own perspective should not be confused with the absolute spacetime projected through the Minkowski diagrams. David Bohm, in *The Special Theory of Relativity*, comments that when viewing Minkowski diagrams, 'almost unconsciously, one is led to adopt the point of view of an observer who is, as it were, standing outside of space and time . . . surveying the whole cosmos from beginning to end' (p. 173). But as Bohm points out, **the feeling is an illusion. Any human observer is necessarily in space and time, and so always in fact occupies a point *within* the diagram.** Similarly, the timeless nature of the Minkowski diagrams . . . should not lead us to think that this reality already pre-exists. **Relativity theory, insofar as it says anything about the future, is fully consonant with seeing it as a Becoming rather than a Being**" (Hayles, 1984, p. 49 n. 32, citing Bohm p. 173 and Capek pp. 214 to 243).
+"The partiality of our own perspective should not be confused with the absolute spacetime projected through the Minkowski diagrams. David Bohm, in *The Special Theory of Relativity*, comments that when viewing Minkowski diagrams, 'almost unconsciously, one is led to adopt the point of view of an observer who is, as it were, standing outside of space and time . . . surveying the whole cosmos from beginning to end' (p. 173). But as Bohm points out, **the feeling is an illusion. Any human observer is necessarily in space and time, and so always in fact occupies a point *within* the diagram.** Similarly, the timeless nature of the Minkowski diagrams . . . should not lead us to think that this reality already pre-exists. **Relativity theory, insofar as it says anything about the future, is fully consonant with seeing it as a Becoming rather than a Being**" (Hayles, 1984, p. 49 n. 32, citing Bohm p. 173 and Capek pp. 214 to 243).
 
-**\[Note\]** Worth keeping because becoming is load-bearing in 1.4, which ends on "a continuous trajectory of becoming," and because a claim of this size usually has to be argued rather than cited. Neither source is held: Bohm, *The Special Theory of Relativity*, p. 173, and Milic Capek, *The Philosophical Impact of Contemporary Physics* (Princeton: Van Nostrand, 1961), pp. 214 to 243. To fetch.
+**\[Note\]** Worth keeping because becoming is load-bearing, which ends on "a continuous trajectory of becoming," and because a claim of this size usually has to be argued rather than cited. Neither source is held: Bohm, *The Special Theory of Relativity*, p. 173, and Milic Capek, *The Philosophical Impact of Contemporary Physics* (Princeton: Van Nostrand, 1961), pp. 214 to 243. To fetch.
 
 ### The arbitrarily chosen frame (Hayles, p. 46)
 
@@ -67,7 +65,7 @@ Einstein at sixteen imagined how a light wave would look to someone travelling a
 
 That is the structure of an agential cut: the frame is **arbitrarily chosen**, the measured value is relative to that frame rather than a property the object carried beforehand, and the choice is what makes a determinate value possible at all. Barad's version, through Bohr, is that "there are no pre-measurable properties of matter that precede their experimentation" and that determinacy is set by "the specificity of the experimental apparatus" rather than by the experimenter's will (Barad, 2007, pp. 18 to 20). Hayles supplies the same guard against reading this as subjectivism, in her own footnote on the same page: "**the relativity of these quantities is not merely a perceptual ambiguity in the observer. The most sensitive instruments (for example, nuclear decay clocks) will record a time that is not absolute, but relative to the reference frame to which they are attached**" (p. 46 n. 26).
 
-**\[Note\]** One difference to keep rather than smooth over. Einstein makes some quantities relative **so that others become absolute**, and he resists the rest of it for the remainder of his life: he "deeply believed in causality, in an objective world that exists independently of human perception, and in the universal truth of scientific law" (Hayles, p. 48). Agential realism does not trade a relativity for a preserved absolute. The structures match; the purposes do not.
+Einstein makes some quantities relative **so that others become absolute**, and he resists the rest of it for the remainder of his life: he "deeply believed in causality, in an objective world that exists independently of human perception, and in the universal truth of scientific law" (Hayles, p. 48). Agential realism does not trade a relativity for a preserved absolute. The structures match; the purposes do not.
 
 ### The cut is something somebody does (Hayles, p. 40)
 
@@ -82,10 +80,6 @@ This section already holds that "each decision is a cut that together produces a
 **\[Note\]** Hayles prints Pirsig's phrase as "sorting **sands** into piles" at p. 40 and "sorting **sand** into piles" at p. 71. One is wrong and the Pirsig page (Bantam, p. 70) settles it. To check before quoting.
 
 ## Theory: posthumanism and new materialism
-
-2.1 Theory: posthumanism and new materialism
-
-*Pasted from comps final, Part One §§1–2, pp. 7–11*
 
 ### Theory, Methodology, Method
 
@@ -110,8 +104,6 @@ Art practice as research is one of the sites in which posthuman and new material
 *Pasted from Maximalist Assemblage notes*
 
 **Maximalist Assemblage**
-
-**\[Note\]** The title term is traced in [2.5](#m6jbyx8zdwp.226653): *agencement* in translation, read against the history of assemblage in art.
 
 How have/do the various nodes of the/my nomadic subjectivities show up in my art practice as research?
 
@@ -145,8 +137,6 @@ autism as method-stimming, perseveration, proprioceptive attunement
 
 With the realization of transcorporeality, while situated in the ethico-onto-epistemological web/womb/magnetic field/structure created by the diffraction patterns/transpositions of Braidotti/Trinh Minh Ha/Bennett/Barad/Alaimo/Deleuze via multiple transpositive voices/Leibniz via Merleau-Ponty.
 
-**\[Note\]** For the premise, purpose statement, main questions, and sub-questions keyed to apparatus, transposition, and diffraction, see Framing the research questions in the scaffold.
-
 ### Hayles: a form and a language adequate to the field
 
 *Hayles, The Cosmic Web (1984), via HAYLES_ch1_additions_for_the_proposal.md, 29 Oct 2026*
@@ -160,8 +150,6 @@ N. Katherine Hayles states the same task in 1984, from inside literary studies, 
 what it doesn't address as explicitly is my role as an educator, because frankly, I believe education is a demonstration of becoming, a role model of striving, a presence/witness to walk alongside the student. My pedagogy is one of facilitated becoming, and because every person who arrives is unique, preplanning is cultivating an openness to show up for each student. Even when teaching explicit content, I teach in an explicitly personal way, to show them my path. Because in the end I teach as if every student were me, and I learn from thick description, from lived experience, from sensory input, entanglement, movement, engorgement, enrichment, diving into the wreck. Every student were me, because I feel like I was a student the usual pedagogy does not prepare for, and if we assume that the usual pedagogy doesn't prepare us for many students, then teaching as if every student were me, is teaching as if every student was not going to respond or understand a preplanned construct designed for an imaginary student body that may or may not exist. I needed something different. I teach as if all students need something different. Specifically/especially for students who learn by demonstration/doing/experiencing/watching others be their authentic selves.
 
 **\[Note\]** Join to write: facilitated becoming is affirmative ethics in the classroom. Braidotti’s transformative ethics has “a critical or reactive and an affirmative or active phase” (2006, p. 5) and “combines critique with the creation of alternatives” (2024, p. xiii); she defines affirmative ethics as “the establishment of mutually empowering relations” that aims “at increasing each entity’s capacity” (2022, p. 97). Your pedagogy spends its primary energy in the affirmative phase: rather than critiquing the imaginary student body, it creates conditions in which each student’s capacity grows, toward futures that don’t exist yet. Bennett names the teacher’s side of this: the ethical task is cultivating “the ability to discern nonhuman vitality” and becoming “perceptually open to it” (2010, p. xiv), which is what preparation as openness to whoever arrives asks of you. All four quotations appear in §4.4 below. Your own v35 wording, pasted in 3.7, already makes the move: affirmative ethics as “the refusal to let critique be the final word — the insistence that diagnosis must be followed by construction, that naming what is wrong must open toward imagining what could be otherwise.”
-
-*Pasted from comps final, Part One §4.4 Affirmative Ethics, pp. 26–29*
 
 ### Affirmative Ethics
 
@@ -189,13 +177,7 @@ The core concept emerging from this practice is fluid affordance: with dynamic m
 
 This is why new materialist APAR is genuinely pedagogical and not merely expressive. It teaches by creating conditions. It shares by transmitting the structure of a situation rather than the content of a finding. What is learned is not a conclusion but a capacity — for attunement, for noticing, for staying with the encounter long enough to let the material's own logic begin to surface. Andersen describes what this produces in the practitioner: the process of making is a process of changing ourselves, "becoming the person who built that thing" (Andersen, 2016). New thoughts are acted out and created "in a complex collaboration between the object, the situation and a performative moment." The knowledge is not deposited in the object. It is held in the changed relation between the practitioner and the world that the making produced.
 
-**\[Note\]** Leads to check (Ellsworth 1997 and 2005, Rogoff 2014, Universal Design for Learning) and Sanders’s new-literacies argument are in the scaffold.
-
-**\[Note\]** Your reading website began here, as thick-text support for student readings in your freshman course. It is your pedagogy built into a tool. See [2.0](#m6jbyx8zdwp.216320) for your words and [3.3–3.4](#m6jbyx8zdwp.176051) for how it becomes the corpus.
-
 ### Literacy as the LLSS bridge
-
-**\[Note\]** literacy should not become another theoretical pillar. Its job is narrower: to show why the project belongs in LLSS and reading and writing is not only metaphor.
 
 My phrase"Literacy is the reading and writing of self."
 
@@ -267,8 +249,6 @@ Fox and Alldred's (2021) work in applied research domains — education, health,
 
 (Fox & Alldred, 2021)
 
-This is a clean "practice case" because it lets you show: diffractive method is attractive precisely when the research situation is already an assemblage of institutions, bodies, technologies, and affects---and because it foregrounds the problem of how findings travel into policy/practice contexts.
-
-*Pasted from comps v35, Speaking Nearby and the Refusal of Closure, p. 83 (cut from the final)*
+This is a clean "practice case" because it shows: diffractive method is attractive precisely when the research situation is already an assemblage of institutions, bodies, technologies, and affects---and because it foregrounds the problem of how findings travel into policy/practice contexts.
 
 The institutional stakes of this position are not abstract. The traditional research evaluation framework demands a specific form of accountability: the research question is posed in advance, the methods are specified, the findings are reported, the conclusions are stated. This sequence assumes that knowledge is extractable from the encounter — that the researcher enters the field, gathers data, and produces conclusions that travel out of the context of their production. For new materialist art practice as research, every one of these assumptions enacts the suppression the framework is built to resist. The question that drives the research often cannot be fully articulated before the making begins. The methods are inseparable from the encounter. The findings are not propositional statements separable from the practice that generated them. The conclusion, in the traditional sense, is precisely what the practice withholds — because the interval that makes meaning possible cannot be closed without destroying what it was producing.

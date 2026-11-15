@@ -5,10 +5,6 @@ title: Reading With
 
 ## First-Person Inquiry Without a Sovereign Subject
 
-First-Person Inquiry Without a Sovereign Subject
-
-*Pasted 2 Nov 2026 as drafted in another window. **The wording is that draft's, unaltered.** Citations were added on 2 Nov 2026 as parentheticals only: `(2022)` after Wilde's title, `(n.d.)` after Su, and `(Herbrechter, 2012)` after the fourth text, which the draft named by title alone. Warfield's `(2019)` was already there. **No sentence was reworded, cut or added.** Full entries follow the subsection. **Two things were deliberately not inserted.** Jackson and Mazzei (2008), the primary source for troubling the narrating I, is still not cited here: citing it would mean writing a new claim into this prose, which is not mine to write. **The access problem is gone.** Amy obtained the article on 3 November 2026 and it was read in full that day; the close read is `JACKSON_MAZZEI_2008_experience_and_I_read_2026-11-03.md`. **Amy decided on 3 November 2026 to leave it uncited here**, after the reading: the article is poststructural rather than new materialist and answers a different question from the one this subsection asks. Her decision is recorded at section 9.16 of `CITATION_CHECK_Dissertation_2026-11-03_v8.md`, so it does not need deciding again. And the phrase "non-unitary subjectivity" in the second paragraph is Braidotti's, quoted by Wilde from Braidotti (2013, p. 93); attributing it in the text would be a change of argument, not a citation. The working table is `FIRSTPERSON_citations_2026-11-02_v4.csv`, the reading is section 20 of `NOTES_to_chase.md`, and every problem behind these entries is section 9 of `CITATION_CHECK_Dissertation_2026-11-02_v4.md`. **Added 3 November 2026 at Amy's instruction: Jackson and Mazzei (2013) and Mazzei (2014).** Both were read in full on 3 November 2026 before being added, from the published articles themselves; the reading is `JACKSON_MAZZEI_2013_MAZZEI_2014_read_2026-11-03.md`. Unlike the four entries above, these two could not be attached as parentheticals, because no existing sentence makes the claim they support. **They are carried by a new paragraph, inserted after the Su and Herbrechter paragraph, whose wording is mine and not the pasted draft's.** Every sentence of the pasted draft is still unaltered, and the new paragraph can be reworded or cut without touching any of them. The two entries are logged at section 9.18 of `CITATION_CHECK_Dissertation_2026-11-03_v10.md`.*
-
 The use of first-person writing in this research presents an apparent tension with its posthuman theoretical orientation. First-person accounts are conventionally associated with an individual subject who experiences, interprets, and narrates phenomena. Posthuman approaches, however, challenge the conception of the subject as autonomous, bounded, and independently constituted. This research does not resolve that tension by removing the first-person voice. Rather, it approaches the tension as a productive methodological problem: how might writing from a situated, embodied position participate in investigating subjectivities that are multiple, relational, and continuously becoming?
 
 Wilde's *Storytelling the Multiple Self* (2022) offers one response through an experimental approach to posthuman autoethnography in which first-person writing does not simply represent an established identity but participates in destabilizing its presumed unity. Wilde's attention to non-unitary subjectivity, nonlinear writing, and the entanglement of physical and virtual embodiments suggests possibilities for treating writing as a practice through which multiple subjectivities emerge. In this sense, the first-person pronoun need not secure the identity of an autonomous narrator. Its use may instead make visible the instability of the position from which an account is produced.
@@ -26,22 +22,6 @@ The first-person voice is retained as one situated mode of participation within 
 Such an orientation also requires attention to the limits of first-person articulation. Neither artistic experience nor its written account can exhaust the material, affective, technological, and conceptual relations through which a phenomenon emerges. The objective is therefore not to represent the totality of an assemblage, but to attend carefully to particular encounters and to the provisional distinctions, relations, and possibilities that become perceptible through them.
 
 In this research, first-person writing is consequently neither a claim to interpretive sovereignty nor an attempt to transcend embodied experience. It is a situated practice within a continuing process of becoming, through which the conditions of artistic making, subjectivity, and knowledge may be investigated and reconfigured.
-
-**Works cited in this subsection.** *Holding list, 2 Nov 2026, to fold into the merged reference list called for under References. Author-date form follows the draft's existing "Warfield's (2019)".*
-
-Herbrechter, S. (2012). Posthumanism, subjectivity, autobiography. *Subjectivity*, 5(3), 327-347. https://doi.org/10.1057/sub.2012.13
-
-Jackson, A. Y., & Mazzei, L. A. (2013). Plugging one text into another: Thinking with theory in qualitative research. *Qualitative Inquiry*, 19(4), 261-271. https://doi.org/10.1177/1077800412471510
-
-Mazzei, L. A. (2014). Beyond an easy sense: A diffractive analysis. *Qualitative Inquiry*, 20(6), 742-746. https://doi.org/10.1177/1077800414530257
-
-Su, P.-R. (n.d.). *Posthuman autoethnography as an inquiry: On the path of becoming a trans\* scholar* [Long abstract]. Social, Cultural, and Critical Theory minor, Graduate Interdisciplinary Programs, The University of Arizona. https://gidp.arizona.edu/sites/default/files/2025-07/Abstract_Pin-Ru-Su.pdf
-
-Warfield, K. (2019). Becoming method(ologist): A feminist posthuman autoethnography of the becoming of a posthuman methodology. *Reconceptualizing Educational Research Methodology*, 10(2-3), 147-172. https://doi.org/10.7577/rerm.3674
-
-Wilde, P. (2022). Storytelling the multiple self: Posthuman autoethnography as critical praxis. In C. Blyth & T. K. Aslanian (Eds.), *Children and the power of stories: Posthuman and autoethnographic perspectives in early childhood education* (pp. 1-16). Springer Singapore. https://doi.org/10.1007/978-981-16-9287-1_1
-
-*Named in this subsection's sources but not cited above.* Jackson, A. Y., & Mazzei, L. A. (2008). Experience and "I" in autoethnography: A deconstruction. *International Review of Qualitative Research*, 1(3), 299-318. https://doi.org/10.1525/irqr.2008.1.3.299 . **Held and read as of 3 November 2026**, at `K:\OneDrive\UNM\Dissertation\November 2\jackson-mazzei-2008-experience-and-i-in-autoethnography.pdf`. The published copy gives the publisher as the International Institute for Qualitative Inquiry, University of Illinois, Urbana-Champaign, not SAGE and not University of California Press.
 
 ## Methods
 
@@ -73,17 +53,9 @@ The convergence of these protocols under the umbrella — Barad's apparatus work
 
 ## Apparatus, site, and the artifact
 
-3.3–3.4 Apparatus, site, and the artifact
-
-**\[Note\]** Your description of the artifact is in 1.3. Frame (1.2) sketches its structure.
-
 *From the scaffold: a draft task statement built from what you described, to rewrite*
 
 I will make a multimodal, interactive, generative installation that lives in and out of digital space, with a website I build as its corpus, its body. My past works fold into that corpus as evidence that theory and abstraction have always been my diffraction grating, a dynamic part of my nomadic subjectivities. It will be made from \[3D scans, sound, video, image, interactivity, code, as in your earlier assemblages?\] at \[sites\] between \[start\] and \[end\]. Making it will involve \[methods\]. The making will leave these traces: \[documentation\]. The work will be encountered by \[who\] in \[gallery or site\] at \[when\], and on the website continuously. The written component will \[its job\]. At the defense the committee will receive \[what\], and it will be deposited as \[format\].
-
-**\[Note\]** The website already exists in two iterations: thick-text support for your freshman course, then a reading apparatus for your own work (the comps draft was written as a page on it). The dissertation site is the third iteration. Your words are in [2.0](#m6jbyx8zdwp.216320).
-
-*Pasted from comps v35, Interactivity/Assemblage/Co-constitutive, pp. 77–78 (cut from the final)*
 
 The Enchantment of Textiles catalog provides a concrete laboratory model for what new materialist interactivity looks like as research apparatus. The catalog describes the project as an interdisciplinary investigation of electronic cloth: studying historic textiles and transforming that knowledge into interactive objects that demonstrate what becomes possible when material languages meet digital culture (Jefferies, 2019, pp. 14–29). The lab is explicitly framed as a collaborative assemblage — artists, engineers, and researchers — with textiles as performative tools rather than passive substrates.
 
@@ -121,15 +93,11 @@ Bateson's formulation is the methodological anchor: information is "a difference
 
 For research practice this means the unit of analysis is never a single text, dataset, or object in isolation. It is always the encounter: what happens when this theoretical framework is read through this practice, when this body of work is read through that ontological commitment, when this site is held against that history. The pattern that emerges from the encounter is where the knowledge lives. Bennett's actants, Barad's phenomena, Haraway's situated knowledges, Braidotti's transpositions — each names a version of the same methodological ground: the differences that matter are the ones the encounter produces, not the ones the researcher brings to it already formed.
 
-*Pasted from comps v35, Bennett, Braidotti, Barad: Ontology, p. 35: the diffractive practice notebook (cut from the final)*
-
 For Barad, phenomena -- unique material discursive arrangements -- are the primary building block of reality. Agential realism is her term for how this reality works: phenomena are the basic unity formed through the frame of an apparatus to create intra-actions of things through material discursive arrangements. Barad created the term "intra-action" as a response to the inadequate and misleading term interaction, which implies a pre-given body with inherent qualities. Intra-action defines agency as a mutually constituted, distributed, emergent force (Barad, 2007, p. 141). Apparatuses are phenomena, not unique stable things, constituted as "specific agential practices... through which specific exclusionary boundaries are enacted," and as "dynamic (re)configurings of the world." As each apparatus is a unique material-discursive arrangement, so are the cuts they make, drawing unique distinctions between subject/object/instrument. Different marks on bodies indicate configurations of apparatus.
 
 Objectivity can only be obtained through accountability to the boundaries we made through the agential cut and the marks we left on bodies. Barad rejects the "God's trick" highlighted by Haraway (1988, p. 581), that outcomes or measurements are ever neutral. These commitments generate a set of orienting questions that function as a diffractive practice notebook — not a checklist but a recursive accountability structure the researcher returns to throughout the inquiry: What is the apparatus — the specific material-discursive arrangement through which this phenomenon is being produced? What agential cut does it enact — what boundaries does it draw, what relata does it constitute? What/who does the cut exclude — what is rendered invisible or inaudible by this specific configuration? What marks are left on bodies — what material traces does the encounter produce in the researcher, the participants, the site, the objects? These questions are answerable. They do not demand a generalizable finding. They demand specification of the apparatus and accountability for its cuts — which is a more rigorous standard than the demand for a transferable conclusion, because it names what the specific encounter actually produced rather than what a decontextualized claim extracted from it might assert.
 
 ## Ethics
-
-**\[Note\]** SymbioticA (ethics as infrastructure) is in the v35 passage in 1.5. Contributory works like Sunsets for Mike and Carmen, and website visitors whose responses join the corpus, need an IRB determination.
 
 Bennett, Braidotti, and Barad share an ethical orientation that follows directly from their ontology — which is to say, ethics in these frameworks is not a set of principles applied to research from outside but the practical consequence of taking seriously what the ontology says about the world. If agency is distributed, if matter is vibrant, if phenomena are constituted through intra-action — then the ethical question is not "what are the rules" but "what does this specific configuration produce and who and what does it include or foreclose." The three share a name for this stance: affirmative ethics. Not optimism, and not the suspension of critique, but the refusal to let critique be the final word — the insistence that diagnosis must be followed by construction, that naming what is wrong must open toward imagining what could be otherwise.
 

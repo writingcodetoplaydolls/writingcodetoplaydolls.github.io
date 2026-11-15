@@ -79,8 +79,6 @@ Reading the two strands through each other
 
 ### Diffraction: assemblage and the found object
 
-Diffraction: assemblage and the found object
-
 **\[Note\]** Both practices take up matter "not intended as art materials" (Seitz's phrase, Strand 2). Read through each other, they place agency differently. What the sources say, then interference points to test.
 
 **The readymade.** Tate: "Term used by the French artist Marcel Duchamp to describe works of art he made from manufactured objects." The first is *Bicycle Wheel* (1913). *Fountain* (1917), a urinal signed with a false name, was submitted to the Society of Independent Artists exhibition in New York (Tate, n.d.).
