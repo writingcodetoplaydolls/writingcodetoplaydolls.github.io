@@ -1,0 +1,25 @@
+{
+  "name": "webxr",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "vite build && gh-pages -d dist",
+    "thesis": "node thesis/build.mjs",
+    "thesis:slots": "node thesis/build.mjs --slots=thesis/slots.csv",
+    "thesis:sheet": "node thesis/sheet.mjs",
+    "thesis:publish": "node thesis/sheet.mjs && node thesis/build.mjs --site --variant=v2 && node thesis/build.mjs --site --variant=v1 && node tools/changed_since_live.mjs --stage",
+    "thesis:changed": "node tools/changed_since_live.mjs"
+  },
+  "dependencies": {
+    "lil-gui": "^0.21.0",
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "vite": "^8.3.1"
+  }
+}

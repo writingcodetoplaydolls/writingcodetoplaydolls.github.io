@@ -1,0 +1,17 @@
+/* v1 — as the draft was first shown.
+ *
+ * Two columns to a page, justified, small type. Kept so the two can be put
+ * side by side rather than one remembered. Measured at 1024px it gives about
+ * 27 characters to the line, where the guidance is 45 to 75; WCAG 1.4.8 also
+ * says blocks of text must not be justified. Both are why v2 exists.
+ */
+.leaf-body { column-count: 2; column-gap: 1.8rem; }
+@media (max-width: 90rem) {
+  .leaf-body { column-gap: 1.5rem; }
+}
+body.book { font-size: .95rem; line-height: 1.52; }
+@media (max-width: 90rem) { body.book { font-size: .88rem; } }
+body.book .leaf-body p { text-align: justify; hyphens: auto; }
+
+/* v1 has no reserved places: the engine writes them, this hides them */
+.leaf-slot { display: none; }

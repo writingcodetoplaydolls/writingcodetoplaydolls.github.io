@@ -1,0 +1,49 @@
+{
+  "title": "Dissertation Proposal",
+  "shortTitle": "Maximalist Assemblage",
+  "author": "Amy Traylor",
+  "affiliation": "University of New Mexico \u00b7 Language, Literacy & Sociocultural Studies",
+  "date": "Draft \u2014 November 2026",
+  "chapters": "sheet",
+  "world": {
+    "module": "floating-skin/skin.js",
+    "colour": "#2b2b2b",
+    "figure": "pregnant.fbx",
+    "clips": [
+      "ginga.fbx",
+      "esquiva.fbx",
+      "armada.fbx",
+      "meia-lua-de-compasso.fbx",
+      "martelo.fbx"
+    ],
+    "waiting": "ginga"
+  },
+  "sheets": {
+    "id": "1nnW3N27SBcEXxnfZlUbtTnk0svJHY685RulUf-yeEsU",
+    "tabs": {
+      "blocks": "266679380"
+    },
+    "pollSeconds": 30
+  },
+  "site": {
+    "pages": "/MaximalistAssemblage/Dissertation/",
+    "lib": "/MaximalistAssemblage/ThesisTemplate/lib/",
+    "figures": "/MaximalistAssemblage/ArtifactAssemblage/figures/",
+    "writing": "/MaximalistAssemblage/Dissertation/writing_chapters_sections/",
+    "sketches": "/MaximalistAssemblage/ArtifactAssemblage/",
+    "assets": "/assets/"
+  },
+  "versions": [
+    {
+      "id": "v2",
+      "title": "One column a page",
+      "note": "One column, larger type, more leading, and a reserved place for a figure or an inset quotation on every page. About 50 characters to the line."
+    },
+    {
+      "id": "v1",
+      "title": "Two columns a page",
+      "note": "The draft as first shown: two columns, justified, smaller type. About 27 characters to the line."
+    }
+  ],
+  "defaultVersion": "v2"
+}

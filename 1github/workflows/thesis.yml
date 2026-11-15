@@ -1,0 +1,129 @@
+# Rebuild the dissertation pages from the Google Sheet.
+#
+# This runs in the Pages repository itself, so it needs no second repository
+# and no personal access token: GITHUB_TOKEN can write to the repository it
+# runs in, and that is the only one involved.
+#
+# The point is that refreshing the site needs no particular computer. The
+# writing is in a sheet; this turns it into pages on a machine that is always
+# there. Edit the sheet from anywhere — a laptop, a phone — then:
+#
+#   Actions → "rebuild the dissertation pages" → Run workflow
+#
+# It also runs once a day, because a spreadsheet has no way to say it changed.
+#
+# What it writes:
+#
+#   MaximalistAssemblage/
+#     ThesisTemplate/lib/, variants/     the engine and the two versions
+#     Dissertation/                      the chooser, v1/ and v2/
+#       writing_chapters_sections/       the markdown, as the writing of record
+#     ArtifactAssemblage/figures/        the posters
+#
+# None of those folders belongs to this build alone — Dissertation/ also holds
+# drafts/ and notes/, and figures/ holds hand-made figures — so it never empties
+# a folder. It deletes the files the PREVIOUS run left, listed in
+# ThesisTemplate/published-files.json, and nothing else.
+
+name: rebuild the dissertation pages
+
+on:
+  workflow_dispatch:          # the Run workflow button: use this after editing the sheet
+  schedule:
+    - cron: '17 6 * * *'      # 06:17 UTC daily
+  push:
+    paths:
+      - '_thesis/**'
+      - '.github/workflows/thesis.yml'
+
+# It commits to MaximalistAssemblage/, and only _thesis/ triggers a push run,
+# so it cannot set itself off again.
+permissions:
+  contents: write
+
+concurrency:
+  group: rebuild-thesis
+  cancel-in-progress: true
+
+env:
+  ROOT: MaximalistAssemblage
+  MANIFEST: MaximalistAssemblage/ThesisTemplate/published-files.json
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: _thesis/package-lock.json
+
+      # three and lil-gui only, so the build can read their versions and pin
+      # the CDN urls in the import map to them. Nothing is bundled.
+      - name: install
+        working-directory: _thesis
+        run: npm ci
+
+      - name: fetch the writing
+        working-directory: _thesis
+        run: node thesis/sheet.mjs
+
+      - name: build both versions
+        working-directory: _thesis
+        run: |
+          node thesis/build.mjs --site --variant=v2
+          node thesis/build.mjs --site --variant=v1
+
+      # A build that wrote nothing is a build that failed quietly.
+      - name: check it wrote something
+        run: |
+          test -s "_thesis/site/$MANIFEST" || { echo "::error::no manifest — the build wrote nothing"; exit 1; }
+          for f in Dissertation/index.html Dissertation/v1/index.html Dissertation/v2/index.html ThesisTemplate/lib/reader.js; do
+            test -s "_thesis/site/$ROOT/$f" || { echo "::error::$f is missing or empty"; exit 1; }
+          done
+          grep -q 'ThesisTemplate/variants/v2.css' "_thesis/site/$ROOT/Dissertation/v2/index.html" \
+            || { echo "::error::v2 is not linking its own stylesheet"; exit 1; }
+
+      # Prune by manifest, never by folder.
+      - name: take back what the last run left
+        run: |
+          if [ -f "$MANIFEST" ]; then
+            node -e '
+              const fs = require("fs"), path = require("path")
+              const m = JSON.parse(fs.readFileSync(process.env.MANIFEST, "utf8"))
+              let gone = 0
+              for (const rel of m.files ?? []) {
+                const f = path.join(process.env.ROOT, rel)
+                if (fs.existsSync(f)) { fs.rmSync(f); gone++ }
+              }
+              console.log(`removed ${gone} file(s) from the previous run`)
+            '
+          else
+            echo 'no manifest yet: nothing to take back'
+          fi
+
+      - name: put the new files in place
+        run: |
+          mkdir -p "$ROOT"
+          cp -r "_thesis/site/$ROOT/." "$ROOT/"
+          find "$ROOT" -type d -empty -delete || true
+
+      - name: commit
+        run: |
+          git config user.name  'thesis build'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A -- "$ROOT"
+          if git diff --cached --quiet; then
+            echo 'the pages already match the sheet; nothing to commit'
+            exit 0
+          fi
+          git diff --cached --name-status | sed 's/^/  /'
+          git commit -m "the pages, rebuilt from the sheet"
+          git push
+
+      - name: what the build had to say
+        if: always()
+        run: echo 'read "fetch the writing" above for warnings about the sheet — a chapter with two titles, a subheading with no heading over it'
