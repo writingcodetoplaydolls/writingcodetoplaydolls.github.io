@@ -7,8 +7,6 @@ title: The Living Work
 
 ## The camera
 
-*Pasted from Camera (latest version, attached October 5).   heading notes are kept as written.*
-
 **Camera**
 
 Framed/Bounded by time/space/place/theory/perseverations

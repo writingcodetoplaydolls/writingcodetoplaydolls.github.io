@@ -31,15 +31,11 @@ The chain matters because it places an artist-practitioner/anthropologist at the
 
 ### Barad
 
-3.2 Barad
-
 For Barad, diffractive practice is inseparable from the apparatus. The apparatus is not a tool external to the researcher. It is the material-discursive arrangement: the configuration of instruments, concepts, bodies, institutions, and practices: through which phenomena are produced. The researcher is always already part of the apparatus; there is no view from outside. Diffractive practice, in Barad’s version, means making the apparatus clear: naming it, specifying the agential cuts it makes, and tracing the marks it leaves on bodies. The agential cut is not a free interpretive choice. It is the determinate event through which boundaries are enacted, relata emerge, and accountability is located. Diffractive practice is rigorous precisely because it specifies these cuts rather than naturalizing them. The question it asks is not “what does this mean” but “what does this configuration of differences produce, and what does it foreclose.” Its ethical force comes from the insistence that exclusions are constitutive: what the apparatus does not produce is as significant as what it does, and the researcher is response-able for those constitutive exclusions \[Barad (2003); 2007\].
 
 Barad then takes Haraway’s diffraction metaphor and grounds it in quantum field theory, making the metaphor into an ontological claim: phenomena do not pre-exist the apparatuses that produce them, and diffraction is not only a way of reading but a description of how the world is constituted (Barad, 2003) (citing Haraway, 1992, p. 300).
 
 ### Diffractive Practice in Education
-
-3.3 Diffractive Practice in Education
 
 The five educators gathered here work across levels and contexts: from early years practice to teacher education to undergraduate curriculum: and each one attaches diffractive practice to specific educational acts. Taken together they show diffractive practice not as a fixed procedure but as a commitment to materially situated inquiry, multiple forms of attunement, and knowledge-making through entangled practice.
 
@@ -63,15 +59,9 @@ Diffractive practice does not aim to produce a total account of its object. It a
 
 ### Braidotti
 
-4.1 Braidotti
-
 Braidotti’s transpositions provide both the method for movement and frame that mediates the move. Transposition is “a scientific term used in biology and musicology” that she adopts as “a metaphor for this specific way of working” (Braidotti, 2006, p. 5). It “indicates an intertextual, cross-boundary or transversal transfer, in the sense of a leap from one code, field or axis into another, not merely in the quantitative mode of plural multiplications, but rather in the qualitative sense of complex multiplicities” (Braidotti, 2006, p. 5). The move from genetic code to music is not analogical; it is the method itself: a “creative leap” that produces new relations by carrying content across registers that were not previously connected. Transposition “is not just a matter of mere translation, but a creative act” that produces “something new” through the passage (Braidotti, 2006, p. 6). Braidotti’s cartography extends this: the researcher is a cartographer whose accounts are embodied, embedded, and grounded in specific locations and histories (Braidotti, 2024).
 
-*Pasted from comps final, Part Two §5, pp. 49–51*
-
 ### Making Strange
-
-5. Making Strange
 
 Making strange has a specific theoretical genealogy that runs through literary theory, theater, and into new materialist art practice. Viktor Shklovsky, 1917, (as cited in Andersen 2012) introduced ostranenie: defamiliarization: as the defining operation of art: art exists to restore the experience of life, to make us feel things rather than merely recognize them. The technique of art is to make objects unfamiliar, to make forms difficult, to increase the length and difficulty of perception. Bertolt Brecht translated this into theatrical practice as the Verfremdungseffekt, the estrangement effect, a set of techniques for preventing the audience from losing itself in the illusion of the performance and forcing critical distance rather than identification. For Brecht, estrangement is not a failure of art but its most powerful political tool: to make the familiar strange is to reveal that it could be otherwise, that what appears natural and necessary is in fact historical and contingent.
 
@@ -82,8 +72,6 @@ Kristina Andersen writes that “Making strange or defamiliarisation is the arti
 a central concept to both Surrealism and Dada, centered on the idea that the act of experiencing something occurs in the moment of perception and that the further   confuse or otherwise prolong that moment of arriving at an understanding of an object of art, the deeper or more detailed that understanding will be (Andersen, 2012, p. 3)
 
 In the 2016 chapter, she restates the principle as the operational core of her own practice: “Hypothetical making facilitates the creation of different kinds of objects and interpretations. The actual process of investigating these magic machines leans directly on the technique of making strange (or othering)” (Andersen, 2016, p. 46). She adds, “In a world that already feels overwhelmingly unfamiliar, making things stranger somehow allows me to inhabit that strangeness, as if it was mine” (Andersen, 2016, p. 47).
-
-**\[Note\]** Still in the comps: §§4.2–4.5 (Schwab, Pirrò, Martin et al., Militsi) and §6 practitioner accounts, pp. 44–57.
 
 ### Heisenberg's microscope and Trinh's camera (Hayles, p. 51)
 

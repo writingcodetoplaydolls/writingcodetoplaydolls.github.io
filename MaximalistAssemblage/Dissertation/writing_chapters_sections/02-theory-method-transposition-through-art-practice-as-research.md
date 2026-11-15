@@ -3,6 +3,14 @@ published: false      # the pages are built from this; Jekyll should not render 
 title: Theory, Method, Transposition Through Art Practice As Research
 ---
 
+## Theory: posthumanism and new materialism
+
+### Theory, Methodology, Method
+
+Theory, methodology, and method are situated first at the meta-level through art theorist, educator, historian Graeme Sullivan. According to Sullivan (Sullivan, 2006, p. 22), “research is a transformative act that has an impact on the researcher and the researched.” Sullivan, drawing on Morrow, situates theory as the conceptual framework through which inquiry orients itself. Theories make broader ontological and epistemological claims that drive how research is conducted. Methodology is the principled approach to inquiry that follows from the theory. The research methodology guides decisions on what methods are necessary to accomplish the research goal. Methods are particular procedures developed by particular practitioners in particular sites, and they enact the methodologies. The chosen methods have consequences for what evidence the researcher can collect.
+
+This distinction maps onto the three questions the document answers. Part One treats posthumanism and new materialism as theories in Sullivan’s sense: conceptual frameworks making ontological and epistemological claims about what the world is and how it can be known. Part Two treats diffractive practice, transpositions, and making strange as methodologies: principled approaches to inquiry that follow from those theoretical commitments. Part Three treats specific methods enacted by named artist-researchers whose practices produce knowledge under the conditions Parts One and Two describe.
+
 ## Art Practice as Research
 
 ### What is research?

@@ -226,33 +226,3 @@ Thread to recover: Whitehead, quantum physics, New York around 1920
 **Harlem Renaissance:** Alain Locke, a pragmatist philosopher with a Harvard PhD (1918), edited *The New Negro* (1925), the same year as Whitehead's Lowell Lectures. That is a shared date, not a documented link.
 
 **Missing:** a documented link from Whitehead to Boas, Locke, or Harlem. If   find the old chat, paste it here and the thread can be rebuilt from it.
-
-### Sources for this section
-
-Sources for this section
-
-Appalachian State University Libraries. (n.d.). 1950s: Charles Olson years \[Online exhibit\]. [Link](https://omeka.library.appstate.edu/exhibits/show/bmc/1950s-charles-olson-years)
-
-Blaser, R. (2006). The violets: Charles Olson and Alfred North Whitehead. In M. Nichols (Ed.), *The fire: Collected essays of Robin Blaser* (pp. 196–228). University of California Press. [Link](https://writing.upenn.edu/library/Blaser-Robin_The-Violets.html)
-
-Bugaeva, L. (2020). Black Mountain College as a form of life. *Pragmatism Today, 11*(2), 147–153. [PDF](https://pureportal.spbu.ru/files/73720344/Black_Mountain_College_as_a_Form_of_Life_Lyubov_Bugaeva.pdf)
-
-Cultural Cartography. (n.d.). Robert Motherwell. [Link](https://culturalcartography.net/names/robert-motherwell/)
-
-Dedalus Foundation. (n.d.). Early life and education \[Robert Motherwell artist timeline\]. [Link](https://dedalusfoundation.org/robert-motherwell/artist-timeline/early-life-and-education)
-
-Harris, M. E. (1987). *The arts at Black Mountain College*. MIT Press. (Standard history; not yet consulted.)
-
-Hobbs, R. (2020). *Robert Motherwell, abstraction, and philosophy*. Routledge. [Publisher page](https://www.routledge.com/products/9780367210441)
-
-Horowitz, F. A., & Danilowitz, B. (2006). *Josef Albers: To open eyes*. Phaidon.
-
-Nelson, P. E. (2022, March 12). Proprioception. Cascadia Poetics Lab. [Link](https://paulenelson.com/2022/03/12/propriception/)
-
-Robert Rauschenberg Foundation. (n.d.). Black Mountain years: Experiments and collaborations. [Link](https://www.rauschenbergfoundation.org/art/lightboxes/black-mountain-years-experiments-and-collaborations)
-
-Whitehead, A. N. (1925). *Science and the modern world*. Macmillan. [Project Gutenberg](https://www.gutenberg.org/cache/epub/68611/pg68611-images.html)
-
-Whitehead, A. N. (1929). *Process and reality*. Macmillan.
-
-Whitehead, A. N. (1938). *Modes of thought*. Macmillan.

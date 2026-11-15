@@ -49,6 +49,12 @@ Also in the lineage, and worth checking against Seitz's list: Elsa von Freytag-L
 
 A lead for   erasure genealogy (2.4): MoMA publishes the 1961 master checklist. Counting who was in the room, by gender and race, would let   test the canon rather than assert it.
 
+### Hayles: a form and a language adequate to the field
+
+N. Katherine Hayles states the same task in 1984, from inside literary studies, and supplies the word the goal can be held to: adequate. Chapter 1 of *The Cosmic Web* ends, "Whereas the scientific theories are created through the attempt to express the field view in rigorously exact models, **the literary strategies are forged by the desire to find a form, and a language, adequate to interpret its human meaning**" (Hayles, 1984, p. 59). The "it" is named two sentences earlier: "a vision of a **dynamic, mutually interacting field**" which must be "represented through a medium that is inherently linear, fragmented, and unidirectional" (p. 59).
+
+**\[Note\]** Two decisions attached to this quotation. The printed verb is *interpret*; my own note of 29 Oct has it as *determine*, and I will set it deliberately one way or the other. And Hayles writes *literary* strategies: her five case studies are all novels and there is no visual art in her book, so carrying the sentence across to art practice as research is my move, not hers. She also does not claim the desire succeeds. The same chapter ends on "the problem of articulation is intrinsic to this view of reality" (p. 59), and p. 21 has "the prey always escapes, precisely because the web is articulated."
+
 ### Reading the two strands through each other
 
 Reading the two strands through each other
