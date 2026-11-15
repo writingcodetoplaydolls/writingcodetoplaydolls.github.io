@@ -7,8 +7,6 @@ title: The Violence of Traditional Methods and a History of Erasure
 
 **\[Note\]** This history is the genealogy of the violence the dissertation answers: the erasure of complexity, the insistence on the word and the one truth, the erasure of the female body. v35 and the final overlap from the atomists through Merleau-Ponty; merge them rather than choosing.
 
-*Pasted from comps v35, Origin Stories, pp. 7–13 (mostly cut from the final)*
-
 Reality is an ongoing becoming. Matter is agentive, relational, and generative — not a passive substance awaiting inscription by an external force. The world is not composed of discrete objects standing in external relations but of entangled phenomena, intra-acting assemblages, folds. Knowledge is not produced by a detached observer standing outside what it studies: it is situated, embodied, produced through the body of the knower and through the specific material-discursive apparatus of the inquiry. The subject is not a bounded individual but a nomadic, non-unitary, multiply-constituted process of becoming — "not one but many" (Ferrando, 2014, p. 169), or as Bennett would say, "walking talking minerals" (Vibrant Matter) — "we have never been human" because "human is a 'human' concept" (Ferrando, 2014, p. 170). The ground of knowledge is relationship. The unit of analysis is phenomenon, not object. Representation is not a mirror of a pre-given world but a cut that produces what it appears merely to describe. These are the affirmations posthumanism and new materialism share. They are not new. They have been made before — in philosophy, in science, in art, in feminist practice, in Indigenous ways of knowing that long predate the Western academic traditions that have most systematically suppressed them. What is new is the moment when enough of these traditions found common vocabulary at once to name what they were doing, to make it speakable as method. That moment was the 1990s. But the conditions for it accumulated across millennia — not as a linear progression toward a predetermined destination, but as a folding, a series of intra-actions in which the same ontological commitment kept resurfacing in different registers, kept being covered over, and kept breaking through.
 
 The problem these frameworks respond to is as old as Leucippus and Democritus: the atomist claim that reality consists of tiny, indivisible, passive particles careening through the void, their shapes and sizes fixed and eternal, their combinations determined by random collision. Ancient atomism gave Western metaphysics its picture of matter as fundamentally inert — moving only when struck, generating only what its pre-given characteristics permit, never surprising itself. Epicurus introduced the clinamen, the swerve, as a small concession to spontaneity: atoms occasionally deviate from their predetermined paths, triggering cascades of changed outcomes. But the deviation is still individual and random, not relational and generative. The full range of cosmic possibilities remains fixed. Lucretius extended Epicurus into the philosophical poem *De Rerum Natura* and came closer — Gamble, Hanan, and Nail argue that Lucretius anticipated performative new materialism, that he studied matter as something that ceaselessly constitutes novel entities and relations (Gamble et al., 2019, pp. 112–113). But this reading was suppressed for most of Western intellectual history, both by the mechanist tradition that followed and by the Christian theology that preceded it, which needed matter to be dead so that God could be its animator.
@@ -157,7 +155,7 @@ Motherwell and Whitehead
 
 **Hobbs (2020).** *Robert Motherwell, Abstraction, and Philosophy* argues that Motherwell's art "is indebted to Alfred North Whitehead's highly original process metaphysics," and describes that philosophy as "inspired by quantum theory and focusing on the ongoing ingenuity of dynamic forces of energy rather than traditional views of inert substances" (publisher's description).
 
-**Whitehead (1925).** *Science and the Modern World*, the Lowell Lectures of February 1925, has a chapter titled "The Quantum Theory" and calls for "some new doctrine of organism which may take the place of the materialism with which, since the seventeenth century, science has saddled philosophy" (ch. 2; confirm the page in your edition).
+**Whitehead (1925).** *Science and the Modern World*, the Lowell Lectures of February 1925, has a chapter titled "The Quantum Theory" and calls for "some new doctrine of organism which may take the place of the materialism with which, since the seventeenth century, science has saddled philosophy" (ch. 2; confirm the page).
 
 ### A second Whitehead line at Black Mountain: Olson
 
@@ -167,13 +165,13 @@ Charles Olson taught at Black Mountain on weekends in 1948–49, returned in 195
 
 Olson's copy of *Process and Reality* is annotated "1st read sprg 55/ again sprg 56/ now spring 57," and he lectured on Whitehead at Black Mountain in 1956 (Blaser, 2006).
 
-Olson published an essay titled "Proprioception" in 1965 (Nelson, 2022; confirm in Olson's *Collected Prose*). Your words from October 6: "lives so fully via proprioception." A poet working from Whitehead toward the body is also a language-and-literacy node. That link is my association; keep or cut.
+Olson published an essay titled "Proprioception" in 1965 (Nelson, 2022; confirm in Olson's *Collected Prose*).  "lives so fully via proprioception." A poet working from Whitehead toward the body is also a language-and-literacy node.
 
 ### Interference points to test
 
 Interference points to test
 
-**Two routes into Black Mountain process.** Dewey reaches the college through Rice and Albers (experience, learning by doing). Whitehead reaches it through Motherwell and Olson (process, organism). Dewey's line feeds your pedagogy (1.6); Whitehead's feeds the ontology (2.1). Does the genealogy need both?
+**Two routes into Black Mountain process.** Dewey reaches the college through Rice and Albers (experience, learning by doing). Whitehead reaches it through Motherwell and Olson (process, organism). Dewey's line feeds pedagogy (1.6); Whitehead's feeds the ontology (2.1). Does the genealogy need both?
 
 **Teacher and student.** Albers taught disciplined attention to materials; Rauschenberg carried salvaged materials from Black Mountain into the Combines. Is the move from Albers to Rauschenberg a move from material study to found matter?
 
@@ -183,8 +181,6 @@ Interference points to test
 
 To search: Whitehead in posthuman and new materialist texts
 
-**\[Note\]** Already in your corpus:
-
 Final comps, p. 9: "Spinoza’s monism, Whitehead’s process philosophy, and phenomenology all resisted that reduction in different ways."
 
 Final comps, p. 21: "its afterlives run through the pre-Socratics, Whitehead, postclassical physics, and the folded proteins of microbiology (Coole, 2010, p. 110)."
@@ -193,7 +189,7 @@ Comps v35, p. 9: "the tradition Deleuze spent his career recovering, tracing thr
 
 Andersen (2017), pp. 21–22, quotes Whitehead: "a traveller, who has lost his way, should not ask, Where am I? What he really wants to know is, Where are the other places?" (1929). *Process and Reality* is in her references.
 
-Deleuze, *The Fold* (1993), already in your references: chapter 6, "What Is an Event?", reads Whitehead.
+Deleuze, *The Fold* (1993), already in references: chapter 6, "What Is an Event?", reads Whitehead.
 
 To check:
 
@@ -219,7 +215,7 @@ Search terms: Whitehead, process, prehension, concrescence, actual occasion, org
 
 Thread to recover: Whitehead, quantum physics, New York around 1920
 
-**\[Note\]** I couldn't find that earlier chat in your searchable history; it may be in a project chat. Your April to-do list also asked "Did Mattox know ppl in NY?", which may be the same thread. Nodes confirmed so far:
+"Did Mattox know ppl in NY?", which may be the same thread. Nodes confirmed so far:
 
 **Whitehead and quantum theory:** the 1925 chapter "The Quantum Theory"; Hobbs (2020) on process philosophy "inspired by quantum theory."
 
@@ -229,7 +225,7 @@ Thread to recover: Whitehead, quantum physics, New York around 1920
 
 **Harlem Renaissance:** Alain Locke, a pragmatist philosopher with a Harvard PhD (1918), edited *The New Negro* (1925), the same year as Whitehead's Lowell Lectures. That is a shared date, not a documented link.
 
-**Missing:** a documented link from Whitehead to Boas, Locke, or Harlem. If you find the old chat, paste it here and the thread can be rebuilt from it.
+**Missing:** a documented link from Whitehead to Boas, Locke, or Harlem. If   find the old chat, paste it here and the thread can be rebuilt from it.
 
 ### Sources for this section
 

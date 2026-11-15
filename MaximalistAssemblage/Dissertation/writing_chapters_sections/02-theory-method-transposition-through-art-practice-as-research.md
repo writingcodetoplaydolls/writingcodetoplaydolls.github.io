@@ -61,15 +61,11 @@ From a practitioner’s location, Margaret Somerville’s account of “data tha
 
 ### Bridge: my practice as already enacting theory
 
-Bridge: my practice as already enacting theory
-
-**\[Note\]** A possible sequence for the bridge:
-
 The field claim: art practice was one of the milieus where the call to rethink matter arose (Kontturi and Tiainen, in 2.1), and practice arrives at the ground that theory then names (the Mosaic Approach passage, in 3.2).
 
 The vocabulary reaches backward: the v35 passage below.
 
-Turning that lens on my own corpus: the potato bin through We Have No Room (1.1, 1.3) as apparatus, transposition, and diffraction enacted before you had the words. The Researcher as Apparatus passage in 1.2 already names the move for Rauschenberg, Cage, and Cézanne.
+Turning that lens on my own corpus: the potato bin through We Have No Room (1.1, 1.3) as apparatus, transposition, and diffraction enacted before   had the words. The Researcher as Apparatus passage in 1.2 already names the move for Rauschenberg, Cage, and Cézanne.
 
 The method that follows: revisiting work through theory is diffractive reading after the event (Hill, in 2.2 §3.3 and 3.2), and Camera is the pilot.
 

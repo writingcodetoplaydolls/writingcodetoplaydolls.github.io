@@ -21,6 +21,14 @@ Motherhood
 
 ### Cartography
 
+As navigators we are the nomadic subjects, moving through a cartography of reality/the Zoe as it is in its specific time/space/matter configuration. Our movement along a path is guided by our affirmative ethics.
+
+Trinh T. Minh-ha is among the most precise illustrations of this figure. As a Vietnamese filmmaker working in Senegal, the United States, and across the postcolonial world, she is not metaphorically nomadic. She inhabits multiple positions simultaneously without resolving them into a stable identity. She describes her practice as "a constant flow from the inside out and outside in," and insists that the challenge lies in "materializing a reality" in which the personal is not naturally political but every form of knowledge carries a specific location (Trinh, 1992, p. 82). Her films --- Reassemblage (1982), Naked Spaces: Living is Round (1985), Surname Viet Given Name Nam (1989) --- do not represent nomadism as subject matter. They enact it as method: refusing the position of the expert-observer who speaks about, insisting instead on a "speaking nearby" that "reflects on itself and can come very close to a subject without, however, seizing or claiming it" (Trinh, 1992, p. 87). The nomadic cartography does not claim to map a fixed territory. It traces a movement through a territory that is itself in motion, attending to what becomes visible from this location at this moment --- and offering that trace as evidence rather than conclusion. Fuser (2019) reads Trinh's entire cinematic project through Braidotti's nomadic subjectivity, arguing that her aesthetics produce a "politics of speaking nearby" that structurally destabilizes the gaze of alterity and challenges the epistemic authority of the Western observer (Fuser, 2019, pp. 107--121). The nomadic subject, in Trinh's practice, is not a philosophical figure. It is a filmmaker with a camera, a specific body, a specific history, working in specific material conditions, refusing exhaustive capture.
+
+Braidotti's cartography is "a non-hierarchical and non-linear mapping" where "any form of encounter with the world... constitutes a legitimate resource of meaning." Forgetting to Forget, on Rosi Braidotti
+
+Cartography as method is explicitly a politics of location as much as a navigation tool. "Situated locations draw a cartographic map of power relations and thus can also help identify possible sites and strategies of resistance. Nonlinearity and a nonunitary vision of the subject do not necessarily result in either cognitive or moral relativism or social anarchy" --- Braidotti frames them instead as "significant sites for reconfiguring feminist political practice" (Braidotti, 2011, p. 12). What connects Braidotti's cartography to the Adornian three steps that follow is precisely this: both name the ethical labor of navigating a world without stable ground. Adorno's ouroboran concept-making, the willingness to be the clown, the practice of lingering --- these are the comportments of the nomadic subject moving through a cartographic field, refusing the fantasy of a view from above, staying inside the entanglement. Cartography is not a map   consult before entering the terrain. It is what   produce by moving through it accountably.
+
 ### Nomadic Subjectivities
 
 I write from a particular location. I am an artist, educator, researcher, parent, and neurodiverse person. My background is in anthropology and art (BA), art education (MA), and experimental art and technology (MFA). My PhD research entangles posthumanism and new materialism with each of these. Adrienne Rich’s poetry has been with me for thirty-five years; encountering her as the locational ground of feminist materialism reads, to me, as coming home. The same is true of Trinh T. Minh-ha, whose work I almost pursued in graduate study in visual anthropology before the path turned. My study of quantum science shows me that the relational, indeterminate character of the world has been repeatedly obscured to maintain authoritarian controls governed by the Platonic dualism this document traces and refuses.
@@ -33,7 +41,7 @@ After months of wrangling and too many to count false starts in organizing my th
 
 During my initial presentation to my comprehensive exam committee I was reminded that in the beginning as researchers we lay the foundation, present the ground of what has come before from which our seeds will grow. We save analysis for later, for comprehensive exams we report. I honor that intention by carefully listening to the voices of each author and trying not to assert my own already always thinking. With that said, it would be irresponsible to not state clearly that I come with a framing that influences the agential cuts I make and the marks I leave on bodies.
 
-I have been teaching philosophy alongside every other subject I have taught since 2009. I began with introducing M. Scott Peck's Making a Map for Life, Plato's Allegory of the Cave, and the Simulacra work underpinning the Matrix. Prior to 2009 I had multiple experiences working with young people with noted mental health struggles that made it difficult for them to navigate expectations in traditional school settings. As a person who suffered from PTSD since childhood, I noticed in them what could be similar difficulties I had in being in the world with other people without such histories. (I checked my ethical boundaries of projecting onto students my own constructs, and after reconciling that growing an ability for meta-cognition, self-reflection, and the understanding of thinking errors (controversial) was a healthy practice for everyone, despite their background, I continued)
+I have been teaching philosophy alongside every other subject I have taught since 2009. I began with introducing M. Scott Peck's Making a Map for Life, Plato's Allegory of the Cave, and the Simulacra work underpinning the Matrix. Prior to 2009 I had multiple experiences working with  ng people with noted mental health struggles that made it difficult for them to navigate expectations in traditional school settings. As a person who suffered from PTSD since childhood, I noticed in them what could be similar difficulties I had in being in the world with other people without such histories. (I checked my ethical boundaries of projecting onto students my own constructs, and after reconciling that growing an ability for meta-cognition, self-reflection, and the understanding of thinking errors (controversial) was a healthy practice for everyone, despite their background, I continued)
 
 "We are entangled, until we are not." — Boris Keifer. Before we can apply diffractive practice to the field, we must first define that field and what exists within it.
 
@@ -89,8 +97,6 @@ This is where Part One opens onto Part Two. If posthumanism and new materialism 
 
 Hayles: the point from which to view, and Braidotti
 
-*Hayles, The Cosmic Web (1984), via HAYLES_ch1_additions_for_the_proposal.md, 29 Oct 2026*
-
 Hayles describes the loss of the single viewpoint as the central issue of modernism: "It would be possible to write the history of the modern novel using similar terms, starting from a Jamesian theory of point of view and progressing to post-modern literature in which **the assumption that there is a 'point' from which to 'view' is called into question**. Shifting viewpoints that are mutually exclusive but all in some sense true; experiments that involve making the subject-object split in different places; the radical questioning of what it means to be 'objective'" (Hayles, 1984, p. 55). She reaches this from Bohr, directly: the paragraph follows four pages on complementarity and the limits of viewpoint, recorded in 1.5.
 
 Braidotti takes the same loss as a starting condition rather than a predicament, and makes a method of it. Style is "a navigational tool" that "negotiates our path across sets of material ('matter-real') coordinates"; the cartographer's accuracy is held together with "the hyper-sensitivity of the sensualist"; perception works by "the folding in and out"; and a figuration "is a living map, a transformative account of the self; it's no metaphor" (Braidotti, 2014). Where Hayles records the question of whether there is a point from which to view, Braidotti answers it: there is a point, it is a located body, and locating it is the work.
@@ -102,8 +108,6 @@ My note, 29 Oct 2026: **the Bohr passage connects Braidotti to quantum physics, 
 ### The contribution: reading Braidotti through Bohr
 
 The contribution: reading Braidotti through Bohr
-
-*Hayles, The Cosmic Web (1984), via HAYLES_ch1_additions_for_the_proposal.md, 29 Oct 2026*
 
 My claim, 29 Oct 2026: **Reading Braidotti through Bohr and quantum physics is mine. It is novel because she never made the claim explicitly herself. She talks about other sci3nce fields extensively but never veers into physics.**
 
@@ -131,35 +135,35 @@ The ten shorter pieces hold the pattern steady across thirty years, and none of 
 
 ### Visions for interconnectedness
 
-**\[Note\]** Comps report; a proposal argues. Condense once the chapter’s argument is settled, ending each section on what it lets you do in Chapter 3.
+**\[Note\]** Comps report; a proposal argues. Condense once the chapter’s argument is settled, ending each section on what it lets   do in Chapter 3.
 
-**\[Note\]** Narrowing criteria, to adjust: keep an example or history if it (a) works in your own media or apparatus (photography, 3D scanning, code, generative or interactive work, installation); (b) carries the genealogy of erasure; (c) bears on pedagogy or literacy; or (d) is a site of documented enactment, which your contribution claim depends on. Leave the rest in the comps and cite it there.
+**\[Note\]** Narrowing criteria, to adjust: keep an example or history if it (a) works in my own media or apparatus (photography, 3D scanning, code, generative or interactive work, installation); (b) carries the genealogy of erasure; (c) bears on pedagogy or literacy; or (d) is a site of documented enactment, which my contribution claim depends on. Leave the rest in the comps and cite it there.
 
-**\[Note\]** This section needs to say how sources entered the review, how they were read, how they were selected and organized, and what the review leaves out, in enough detail that a reader can trace it. Diffractive reading answers the “how they were read” part; the other parts still need a record. Questions only you can answer:
+**\[Note\]** This section needs to say how sources entered the review, how they were read, how they were selected and organized, and what the review leaves out, in enough detail that a reader can trace it. Diffractive reading answers the “how they were read” part; the other parts still need a record. Questions only   can answer:
 
 How did sources enter: database searches (which databases, which terms, which dates), citation trails, committee and colleague recommendations, chance?
 
-Reading record: answered October 6. You built the site that auto-highlights glossary terms, first as thick-text support for your freshman course, then for your own reading. Your words, and what they connect, are just below this list.
+I built the site that auto-highlights glossary terms, first as thick-text support for my freshman course, then for my own reading.
 
-What did you leave out, and why? That is the cut the review is accountable for, and the scarcity claim in 1.6 depends on it.
+What did   leave out, and why? That is the cut the review is accountable for, and the scarcity claim in 1.6 depends on it.
 
 I did build that website. The first iteration was creating thick text support for student readings for my college freshman course. I then picked it up again for my own work as a way to navigate/build relationships with/through the text.
 
-**\[Note\]** The site is your literature review method in material form. It also connects three parts of the proposal:
+**\[Note\]** The site is   literature review method in material form. It also connects three parts of the proposal:
 
-**Method (here, 2.0).** It is a reading apparatus. Highlighting each glossary term wherever it recurs lets a reading build relationships across texts instead of summarizing them one at a time. Describe it here as the apparatus of your diffractive reading: what it highlights, what it links, and what it leaves out (its cut).
+**Method (here, 2.0).** It is a reading apparatus. Highlighting each glossary term wherever it recurs lets a reading build relationships across texts instead of summarizing them one at a time. Describe it here as the apparatus of   diffractive reading: what it highlights, what it links, and what it leaves out (its cut).
 
-**Pedagogy ([1.6](#m6jbyx8zdwp.48646)).** It began as thick-text support for freshmen: the reading support you would have needed, built for every student. That is facilitated becoming made into a tool.
+**Pedagogy ([1.6](#m6jbyx8zdwp.48646)).** It began as thick-text support for freshmen: the reading support   would have needed, built for every student. That is facilitated becoming made into a tool.
 
-**The artifact ([3.3–3.4](#m6jbyx8zdwp.176051)).** It is the first iteration of the website as corpus. The dissertation site can be described as its third iteration (students, then your own reading, then the corpus/body), not as something new.
+**The artifact ([3.3–3.4](#m6jbyx8zdwp.176051)).** It is the first iteration of the website as corpus. The dissertation site can be described as its third iteration (students, then   own reading, then the corpus/body), not as something new.
 
-The v35 file is itself evidence: its front matter (`layout: course`, `permalink: /work/comprehensive_exam/`, and the glossary term list) shows the comps draft was written as a page on that site.
+The v35 file is itself evidence: its front matter (`la t: course`, `permalink: /work/comprehensive_exam/`, and the glossary term list) shows the comps draft was written as a page on that site.
 
-To document: screenshots or archived versions of both iterations, dates, the course name, the full glossary term list, and the site's URL or repository if you want the committee to see it.
+To document: screenshots or archived versions of both iterations, dates, the course name, the full glossary term list, and the site's URL or repository if   want the committee to see it.
 
 Reading texts through one another rather than one by one: Barad, Hill’s diffractive reading (2.2 §3.3), differences that make a difference (2.2 §2).
 
-Reading theory through practice and practice through theory, including your own works (the bridge at the end of 2.3).
+Reading theory through practice and practice through theory, including   own works (the bridge at the end of 2.3).
 
 Following what glows: sources that kept grabbing attention (Somerville’s “data that glow,” 2.3 §1.3), and returning to them, with perseveration as method (1.4).
 
@@ -173,7 +177,7 @@ The question is answered not by forcing a clean taxonomy --- which would betray 
 
 To tease them apart is to follow the diffractive practices we will later discuss, to search for the differences that make a difference (Barad, 2007, citing Bateson, 1972; developed further in \[link to Deleuze Called for a Diffractive Practice\]). We begin (now it is we because the reader is also participating. As my thoughts unfold/refold so does the reader's and a thought-baby, an entanglement is made) with recognition that all things are co-constituted together through the continuous becomings of the protean flow, zoe, the primordial swerve, the entanglement, the void, the virtual, the immanence, the Wild, non-identity, a life, the absolute, and ever shifting assemblages both cosmic and atomic and everywhere, everything, all at once. These are not synonyms in the strict sense --- each carries the specific weight of the theoretical tradition from which it comes. But they are pointing at the same thing, or rather, at the same absence of a thing, not nothing, not chaos, the deviation from the straight line that generates all actual things, the condition of possibility for all swerving/becoming. These notions form the ground and set the tone, revealing themselves more fully in the sections that follow, and again in Part Two \[link\], where specific terms are grounded in their theoretical traditions.
 
-The point of this teasing apart is to find a place and time to stand, to stake a position (metaphorical or literal) in the entanglement from which to explore/ponder/make sense (a gathering of diffractions coalesced into an accessible whole --- not too large, not too small) and to most importantly connect to other travelers in the protean flow. Without a position, how would they find you? How would you find them? See Henri Matisse's series of paintings and cut paper compositions from early 1900's Paris, that for many viewers evoke a feeling of human connection in the protean flow. [Dance I](https://www.moma.org/collection/works/79124)
+The point of this teasing apart is to find a place and time to stand, to stake a position (metaphorical or literal) in the entanglement from which to explore/ponder/make sense (a gathering of diffractions coalesced into an accessible whole --- not too large, not too small) and to most importantly connect to other travelers in the protean flow. Without a position, how would they find  ? How would   find them? See Henri Matisse's series of paintings and cut paper compositions from early 1900's Paris, that for many viewers evoke a feeling of human connection in the protean flow. [Dance I](https://www.moma.org/collection/works/79124)
 
 As I neared the end of researching and started to write, I realized the questions would be better introduced in a different order, from the introduction of the larger field of theory, to specific methods, to theory/methods in a specific context. So the questions will be presented in this order:
 
