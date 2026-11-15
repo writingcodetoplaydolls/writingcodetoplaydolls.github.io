@@ -59,11 +59,14 @@ body.book.rail-open::after { content: ""; position: fixed; inset: 0; background:
   display: flex; flex-direction: column;
   min-height: 0; overflow: hidden;
   background: transparent;
-  padding: 1.3rem 2rem 0.8rem;
+  /* Generous side margins: the measure is capped anyway, so this is what
+     keeps the text off the edge of the page and gives the window something
+     to be a window in. */
+  padding: 2rem 2.6rem 1.4rem;
   box-shadow: 0 0 0 1px rgba(255, 255, 255, .07);
 }
-.leaf--verso { border-radius: 4px 0 0 4px; padding-right: 2.6rem; }
-.leaf--recto { border-radius: 0 4px 4px 0; padding-left: 2.6rem; }
+.leaf--verso { border-radius: 4px 0 0 4px; padding-right: 3.1rem; }
+.leaf--recto { border-radius: 0 4px 4px 0; padding-left: 3.1rem; }
 .leaf > .sheet { border-radius: inherit; }
 .leaf-head, .leaf-body, .leaf-foot { position: relative; z-index: 1; }
 
@@ -94,9 +97,9 @@ body.book.rail-open::after { content: ""; position: fixed; inset: 0; background:
   overflow: hidden;
 }
 @media (max-width: 90rem) {
-  .leaf { padding-left: 1.5rem; padding-right: 1.5rem; }
-  .leaf--verso { padding-right: 2rem; }
-  .leaf--recto { padding-left: 2rem; }
+  .leaf { padding-left: 2.25rem; padding-right: 2.25rem; }
+  .leaf--verso { padding-right: 2.75rem; }
+  .leaf--recto { padding-left: 2.75rem; }
 }
 body.book .leaf-body p { margin: 0; }
 

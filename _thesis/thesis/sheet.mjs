@@ -177,8 +177,13 @@ function chaptersFrom(rows) {
       section(chapter, heading, subheading)
       continue
     }
-    section(chapter, heading, subheading).push(r.text)
-    placed++
+    // A line break inside the cell starts a new paragraph. That is the only
+    // way to break one -- a row is a row -- and it is what Alt+Enter does in
+    // Sheets. Blank lines are dropped, so pressing it twice is the same as
+    // once, and a trailing one leaves no empty paragraph behind.
+    const paras = r.text.split(/\r?\n/).map(t => t.trim()).filter(Boolean)
+    for (const para of paras) section(chapter, heading, subheading).push(para)
+    placed += paras.length
   }
 
   if (orphaned) warn(`${orphaned} row(s) have text before any Chapter, so they are on no page`)

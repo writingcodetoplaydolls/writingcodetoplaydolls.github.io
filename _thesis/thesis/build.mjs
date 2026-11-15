@@ -47,7 +47,13 @@ const SLOTS_OUT = process.argv.find(a => a.startsWith('--slots='))?.slice(8)
 // --variant=<id>: which version of the page this is. Versions differ by one
 // stylesheet and live in their own folders, so building one never overwrites
 // another. See thesis/variants/ and "versions" in thesis.json.
-const VARIANT = process.argv.find(a => a.startsWith('--variant='))?.slice(10) ?? ''
+// Falls back to the document's default version rather than to no version at
+// all. A page with no variant is styled by neither v1 nor v2 -- book.css alone
+// holds only what they share -- so the preview was showing a layout that does
+// not exist anywhere, and measuring it said nothing about either.
+const VARIANT = process.argv.find(a => a.startsWith('--variant='))?.slice(10)
+  ?? JSON.parse(fs.readFileSync(path.join(path.dirname(fileURLToPath(import.meta.url)), 'thesis.json'), 'utf8')).defaultVersion
+  ?? ''
 const TUNE_MODE = process.argv.includes('--tune')   // build the tuning panel into the pages
 const THESIS = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.resolve(THESIS, '..')
@@ -907,8 +913,9 @@ console.log(`  index.html, lib/ (${fs.readdirSync(OUT_LIB).length} files), poste
   + (written ? `, ${written} markdown file(s)` : ''))
 // the variant stylesheets, all of them: a version is only as good as the
 // sheet that makes it, and a missing one silently returns the page to book.css
-if (SITE_MODE && fs.existsSync(path.join(THESIS, 'variants'))) {
-  const dir = under(SITE.variants)
+// Dev needs them too: the preview links one, so it has to be there.
+if (fs.existsSync(path.join(THESIS, 'variants'))) {
+  const dir = SITE_MODE ? under(SITE.variants) : path.join(OUT, 'variants')
   fs.mkdirSync(dir, { recursive: true })
   for (const f of fs.readdirSync(path.join(THESIS, 'variants'))) {
     fs.copyFileSync(path.join(THESIS, 'variants', f), path.join(dir, f))
