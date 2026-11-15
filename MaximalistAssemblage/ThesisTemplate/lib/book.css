@@ -1,0 +1,230 @@
+/* Book mode: a two-page spread, two columns to a page, turned a spread at a
+ * time. thesis/lib/book.js moves the chapter's blocks out of .page and pours
+ * them into the pages; the browser does the typesetting inside each page,
+ * which is why a page here is simply a two-column box of a fixed height.
+ *
+ * Loaded beside thesis.css, which holds the scrolling layout and the palette
+ * these rules use. Nothing here applies until body carries the class `book`.
+ * The element the pages are built in is .book-shell, deliberately not .book:
+ * a class selector matches any element carrying it, body included, so naming
+ * them the same would hide the whole document.
+ */
+
+.book-shell { display: none; }
+
+body.book { overflow: hidden; }                 /* the document itself does not scroll */
+body.book .sheetbox { display: none; }
+body.book .book-shell {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-rows: minmax(0, 1fr) auto;
+  position: fixed; inset: 2.75rem 0 0 0;
+  background: transparent;              /* the room shows around the pages */
+}
+/* A spread wants the whole window: two columns to a page is already a narrow
+   measure, and a fixed rail down the side takes 15rem out of it. So in book
+   mode the contents become a drawer at every width, opened by the button in
+   the top bar, and the book starts at the left edge. */
+body.has-rail.book .book-shell { left: 0; }
+body.book .rail {
+  top: 0; width: min(20rem, 85vw);
+  transform: translateX(-100%); transition: transform .18s ease-out;
+  box-shadow: 0 0 40px var(--drop);
+}
+body.book.rail-open .rail { transform: none; }
+body.book .rail-close { display: block; float: right; font: inherit; background: none; border: 0; color: var(--ink-soft); cursor: pointer; }
+body.book.rail-open::after { content: ""; position: fixed; inset: 0; background: rgba(0, 0, 0, .3); z-index: 29; }
+@media (prefers-reduced-motion: reduce) { body.book .rail { transition: none; } }
+
+.book-viewport { grid-area: 1 / 2; overflow: hidden; padding: 1.1rem 0; }
+.book-track { display: flex; height: 100%; transition: transform .34s cubic-bezier(.33, 1, .68, 1); will-change: transform; }
+@media (prefers-reduced-motion: reduce) { .book-track { transition: none; } }
+.book--setting .book-track { visibility: hidden; }
+
+.spread { flex: 0 0 100%; min-width: 100%; height: 100%; }
+.spread .pages {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 1.5rem minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);     /* one row, exactly the height of the spread:
+                                             without this the row grows to its content and
+                                             a page never overflows, so nothing paginates */
+  height: 100%; width: 100%; max-width: 86rem; margin: 0 auto;
+}
+
+/* A page is not painted here: its black is the .sheet behind its text, which
+   lib/windows.js cuts the windows out of. The leaf itself only holds the shape
+   and the hairline that says where the paper ends. */
+.leaf {
+  position: relative;
+  display: flex; flex-direction: column;
+  min-height: 0; overflow: hidden;
+  background: transparent;
+  padding: 1.3rem 2rem 0.8rem;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .07);
+}
+.leaf--verso { border-radius: 4px 0 0 4px; padding-right: 2.6rem; }
+.leaf--recto { border-radius: 0 4px 4px 0; padding-left: 2.6rem; }
+.leaf > .sheet { border-radius: inherit; }
+.leaf-head, .leaf-body, .leaf-foot { position: relative; z-index: 1; }
+
+/* the fold: the same sheet of black, creased down the middle */
+.spine {
+  background-color: var(--page);
+  background-image: linear-gradient(to right,
+    rgba(0, 0, 0, .55), rgba(255, 255, 255, .05) 46%, rgba(255, 255, 255, .05) 54%, rgba(0, 0, 0, .55));
+}
+
+.leaf-head {
+  font: .66rem/1 var(--sans); letter-spacing: .1em; text-transform: uppercase;
+  color: var(--ink-faint); padding-bottom: .5rem; margin-bottom: .9rem;
+  border-bottom: 1px solid var(--rule-soft);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-height: 1.6em;
+}
+.leaf--recto .leaf-head { text-align: right; }
+.leaf-foot { font: .7rem/1 var(--sans); color: var(--ink-faint); padding-top: .6rem; }
+.leaf--recto .leaf-foot { text-align: right; }
+
+/* the page itself: two columns, filled one after the other, clipped at the foot */
+.leaf-body {
+  flex: 1 1 auto; min-height: 0;
+  column-count: 2; column-gap: 1.8rem; column-fill: auto;
+  overflow: hidden;
+}
+
+/* ---- type in a narrow column --------------------------------------------
+ * Four columns across a window is a tight measure. Below a wide window the
+ * type and the margins both come in, to hold the line near 45 characters. */
+body.book { font-size: .95rem; line-height: 1.52; }
+@media (max-width: 90rem) {
+  body.book { font-size: .88rem; }
+  .leaf { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .leaf--verso { padding-right: 2rem; }
+  .leaf--recto { padding-left: 2rem; }
+  .leaf-body { column-gap: 1.5rem; }
+}
+body.book .leaf-body p { text-align: justify; hyphens: auto; margin: 0; }
+body.book .leaf-body p + p { text-indent: 1.2em; }    /* set as a book is set: indent, no gap */
+body.book .leaf-body h2 + p,
+body.book .leaf-body h3 + p,
+body.book .leaf-body h4 + p,
+body.book .leaf-body blockquote + p,
+body.book .leaf-body figure + p,
+body.book .leaf-body ul + p,
+body.book .leaf-body ol + p,
+body.book .leaf-body pre + p,
+body.book .leaf-body .codeblock + p,
+body.book .leaf-body .aside + p,
+body.book .leaf-body .epigraph + p,
+body.book .leaf-body .tablewrap + p,
+body.book .leaf-body .sidenote + p { text-indent: 0; }
+body.book .leaf-body h2 { font-size: 1.15rem; margin: 1.2rem 0 .4rem; break-after: avoid; }
+body.book .leaf-body h3 { font-size: 1rem; margin: 1rem 0 .3rem; break-after: avoid; }
+body.book .leaf-body h4 { font-size: .9rem; margin: .8rem 0 .2rem; break-after: avoid; }
+body.book .leaf-body > :first-child { margin-top: 0; }
+body.book .leaf-body ul, body.book .leaf-body ol { margin: .4rem 0 .8rem; padding-left: 1.1rem; }
+body.book .leaf-body li { margin: .15rem 0; }
+body.book .leaf-body blockquote { margin: .8rem 0; font-size: .95em; break-inside: avoid; }
+body.book .leaf-body pre { font-size: .72rem; padding: .6rem .7rem; margin: 0; break-inside: avoid; }
+body.book .leaf-body .codeblock { margin: .7rem 0; break-inside: avoid; }
+body.book .leaf-body .aside { margin: .8rem 0; padding: .6rem .7rem; font-size: .88rem; break-inside: avoid; }
+body.book .leaf-body .epigraph { margin: .6rem 0 1rem; }
+body.book .leaf-body .tablewrap { margin: .8rem 0; break-inside: avoid; }
+body.book .leaf-body table { font-size: .8rem; }
+body.book .leaf-body hr { margin: 1rem 0; }
+body.book .leaf-body .anchor { display: none; }
+
+/* a sidenote has no margin to live in here, so it is set as a note in the column */
+body.book .leaf-body .sidenote {
+  display: block; margin: .6rem 0; font-size: .78rem; line-height: 1.45;
+  break-inside: avoid; border-left: 2px solid var(--rule);
+}
+
+/* the chapter opening spans the page, as it would in a book */
+body.book .chapter-head { column-span: all; margin: 0 0 1rem; padding-bottom: .7rem; }
+body.book .chapter-head h1 { font-size: 1.7rem; }
+body.book .chapter-head .abstract { font-size: .92rem; }
+body.book .chapter-nav { column-span: all; margin: 1.5rem 0 0; font-size: .8rem; }
+
+/* ---- figures on a page --------------------------------------------------- */
+body.book .leaf-body figure { margin: .7rem 0 1rem; break-inside: avoid; }
+body.book .leaf-body .fig-stage { height: auto; aspect-ratio: 4 / 3; }
+/* On a page the aperture gives way to the column: it keeps its real 60 mm
+   where there is room for it and shrinks where there is not, because a float
+   that leaves four words to a line is not a measure. */
+body.book .leaf-body figure.window {
+  width: min(var(--win-size), 46%); margin: .2rem 0 .7rem 1.2rem;
+}
+body.book .leaf-body figure.window.win--left { margin: .2rem 1.2rem .7rem 0; }
+body.book .leaf-body figure.window.wide,
+body.book .leaf-body figure.window.full { width: auto; margin: .7rem 0 1rem; }
+body.book .leaf-body figure.window .fig-stage {
+  width: 100%; height: auto; aspect-ratio: 1 / 1; max-width: none;
+}
+body.book .leaf-body figcaption { font-size: .72rem; line-height: 1.4; margin-top: .35rem; }
+
+/* a figure the width of the page spans both columns; the text flows round it */
+body.book .leaf-body .fig--wide { column-span: all; }
+body.book .leaf-body .fig--wide .fig-stage { aspect-ratio: 16 / 9; }
+
+/* a page given over to one figure: no columns, the figure fills the page */
+.leaf--plate .leaf-body { display: flex; column-count: 1; }
+.leaf--plate figure { flex: 1 1 auto; display: flex; flex-direction: column; margin: 0; min-height: 0; }
+body.book .leaf--plate .fig-stage { flex: 1 1 auto; height: auto; aspect-ratio: auto; min-height: 0; }
+.leaf--plate figcaption { flex: 0 0 auto; }
+
+/* a figure the width of the spread is a plate, on a spread of its own */
+.spread--plate .pages { display: block; padding: 0 1rem; max-width: 86rem; }
+.spread--plate figure { height: 100%; display: flex; flex-direction: column; margin: 0; }
+.spread--plate .fig-stage { flex: 1 1 auto; height: auto; aspect-ratio: auto; border-radius: 4px; }
+.spread--plate figcaption { flex: 0 0 auto; font-size: .78rem; padding: .5rem .2rem 0; }
+
+/* ---- turning ------------------------------------------------------------- */
+.turn {
+  grid-row: 1; align-self: center;
+  width: 2.2rem; height: 4.5rem; margin: 0 .25rem;
+  display: grid; place-items: center;
+  font: 1.5rem/1 var(--sans); color: var(--ink-faint);
+  background: none; border: 1px solid transparent; border-radius: 6px; cursor: pointer;
+}
+.turn:hover:not(:disabled) { color: var(--ink); background: var(--bg-raised); border-color: var(--rule-soft); }
+.turn:disabled { opacity: .22; cursor: default; }
+.turn.prev { grid-column: 1; }
+.turn.next { grid-column: 3; }
+
+/* A fixed height, not one that follows its content: the pages are measured
+   against the height left over after this bar, and the bar is empty until the
+   page numbers are written. If it grew then, every page would lose a few
+   pixels after it had already been filled, and the last block on a full page
+   would be pushed out of sight. */
+.book-foot {
+  grid-area: 2 / 1 / 3 / 4;
+  display: flex; justify-content: center; gap: 1rem; align-items: center;
+  height: 2rem; padding: 0 1rem;
+  font: .72rem/1 var(--sans); color: var(--ink-faint);
+}
+.book-foot .folios { color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.book-foot, .turn { position: relative; z-index: 1; }
+
+/* ---- print ---------------------------------------------------------------
+ * Book mode is not printed as a book: the pages are flattened back into one
+ * flow. A page's blocks are in reading order inside it and the pages are in
+ * order, so the flattened document reads correctly. */
+@media print {
+  body.book { overflow: visible; }
+  body.book .book-shell { display: block; position: static; inset: auto; background: #fff; }
+  .book-viewport { overflow: visible; padding: 0; }
+  .book-track { display: block; transform: none !important; }
+  body.book .sheetbox { display: none; }
+  .spread, .spread .pages, .leaf, .leaf-body {
+    display: block; height: auto; max-width: none; width: auto;
+    column-count: 1; overflow: visible; box-shadow: none; padding: 0; background: #fff;
+  }
+  .spine, .leaf-head, .leaf-foot, .turn, .book-foot, .sheet, canvas.world { display: none; }
+  body.book .leaf-body p { text-align: left; hyphens: manual; margin: 0 0 1.1rem; text-indent: 0; }
+  /* a plate page is a flex column on screen; on paper it is an ordinary block,
+     and the stage takes its height from the poster inside it */
+  .leaf--plate .leaf-body, .leaf--plate figure, .spread--plate figure { display: block; }
+  body.book .leaf-body .fig-stage,
+  body.book .leaf--plate .fig-stage,
+  .spread--plate .fig-stage { aspect-ratio: auto; height: auto; flex: none; }
+}
