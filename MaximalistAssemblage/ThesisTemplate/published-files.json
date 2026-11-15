@@ -1,6 +1,5 @@
 {
   "note": "Written by thesis/build.mjs. The publish step deletes the files listed by the PREVIOUS build and nothing else, so that hand-made files in the same folders are never touched. Do not edit by hand.",
-  "built": "2026-11-15T22:30:13.265Z",
   "files": [
     "ArtifactAssemblage/figures/fig-bouquet.jpg",
     "ArtifactAssemblage/figures/fig-cube.jpg",
