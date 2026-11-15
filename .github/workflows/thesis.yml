@@ -87,42 +87,61 @@ jobs:
           grep -q 'ThesisTemplate/variants/v2.css' "_thesis/site/$ROOT/Dissertation/v2/index.html" \
             || { echo "::error::v2 is not linking its own stylesheet"; exit 1; }
 
-      # Prune by manifest, never by folder.
-      - name: take back what the last run left
+      # Prune by manifest, never by folder. Dissertation/ also holds drafts/
+      # and notes/, and figures/ holds hand-made figures: emptying any of those
+      # would delete work this build did not make and cannot put back.
+      #
+      # This sits inside the retry loop because a lost push means main has
+      # moved, and the pages then have to be laid on top of the new main
+      # rather than rebased over it. They are a function of the sheet, not a
+      # change to be replayed.
+      - name: put the pages in place and push
         run: |
-          if [ -f "$MANIFEST" ]; then
-            node -e '
-              const fs = require("fs"), path = require("path")
-              const m = JSON.parse(fs.readFileSync(process.env.MANIFEST, "utf8"))
-              let gone = 0
-              for (const rel of m.files ?? []) {
-                const f = path.join(process.env.ROOT, rel)
-                if (fs.existsSync(f)) { fs.rmSync(f); gone++ }
-              }
-              console.log(`removed ${gone} file(s) from the previous run`)
-            '
-          else
-            echo 'no manifest yet: nothing to take back'
-          fi
+          set -e
+          apply() {
+            if [ -f "$MANIFEST" ]; then
+              node -e '
+                const fs = require("fs"), path = require("path")
+                const m = JSON.parse(fs.readFileSync(process.env.MANIFEST, "utf8"))
+                let gone = 0
+                for (const rel of m.files ?? []) {
+                  const f = path.join(process.env.ROOT, rel)
+                  if (fs.existsSync(f)) { fs.rmSync(f); gone++ }
+                }
+                console.log(`  took back ${gone} file(s) from the previous run`)
+              '
+            else
+              echo '  no manifest yet: nothing to take back'
+            fi
+            mkdir -p "$ROOT"
+            cp -r "_thesis/site/$ROOT/." "$ROOT/"
+            find "$ROOT" -type d -empty -delete || true
+            git add -A -- "$ROOT"
+          }
 
-      - name: put the new files in place
-        run: |
-          mkdir -p "$ROOT"
-          cp -r "_thesis/site/$ROOT/." "$ROOT/"
-          find "$ROOT" -type d -empty -delete || true
-
-      - name: commit
-        run: |
           git config user.name  'thesis build'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -A -- "$ROOT"
-          if git diff --cached --quiet; then
-            echo 'the pages already match the sheet; nothing to commit'
-            exit 0
-          fi
-          git diff --cached --name-status | sed 's/^/  /'
-          git commit -m "the pages, rebuilt from the sheet"
-          git push
+
+          for attempt in 1 2 3 4 5; do
+            echo "attempt $attempt"
+            apply
+            if git diff --cached --quiet; then
+              echo '  the pages already match the sheet; nothing to commit'
+              exit 0
+            fi
+            git diff --cached --name-status | sed 's/^/    /'
+            git commit -q -m 'the pages, rebuilt from the sheet'
+            if git push -q 2>/dev/null; then
+              echo '  pushed'
+              exit 0
+            fi
+            echo '  main moved while this ran; taking the new main and laying the pages on it again'
+            git fetch -q origin main
+            git reset -q --hard origin/main      # drops our commit, keeps _thesis/site/ (untracked)
+          done
+
+          echo '::error::could not push after five attempts — something is committing continuously'
+          exit 1
 
       - name: what the build had to say
         if: always()
