@@ -979,7 +979,11 @@ if (SITE_MODE) {
       note: 'Written by thesis/build.mjs. The publish step deletes the files listed'
           + ' by the PREVIOUS build and nothing else, so that hand-made files in the'
           + ' same folders are never touched. Do not edit by hand.',
-      built: new Date().toISOString(),
+      // No timestamp. Git records when a file was written far better than the
+      // file can, and a timestamp here would change on every build -- so the
+      // manifest would differ every time even when the list did not, the
+      // publish would never see "nothing to commit", and the daily run would
+      // put a commit in the history every day saying nothing had changed.
       files,
     }, null, 2) + '\n', 'utf8')
   console.log(`  ${files.length} file(s), listed in MaximalistAssemblage/${MANIFEST_NAME}`)
