@@ -1,0 +1,934 @@
+﻿source,source_label,type,target,target_label,year,note,batches,sources
+pe_jane_bennett,Jane Bennett,created,wk_vibrant_matter_2010,Vibrant Matter (2010),2010,Jane Bennett's Vibrant Matter,batch_01; batch_02; batch_03; batch_04; batch_06; batch_08; batch_f01; batch_f02; batch_f04; batch_f05; batch_f06,final; v40
+pe_m_scott_peck,M. Scott Peck,created,wk_making_a_map_for_life,Making a Map for Life,,M. Scott Peck's Making a Map for Life,batch_01,v40
+pe_plato,Plato,created,wk_allegory_of_the_cave,Allegory of the Cave,,Plato's Allegory of the Cave,batch_01,v40
+pe_karen_barad,Karen Barad,created,wk_posthumanist_performativity_2003,Posthumanist Performativity (2003),2003,"Barad, 'Posthumanist Performativity'",batch_01; batch_04; batch_10; batch_f01; batch_f06,final; v40
+pe_karen_barad,Karen Barad,created,wk_meeting_the_universe_halfway_2007,Meeting the Universe Halfway (2007),2007,"cited as Barad, 2007",batch_01; batch_02; batch_03; batch_04; batch_10; batch_f01; batch_f02; batch_f03; batch_f05; batch_f06,final; v40
+pe_rosi_braidotti,Rosi Braidotti,created,wk_braidotti_2006,Braidotti (2006),2006,,batch_01,v40
+pe_rosi_braidotti,Rosi Braidotti,created,wk_braidotti_2013,Braidotti (2013),2013,,batch_01; batch_f01,final; v40
+pe_rosi_braidotti,Rosi Braidotti,created,wk_braidotti_2019,Braidotti (2019),2019,,batch_01; batch_f01,final; v40
+pe_francesca_ferrando,Francesca Ferrando,created,wk_ferrando_2012,Ferrando (2012),2012,,batch_01; batch_f01,final; v40
+pe_francesca_ferrando,Francesca Ferrando,created,wk_ferrando_2013,Ferrando (2013),2013,,batch_01; batch_f01,final; v40
+pe_francesca_ferrando,Francesca Ferrando,created,wk_ferrando_2014,Ferrando (2014),2014,,batch_01; batch_f01,final; v40
+pe_francesca_ferrando,Francesca Ferrando,created,wk_ferrando_2016,Ferrando (2016),2016,,batch_01,v40
+pe_anna_militsi,Anna Militsi,created,wk_militsi_2021,Militsi (2021),2021,,batch_01; batch_06; batch_f01; batch_f04,final; v40
+pe_nicole_siffrinn,Nicole Siffrinn,created,wk_siffrinn_coda_2025,Siffrinn & Coda (2025),2025,co-authored,batch_01; batch_02; batch_f01,final; v40
+pe_james_coda,James Coda,created,wk_siffrinn_coda_2025,Siffrinn & Coda (2025),2025,co-authored,batch_01; batch_02; batch_f01,final; v40
+pe_diana_coole,Diana Coole,created,wk_coole_frost_2010,Coole & Frost (2010),2010,,batch_01; batch_f01,final; v40
+pe_samantha_frost,Samantha Frost,created,wk_coole_frost_2010,Coole & Frost (2010),2010,,batch_01; batch_f01,final; v40
+pe_cary_wolfe,Cary Wolfe,created,wk_wolfe_2010,Wolfe (2010),2010,Wolfe (2010) reading of Bush of Ghosts,batch_01; batch_09,v40
+pe_gregory_bateson,Gregory Bateson,created,wk_bateson_1972,Steps to an Ecology of Mind (1972),1972,the 1972 collection,batch_01; batch_05; batch_f01; batch_f03; batch_f06,final; v40
+pe_nick_srnicek,Srnicek,created,wk_srnicek_2017,Srnicek (2017),2017,,batch_01; batch_f01,final; v40
+pe_anneke_smelik,Smelik,created,wk_smelik_2018,Smelik (2018),2018,,batch_01; batch_f01,final; v40
+pe_de_liano,De Liaño,created,wk_de_liano_fernandez_gotz_2021,De Liaño & Fernández-Götz (2021),2021,,batch_01,v40
+pe_fernandez_gotz,Fernández-Götz,created,wk_de_liano_fernandez_gotz_2021,De Liaño & Fernández-Götz (2021),2021,,batch_01,v40
+pe_blok,Blok,created,wk_blok_2024,Blok (2024),2024,,batch_01; batch_f01,final; v40
+pe_gamble,Gamble,created,wk_gamble_hanan_rossdale_2019,"Gamble, Hanan & Rossdale (2019)",2019,"final exam cites the 2019 work as Gamble, Hanan, and Nail",batch_01; batch_f01,final; v40
+pe_hanan,Hanan,created,wk_gamble_hanan_rossdale_2019,"Gamble, Hanan & Rossdale (2019)",2019,"final exam cites the 2019 work as Gamble, Hanan, and Nail",batch_01; batch_f01,final; v40
+pe_rossdale,Rossdale,created,wk_gamble_hanan_rossdale_2019,"Gamble, Hanan & Rossdale (2019)",2019,,batch_01,v40
+pe_rick_dolphijn,Rick Dolphijn,created,wk_dolphijn_van_der_tuin_2012,Dolphijn & van der Tuin (2012),2012,,batch_01; batch_f01,final; v40
+pe_iris_van_der_tuin,Iris van der Tuin,created,wk_dolphijn_van_der_tuin_2012,Dolphijn & van der Tuin (2012),2012,,batch_01; batch_f01,final; v40
+pe_iris_van_der_tuin,Iris van der Tuin,created,wk_van_der_tuin_dolphijn_2010,van der Tuin and Dolphijn (2010),2010,,batch_01; batch_04; batch_f01; batch_f03; batch_f04,final; v40
+pe_rick_dolphijn,Rick Dolphijn,created,wk_van_der_tuin_dolphijn_2010,van der Tuin and Dolphijn (2010),2010,,batch_01; batch_04; batch_f01; batch_f03; batch_f04,final; v40
+pe_carol_taylor,Taylor (Carol A. Taylor),created,wk_taylor_2023,Taylor (2023),2023,,batch_01,v40
+pe_stacy_alaimo,Stacy Alaimo,created,wk_alaimo_hekman_2008,Material feminisms (2008),2008,co-editor,batch_01; batch_f01; batch_f06,final; v40
+pe_susan_hekman,Hekman,created,wk_alaimo_hekman_2008,Material feminisms (2008),2008,co-editor,batch_01; batch_f01; batch_f06,final; v40
+pe_felix_guattari,Felix Guattari,created,wk_guattari_1964,Guattari ([1964] 1984),1964,"Guattari, [1964] 1984",batch_01,v40
+pe_sencindiver,Sencindiver,created,wk_sencindiver_2017,Sencindiver (2017),2017,,batch_01,v40
+pe_felix_guattari,Felix Guattari,coined,co_transversality,transversality,1964,coined the term transversality in 1964,batch_01,v40
+pe_karen_barad,Karen Barad,developed,co_ethico_onto_epistemology,ethico-onto-epistemology,,Barad names the inseparability as ethico-onto-epistemology,batch_01,v40
+pe_karen_barad,Karen Barad,developed,co_posthumanist_performativity,posthumanist performativity,2003,Barad presents posthumanist performativity as a diffractive elaboration of Butler and Haraway,batch_01; batch_f01,final; v40
+pe_karen_barad,Karen Barad,developed,co_intra_action,intra-action,,phenomena as ontological inseparability of intra-acting agencies,batch_01; batch_02; batch_03; batch_04; batch_05; batch_10; batch_f01; batch_f02,final; v40
+pe_karen_barad,Karen Barad,developed,co_agential_cut,agential cut,,objectivity relocated to the cut; agential cuts leave marks on bodies,batch_01; batch_02; batch_03; batch_04; batch_05; batch_f01; batch_f02; batch_f03,final; v40
+pe_jane_bennett,Jane Bennett,developed,co_agential_swarm,agential swarm,,from the first chapter of Vibrant Matter,batch_01,v40
+pe_jane_bennett,Jane Bennett,developed,co_primordial_swerve,primordial swerve,,from the first chapter of Vibrant Matter,batch_01,v40
+pe_amy_traylor,Amy Traylor,developed,co_transpositions,transpositions,,Amy draws an operative distinction between diffraction and transposition for the comps,batch_01,v40
+wk_militsi_2021,Militsi (2021),cited,wk_ferrando_2013,Ferrando (2013),,"Militsi, 2021, p. 11, citing Ferrando, 2013",batch_01; batch_f01,final; v40
+wk_militsi_2021,Militsi (2021),cited,wk_sencindiver_2017,Sencindiver (2017),,"Militsi, 2021, p. 11, citing Sencindiver, 2017",batch_01,v40
+wk_militsi_2021,Militsi (2021),cited,wk_posthumanist_performativity_2003,Posthumanist Performativity (2003),,"Militsi (2021) summarizes Barad 2003, p. 808",batch_01,v40
+wk_siffrinn_coda_2025,Siffrinn & Coda (2025),cited,wk_coole_frost_2010,Coole & Frost (2010),,"Siffrinn & Coda, 2025, p. 191, citing Coole & Frost, 2010",batch_01; batch_f01,final; v40
+wk_siffrinn_coda_2025,Siffrinn & Coda (2025),cited,wk_vibrant_matter_2010,Vibrant Matter (2010),,"Siffrinn & Coda, 2025, p. 191, citing Bennett, 2010",batch_01; batch_f01,final; v40
+wk_siffrinn_coda_2025,Siffrinn & Coda (2025),cited,wk_braidotti_2013,Braidotti (2013),,"Siffrinn & Coda, 2025, p. 191, citing Braidotti, 2013",batch_01; batch_f01,final; v40
+wk_siffrinn_coda_2025,Siffrinn & Coda (2025),cited,wk_meeting_the_universe_halfway_2007,Meeting the Universe Halfway (2007),,"Siffrinn & Coda, 2025, p. 192, citing Barad, 2007, p. 379",batch_01; batch_f01,final; v40
+wk_wolfe_2010,Wolfe (2010),cited,pe_rutsky,Rutsky,,"Wolfe, 2010, p. xviii, citing Rutsky",batch_01,v40
+wk_wolfe_2010,Wolfe (2010),cited,pe_bruce_clarke,Clarke,,"Wolfe, 2010, p. xviii, citing Clarke",batch_01,v40
+pe_bruce_clarke,Clarke,cited,wk_bateson_1972,Steps to an Ecology of Mind (1972),,Clarke quoting Bateson on recursiveness,batch_01; batch_f01,final; v40
+wk_dolphijn_van_der_tuin_2012,Dolphijn & van der Tuin (2012),cited,wk_guattari_1964,Guattari ([1964] 1984),,"Guattari, [1964] 1984, cited in van der Tuin & Dolphijn, 2012, p. 101",batch_01,v40
+wk_dolphijn_van_der_tuin_2012,Dolphijn & van der Tuin (2012),cited,wk_braidotti_2006,Braidotti (2006),,"Braidotti, 2006, p. 123, cited in van der Tuin & Dolphijn, 2012, p. 100",batch_01,v40
+wk_dolphijn_van_der_tuin_2012,Dolphijn & van der Tuin (2012),cited,wk_alaimo_hekman_2008,Material feminisms (2008),,"Alaimo & Hekman, 2008, pp. 9-10, cited in van der Tuin & Dolphijn, 2012, p. 103",batch_01,v40
+pe_amy_traylor,Amy Traylor,cited,wk_making_a_map_for_life,Making a Map for Life,2009,introduced in her philosophy teaching beginning 2009,batch_01,v40
+pe_amy_traylor,Amy Traylor,cited,wk_allegory_of_the_cave,Allegory of the Cave,2009,introduced in her philosophy teaching beginning 2009,batch_01,v40
+pe_amy_traylor,Amy Traylor,cited,wk_the_matrix,The Matrix,2009,"the Simulacra work underpinning the Matrix, taught from 2009",batch_01,v40
+pe_amy_traylor,Amy Traylor,cited,pe_boris_keifer,Boris Keifer,,"quotes 'We are entangled, until we are not.'",batch_01,v40
+wk_vibrant_matter_2010,Vibrant Matter (2010),influenced,pe_amy_traylor,Amy Traylor,,struck and annoyed by Bennett's first chapter; already lives in the world of vibrancy,batch_01,v40
+pe_judith_butler,Judith Butler,influenced,wk_posthumanist_performativity_2003,Posthumanist Performativity (2003),,posthumanist performativity as diffractive elaboration of Butler,batch_01,v40
+pe_donna_haraway,Donna Haraway,influenced,wk_posthumanist_performativity_2003,Posthumanist Performativity (2003),,posthumanist performativity as diffractive elaboration of Haraway,batch_01,v40
+mv_posthumanism,feminist posthumanism,counter_tradition_to,mv_cartesian_newtonian_settlement,Cartesian-Newtonian settlement,,developed in opposition to the Cartesian-Newtonian settlement that rendered matter inert,batch_01; batch_f06,final; v40
+mv_posthumanism,feminist posthumanism,counter_tradition_to,mv_enlightenment_humanism,Enlightenment humanism,,developed in opposition to Enlightenment humanism's sovereign rational subject,batch_01; batch_f01,final; v40
+mv_new_materialism,new materialism,counter_tradition_to,mv_cartesian_newtonian_settlement,Cartesian-Newtonian settlement,,twinned frames whose combined force dismantles the Cartesian-Newtonian settlement,batch_01; batch_f01; batch_f06,final; v40
+mv_new_materialism,new materialism,counter_tradition_to,mv_enlightenment_humanism,Enlightenment humanism,,developed in opposition to the same historical conditions,batch_01,v40
+mv_new_materialism,new materialism,part_of_movement,mv_posthumanism,feminist posthumanism,1990,a specific movement within the posthumanist theoretical scenario; branch of the posthuman field by end of the 1990s,batch_01; batch_f01,final; v40
+mv_material_feminism,material feminism,part_of_movement,mv_new_materialism,new materialism,,one of new materialism's constitutive strands,batch_01,v40
+mv_vital_materialism,vital materialism,part_of_movement,mv_new_materialism,new materialism,,"strand distinguished by Gamble, Hanan, and Rossdale (2019)",batch_01; batch_f01,final; v40
+mv_negative_materialism,negative materialism,part_of_movement,mv_new_materialism,new materialism,,"strand distinguished by Gamble, Hanan, and Rossdale (2019)",batch_01; batch_f01,final; v40
+mv_performative_materialism,performative materialism,part_of_movement,mv_new_materialism,new materialism,,"strand distinguished by Gamble, Hanan, and Rossdale (2019)",batch_01; batch_f01,final; v40
+mv_speculative_realism,speculative realism,part_of_movement,mv_new_materialism,new materialism,,"per Srnicek (2017), variant within a broader new materialist field",batch_01; batch_f01,final; v40
+mv_object_oriented_philosophy,object-oriented philosophy,part_of_movement,mv_new_materialism,new materialism,,"per Srnicek (2017), variant within a broader new materialist field",batch_01; batch_f01,final; v40
+mv_posthumanism,feminist posthumanism,part_of_movement,mv_new_materialism,new materialism,,contested: Srnicek groups posthumanism within a broader new materialist field,batch_01; batch_f01,final; v40
+pe_karen_barad,Karen Barad,part_of_movement,mv_new_materialism,new materialism,,the Baradian account of matter-discourse co-production,batch_01; batch_02; batch_03; batch_08,v40
+pe_barbara_bolt,Barbara Bolt,part_of_movement,mv_art_practice_as_research,art practice as research (APAR),,practitioner in the APAR field,batch_01,v40
+pe_henk_borgdorff,Henk Borgdorff,part_of_movement,mv_art_practice_as_research,art practice as research (APAR),,practitioner in the APAR field,batch_01,v40
+pe_cher_hill,Hill (Cher Hill),part_of_movement,mv_art_practice_as_research,art practice as research (APAR),,practitioner in the APAR field,batch_01,v40
+pe_l_lambert,Louise Lambert,part_of_movement,mv_art_practice_as_research,art practice as research (APAR),,practitioner in the APAR field,batch_01,v40
+pe_hillary,Hillary,part_of_movement,mv_art_practice_as_research,art practice as research (APAR),,practitioner in the APAR field,batch_01,v40
+pe_kristina_andersen,Andersen (Kristina Andersen),part_of_movement,mv_art_practice_as_research,art practice as research (APAR),,practitioner in the APAR field,batch_01,v40
+pe_taguhi_torosyan,Taguhi Torosyan,part_of_movement,mv_art_practice_as_research,art practice as research (APAR),,practitioner gathered among APAR accounts,batch_01,v40
+pe_patricia_reis,Patricia Reis,part_of_movement,mv_art_practice_as_research,art practice as research (APAR),,practitioner gathered among APAR accounts,batch_01,v40
+pe_stefanie_wuschitz,Stefanie Wuschitz,part_of_movement,mv_art_practice_as_research,art practice as research (APAR),,practitioner gathered among APAR accounts,batch_01,v40
+wk_coole_frost_2010,Coole & Frost (2010),about,mv_new_materialism,new materialism,,introduction presenting new materialism,batch_01,v40
+wk_siffrinn_coda_2025,Siffrinn & Coda (2025),about,mv_posthumanism,feminist posthumanism,,survey of posthumanist research in applied linguistics,batch_01; batch_02,v40
+wk_siffrinn_coda_2025,Siffrinn & Coda (2025),about,mv_new_materialism,new materialism,,survey of new materialist research in applied linguistics,batch_01; batch_02,v40
+wk_siffrinn_coda_2025,Siffrinn & Coda (2025),about,mv_applied_linguistics,applied linguistics,,survey of posthumanist and new materialist research in applied linguistics,batch_01; batch_f01,final; v40
+wk_wolfe_2010,Wolfe (2010),about,mv_posthumanism,feminist posthumanism,,puts posthumanism to work across fields,batch_01,v40
+wk_gamble_hanan_rossdale_2019,"Gamble, Hanan & Rossdale (2019)",about,mv_new_materialism,new materialism,,"distinguishes vital, negative, and performative materialisms",batch_01; batch_f01,final; v40
+wk_dolphijn_van_der_tuin_2012,Dolphijn & van der Tuin (2012),about,mv_new_materialism,new materialism,,theorizes new materialism's transversality,batch_01,v40
+wk_van_der_tuin_dolphijn_2010,van der Tuin and Dolphijn (2010),about,mv_new_materialism,new materialism,,new materialism requires cartography rather than classification,batch_01; batch_04; batch_f04,final; v40
+wk_posthumanist_performativity_2003,Posthumanist Performativity (2003),about,co_posthumanist_performativity,posthumanist performativity,,,batch_01,v40
+wk_alaimo_hekman_2008,Material feminisms (2008),about,mv_material_feminism,material feminism,,finds material feminism operating across many fields,batch_01; batch_f01,final; v40
+wk_guattari_1964,Guattari ([1964] 1984),about,co_transversality,transversality,1964,coinage text for transversality,batch_01,v40
+wk_braidotti_2006,Braidotti (2006),about,co_transversality,transversality,,qualitative leap towards implementing transversality,batch_01,v40
+wk_srnicek_2017,Srnicek (2017),about,mv_new_materialism,new materialism,,groups variants within a broader new materialist field,batch_01; batch_f01,final; v40
+wk_smelik_2018,Smelik (2018),about,mv_new_materialism,new materialism,,situates new materialism within a posthuman context,batch_01; batch_f01,final; v40
+wk_blok_2024,Blok (2024),about,mv_new_materialism,new materialism,,qualifies distribution of conativity and responsivity,batch_01,v40
+wk_de_liano_fernandez_gotz_2021,De Liaño & Fernández-Götz (2021),about,mv_new_humanism,New Humanism,,defends elements of New Humanism,batch_01,v40
+wk_taylor_2023,Taylor (2023),about,mv_new_materialism,new materialism,,on new materialism's malleability,batch_01,v40
+wk_militsi_2021,Militsi (2021),about,mv_new_materialism,new materialism,,new materialism nested in the posthumanist scenario,batch_01,v40
+wk_ferrando_2012,Ferrando (2012),about,mv_posthumanism,feminist posthumanism,,"posthumanist methodology as dynamic, mutant, shifting",batch_01,v40
+wk_ferrando_2013,Ferrando (2013),about,mv_posthumanism,feminist posthumanism,,,batch_01,v40
+wk_ferrando_2013,Ferrando (2013),about,mv_new_materialism,new materialism,,new materialism as movement within the posthumanist scenario,batch_01,v40
+wk_ferrando_2014,Ferrando (2014),about,mv_posthumanism,feminist posthumanism,,posthumanism applies to any field of enquiry,batch_01,v40
+wk_ferrando_2014,Ferrando (2014),about,mv_new_materialism,new materialism,,new materialism's own origin story,batch_01,v40
+wk_ferrando_2016,Ferrando (2016),about,mv_posthumanism,feminist posthumanism,,posthumanism's feminist genealogy and inclusive reach,batch_01,v40
+wk_the_matrix,The Matrix,about,co_simulacra,Simulacra,,the Simulacra work underpinning the Matrix,batch_01,v40
+pe_amy_traylor,Amy Traylor,presented_at,ev_amy_comps_presentation,Amy's initial comps committee presentation,,initial presentation to comprehensive exam committee,batch_01,v40
+pe_stacy_alaimo,Stacy Alaimo,developed,co_trans_corporeality,trans-corporeality,,Alaimo's trans-corporeality (names embodiment in the broader field of life),batch_01; batch_02; batch_f02,final; v40
+co_trans_corporeality,trans-corporeality,part_of_movement,mv_new_materialism,new materialism,,material-feminist strand (Alaimo & Hekman),batch_01,v40
+pe_donna_haraway,Donna Haraway,created,wk_staying_with_the_trouble_2016,Staying with the Trouble (2016),2016,Haraway 2016,batch_02; batch_f01; batch_f02,final; v40
+pe_rosi_braidotti,Rosi Braidotti,created,wk_transpositions_2006,Transpositions (2006),2006,"Braidotti 2006, also cited as 2006/2018",batch_02; batch_f02; batch_f03,final; v40
+pe_francesca_ferrando,Francesca Ferrando,coined,co_hegemonic_essentialism,hegemonic essentialism,2012,names hegemonic essentialism as a failure mode in posthuman research,batch_02,v40
+pe_donna_haraway,Donna Haraway,coined,co_god_trick,God trick,1988,the god trick in Situated Knowledges,batch_02; batch_03; batch_f02,final; v40
+pe_donna_haraway,Donna Haraway,coined,co_situated_knowledges,situated knowledges,1991,"situated and embodied knowledges (Haraway, 1991, p. 191)",batch_02,v40
+pe_adrienne_rich,Adrienne Rich,coined,co_politics_of_location,politics of location,,Braidotti traces feminist neo-materialism to Adrienne Rich's politics of location,batch_02,v40
+pe_margaret_somerville,Margaret Somerville,coined,co_post_human_i,post-human I,2016,names the condition in research practice as the post-human I,batch_02; batch_f02,final; v40
+pe_lucretius,Lucretius,coined,co_clinamen,clinamen,,"the clinamen/swerve, via Bennett's framing",batch_02,v40
+pe_karen_barad,Karen Barad,developed,co_apparatus,apparatus,,apparatuses as boundary-making material-discursive practices,batch_02; batch_03; batch_04; batch_05; batch_07; batch_f01; batch_f03; batch_f04,final; v40
+pe_karen_barad,Karen Barad,developed,co_phenomenon,phenomenon,,phenomenon as unit produced through agential cuts,batch_02; batch_04,v40
+pe_karen_barad,Karen Barad,developed,co_agential_realism,agential realism,,Barad's development of agential realism,batch_02; batch_03; batch_f02,final; v40
+pe_karen_barad,Karen Barad,developed,co_material_discursive_practice,material-discursive practices,,Barad extends Butler's performativity into material-discursive practice,batch_02; batch_f05,final; v40
+pe_karen_barad,Karen Barad,developed,co_performativity,performativity,,"performativity as ontological claim (Barad, 2007, p. 184)",batch_02,v40
+pe_karen_barad,Karen Barad,developed,co_diffraction,diffraction / diffractive methodology,,"grounds the metaphor in quantum field theory, making it an ontological claim",batch_02; batch_04; batch_05; batch_07; batch_f03,final; v40
+pe_jane_bennett,Jane Bennett,developed,co_thing_power,thing-power,,readiness to encounter thing-power; perceptual style open to its appearance,batch_02; batch_04; batch_06; batch_f02,final; v40
+pe_jane_bennett,Jane Bennett,developed,co_distributive_agency,distributive agency,,"a more distributive agency (Bennett, 2010)",batch_02,v40
+pe_jane_bennett,Jane Bennett,developed,co_actant,actant,,the thing or actant within a distributed agency of assemblages,batch_02,v40
+pe_jane_bennett,Jane Bennett,developed,co_lingering,lingering,,espouses lingering as the practice adequate to inhabiting this world,batch_02; batch_f02; batch_f04,final; v40
+pe_rosi_braidotti,Rosi Braidotti,developed,co_nomadic_subject,nomadic subject,,nomadic subject traced through cartographies and transpositions,batch_02; batch_f02,final; v40
+pe_rosi_braidotti,Rosi Braidotti,developed,co_transpositions,transpositions,2018,adopts the biology/musicology term as a metaphor for this way of working,batch_02; batch_04; batch_05; batch_08; batch_f03; batch_f04,final; v40
+pe_rosi_braidotti,Rosi Braidotti,developed,co_cartography,cartography (Braidotti),,"Braidotti names cartography as an embodied, embedded, grounded method",batch_02; batch_05; batch_08; batch_f02; batch_f03,final; v40
+pe_rosi_braidotti,Rosi Braidotti,developed,co_zoe,zoe,,"names life as cosmic force zoe, distinct from bios",batch_02; batch_f01; batch_f02,final; v40
+pe_rosi_braidotti,Rosi Braidotti,developed,co_bios,bios,,"bios as institutionally recognized humanist life, distinguished from zoe",batch_02,v40
+pe_rosi_braidotti,Rosi Braidotti,developed,co_affirmative_ethics,affirmative ethics,,"for Braidotti, the raison d'etre is affirmative ethics",batch_02,v40
+pe_rosi_braidotti,Rosi Braidotti,developed,co_nomadic_ethics,nomadic ethics,,nomadic ethics of location as accountability structure,batch_02; batch_05,v40
+pe_rosi_braidotti,Rosi Braidotti,developed,co_bodily_materialism,bodily materialism,,"bodily materialism as empirical-discursive methodological approach (Braidotti, 2024)",batch_02,v40
+pe_rosi_braidotti,Rosi Braidotti,developed,co_perspectivism,perspectivism,,"perspectivism as antidote to relativism (Braidotti, 2024, p. xv)",batch_02,v40
+pe_francesca_ferrando,Francesca Ferrando,developed,co_perspectivism,perspectivism,,"posthumanist methodology works through perspectivism (Ferrando, 2013)",batch_02,v40
+pe_trinh_t_minh_ha,Trinh T. Minh-ha,developed,co_speaking_nearby,speaking nearby,,the methodology Trinh develops is speaking nearby rather than speaking about,batch_02; batch_05; batch_f03; batch_f05,final; v40
+pe_felicity_colman,Felicity Colman,developed,co_affect,affect,2010,"defines affect as change or variation when bodies collide (Colman, 2010, p. 11)",batch_02,v40
+pe_donna_haraway,Donna Haraway,developed,co_response_ability,response-ability,2016,frames the orientation through response and relation,batch_02; batch_f02,final; v40
+pe_donna_haraway,Donna Haraway,developed,co_making_kin,making kin,2016,make kin in lines of inventive connection,batch_02; batch_f02,final; v40
+pe_lucretius,Lucretius,influenced,pe_jane_bennett,Jane Bennett,,Bennett's framing of the ontological ground through Lucretius,batch_02,v40
+pe_adrienne_rich,Adrienne Rich,influenced,pe_rosi_braidotti,Rosi Braidotti,,"Braidotti traces feminist neo-materialism to Rich's politics of location (Braidotti, 2022)",batch_02; batch_f02,final; v40
+mv_feminist_theory,feminist theory,influenced,mv_new_materialism,new materialism,,"feminist philosophies of neo-materialism as fundamental source (Braidotti, 2024)",batch_02,v40
+co_art_practice_as_research,art practice as research,influenced,mv_new_materialism,new materialism,,"art practice as one of the milieus in which the call to rethink matter arose (Kontturi & Tiainen, 2021)",batch_02,v40
+mv_posthumanism,feminist posthumanism,counter_tradition_to,mv_humanism,humanism,,opposes the fantasies of disembodiment and autonomy inherited from humanism,batch_02; batch_03,v40
+mv_new_materialism,new materialism,counter_tradition_to,mv_cartesian_dualism,Cartesian dualism,,"creative affirmation of a new ontology vs Cartesian ontological dualism (Coole & Frost, 2010)",batch_02,v40
+mv_feminist_theory,feminist theory,counter_tradition_to,mv_positivism,positivism,,feminist critique of the neutral observer and view from nowhere,batch_02,v40
+wk_siffrinn_coda_2025,Siffrinn & Coda (2025),cited,pe_felicity_colman,Felicity Colman,,"Colman 2010 cited in Siffrinn and Coda 2025, p. 196",batch_02,v40
+wk_siffrinn_coda_2025,Siffrinn & Coda (2025),cited,pe_katja_frimberger,Frimberger,,"citing Frimberger et al., 2018",batch_02,v40
+wk_siffrinn_coda_2025,Siffrinn & Coda (2025),cited,pe_nigel_thrift,Nigel Thrift,,"Thrift 2007, p. 217 cited in Siffrinn and Coda 2025, p. 198",batch_02,v40
+pe_stacy_alaimo,Stacy Alaimo,cited,pe_donna_haraway,Donna Haraway,,"Haraway, 1991, p. 191, cited in Alaimo, n.d.",batch_02,v40
+pe_margaret_somerville,Margaret Somerville,cited,pe_doreen_massey,Doreen Massey,,"Somerville, 2016, p. 1167, citing Massey, 2005",batch_02,v40
+wk_meeting_the_universe_halfway_2007,Meeting the Universe Halfway (2007),cited,pe_donna_haraway,Donna Haraway,2007,"Haraway's partial perspectives discussed at Barad, 2007, pp. 71-72",batch_02; batch_04; batch_f03,final; v40
+pe_federica_timeto,Federica Timeto,cited,pe_karen_barad,Karen Barad,2011,Timeto summarizes Barad's agential realism,batch_02; batch_03,v40
+pe_cary_wolfe,Cary Wolfe,cited,pe_rosi_braidotti,Rosi Braidotti,2010,Wolfe 2010 on Braidotti's transpositions and cartography,batch_02,v40
+wk_vibrant_matter_2010,Vibrant Matter (2010),cited,pe_vladimir_vernadsky,Vernadsky,,"Vernadsky's 'walking, talking minerals' at Bennett, 2010, pp. 10-12",batch_02,v40
+pe_jane_bennett,Jane Bennett,cited,pe_gertrude_stein,Gertrude Stein,,"admonishes Lucretius through Gertrude Stein's 'there is no there, there'",batch_02,v40
+pe_jane_bennett,Jane Bennett,part_of_movement,mv_new_materialism,new materialism,,grouped with Barad and Braidotti as posthumanist/new materialist entities,batch_02; batch_03,v40
+pe_rosi_braidotti,Rosi Braidotti,part_of_movement,mv_posthumanism,feminist posthumanism,,navigating the posthuman convergence,batch_02,v40
+pe_rosi_braidotti,Rosi Braidotti,part_of_movement,mv_new_materialism,new materialism,,describes philosophical neo-materialism as line of immanence,batch_02; batch_03,v40
+pe_francesca_ferrando,Francesca Ferrando,part_of_movement,mv_posthumanism,feminist posthumanism,,defines a posthumanist methodology,batch_02,v40
+pe_donna_haraway,Donna Haraway,part_of_movement,mv_feminist_technoscience,feminist technoscience,,enters through feminist technoscience and figuration,batch_02,v40
+pe_diana_coole,Diana Coole,part_of_movement,mv_new_materialism,new materialism,,"characterizes new materialist thinkers (Coole & Frost, 2010)",batch_02,v40
+pe_samantha_frost,Samantha Frost,part_of_movement,mv_new_materialism,new materialism,,"characterizes new materialist thinkers (Coole & Frost, 2010)",batch_02,v40
+pe_suresh_canagarajah,Suresh Canagarajah,part_of_movement,mv_applied_linguistics,applied linguistics,,relational/semiotic frame in applied linguistics,batch_02,v40
+pe_roslyn_appleby,Roslyn Appleby,part_of_movement,mv_applied_linguistics,applied linguistics,,relational thinking as analytical frame,batch_02,v40
+pe_alastair_pennycook,Alastair Pennycook,part_of_movement,mv_applied_linguistics,applied linguistics,,relational thinking as analytical frame,batch_02,v40
+pe_albert_weideman,Albert Weideman,part_of_movement,mv_applied_linguistics,applied linguistics,,relational thinking as analytical frame,batch_02,v40
+pe_nicole_siffrinn,Nicole Siffrinn,part_of_movement,mv_applied_linguistics,applied linguistics,,from the standpoint of applied research,batch_02,v40
+pe_james_coda,James Coda,part_of_movement,mv_applied_linguistics,applied linguistics,,from the standpoint of applied research,batch_02,v40
+pe_henk_borgdorff,Henk Borgdorff,part_of_movement,mv_science_and_technology_studies,science and technology studies,,their formulation identified as the STS formulation,batch_02,v40
+pe_peter_peters,Peter Peters,part_of_movement,mv_science_and_technology_studies,science and technology studies,,their formulation identified as the STS formulation,batch_02,v40
+pe_trevor_pinch,Trevor Pinch,part_of_movement,mv_science_and_technology_studies,science and technology studies,,their formulation identified as the STS formulation,batch_02,v40
+co_assemblage,assemblage,part_of_movement,mv_new_materialism,new materialism,,assemblage as basic unit of inquiry in this frame,batch_02,v40
+mv_new_materialism,new materialism,influenced,mv_diffractive_practice_family,diffractive practice (family of methods),,posthumanism and new materialism generate this family of methodological orientations,batch_02,v40
+mv_posthumanism,feminist posthumanism,influenced,mv_diffractive_practice_family,diffractive practice (family of methods),,posthumanism and new materialism generate this family of methodological orientations,batch_02,v40
+wk_vibrant_matter_2010,Vibrant Matter (2010),about,co_thing_power,thing-power,,perceptual style open to the appearance of thing-power,batch_02; batch_04; batch_f02,final; v40
+wk_staying_with_the_trouble_2016,Staying with the Trouble (2016),about,co_response_ability,response-ability,,living and dying in response-ability on a damaged earth,batch_02,v40
+wk_meeting_the_universe_halfway_2007,Meeting the Universe Halfway (2007),about,co_agential_realism,agential realism,,where these navigational threads are most systematically brought together,batch_02; batch_f02,final; v40
+wk_transpositions_2006,Transpositions (2006),about,co_affirmative_ethics,affirmative ethics,,ethics of sustainability with critical and affirmative phases,batch_02,v40
+wk_transpositions_2006,Transpositions (2006),about,co_transpositions,transpositions,,transposition as creative leap,batch_02,v40
+pe_leucippus,Leucippus,part_of_movement,mv_atomism,ancient atomism,,atomist claim traced to Leucippus,batch_03; batch_f01,final; v40
+pe_democritus,Democritus,part_of_movement,mv_atomism,ancient atomism,,atomist claim traced to Democritus,batch_03; batch_f01,final; v40
+mv_atomism,ancient atomism,influenced,mv_mechanism,mechanism,,ancient atomism gave Western metaphysics the model of matter as inert,batch_03; batch_f01,final; v40
+pe_epicurus,Epicurus,coined,co_clinamen,clinamen,,"introduced the clinamen, the swerve",batch_03,v40
+pe_epicurus,Epicurus,influenced,pe_lucretius,Lucretius,,Lucretius extended Epicurus in De Rerum Natura,batch_03,v40
+pe_lucretius,Lucretius,created,wk_de_rerum_natura,De Rerum Natura,,,batch_03; batch_f01,final; v40
+pe_lucretius,Lucretius,influenced,mv_new_materialism,new materialism,,"anticipates performative new materialism (Gamble, Hanan & Nail, 2019)",batch_03,v40
+pe_francis_bacon,Francis Bacon,part_of_movement,mv_mechanism,mechanism,,"synthesizes theology, naturalism, and mechanism",batch_03; batch_f01,final; v40
+pe_thomas_hobbes,Thomas Hobbes,part_of_movement,mv_mechanism,mechanism,,"modern consolidation runs through Bacon, Descartes, Hobbes",batch_03,v40
+pe_rene_descartes,Rene Descartes,part_of_movement,mv_cartesian_dualism,Cartesian dualism,,sharpens mechanism into dualism,batch_03; batch_f01,final; v40
+pe_immanuel_kant,Immanuel Kant,developed,co_transcendental_anthropology,transcendental anthropology,,turned theological metaphysics into transcendental anthropology (van der Tuin & Dolphijn),batch_03; batch_f01,final; v40
+pe_immanuel_kant,Immanuel Kant,influenced,mv_humanism,humanism,,started philosophy with the human being; anthropological turn as humanist revolution,batch_03,v40
+mv_monist_counter_tradition,monist counter-tradition,counter_tradition_to,mv_cartesian_dualism,Cartesian dualism,,alternative that kept being marginalized,batch_03,v40
+mv_monist_counter_tradition,monist counter-tradition,counter_tradition_to,mv_mechanism,mechanism,,"freeing itself from the Platonist, Christian, and Modernist rule",batch_03,v40
+mv_monist_counter_tradition,monist counter-tradition,influenced,mv_new_materialism,new materialism,,monist minor tradition later taken up in new materialist thought,batch_03,v40
+pe_baruch_spinoza,Baruch Spinoza,part_of_movement,mv_monist_counter_tradition,monist counter-tradition,,key figure in the monist minor tradition,batch_03,v40
+pe_baruch_spinoza,Baruch Spinoza,developed,co_conatus,conatus,1677,counter-claim made in 1677: the mind is the idea of the body,batch_03; batch_f01,final; v40
+pe_baruch_spinoza,Baruch Spinoza,developed,co_multitude,multitude,,"multitude as the agent of potentia (Torosyan et al., 2021)",batch_03,v40
+pe_baruch_spinoza,Baruch Spinoza,influenced,pe_henri_bergson,Henri Bergson,,Bergson extended the Spinozist commitment into a philosophy of duration,batch_03; batch_f01,final; v40
+pe_baruch_spinoza,Baruch Spinoza,influenced,pe_maurice_merleau_ponty,Maurice Merleau-Ponty,,"Merleau-Ponty extended the Spinozist emphasis on immanence, process, embodiment",batch_03,v40
+pe_baruch_spinoza,Baruch Spinoza,influenced,mv_new_materialism,new materialism,,emphasis on immanence and process ontology taken up by new materialism,batch_03,v40
+pe_henri_bergson,Henri Bergson,part_of_movement,mv_monist_counter_tradition,monist counter-tradition,,placed by van der Tuin & Dolphijn within the monist line,batch_03,v40
+pe_henri_bergson,Henri Bergson,developed,co_duration,duration,,philosophy of duration,batch_03; batch_f01,final; v40
+pe_henri_bergson,Henri Bergson,influenced,pe_maurice_merleau_ponty,Maurice Merleau-Ponty,,extended the Spinozist and Bergsonian emphasis,batch_03,v40
+pe_gottfried_leibniz,Gottfried Leibniz,influenced,pe_maurice_merleau_ponty,Maurice Merleau-Ponty,,planned to substitute being-in-the-world for Leibniz's God; lived Leibnizean folded ontology,batch_03,v40
+pe_maurice_merleau_ponty,Maurice Merleau-Ponty,part_of_movement,mv_phenomenology,phenomenology,,phenomenological vocabulary inherited from Merleau-Ponty,batch_03; batch_f01; batch_f06,final; v40
+pe_maurice_merleau_ponty,Maurice Merleau-Ponty,developed,co_fold,the fold,,the body is itself a fold,batch_03; batch_f01,final; v40
+pe_maurice_merleau_ponty,Maurice Merleau-Ponty,developed,co_umwelt,Umwelt,,"body inhabits a milieu, an Umwelt, ambiguous and indeterminate",batch_03,v40
+pe_gottfried_leibniz,Gottfried Leibniz,developed,co_fold,the fold,,folds replace holes; matter without voids (Monadology),batch_03; batch_f02,final; v40
+pe_gilles_deleuze,Gilles Deleuze,developed,co_fold,the fold,,"glosses Leibnizean matter as infinitely porous, spongy, cavernous",batch_03; batch_f02,final; v40
+pe_gilles_deleuze,Gilles Deleuze,cited,pe_gottfried_leibniz,Gottfried Leibniz,,Deleuze glosses Leibniz,batch_03,v40
+pe_paul_cezanne,Paul Cezanne,influenced,mv_phenomenology,phenomenology,,Merleau-Ponty reads Cezanne as a precursor to phenomenology,batch_03,v40
+pe_maurice_merleau_ponty,Maurice Merleau-Ponty,cited,pe_paul_cezanne,Paul Cezanne,,reads Cezanne's refusal of Renaissance perspective as phenomenological position,batch_03; batch_f02,final; v40
+pe_michel_foucault,Michel Foucault,influenced,mv_posthumanism,feminist posthumanism,,"man is an invention of recent date, perhaps nearing its end",batch_03,v40
+pe_cary_wolfe,Cary Wolfe,cited,pe_michel_foucault,Michel Foucault,,"Wolfe (2010, p. xii) citing Foucault",batch_03,v40
+pe_cary_wolfe,Cary Wolfe,cited,pe_nick_bostrom,Nick Bostrom,,"Bostrom quoted via Wolfe (2010, p. xiii)",batch_03,v40
+mv_humanism,humanism,influenced,mv_transhumanism,transhumanism,,transhumanism inherits the humanist legacy it claims to transcend,batch_03,v40
+pe_nick_bostrom,Nick Bostrom,part_of_movement,mv_transhumanism,transhumanism,,,batch_03; batch_f01,final; v40
+pe_hans_moravec,Hans Moravec,part_of_movement,mv_transhumanism,transhumanism,,downloading consciousness in pursuit of technological immortality,batch_03; batch_f01,final; v40
+mv_posthumanism,feminist posthumanism,counter_tradition_to,mv_transhumanism,transhumanism,,"insists on embodiment, embeddedness, and materiality",batch_03; batch_f01,final; v40
+pe_gregory_bateson,Gregory Bateson,presented_at,ev_macy_conferences_1946,Macy Conferences on Cybernetics (1946-1953),1942,participant in the Macy Conferences from 1942 onward (text's date),batch_03; batch_f03,final; v40
+pe_warren_mcculloch,Warren McCulloch,presented_at,ev_macy_conferences_1946,Macy Conferences on Cybernetics (1946-1953),,Macy participant,batch_03,v40
+pe_norbert_wiener,Norbert Wiener,presented_at,ev_macy_conferences_1946,Macy Conferences on Cybernetics (1946-1953),,Macy participant,batch_03,v40
+pe_john_von_neumann,John von Neumann,presented_at,ev_macy_conferences_1946,Macy Conferences on Cybernetics (1946-1953),,Macy participant,batch_03,v40
+pe_claude_shannon,Claude Shannon,presented_at,ev_macy_conferences_1946,Macy Conferences on Cybernetics (1946-1953),,central figure in the Macy Conferences,batch_03,v40
+pe_margaret_mead,Margaret Mead,presented_at,ev_macy_conferences_1946,Macy Conferences on Cybernetics (1946-1953),,Macy participant,batch_03,v40
+pe_gregory_bateson,Gregory Bateson,coined,co_difference_that_makes_a_difference,a difference which makes a difference,1972,"information as 'a difference that makes a difference' (1972, p. 459)",batch_03; batch_05; batch_f03,final; v40
+mv_cybernetics,cybernetics,influenced,mv_posthumanism,feminist posthumanism,,Wolfe treats the cybernetic moment as foundational for posthumanism,batch_03,v40
+mv_quantum_physics,quantum physics,influenced,mv_posthumanism,feminist posthumanism,,quantum physics displaced the observer on different grounds,batch_03,v40
+mv_quantum_physics,quantum physics,influenced,mv_conceptual_art,conceptual art,,quantum overthrow of determinism found cultural articulation in dematerialization of the art object,batch_03,v40
+pe_werner_heisenberg,Werner Heisenberg,developed,co_uncertainty_principle,uncertainty principle,,,batch_03,v40
+pe_niels_bohr,Niels Bohr,developed,co_indeterminacy,indeterminacy,,relocated the problem from uncertainty to indeterminacy,batch_03; batch_f01,final; v40
+pe_niels_bohr,Niels Bohr,developed,co_apparatus,apparatus,,entities do not determinately exist apart from measuring apparatuses (Barad's reading),batch_03,v40
+pe_adrienne_rich,Adrienne Rich,created,wk_of_woman_born_1976,Of Woman Born (1976),1976,,batch_03; batch_f02,final; v40
+pe_adrienne_rich,Adrienne Rich,created,wk_blood_bread_and_poetry_1984,"Blood, Bread, and Poetry (1984)",1984,,batch_03; batch_f02,final; v40
+pe_adrienne_rich,Adrienne Rich,developed,co_politics_of_location,politics of location,,begin with the geography closest in: the body,batch_03; batch_f02,final; v40
+pe_adrienne_rich,Adrienne Rich,influenced,mv_new_materialism,new materialism,,line from Rich through situated knowledges and standpoint debates to feminist neo-materialism,batch_03; batch_f02,final; v40
+pe_rosi_braidotti,Rosi Braidotti,cited,pe_adrienne_rich,Adrienne Rich,,traces a line from Rich through situated knowledges and standpoint debates (2022),batch_03,v40
+pe_trinh_t_minh_ha,Trinh T. Minh-ha,created,wk_documentary_is_not_a_name_1990,Documentary Is/Not a Name (1990),1990,Documentary Is/Not a Name (1990),batch_03; batch_04; batch_08; batch_f02; batch_f03; batch_f05,final; v40
+pe_trinh_t_minh_ha,Trinh T. Minh-ha,developed,co_interval,the interval,1990,"the interval as part of the work's method (Trinh, 1990, p. 81)",batch_03; batch_04; batch_05; batch_06; batch_08; batch_f02; batch_f03; batch_f05,final; v40
+pe_trinh_t_minh_ha,Trinh T. Minh-ha,coined,co_critical_difference_within,critical difference within,,"Trinh's formulation, later taken up by Haraway",batch_03,v40
+pe_trinh_t_minh_ha,Trinh T. Minh-ha,influenced,pe_donna_haraway,Donna Haraway,1992,Haraway's diffraction metaphor constructed in dialogue with Trinh's writing on difference,batch_03; batch_04; batch_f02; batch_f03; batch_f06,final; v40
+wk_promises_of_monsters_1992,The Promises of Monsters (1992),cited,pe_trinh_t_minh_ha,Trinh T. Minh-ha,1992,Haraway takes up Trinh's formulation of critical difference within,batch_03; batch_04; batch_f02,final; v40
+pe_donna_haraway,Donna Haraway,created,wk_situated_knowledges_1988,Situated Knowledges (1988),1988,Haraway's 1988 'Situated Knowledges',batch_03; batch_f02,final; v40
+pe_donna_haraway,Donna Haraway,created,wk_promises_of_monsters_1992,The Promises of Monsters (1992),1992,,batch_03; batch_04; batch_f02; batch_f03,final; v40
+pe_donna_haraway,Donna Haraway,developed,co_situated_knowledges,situated knowledges,1988,pushes the epistemological argument further in Situated Knowledges,batch_03; batch_05; batch_f02,final; v40
+pe_donna_haraway,Donna Haraway,developed,co_diffraction,diffraction / diffractive methodology,1997,"Haraway's methodological name for a different optics (Haraway, 1997)",batch_03; batch_f02,final; v40
+pe_donna_haraway,Donna Haraway,developed,co_figurations,figurations,1997,Haraway's figurations: performative images that can be inhabited,batch_03; batch_f02,final; v40
+pe_n_katherine_hayles,N. Katherine Hayles,developed,co_constrained_constructivism,constrained constructivism,1991,Hayles [1991] 1997; consistency over congruence,batch_03,v40
+pe_n_katherine_hayles,N. Katherine Hayles,influenced,pe_donna_haraway,Donna Haraway,,Timeto: situated knowledges extends Hayles's cusp (stage 1 to stage 2),batch_03; batch_f02,final; v40
+pe_donna_haraway,Donna Haraway,influenced,pe_karen_barad,Karen Barad,,Barad accepts Haraway's diffractive methodology and grounds it ontologically (stage 2 to stage 3),batch_03; batch_04; batch_f01; batch_f02; batch_f03; batch_f06,final; v40
+pe_niels_bohr,Niels Bohr,influenced,pe_karen_barad,Karen Barad,,her novel reading of Bohr as having advanced an ontic interpretation,batch_03,v40
+wk_meeting_the_universe_halfway_2007,Meeting the Universe Halfway (2007),about,pe_niels_bohr,Niels Bohr,,the Bohr chapter; recovery of Bohr's ontic interpretation,batch_03,v40
+wk_meeting_the_universe_halfway_2007,Meeting the Universe Halfway (2007),cited,pe_clifford_hooker,Clifford Hooker,,Hooker passage placed at the opening of the Bohr chapter,batch_03,v40
+pe_niels_bohr,Niels Bohr,presented_at,ev_bohr_einstein_debates,Bohr-Einstein debates,,interpretational questions a lightning rod for Bohr and Einstein,batch_03,v40
+pe_albert_einstein,Albert Einstein,presented_at,ev_bohr_einstein_debates,Bohr-Einstein debates,,,batch_03,v40
+pe_john_bell,John Bell,presented_at,ev_bell_findings_1960,Bell's findings (1960s),1960,Bell's findings in the 1960s,batch_03,v40
+pe_michael_epperson,Epperson,cited,pe_karl_popper,Popper,,citing Popper for the instrumentalist interpretation,batch_03,v40
+pe_michael_epperson,Epperson,developed,co_instrumentalist_interpretation,instrumentalist interpretation,,"names the move, citing Popper",batch_03,v40
+pe_alfred_north_whitehead,Alfred North Whitehead,created,wk_process_and_reality_1929,Process and Reality (1929),1929,,batch_03,v40
+pe_alfred_north_whitehead,Alfred North Whitehead,part_of_movement,mv_process_philosophy,process philosophy,,philosophy of organism,batch_03; batch_f01,final; v40
+pe_alfred_north_whitehead,Alfred North Whitehead,coined,co_fallacy_of_misplaced_concreteness,fallacy of misplaced concreteness,,Whitehead names the fallacy of misplaced concreteness,batch_03,v40
+pe_alfred_north_whitehead,Alfred North Whitehead,created,wk_principia_mathematica_1910,Principia Mathematica (1910-1913),1910,"1910-1913, with Russell",batch_03,v40
+pe_bertrand_russell,Bertrand Russell,created,wk_principia_mathematica_1910,Principia Mathematica (1910-1913),1910,"1910-1913, with Whitehead",batch_03,v40
+wk_principia_mathematica_1910,Principia Mathematica (1910-1913),influenced,pe_kurt_godel,Kurt Godel,,"formal groundwork later taken up in computation (Irvine, 2024)",batch_03,v40
+wk_principia_mathematica_1910,Principia Mathematica (1910-1913),influenced,pe_alonzo_church,Alonzo Church,,formal groundwork later taken up in computation,batch_03,v40
+wk_principia_mathematica_1910,Principia Mathematica (1910-1913),influenced,pe_alan_turing,Alan Turing,,formal groundwork later taken up in computation,batch_03,v40
+mv_process_philosophy,process philosophy,counter_tradition_to,mv_mechanism,mechanism,,repudiation of fundamental mechanistic materialism (Epperson),batch_03,v40
+mv_phenomenology,phenomenology,counter_tradition_to,mv_cartesian_dualism,Cartesian dualism,,resisted the retreat into epistemological safety,batch_03,v40
+pe_gottfried_leibniz,Gottfried Leibniz,created,wk_explication_arithmetique_binaire_1703,Explication de l'Arithmetique Binaire (1703),1703,,batch_03,v40
+pe_gottfried_leibniz,Gottfried Leibniz,created,wk_monadology_1714,Monadology (1714),1714,,batch_03,v40
+pe_gottfried_leibniz,Gottfried Leibniz,developed,co_binary_arithmetic,binary arithmetic,1703,binary reckoning as cosmological meditation,batch_03,v40
+pe_gottfried_leibniz,Gottfried Leibniz,developed,co_calculus,modern calculus,,co-inventor; his notation endured,batch_03,v40
+pe_isaac_newton,Isaac Newton,developed,co_calculus,modern calculus,,co-inventor of modern calculus,batch_03,v40
+pe_gottfried_leibniz,Gottfried Leibniz,influenced,pe_george_boole,George Boole,,binary arithmetic extracted from relational context and formalized by Boole,batch_03,v40
+pe_george_boole,George Boole,developed,co_boolean_logic,Boolean logic,,"logic of true/false, yes/no, on/off; foundation for digital computing",batch_03,v40
+pe_fuxi,Fuxi,influenced,pe_gottfried_leibniz,Gottfried Leibniz,1703,Leibniz took the I Ching correspondence as confirmation; high opinion of Fuxi's meditations,batch_03,v40
+pe_joachim_bouvet,Joachim Bouvet,cited,wk_i_ching,I Ching,1703,recognized Leibniz's system as corresponding to Fuxi's hexagrams,batch_03,v40
+ev_leibniz_bouvet_1703,Leibniz sends binary system to Bouvet (1703),located_in,pl_peking,Peking,1703,Bouvet was in Peking,batch_03,v40
+pe_claude_shannon,Claude Shannon,created,wk_mathematical_theory_of_communication_1948,A Mathematical Theory of Communication (1948),1948,,batch_03,v40
+pe_warren_weaver,Warren Weaver,created,wk_mathematical_theory_of_communication_1948,A Mathematical Theory of Communication (1948),1948,co-published,batch_03,v40
+pe_claude_shannon,Claude Shannon,coined,co_bit,bit,1948,"reduced information to its minimal unit, the bit",batch_03,v40
+pe_claude_shannon,Claude Shannon,developed,co_information_entropy,information entropy,,adopted the term information entropy (per Malaspina),batch_03,v40
+pe_claude_shannon,Claude Shannon,part_of_movement,mv_information_theory,information theory,,,batch_03,v40
+pe_norbert_wiener,Norbert Wiener,part_of_movement,mv_cybernetics,cybernetics,,developing cybernetics at MIT,batch_03,v40
+pe_norbert_wiener,Norbert Wiener,presented_at,ev_wiener_bmc_1954,Wiener joins Black Mountain advisory council (1954),1954,accepted advisory council seat as a high honor,batch_03,v40
+pe_charles_olson,Charles Olson,presented_at,ev_wiener_bmc_1954,Wiener joins Black Mountain advisory council (1954),1954,"Olson, rector of BMC, issued the invitation",batch_03,v40
+pe_cecile_malaspina,Cecile Malaspina,cited,pe_claude_shannon,Claude Shannon,,traces the cybernetics/information-theory split over noise (2018),batch_03,v40
+pe_michael_epperson,Epperson,cited,pe_alfred_north_whitehead,Alfred North Whitehead,,characterizes Whitehead's scheme against mechanistic materialism (2004),batch_03,v40
+pe_michael_epperson,Epperson,cited,wk_process_and_reality_1929,Process and Reality (1929),,quotes Whitehead 1978 edition throughout,batch_03,v40
+pe_vicki_kirby,Vicki Kirby,influenced,pe_barbara_bolt,Barbara Bolt,,Bolt's return to the energetic potential of matter runs through Kirby's reading of Bohr,batch_03; batch_f05,final; v40
+pe_niels_bohr,Niels Bohr,influenced,pe_vicki_kirby,Vicki Kirby,,Kirby's reading of Bohr,batch_03,v40
+pe_barbara_bolt,Barbara Bolt,cited,pe_judith_butler,Judith Butler,,locates the limit in Butler's account of performativity,batch_03,v40
+pe_judith_butler,Judith Butler,developed,co_performativity,performativity,,Butler's account of performativity; bodies materialize through repetition and discourse,batch_03; batch_08; batch_f05,final; v40
+pe_marcel_duchamp,Marcel Duchamp,developed,co_readymade,ready-made,1912,work from 1912 onward parallel to emergence of quantum mechanics,batch_03; batch_f05,final; v40
+pe_michael_schwab,Schwab (Michael Schwab),cited,pe_molderings,Molderings,,Schwab (2018) drawing on Molderings (2010),batch_03,v40
+pe_molderings,Molderings,cited,pe_wolfgang_pauli,Pauli,,Molderings citing Pauli,batch_03,v40
+pe_michael_schwab,Schwab (Michael Schwab),cited,pe_marcel_duchamp,Marcel Duchamp,,traces the quantum-art entanglement through Duchamp,batch_03,v40
+pe_john_cage,John Cage,created,aw_4_33,"4'33""",,,batch_03,v40
+pe_john_cage,John Cage,developed,co_chance_operations,chance operations,,method for withdrawing the composing subject,batch_03; batch_f05,final; v40
+pe_wilson,Wilson,cited,pe_john_cage,John Cage,2018,reads Cage's practice as pre-emption,batch_03,v40
+pe_wilson,Wilson,coined,co_pre_emption,pre-emption,2018,what Wilson (2018) calls a pre-emption,batch_03,v40
+pe_belletto,Belletto,cited,pe_john_cage,John Cage,,on Cage's aspiration toward unmediated materiality,batch_03,v40
+pe_belletto,Belletto,cited,pe_marshall_mcluhan,McLuhan,,Kantian epistemology to McLuhan's media theory to quantum mechanics,batch_03,v40
+pe_slodkowski,Slodkowski,cited,pe_robert_rauschenberg,Robert Rauschenberg,2023,reads the combines from a new materialist position,batch_03,v40
+pe_slodkowski,Slodkowski,cited,pe_olsen,Olsen,,through Olsen's question about how things remember,batch_03,v40
+pe_robert_rauschenberg,Robert Rauschenberg,created,aw_combines,Rauschenberg's combines,,Rauschenberg's combines,batch_03; batch_f05,final; v40
+pe_cornelia_parker,Cornelia Parker,created,aw_parker_suspended_bricks,Cornelia Parker's suspended bricks,,on the cover of Vibrant Matter,batch_03,v40
+pe_thomas_demand,Thomas Demand,created,aw_demand_cover_images,Thomas Demand's images,,on the cover of Meeting the Universe Halfway,batch_03,v40
+pe_donna_haraway,Donna Haraway,part_of_movement,mv_new_materialism,new materialism,,standard account: feminist science studies strand,batch_03,v40
+pe_manuel_delanda,DeLanda,part_of_movement,mv_new_materialism,new materialism,,standard account: political theory strand,batch_03,v40
+pe_elizabeth_grosz,Grosz,part_of_movement,mv_new_materialism,new materialism,,standard account: philosophy strand,batch_03,v40
+pe_donna_haraway,Donna Haraway,part_of_movement,mv_feminist_science_studies,feminist science studies,,,batch_03,v40
+pe_karen_barad,Karen Barad,part_of_movement,mv_feminist_science_studies,feminist science studies,,,batch_03,v40
+mv_postmodernism,postmodernism,influenced,mv_posthumanism,feminist posthumanism,,posthumanism inherits postmodernism's critique of the sovereign subject,batch_03; batch_f01,final; v40
+mv_postmodernism,postmodernism,influenced,mv_new_materialism,new materialism,,consolidation emerged within and after postmodernism; response to losing track of the material,batch_03,v40
+pe_vanessa_watts,Vanessa Watts,coined,co_place_thought,Place-Thought,,Watts names the same ground through Place-Thought,batch_03; batch_f02,final; v40
+pe_vanessa_watts,Vanessa Watts,part_of_movement,mv_indigenous_ways_of_knowing,Indigenous ways of knowing,,Haudenosaunee and Anishinaabe scholar,batch_03; batch_f02,final; v40
+pe_zoe_todd,Zoe Todd,part_of_movement,mv_indigenous_ways_of_knowing,Indigenous ways of knowing,,argues for recognition of Indigenous thinkers,batch_03; batch_f02,final; v40
+pe_anderson,Anderson,cited,pe_zoe_todd,Zoe Todd,2020,"Todd, cited in Anderson, 2020, p. 210",batch_03,v40
+pe_anderson,Anderson,cited,pe_vanessa_watts,Vanessa Watts,2020,"Watts, cited in Anderson, 2020, p. 211",batch_03,v40
+pe_anderson,Anderson,cited,pe_rosi_braidotti,Rosi Braidotti,2020,"follows Braidotti on amplifying resonances, not false equivalences",batch_03,v40
+pe_rosi_braidotti,Rosi Braidotti,developed,co_anthropolatry,anthropolatry,2024,"names exceptionalist anthropocentrism anthropolatry (Braidotti, 2024)",batch_03; batch_f01,final; v40
+pe_rosi_braidotti,Rosi Braidotti,developed,co_man_of_reason,man of reason,2024,critique of the humanistic man of reason,batch_03,v40
+pe_rosi_braidotti,Rosi Braidotti,cited,pe_robert_pepperell,Pepperell,,citing Pepperell (2003) on notions circulating around the posthuman,batch_03,v40
+pe_francesca_ferrando,Francesca Ferrando,cited,pe_karen_barad,Karen Barad,,quotes Barad 2003 on matter not seeming to matter,batch_03,v40
+pe_francesca_ferrando,Francesca Ferrando,cited,pe_plato,Plato,2019,traces hierarchies of ideal and profane to Plato,batch_03,v40
+pe_francesca_ferrando,Francesca Ferrando,cited,pe_aristotle,Aristotle,2019,traces hierarchies of ideal and profane to Aristotle,batch_03,v40
+pe_francesca_ferrando,Francesca Ferrando,cited,wk_old_testament,Old Testament,2019,traces hierarchies of ideal and profane to the Old Testament,batch_03,v40
+pe_plato,Plato,developed,co_representationalism,representationalism,,gap built into Western visual theory since Plato (Bolt),batch_03,v40
+pe_heraclitus,Heraclitus,part_of_movement,mv_pre_socratics,pre-Socratics,,earliest strata of Western thought,batch_03,v40
+wk_vibrant_matter_2010,Vibrant Matter (2010),cited,pe_henri_bergson,Henri Bergson,,Bennett cites Bergson on life as perpetual efflorescence of novelty,batch_03,v40
+wk_vibrant_matter_2010,Vibrant Matter (2010),cited,pe_epicurus,Epicurus,,Bennett's account of the clinamen,batch_03,v40
+pe_iris_van_der_tuin,Iris van der Tuin,cited,pe_baruch_spinoza,Baruch Spinoza,2012,identify Spinoza as key figure in the monist minor tradition,batch_03,v40
+pe_rick_dolphijn,Rick Dolphijn,cited,pe_baruch_spinoza,Baruch Spinoza,2012,identify Spinoza as key figure in the monist minor tradition,batch_03,v40
+pe_iris_van_der_tuin,Iris van der Tuin,cited,pe_henri_bergson,Henri Bergson,2012,place Bergson within the monist line,batch_03,v40
+pe_federica_timeto,Federica Timeto,cited,pe_n_katherine_hayles,N. Katherine Hayles,2011,stage one: constrained constructivism,batch_03,v40
+pe_federica_timeto,Federica Timeto,cited,pe_donna_haraway,Donna Haraway,2011,stage two: situated knowledges,batch_03,v40
+pe_katve_kaisa_kontturi,Katve-Kaisa Kontturi,cited,pe_barbara_bolt,Barbara Bolt,2021,note Bolt among the first art scholars to address quantum theory in visual practice,batch_03,v40
+pe_milla_tiainen,Milla Tiainen,cited,pe_barbara_bolt,Barbara Bolt,2021,place her intervention alongside Barad's agential realism,batch_03,v40
+pe_gamble,Gamble,cited,pe_lucretius,Lucretius,2019,Lucretius anticipates performative new materialism,batch_03,v40
+pe_gamble,Gamble,cited,pe_francis_bacon,Francis Bacon,2019,summarize Bacon on force implanted by God in first particles,batch_03,v40
+co_dematerialization_of_the_art_object,dematerialization of the art object,part_of_movement,mv_conceptual_art,conceptual art,,"turn toward process, event, and relation",batch_03,v40
+pe_pheng_cheah,Pheng Cheah,created,wk_non_dialectical_materialism_2010,Non-Dialectical Materialism (2010),2010,essay in Coole and Frost (2010),batch_04; batch_f01,final; v40
+wk_non_dialectical_materialism_2010,Non-Dialectical Materialism (2010),about,pe_jacques_derrida,Jacques Derrida,,juxtaposition of Derrida's and Deleuze's materialist views,batch_04,v40
+wk_non_dialectical_materialism_2010,Non-Dialectical Materialism (2010),about,pe_gilles_deleuze,Gilles Deleuze,,juxtaposition of Derrida's and Deleuze's materialist views,batch_04,v40
+wk_non_dialectical_materialism_2010,Non-Dialectical Materialism (2010),cited,pe_gilles_deleuze,Gilles Deleuze,,Cheah cites Deleuze and Guattari's definition of matter,batch_04; batch_f01,final; v40
+wk_non_dialectical_materialism_2010,Non-Dialectical Materialism (2010),cited,pe_felix_guattari,Felix Guattari,,Cheah cites Deleuze and Guattari's definition of matter,batch_04,v40
+pe_diana_coole,Diana Coole,created,wk_new_materialisms_2010,Coole and Frost (2010) edited collection,2010,co-editor of the 2010 collection,batch_04,v40
+pe_samantha_frost,Samantha Frost,created,wk_new_materialisms_2010,Coole and Frost (2010) edited collection,2010,co-editor of the 2010 collection,batch_04,v40
+pe_gilles_deleuze,Gilles Deleuze,counter_tradition_to,mv_hegelianism,Hegelianism,,refusal of the Hegelian reduction of difference to negation and contradiction,batch_04,v40
+pe_gilles_deleuze,Gilles Deleuze,developed,co_plane_of_immanence,plane of immanence,,"materiality as plane of immanence, per Cheah's account of Deleuze",batch_04; batch_f01,final; v40
+pe_gilles_deleuze,Gilles Deleuze,developed,co_transcendental_field,transcendental field,,ground as transcendental field of pre-individual singularities,batch_04; batch_f01,final; v40
+pe_gilles_deleuze,Gilles Deleuze,developed,co_the_virtual,the virtual,,the virtual as strictly part of the real object,batch_04; batch_f01; batch_f02,final; v40
+pe_gilles_deleuze,Gilles Deleuze,developed,co_chaosmos,chaosmos,,ontology as dice throw; chaosmos from which the cosmos emerges,batch_04,v40
+pe_gilles_deleuze,Gilles Deleuze,developed,co_singularities,singularities,,singularities as the true transcendental events,batch_04,v40
+wk_vibrant_matter_2010,Vibrant Matter (2010),cited,pe_friedrich_nietzsche,Friedrich Nietzsche,,"Nietzsche's 'monster of energy' cited in Bennett, 2010, p. 53",batch_04,v40
+wk_vibrant_matter_2010,Vibrant Matter (2010),cited,pe_henry_david_thoreau,Henry David Thoreau,,Thoreau's discipline of looking always at what is to be seen,batch_04; batch_f04,final; v40
+pe_gilles_deleuze,Gilles Deleuze,influenced,pe_jane_bennett,Jane Bennett,,Bennett renders Deleuze's virtual in her own key,batch_04,v40
+pe_jane_bennett,Jane Bennett,developed,co_a_life,a life,2010,renders Deleuze's virtual as 'a life',batch_04,v40
+pe_rosi_braidotti,Rosi Braidotti,coined,co_living_map,living map,,'living map' is Braidotti's phrase,batch_04; batch_f02,final; v40
+pe_iris_van_der_tuin,Iris van der Tuin,developed,co_cartography,cartography (Braidotti),2010,cartography as methodological posture of new materialism,batch_04,v40
+pe_rick_dolphijn,Rick Dolphijn,developed,co_cartography,cartography (Braidotti),2010,cartography as methodological posture of new materialism,batch_04,v40
+pe_nick_fox,Fox (Nick Fox),created,wk_fox_alldred_2021,Fox and Alldred (2021),2021,,batch_04; batch_f06,final; v40
+pe_pam_alldred,Alldred (Pam Alldred),created,wk_fox_alldred_2021,Fox and Alldred (2021),2021,,batch_04; batch_f06,final; v40
+wk_fox_alldred_2021,Fox and Alldred (2021),about,mv_diffractive_practice_family,diffractive practice (family of methods),,"diffractive method in applied research domains: education, health, sustainability",batch_04,v40
+pe_donna_haraway,Donna Haraway,created,wk_modest_witness_1997,Modest_Witness (1997),1997,,batch_04; batch_f02; batch_f03,final; v40
+pe_donna_haraway,Donna Haraway,coined,co_diffraction,diffraction / diffractive methodology,1992,"origin of the diffraction metaphor in feminist theory, generated from a reading of Trinh",batch_04; batch_f03,final; v40
+pe_donna_haraway,Donna Haraway,developed,co_figuration,figuration,,commitment to figuration: performative images that can be inhabited,batch_04; batch_f03,final; v40
+wk_modest_witness_1997,Modest_Witness (1997),about,co_diffraction,diffraction / diffractive methodology,1997,develops diffraction into a fourth semiotic category,batch_04,v40
+wk_modest_witness_1997,Modest_Witness (1997),about,co_reflexivity,reflexivity,1997,"reflexivity, like reflection, only displaces the same elsewhere",batch_04,v40
+wk_posthumanist_performativity_2003,Posthumanist Performativity (2003),cited,wk_promises_of_monsters_1992,The Promises of Monsters (1992),2003,"Barad, 2003, p. 804 n.3, citing Haraway, 1992, p. 300",batch_04,v40
+pe_trinh_t_minh_ha,Trinh T. Minh-ha,created,wk_speaking_nearby_1992,Speaking Nearby (1992),1992,"the 1992 conversation 'Speaking Nearby' (cited as Chen, 1992)",batch_04; batch_f05,final; v40
+pe_trinh_t_minh_ha,Trinh T. Minh-ha,coined,co_speaking_nearby,speaking nearby,1992,"names the method 'speaking nearby' (Trinh, 1992, p. 84)",batch_04; batch_08,v40
+pe_trinh_t_minh_ha,Trinh T. Minh-ha,part_of_movement,mv_diffractive_practice_family,diffractive practice (family of methods),,"diffraction as filmmaking practice, before the name; part of the genealogy",batch_04; batch_08,v40
+pe_karen_barad,Karen Barad,part_of_movement,mv_diffractive_practice_family,diffractive practice (family of methods),,"diffractive practice (Barad, Haraway)",batch_04,v40
+pe_donna_haraway,Donna Haraway,part_of_movement,mv_diffractive_practice_family,diffractive practice (family of methods),,"diffractive practice (Barad, Haraway)",batch_04,v40
+pe_cher_hill,Hill (Cher Hill),part_of_movement,mv_diffractive_practice_family,diffractive practice (family of methods),,one of the five diffractive practice accounts,batch_04; batch_05,v40
+pe_l_lambert,Louise Lambert,part_of_movement,mv_diffractive_practice_family,diffractive practice (family of methods),,one of the five diffractive practice accounts,batch_04; batch_05,v40
+pe_k_dudley,Kate Dudley,part_of_movement,mv_diffractive_practice_family,diffractive practice (family of methods),,mosaic listening extended through diffractive practice,batch_04; batch_05,v40
+pe_anna_militsi,Anna Militsi,part_of_movement,mv_diffractive_practice_family,diffractive practice (family of methods),,diffractive watching/watching diffractively,batch_04,v40
+mv_diffractive_practice_family,diffractive practice (family of methods),counter_tradition_to,mv_reflective_practice,reflective practice,,"moves beyond reflective practice; an 'otherwise', not an either/or replacement",batch_04,v40
+co_making_strange,making strange,part_of_movement,mv_diffractive_practice_family,diffractive practice (family of methods),,"making strange (Shklovsky, Brecht, extended by Andersen and Schwab) under the umbrella",batch_04; batch_06; batch_f03,final; v40
+co_material_encounter,material encounter,part_of_movement,mv_diffractive_practice_family,diffractive practice (family of methods),,one of Part Two's named categories of relational methods,batch_04,v40
+co_transpositions,transpositions,part_of_movement,mv_diffractive_practice_family,diffractive practice (family of methods),,family of protocols sharing the same ontological ground without a common name,batch_04; batch_f03,final; v40
+pe_cher_hill,Hill (Cher Hill),developed,co_becoming_diffractive,becoming-diffractive,2017,three interrelated ways of becoming diffractive,batch_04; batch_f03,final; v40
+pe_cher_hill,Hill (Cher Hill),developed,co_diffractive_reading,diffractive reading,2017,distinguishes diffractive reading from experimenting with a diffractive apparatus,batch_04,v40
+pe_cher_hill,Hill (Cher Hill),created,wk_more_than_reflective_practice_2017,More-than-reflective practice: Becoming a diffractive practitioner (2017),2017,,batch_04; batch_f03,final; v40
+wk_more_than_reflective_practice_2017,More-than-reflective practice: Becoming a diffractive practitioner (2017),published_in,in_teacher_learning_and_professional_development,Teacher Learning and Professional Development,2017,,batch_04,v40
+pe_anna_militsi,Anna Militsi,developed,co_diffractive_watching,diffractive watching,2021,proposes diffractive watching as another tool for film analysis,batch_04; batch_05; batch_f03; batch_f04,final; v40
+pe_clark,Clark,developed,co_mosaic_listening,mosaic listening,2001,"Mosaic listening (Clark & Moss, 2001)",batch_04; batch_f03,final; v40
+pe_moss,Moss,developed,co_mosaic_listening,mosaic listening,2001,"Mosaic listening (Clark & Moss, 2001)",batch_04; batch_f03,final; v40
+pe_k_dudley,Kate Dudley,developed,co_mosaic_listening,mosaic listening,2025,extended by Dudley,batch_04; batch_f03,final; v40
+pe_k_dudley,Kate Dudley,created,wk_mosaic_listening_nd,Mosaic listening: Navigating ethical entanglements through diffractive practice (n.d.),2025,"research post, n.d.",batch_04; batch_f03,final; v40
+wk_mosaic_listening_nd,Mosaic listening: Navigating ethical entanglements through diffractive practice (n.d.),about,co_mosaic_listening,mosaic listening,,,batch_04,v40
+pe_l_lambert,Louise Lambert,created,wk_diffraction_as_otherwise_nd,Diffraction as an otherwise practice of exploring new teachers' entanglements in time and space (n.d.),2021,"manuscript, n.d.",batch_04; batch_f03,final; v40
+wk_diffraction_as_otherwise_nd,Diffraction as an otherwise practice of exploring new teachers' entanglements in time and space (n.d.),about,co_affect,affect,,named concept through which she develops the practice,batch_04; batch_f03,final; v40
+wk_diffraction_as_otherwise_nd,Diffraction as an otherwise practice of exploring new teachers' entanglements in time and space (n.d.),about,co_intra_action,intra-action,,named concept through which she develops the practice,batch_04; batch_f03,final; v40
+wk_diffraction_as_otherwise_nd,Diffraction as an otherwise practice of exploring new teachers' entanglements in time and space (n.d.),about,co_assemblage,assemblage,,named concept through which she develops the practice,batch_04; batch_f03,final; v40
+wk_diffraction_as_otherwise_nd,Diffraction as an otherwise practice of exploring new teachers' entanglements in time and space (n.d.),about,co_becoming_with,becoming-with,,named concept through which she develops the practice,batch_04; batch_f03,final; v40
+wk_diffraction_as_otherwise_nd,Diffraction as an otherwise practice of exploring new teachers' entanglements in time and space (n.d.),about,co_spacetimemattering,spacetimemattering,,named concept through which she develops the practice,batch_04; batch_f03,final; v40
+pe_enoch_powell,Enoch Powell,created,wk_rivers_of_blood_speech,Rivers of Blood speech,,undated in text,batch_04; batch_f03,final; v40
+pe_sofie_sauzet,Sauzet (Sofie Sauzet),created,wk_thinking_through_picturing_2015,Thinking through picturing (2015),2015,,batch_04; batch_f03,final; v40
+wk_thinking_through_picturing_2015,Thinking through picturing (2015),published_in,in_atgender,ATGENDER,2015,chapter in Teaching with Feminist Materialisms,batch_04,v40
+pe_p_hinton,P. Hinton,created,wk_teaching_with_feminist_materialisms_2015,Teaching with Feminist Materialisms (2015),2015,co-editor,batch_04,v40
+pe_p_treusch,P. Treusch,created,wk_teaching_with_feminist_materialisms_2015,Teaching with Feminist Materialisms (2015),2015,co-editor,batch_04,v40
+pe_carol_taylor,Taylor (Carol A. Taylor),created,wk_diffracting_the_curriculum_2019,Diffracting the curriculum (2019),2019,,batch_04; batch_f03,final; v40
+wk_diffracting_the_curriculum_2019,Diffracting the curriculum (2019),published_in,in_emerald_publishing,Emerald Publishing,2019,"chapter in Theory and Method in Higher Education Research, Vol. 5",batch_04,v40
+pe_m_tight,M. Tight,created,wk_theory_and_method_in_higher_education_research_2019,"Theory and Method in Higher Education Research, Vol. 5 (2019)",2019,co-editor,batch_04,v40
+pe_j_huisman,J. Huisman,created,wk_theory_and_method_in_higher_education_research_2019,"Theory and Method in Higher Education Research, Vol. 5 (2019)",2019,co-editor,batch_04,v40
+pe_henk_borgdorff,Henk Borgdorff,created,wk_conflict_of_the_faculties_2012,The Conflict of the Faculties: Perspectives on Artistic Research and Academia (2012),2012,,batch_04,v40
+wk_conflict_of_the_faculties_2012,The Conflict of the Faculties: Perspectives on Artistic Research and Academia (2012),published_in,in_leiden_university_press,Leiden University Press,2012,,batch_04,v40
+wk_conflict_of_the_faculties_2012,The Conflict of the Faculties: Perspectives on Artistic Research and Academia (2012),about,mv_artistic_research,artistic research,,perspectives on artistic research and academia,batch_04,v40
+pe_b_christensen_scheel,B. Christensen-Scheel,created,wk_artistic_and_art_based_research_methods_2022,Introduction: Artistic and art-based research methods (2022),2022,,batch_04,v40
+pe_venke_aure,Venke Aure,created,wk_artistic_and_art_based_research_methods_2022,Introduction: Artistic and art-based research methods (2022),2022,,batch_04,v40
+pe_kristin_bergaust,Kristin Bergaust,created,wk_artistic_and_art_based_research_methods_2022,Introduction: Artistic and art-based research methods (2022),2022,,batch_04,v40
+wk_artistic_and_art_based_research_methods_2022,Introduction: Artistic and art-based research methods (2022),published_in,in_nordic_journal_of_art_and_research,Nordic Journal of Art and Research,2022,,batch_04,v40
+wk_artistic_and_art_based_research_methods_2022,Introduction: Artistic and art-based research methods (2022),about,mv_artistic_research,artistic research,,artistic and art-based research methods,batch_04,v40
+pe_p_de_assis,P. de Assis,created,wk_artistic_research_charting_a_field_2019,Artistic Research: Charting a Field in Expansion (2019),2019,co-editor,batch_04,v40
+pe_l_derrico,L. D'Errico,created,wk_artistic_research_charting_a_field_2019,Artistic Research: Charting a Field in Expansion (2019),2019,co-editor,batch_04,v40
+wk_artistic_research_charting_a_field_2019,Artistic Research: Charting a Field in Expansion (2019),published_in,in_rowman_and_littlefield,Rowman & Littlefield International,2019,,batch_04,v40
+wk_artistic_research_charting_a_field_2019,Artistic Research: Charting a Field in Expansion (2019),about,mv_artistic_research,artistic research,,charting a field in expansion,batch_04,v40
+pe_christopher_frayling,Christopher Frayling,created,wk_research_in_art_and_design_1993,Research in Art and Design (1993/1994),1993,dated 1993/1994,batch_04,v40
+wk_research_in_art_and_design_1993,Research in Art and Design (1993/1994),published_in,in_royal_college_of_art_research_papers,Royal College of Art Research Papers,1993,,batch_04,v40
+wk_research_in_art_and_design_1993,Research in Art and Design (1993/1994),about,mv_artistic_research,artistic research,,research in art and design,batch_04,v40
+pe_georgios_kaounas,Georgios Kaounas,created,wk_art_as_research_2024,Art as Research? (2024),2024,master's thesis,batch_04,v40
+wk_art_as_research_2024,Art as Research? (2024),published_in,in_lund_university,Lund University,2024,Department of Sociology,batch_04,v40
+wk_art_as_research_2024,Art as Research? (2024),about,mv_artistic_research,artistic research,,epistemic culture of artistic research and its justification,batch_04,v40
+pe_graeme_sullivan,Graeme Sullivan,created,wk_research_acts_in_art_practice_2006,Research Acts in Art Practice (2006),2006,,batch_04,v40
+wk_research_acts_in_art_practice_2006,Research Acts in Art Practice (2006),published_in,in_studies_in_art_education,Studies in Art Education,2006,,batch_04,v40
+wk_research_acts_in_art_practice_2006,Research Acts in Art Practice (2006),about,mv_artistic_research,artistic research,,research acts in art practice,batch_04,v40
+pe_norbert_wiener,Norbert Wiener,created,wk_cybernetics_1948,"Cybernetics: Or, Control and Communication in the Animal and the Machine (1948)",1948,,batch_04,v40
+wk_cybernetics_1948,"Cybernetics: Or, Control and Communication in the Animal and the Machine (1948)",published_in,in_mit_press,MIT Press,1948,,batch_04,v40
+wk_cybernetics_1948,"Cybernetics: Or, Control and Communication in the Animal and the Machine (1948)",about,mv_cybernetics,cybernetics,,control and communication in the animal and the machine,batch_04,v40
+pe_cary_wolfe,Cary Wolfe,created,wk_what_is_posthumanism_2010,What Is Posthumanism? (2010),2010,,batch_04; batch_f01,final; v40
+wk_what_is_posthumanism_2010,What Is Posthumanism? (2010),published_in,in_university_of_minnesota_press,University of Minnesota Press,2010,,batch_04,v40
+wk_what_is_posthumanism_2010,What Is Posthumanism? (2010),about,mv_posthumanism,feminist posthumanism,,,batch_04,v40
+pe_a_d_irvine,A. D. Irvine,created,wk_principia_mathematica_sep_2024,"Principia Mathematica (SEP entry, 2024)",2024,,batch_04,v40
+wk_principia_mathematica_sep_2024,"Principia Mathematica (SEP entry, 2024)",published_in,in_stanford_encyclopedia_of_philosophy,The Stanford Encyclopedia of Philosophy,2024,"Zalta & Nodelman, eds.",batch_04,v40
+wk_principia_mathematica_sep_2024,"Principia Mathematica (SEP entry, 2024)",cited,wk_principia_mathematica,Principia Mathematica,,encyclopedia entry on Principia Mathematica,batch_04,v40
+pe_k_dudley,Kate Dudley,created,wk_dudley_mosaic_nd,Dudley (n.d.),,"Dudley, n.d.",batch_05,v40
+pe_carol_taylor,Taylor (Carol A. Taylor),created,wk_taylor_chapter_2019,Taylor (2019),2019,"Taylor, 2019 chapter",batch_05,v40
+pe_carol_taylor,Taylor (Carol A. Taylor),created,wk_educational_spaces_module,Educational Spaces: Theories and Perspectives,,designs the module; students co-sequence it,batch_05; batch_f03,final; v40
+pe_sofie_sauzet,Sauzet (Sofie Sauzet),created,wk_sauzet_snaplogs_2015,Sauzet (2015),2015,"Sauzet, 2015",batch_05,v40
+pe_karen_barad,Karen Barad,created,wk_barad_2003,Barad (2003),2003,"Barad, 2003",batch_05; batch_f02; batch_f03,final; v40
+pe_karen_barad,Karen Barad,created,wk_cutting_together_apart,"""Cutting Together-Apart"" (Barad)",,"Barad, 'Cutting Together-Apart'",batch_05,v40
+pe_rosi_braidotti,Rosi Braidotti,created,wk_braidotti_2018,Braidotti (2018),2018,"cited as Braidotti, 2018",batch_05; batch_08; batch_f02; batch_f05,final; v40
+pe_kirschner,Kirschner,created,wk_kirschner_2016,Kirschner (2016),2016,"Kirschner, 2016",batch_05,v40
+pe_michael_schwab,Schwab (Michael Schwab),created,wk_schwab_transposition_2018,Schwab (2018),2018,"Schwab, 2018 (incl. introduction)",batch_05; batch_08; batch_f03; batch_f04; batch_f05; batch_f06,final; v40
+pe_esa_kirkkopelto,Esa Kirkkopelto,created,wk_kirkkopelto_2018,Kirkkopelto (2018),2018,"cited as Kirkkopelto, 2018",batch_05; batch_f05,final; v40
+pe_annette_arlander,Annette Arlander,created,wk_arlander_2018,Arlander (2018),2018,"Arlander, 2018",batch_05,v40
+pe_annette_arlander,Annette Arlander,created,aw_animal_years,Animal Years,,twelve year-long performances for camera,batch_05,v40
+pe_lucia_derrico,Lucia D'Errico,created,wk_derrico_2018,D'Errico (2018),2018,"D'Errico, 2018",batch_05,v40
+pe_david_pirro,David Pirrò,created,wk_pirro_2018,Pirrò (2018),2018,chapter in Transpositions,batch_05; batch_08; batch_f03; batch_f05,final; v40
+pe_martin,Martin,created,wk_martin_sayers_carroll_2025,"Martin, Sayers & Carroll (2025)",2025,"Martin, Sayers & Carroll, 2025",batch_05; batch_f03,final; v40
+pe_sayers,Sayers,created,wk_martin_sayers_carroll_2025,"Martin, Sayers & Carroll (2025)",2025,"Martin, Sayers & Carroll, 2025",batch_05; batch_f03,final; v40
+pe_carroll,Carroll,created,wk_martin_sayers_carroll_2025,"Martin, Sayers & Carroll (2025)",2025,"Martin, Sayers & Carroll, 2025",batch_05; batch_f03,final; v40
+pe_clark,Clark,coined,co_mosaic_listening,mosaic listening,2001,"Mosaic listening (Clark & Moss, 2001)",batch_05,v40
+pe_moss,Moss,coined,co_mosaic_listening,mosaic listening,2001,"Mosaic listening (Clark & Moss, 2001)",batch_05,v40
+pe_karen_barad,Karen Barad,developed,co_phenomena,phenomena (Barad),,Barad's primary unit of analysis,batch_05; batch_f01,final; v40
+pe_karen_barad,Karen Barad,developed,co_diffractive_reading,diffractive reading,,diffractive reading as affirmative engagement ('Cutting Together-Apart'),batch_05,v40
+pe_jane_bennett,Jane Bennett,developed,co_actants,actants,,Bennett's actants,batch_05,v40
+pe_rosi_braidotti,Rosi Braidotti,developed,co_transponent,transponent,,"the transponent as hybrid agent of change (Braidotti, 2006; 2011)",batch_05,v40
+pe_rosi_braidotti,Rosi Braidotti,developed,co_imaginary_formations,imaginary formations,,critique of imaginary formations; 'choreography of constraints and entitlements' (2006),batch_05,v40
+pe_sofie_sauzet,Sauzet (Sofie Sauzet),developed,co_thinking_through_picturing,thinking through picturing,2015,Sauzet names 'thinking through picturing' (2015),batch_05; batch_10; batch_f03,final; v40
+pe_michael_schwab,Schwab (Michael Schwab),developed,co_transpositions,transpositions,2018,a transpositional shift produces an encounter that cannot be reduced back into stable representation,batch_05; batch_06; batch_10,v40
+pe_esa_kirkkopelto,Esa Kirkkopelto,developed,co_transpositions,transpositions,2018,transposition as methodological hypothesis for artistic research,batch_05,v40
+pe_esa_kirkkopelto,Esa Kirkkopelto,developed,co_transponent,transponent,2018,the transposed element 'becomes the transponent' through active maintenance,batch_05,v40
+pe_david_pirro,David Pirrò,developed,co_complexification,complexification,2018,'A transposition is not an analysis. A transposition is a complexification',batch_05; batch_f03,final; v40
+pe_iris_van_der_tuin,Iris van der Tuin,developed,co_diffractive_reading,diffractive reading,,"van der Tuin's diffractive reading, operationalized by Militsi",batch_05; batch_06; batch_f04,final; v40
+pe_amy_traylor,Amy Traylor,developed,co_refusal_of_exhaustive_capture,refusal of exhaustive capture,,named as method in the comps draft,batch_05,v40
+wk_dudley_mosaic_nd,Dudley (n.d.),cited,pe_clark,Clark,2001,"Mosaic listening (Clark & Moss, 2001)",batch_05,v40
+wk_dudley_mosaic_nd,Dudley (n.d.),cited,pe_moss,Moss,2001,"Mosaic listening (Clark & Moss, 2001)",batch_05,v40
+wk_taylor_chapter_2019,Taylor (2019),cited,pe_karen_barad,Karen Barad,,uses Barad's notion of diffraction,batch_05,v40
+wk_arlander_2018,Arlander (2018),cited,pe_karen_barad,Karen Barad,,following Barad's claim about entanglements,batch_05,v40
+wk_derrico_2018,D'Errico (2018),cited,pe_gilles_deleuze,Gilles Deleuze,2003,"Deleuze, 2003, pp. 98, 115, cited in D'Errico, 2018",batch_05,v40
+wk_martin_sayers_carroll_2025,"Martin, Sayers & Carroll (2025)",cited,pe_rosi_braidotti,Rosi Braidotti,,"cites Braidotti 2003, 2006, 2011, 2017",batch_05,v40
+wk_martin_sayers_carroll_2025,"Martin, Sayers & Carroll (2025)",cited,pe_felicity_colman,Felicity Colman,2010,"Colman, 2010, pp. 11–12, cited in Martin et al., 2025",batch_05,v40
+wk_martin_sayers_carroll_2025,"Martin, Sayers & Carroll (2025)",cited,pe_elizabeth_grosz,Grosz,2005,"Grosz, 2005, p. 165, cited in Martin et al., 2025",batch_05,v40
+wk_martin_sayers_carroll_2025,"Martin, Sayers & Carroll (2025)",cited,pe_grebowicz,Grebowicz,2013,"Grebowicz & Merrick, 2013, p. 113",batch_05,v40
+wk_martin_sayers_carroll_2025,"Martin, Sayers & Carroll (2025)",cited,pe_merrick,Merrick,2013,"Grebowicz & Merrick, 2013, p. 113",batch_05,v40
+wk_martin_sayers_carroll_2025,"Martin, Sayers & Carroll (2025)",cited,pe_le_guin,Le Guin,,feminist speculative fiction as site of transpositions practices,batch_05,v40
+wk_martin_sayers_carroll_2025,"Martin, Sayers & Carroll (2025)",cited,pe_griffith,Griffith,,feminist speculative fiction as site of transpositions practices,batch_05,v40
+pe_anna_militsi,Anna Militsi,cited,pe_iris_van_der_tuin,Iris van der Tuin,,operationalizes van der Tuin's diffractive reading,batch_05,v40
+wk_dudley_mosaic_nd,Dudley (n.d.),about,co_mosaic_listening,mosaic listening,,presents diffractive practice through Mosaic listening,batch_05,v40
+wk_dudley_mosaic_nd,Dudley (n.d.),about,co_ethico_onto_epistemology,ethico-onto-epistemology,,study grounded in ethico-onto-epistemology,batch_05,v40
+wk_dudley_mosaic_nd,Dudley (n.d.),about,co_nomadic_ethics,nomadic ethics,,turns immediately to nomadic ethics,batch_05,v40
+wk_taylor_chapter_2019,Taylor (2019),about,co_diffraction,diffraction / diffractive methodology,,diffraction in curriculum design,batch_05,v40
+wk_sauzet_snaplogs_2015,Sauzet (2015),about,co_snaplogs,snaplogs,,snaplog assignment as diffraction apparatus,batch_05,v40
+wk_sauzet_snaplogs_2015,Sauzet (2015),about,co_apparatus,apparatus,,names 'a diffraction apparatus',batch_05,v40
+wk_barad_2003,Barad (2003),about,co_diffraction,diffraction / diffractive methodology,,diffraction as mapping of effects of difference,batch_05; batch_f03,final; v40
+wk_braidotti_2018,Braidotti (2018),about,co_cartography,cartography (Braidotti),,"cartographic account necessarily selective, partial, never exhaustive",batch_05,v40
+wk_braidotti_2018,Braidotti (2018),about,co_transpositions,transpositions,,"transposition as creative insight, mobility, cross-referencing",batch_05; batch_08,v40
+wk_cutting_together_apart,"""Cutting Together-Apart"" (Barad)",about,co_diffractive_reading,diffractive reading,,critique vs diffractive reading as affirmative engagement,batch_05,v40
+wk_schwab_transposition_2018,Schwab (2018),about,co_transpositions,transpositions,,logic of transposition vs logic of representation,batch_05; batch_08; batch_f03,final; v40
+wk_schwab_transposition_2018,Schwab (2018),about,co_epistemic_thing,epistemic things,,concepts staged artistically as epistemic things,batch_05; batch_08; batch_f03,final; v40
+wk_kirkkopelto_2018,Kirkkopelto (2018),about,co_transpositions,transpositions,,transposition as methodological hypothesis,batch_05,v40
+wk_kirkkopelto_2018,Kirkkopelto (2018),about,co_transponent,transponent,,the transponent as stranger/intruder,batch_05,v40
+wk_arlander_2018,Arlander (2018),about,co_transpositions,transpositions,,transposition as repetition with a difference; ontological entanglements,batch_05,v40
+wk_derrico_2018,D'Errico (2018),about,co_transpositions,transpositions,,transposition as severing resemblance between score and sounding result,batch_05,v40
+wk_pirro_2018,Pirrò (2018),about,co_transpositions,transpositions,,the object being diffracted is the concept of transposition,batch_05; batch_08; batch_f03; batch_f05,final; v40
+wk_pirro_2018,Pirrò (2018),about,co_diffraction,diffraction / diffractive methodology,,'I regard this text as a diffraction',batch_05,v40
+wk_pirro_2018,Pirrò (2018),about,co_complexification,complexification,,complexification opposed to analysis,batch_05,v40
+wk_martin_sayers_carroll_2025,"Martin, Sayers & Carroll (2025)",about,co_transpositions,transpositions,,full systematic derivation of transpositions as research protocol,batch_05; batch_f03,final; v40
+wk_martin_sayers_carroll_2025,"Martin, Sayers & Carroll (2025)",about,co_heroic_leadership,heroic leadership,,exemplar imaginary formation,batch_05; batch_f03,final; v40
+wk_martin_sayers_carroll_2025,"Martin, Sayers & Carroll (2025)",about,co_imaginary_formations,imaginary formations,,assessing and critiquing imaginary formations,batch_05; batch_f03,final; v40
+wk_kirschner_2016,Kirschner (2016),about,co_refusal_of_exhaustive_capture,refusal of exhaustive capture,,"impurities, mixtures, singularities resist categorization",batch_05,v40
+aw_animal_years,Animal Years,about,co_transpositions,transpositions,,tests transposition through relocation of entanglements,batch_05,v40
+pe_carol_taylor,Taylor (Carol A. Taylor),part_of_movement,mv_diffractive_practice_family,diffractive practice (family of methods),,one of the five diffractive practice accounts,batch_05,v40
+pe_sofie_sauzet,Sauzet (Sofie Sauzet),part_of_movement,mv_diffractive_practice_family,diffractive practice (family of methods),,one of the five diffractive practice accounts,batch_05,v40
+co_diffraction,diffraction / diffractive methodology,part_of_movement,mv_new_materialism,new materialism,,one of two method categories informing new materialist art practice as research,batch_05,v40
+co_transpositions,transpositions,part_of_movement,mv_new_materialism,new materialism,,one of two method categories informing new materialist art practice as research,batch_05,v40
+pe_iris_van_der_tuin,Iris van der Tuin,part_of_movement,mv_new_materialism,new materialism,,argues from the side of new materialist method,batch_05,v40
+pe_rick_dolphijn,Rick Dolphijn,part_of_movement,mv_new_materialism,new materialism,,argues from the side of new materialist method,batch_05,v40
+wk_schwab_transposition_2018,Schwab (2018),part_of_movement,mv_artistic_research,artistic research,,transposition in artistic research,batch_05,v40
+wk_kirkkopelto_2018,Kirkkopelto (2018),part_of_movement,mv_artistic_research,artistic research,,methodological hypothesis for artistic research,batch_05,v40
+wk_kirschner_2016,Kirschner (2016),part_of_movement,mv_artistic_research,artistic research,,extends refusal of exhaustive capture into artistic research,batch_05,v40
+wk_martin_sayers_carroll_2025,"Martin, Sayers & Carroll (2025)",part_of_movement,mv_organizational_studies,organizational studies,,working in organizational studies,batch_05,v40
+wk_martin_sayers_carroll_2025,"Martin, Sayers & Carroll (2025)",part_of_movement,mv_posthumanism,feminist posthumanism,,drawing on feminist posthumanist methodology,batch_05,v40
+pe_le_guin,Le Guin,part_of_movement,mv_feminist_speculative_fiction,feminist speculative fiction,,feminist speculative fiction author,batch_05,v40
+pe_griffith,Griffith,part_of_movement,mv_feminist_speculative_fiction,feminist speculative fiction,,feminist speculative fiction author,batch_05,v40
+pe_gilles_deleuze,Gilles Deleuze,influenced,pe_lucia_derrico,Lucia D'Errico,,D'Errico draws on Deleuze's two modalities of analogy,batch_05,v40
+pe_gregory_bateson,Gregory Bateson,influenced,mv_diffractive_practice_family,diffractive practice (family of methods),,Bateson's formulation is the methodological anchor,batch_05,v40
+pe_rosi_braidotti,Rosi Braidotti,influenced,wk_martin_sayers_carroll_2025,"Martin, Sayers & Carroll (2025)",,"grounded in Braidotti's relational ontology of becoming, nomadic subject position, affirmative ethics",batch_05; batch_f03,final; v40
+pe_iris_van_der_tuin,Iris van der Tuin,influenced,pe_anna_militsi,Anna Militsi,,Militsi extends van der Tuin's diffractive reading into viewing,batch_05; batch_06; batch_f04,final; v40
+pe_karen_barad,Karen Barad,influenced,pe_annette_arlander,Annette Arlander,,Arlander follows Barad's claim on entanglements,batch_05,v40
+wk_martin_et_al_2025,Martin et al. (2025),cited,wk_truman_2019,Truman (2019),,"Martin et al. 2025 p. 513, citing Truman, 2019",batch_06; batch_f04,final; v40
+wk_martin_et_al_2025,Martin et al. (2025),about,co_transpositions,transpositions,,transposition practices produce generative cracks,batch_06,v40
+pe_anna_militsi,Anna Militsi,coined,co_diffractive_watching,diffractive watching,2021,proposes the methodology of diffractive watching and watching diffractively,batch_06,v40
+wk_militsi_2021,Militsi (2021),cited,pe_brian_massumi,Brian Massumi,,"citing Massumi, 1987",batch_06,v40
+wk_militsi_2021,Militsi (2021),cited,pe_karen_barad,Karen Barad,,"citing Barad, 2010",batch_06,v40
+wk_militsi_2021,Militsi (2021),cited,pe_donna_haraway,Donna Haraway,,"citing Haraway, 2016 on diffraction vs reflexivity",batch_06,v40
+wk_militsi_2021,Militsi (2021),about,co_diffractive_watching,diffractive watching,,seven propositions for diffractive watching,batch_06; batch_f04,final; v40
+wk_militsi_2021,Militsi (2021),about,aw_blade_runner_1982,Bladerunner (1982),,illustrates the method through a diffractive watching of Bladerunner (1982),batch_06,v40
+wk_militsi_2021,Militsi (2021),about,aw_blade_runner_2049_2017,Blade Runner 2049 (2017),,illustrates the method through Blade Runner 2049 (2017),batch_06,v40
+co_diffractive_watching,diffractive watching,part_of_movement,mv_posthumanism,feminist posthumanism,,an affirmative act in accordance with posthumanist thought,batch_06,v40
+co_diffractive_watching,diffractive watching,part_of_movement,mv_diffractive_practice_family,diffractive practice (family of methods),,diffractive watching (Militsi) under the umbrella,batch_06; batch_f03,final; v40
+pe_viktor_shklovsky,Viktor Shklovsky,coined,co_ostranenie,ostranenie,1917,"introduced ostranenie, defamiliarization, as the defining operation of art",batch_06; batch_f04,final; v40
+pe_bertolt_brecht,Bertolt Brecht,coined,co_verfremdungseffekt,Verfremdungseffekt,,translated making strange into theatrical practice as the Verfremdungseffekt,batch_06; batch_f04,final; v40
+pe_viktor_shklovsky,Viktor Shklovsky,influenced,pe_bertolt_brecht,Bertolt Brecht,,Brecht translated Shklovsky's ostranenie into theatrical practice,batch_06; batch_f04,final; v40
+pe_viktor_shklovsky,Viktor Shklovsky,influenced,mv_new_materialism,new materialism,,new materialist art practice inherits and extends the making-strange tradition,batch_06; batch_f04,final; v40
+pe_bertolt_brecht,Bertolt Brecht,influenced,mv_new_materialism,new materialism,,new materialist art practice inherits and extends the making-strange tradition,batch_06; batch_f04,final; v40
+co_making_strange,making strange,part_of_movement,mv_surrealism,Surrealism,,"a central concept to both Surrealism and Dada (Andersen, 2012)",batch_06; batch_f04,final; v40
+co_making_strange,making strange,part_of_movement,mv_dada,Dada,,"a central concept to both Surrealism and Dada (Andersen, 2012)",batch_06; batch_f04,final; v40
+co_queering,queering,part_of_movement,mv_diffractive_practice_family,diffractive practice (family of methods),,the other aspect of the same onto-epistemological refusal,batch_06,v40
+pe_kristina_andersen,Andersen (Kristina Andersen),created,wk_andersen_2012,Making magic machines (2012),2012,,batch_06; batch_f04; batch_f06,final; v40
+pe_kristina_andersen,Andersen (Kristina Andersen),created,wk_andersen_2016,Making speculative technologies (2016),2016,the 2016 chapter,batch_06; batch_07; batch_f04; batch_f06,final; v40
+wk_andersen_2012,Making magic machines (2012),cited,pe_viktor_shklovsky,Viktor Shklovsky,,cites Shklovsky 1917 on making strange,batch_06; batch_f04,final; v40
+pe_kristina_andersen,Andersen (Kristina Andersen),developed,co_hypothetical_making,hypothetical making,2016,operational core of her own practice,batch_06; batch_f04,final; v40
+pe_kristina_andersen,Andersen (Kristina Andersen),developed,co_magic_machines,magic machines,2016,her hypothetical 'magic' machines as non-functional props,batch_06; batch_07; batch_f04; batch_f06,final; v40
+pe_theodor_adorno,Theodor Adorno,created,wk_negative_dialectics,Negative Dialectics,1966,Adorno's 1966 book,batch_06; batch_f04,final; v40
+pe_theodor_adorno,Theodor Adorno,developed,co_nonidentity,nonidentity,,"the problem of nonidentity, the permanent gap between a thing and any concept of it",batch_06,v40
+pe_theodor_adorno,Theodor Adorno,developed,co_utopian_imagination,utopian imagination,,the third of Adorno's four techniques,batch_06,v40
+pe_theodor_adorno,Theodor Adorno,influenced,pe_jane_bennett,Jane Bennett,,Bennett's four Adornian techniques come from her reading of Negative Dialectics,batch_06; batch_f04,final; v40
+wk_vibrant_matter_2010,Vibrant Matter (2010),cited,wk_negative_dialectics,Negative Dialectics,,Bennett reads Negative Dialectics as source of four comportments,batch_06; batch_f04,final; v40
+wk_vibrant_matter_2010,Vibrant Matter (2010),cited,wk_three_ecologies,The Three Ecologies,,"Guattari qtd. in Vibrant Matter, p. 114",batch_06,v40
+pe_jane_bennett,Jane Bennett,developed,co_enchantment,enchantment,,what she calls enchantment,batch_06,v40
+pe_jane_bennett,Jane Bennett,part_of_movement,mv_vital_materialism,vital materialism,,Bennett calls for vital materialists to linger,batch_06; batch_f01; batch_f04,final; v40
+pe_pereira,Pereira,created,aw_becoming_a_tomato,tomato-embodiment computational performance (Becoming a Tomato),,co-creator of the performance piece,batch_06; batch_09,v40
+pe_bruggave,Bruggave,created,aw_becoming_a_tomato,tomato-embodiment computational performance (Becoming a Tomato),,co-creator of the performance piece,batch_06; batch_09,v40
+wk_torosyan_et_al_2021,Torosyan et al. (2021),about,aw_becoming_a_tomato,tomato-embodiment computational performance (Becoming a Tomato),,Becoming a Tomato discussed in the Torosyan et al. track,batch_06,v40
+pe_bruno_latour,Bruno Latour,developed,co_blackboxing,blackboxing,,Latour's notion of blackboxing,batch_06,v40
+pe_donna_haraway,Donna Haraway,influenced,aw_becoming_a_tomato,tomato-embodiment computational performance (Becoming a Tomato),,motivated by Haraway's proposal to rewrite the story of the world,batch_06,v40
+pe_felix_guattari,Felix Guattari,created,wk_three_ecologies,The Three Ecologies,,,batch_06,v40
+pe_felix_guattari,Felix Guattari,developed,co_transversality,transversality,,Guattari calls this thinking transversally (The Three Ecologies),batch_06; batch_f04,final; v40
+pe_felix_guattari,Felix Guattari,developed,co_three_ecological_registers,three ecological registers,,"environmental, social, mental as interchangeable lenses forming a single whole",batch_06,v40
+pe_margaret_somerville,Margaret Somerville,created,wk_somerville_2016,Somerville (2016),2016,Somerville (2016),batch_06; batch_f02; batch_f04; batch_f05,final; v40
+pe_margaret_somerville,Margaret Somerville,developed,co_worlding,worlding,,names worlding in applied register as pre-methodological ground,batch_06; batch_f04,final; v40
+pe_donna_haraway,Donna Haraway,developed,co_worlding,worlding,,"Haraway's cosmological use of worlding — making kin, making worlds",batch_06,v40
+pe_maggie_maclure,MacLure,developed,co_data_that_glow,data that glow,2013,"MacLure describes the glow (MacLure, 2013)",batch_06,v40
+pe_margaret_somerville,Margaret Somerville,developed,co_data_that_glow,data that glow,2016,data that glow names the methodological consequence of worlding,batch_06; batch_f05,final; v40
+pe_maggie_maclure,MacLure,created,wk_maclure_2013,MacLure (2013),2013,,batch_06,v40
+pe_doreen_massey,Doreen Massey,created,wk_massey_2005,Massey (2005),2005,,batch_06; batch_f02,final; v40
+pe_doreen_massey,Doreen Massey,developed,co_event_of_place,event of place,,"Massey's event of place (Massey, 2005)",batch_06,v40
+wk_somerville_2016,Somerville (2016),cited,wk_maclure_2013,MacLure (2013),,"MacLure, 2013 cited in Somerville, 2016",batch_06,v40
+wk_somerville_2016,Somerville (2016),cited,wk_massey_2005,Massey (2005),,"citing Massey, 2005",batch_06; batch_f02,final; v40
+wk_somerville_2016,Somerville (2016),cited,pe_donna_haraway,Donna Haraway,,worlding resonates with Haraway's cosmological use,batch_06,v40
+wk_somerville_2016,Somerville (2016),cited,pe_gilles_deleuze,Gilles Deleuze,,following Deleuze's logic of sense as pre-personal and pre-conscious,batch_06,v40
+wk_somerville_2016,Somerville (2016),about,co_worlding,worlding,,,batch_06,v40
+wk_somerville_2016,Somerville (2016),about,co_data_that_glow,data that glow,,data that glow names the methodological consequence of worlding,batch_06; batch_f04; batch_f05,final; v40
+wk_somerville_2016,Somerville (2016),part_of_movement,mv_post_qualitative_inquiry,post-qualitative research,,post-qualitative environmental research project,batch_06,v40
+pe_riikka_makikoskela,Riikka Mäkikoskela,created,wk_makikoskela_2017,"Mäkikoskela, candy-laces artistic research study (2018)",2017,"cited as Mäkikoskela, 2018 in the final exam",batch_06; batch_07; batch_f04; batch_f06,final; v40
+pe_riikka_makikoskela,Riikka Mäkikoskela,developed,co_material_resistance,material resistance,2017,specified the resistance of the world into the material resistance,batch_06; batch_07,v40
+wk_makikoskela_2017,"Mäkikoskela, candy-laces artistic research study (2018)",about,co_chiasm,chiasm,,process named through chiasm and material resistance,batch_06; batch_07; batch_f04; batch_f06,final; v40
+wk_makikoskela_2017,"Mäkikoskela, candy-laces artistic research study (2018)",about,co_material_resistance,material resistance,,material resistance justifies the methodology of artistic research,batch_06; batch_07; batch_f04; batch_f06,final; v40
+wk_makikoskela_2017,"Mäkikoskela, candy-laces artistic research study (2018)",part_of_movement,mv_artistic_research,artistic research,,through the methodology of artistic research,batch_06,v40
+pe_michael_schwab,Schwab (Michael Schwab),developed,co_multistable_image,multistable image,,Schwab's multistable-image logic,batch_06; batch_f04,final; v40
+wk_makikoskela_2017,"Mäkikoskela, candy-laces artistic research study (2018)",about,co_localization,localization,,temporary localizations form a series of events,batch_07; batch_f06,final; v40
+pe_hans_jorg_rheinberger,Hans-Jörg Rheinberger,created,wk_transpositions_rheinberger_2018,Transpositions: Aesthetico-Epistemic Operators in Artistic Research (2018),2018,,batch_07,v40
+pe_hans_jorg_rheinberger,Hans-Jörg Rheinberger,developed,co_epistemic_thing,epistemic things,,'what he elsewhere calls epistemic things',batch_07; batch_f05,final; v40
+pe_hans_jorg_rheinberger,Hans-Jörg Rheinberger,developed,co_experimental_system,experimental system,,the epistemic thing drives a particular experimental system,batch_07; batch_f04; batch_f05,final; v40
+pe_hans_jorg_rheinberger,Hans-Jörg Rheinberger,developed,co_transpositions,transpositions,2018,transposition in the experimental sciences,batch_07,v40
+wk_transpositions_rheinberger_2018,Transpositions: Aesthetico-Epistemic Operators in Artistic Research (2018),about,co_transpositions,transpositions,,,batch_07,v40
+wk_transpositions_rheinberger_2018,Transpositions: Aesthetico-Epistemic Operators in Artistic Research (2018),about,co_epistemic_thing,epistemic things,,,batch_07,v40
+pe_esther_monivas_mayor,Esther Moñivas Mayor,created,wk_monivas_mayor_2016,Moñivas Mayor (2016),2016,in Raw Flows,batch_07; batch_f04,final; v40
+pe_taguhi_torosyan,Taguhi Torosyan,created,wk_interferences_of_the_multitude_2021,Interferences of the Multitude track text (2021),2021,"Torosyan et al., 2021",batch_07; batch_10,v40
+pe_patricia_reis,Patricia Reis,created,wk_interferences_of_the_multitude_2021,Interferences of the Multitude track text (2021),2021,"Torosyan et al., 2021",batch_07; batch_10,v40
+pe_stefanie_wuschitz,Stefanie Wuschitz,created,wk_interferences_of_the_multitude_2021,Interferences of the Multitude track text (2021),2021,"Torosyan et al., 2021",batch_07; batch_10,v40
+wk_interferences_of_the_multitude_2021,Interferences of the Multitude track text (2021),about,mv_new_materialism,new materialism,,authors apply a new materialist framework,batch_07,v40
+wk_interferences_of_the_multitude_2021,Interferences of the Multitude track text (2021),about,mv_posthumanism,feminist posthumanism,,posthumanist methods across media and disciplines,batch_07,v40
+wk_interferences_of_the_multitude_2021,Interferences of the Multitude track text (2021),about,mv_arts_based_research,arts-based research,,,batch_07,v40
+wk_interferences_of_the_multitude_2021,Interferences of the Multitude track text (2021),about,mv_techno_ecofeminism,techno-ecofeminism,,techno-ecofeminist imaginaries,batch_07,v40
+pe_taguhi_torosyan,Taguhi Torosyan,developed,co_interference,interference,2021,they define interference as critical disruptive process,batch_07,v40
+pe_patricia_reis,Patricia Reis,developed,co_interference,interference,2021,,batch_07,v40
+pe_stefanie_wuschitz,Stefanie Wuschitz,developed,co_interference,interference,2021,,batch_07,v40
+pe_taguhi_torosyan,Taguhi Torosyan,developed,co_trans_feminist_hacking,trans-feminist hacking,2021,trans-feminist hacking as artistic methodology,batch_07,v40
+pe_patricia_reis,Patricia Reis,developed,co_trans_feminist_hacking,trans-feminist hacking,2021,,batch_07,v40
+pe_stefanie_wuschitz,Stefanie Wuschitz,developed,co_trans_feminist_hacking,trans-feminist hacking,2021,,batch_07,v40
+co_trans_feminist_hacking,trans-feminist hacking,part_of_movement,mv_techno_ecofeminism,techno-ecofeminism,,techno-ecofeminist and trans-feminist hacking framework,batch_07; batch_f04,final; v40
+in_mz_baltazars_laboratory,Mz* Baltazar's Laboratory,located_in,pl_vienna,Vienna,,a feminist hackerspace in Vienna,batch_07; batch_10; batch_f04,final; v40
+wk_collectively_reimagining_technology_2021,Collectively Reimagining Technology (2021),presented_at,ev_interferences_of_the_multitude_track_2021,Interferences of the Multitude track (2021),2021,Session 1,batch_07,v40
+wk_collectively_reimagining_technology_2021,Collectively Reimagining Technology (2021),about,co_speculative_fabulation,speculative fabulation,,,batch_07,v40
+wk_collectively_reimagining_technology_2021,Collectively Reimagining Technology (2021),about,co_critical_making,critical making,,,batch_07,v40
+pe_marie_dietze,Marie Dietze,created,wk_diwo_sextech_paper_2021,"Dietze & Stewart, DIWO sextech paper (2021)",2021,,batch_07,v40
+pe_alice_stewart,Alice Stewart,created,wk_diwo_sextech_paper_2021,"Dietze & Stewart, DIWO sextech paper (2021)",2021,,batch_07,v40
+wk_diwo_sextech_paper_2021,"Dietze & Stewart, DIWO sextech paper (2021)",presented_at,ev_interferences_of_the_multitude_track_2021,Interferences of the Multitude track (2021),2021,Session 1,batch_07,v40
+wk_diwo_sextech_paper_2021,"Dietze & Stewart, DIWO sextech paper (2021)",about,co_do_it_with_others,Do-It-With-Others,,DIWO communities in sextech,batch_07,v40
+wk_diwo_sextech_paper_2021,"Dietze & Stewart, DIWO sextech paper (2021)",cited,wk_drip_app,drip (open-source menstruation app),,case of the open-source menstruation app drip,batch_07,v40
+pe_reisinger,Reisinger,created,wk_mineral_tour_paper_2021,"Reisinger & Lilja, mineral tour paper (2021)",2021,,batch_07,v40
+pe_lilja,Lilja,created,wk_mineral_tour_paper_2021,"Reisinger & Lilja, mineral tour paper (2021)",2021,,batch_07,v40
+wk_mineral_tour_paper_2021,"Reisinger & Lilja, mineral tour paper (2021)",presented_at,ev_interferences_of_the_multitude_track_2021,Interferences of the Multitude track (2021),2021,Session 2,batch_07,v40
+wk_mineral_tour_paper_2021,"Reisinger & Lilja, mineral tour paper (2021)",about,co_walking_lab,Walking Lab as a research method,,drawing inspiration from Walking Lab as a research method,batch_07,v40
+pe_walentynowicz,Walentynowicz,created,wk_hydrocommons_paper_2021,"Walentynowicz & Majewska-Güde, hydrocommons paper (2021)",2021,,batch_07,v40
+pe_majewska_gude,Majewska-Güde,created,wk_hydrocommons_paper_2021,"Walentynowicz & Majewska-Güde, hydrocommons paper (2021)",2021,,batch_07,v40
+wk_hydrocommons_paper_2021,"Walentynowicz & Majewska-Güde, hydrocommons paper (2021)",presented_at,ev_interferences_of_the_multitude_track_2021,Interferences of the Multitude track (2021),2021,Session 2,batch_07,v40
+wk_hydrocommons_paper_2021,"Walentynowicz & Majewska-Güde, hydrocommons paper (2021)",about,co_hydrofeminism,hydro-feminism,,feminist phenomenological hydro-logic,batch_07,v40
+wk_hydrocommons_paper_2021,"Walentynowicz & Majewska-Güde, hydrocommons paper (2021)",about,co_hydrocommons,hydrocommons,,FLOW residency as model for hydrocommons,batch_07,v40
+pe_pereira,Pereira,created,wk_becoming_a_tomato_2021,Becoming a Tomato (2021),2021,,batch_07,v40
+pe_bruggave,Bruggave,created,wk_becoming_a_tomato_2021,Becoming a Tomato (2021),2021,,batch_07,v40
+wk_becoming_a_tomato_2021,Becoming a Tomato (2021),presented_at,ev_interferences_of_the_multitude_track_2021,Interferences of the Multitude track (2021),2021,Session 2,batch_07,v40
+pe_sarah_ciston,Sarah Ciston,created,wk_creative_critical_code_paper_2021,"Ciston, creative-critical-code paper (2021)",2021,,batch_07,v40
+wk_creative_critical_code_paper_2021,"Ciston, creative-critical-code paper (2021)",presented_at,ev_interferences_of_the_multitude_track_2021,Interferences of the Multitude track (2021),2021,Session 3,batch_07,v40
+pe_sarah_ciston,Sarah Ciston,developed,co_creative_critical_code_writing,creative-critical-code writing,2021,proposing creative-critical-code writing,batch_07,v40
+wk_creative_critical_code_paper_2021,"Ciston, creative-critical-code paper (2021)",about,co_creative_critical_code_writing,creative-critical-code writing,,,batch_07,v40
+pe_pamela_varela,Pamela Varela,created,aw_transcendence_trance_n_dance,transcendence – trance 'n dance,2021,interactive performance,batch_07,v40
+aw_transcendence_trance_n_dance,transcendence – trance 'n dance,presented_at,ev_interferences_of_the_multitude_track_2021,Interferences of the Multitude track (2021),2021,Session 3,batch_07,v40
+pe_jessica_renfro,Jessica Renfro,created,wk_co_authoring_with_the_multitude_2021,Co-authoring with the multitude (2021),2021,iterative design framework,batch_07,v40
+wk_co_authoring_with_the_multitude_2021,Co-authoring with the multitude (2021),presented_at,ev_interferences_of_the_multitude_track_2021,Interferences of the Multitude track (2021),2021,Session 3,batch_07,v40
+pe_hillary,Hillary,created,wk_hillary_2021,Hillary (2021),2021,,batch_07,v40
+pe_hillary,Hillary,cited,pe_karen_barad,Karen Barad,,Hillary draws on Barad's definition of diffraction directly,batch_07,v40
+wk_hillary_2021,Hillary (2021),about,co_intra_action,intra-action,,each method item names a mode of intra-action with the site,batch_07,v40
+wk_hillary_2021,Hillary (2021),about,co_diffraction,diffraction / diffractive methodology,,,batch_07,v40
+wk_hillary_2021,Hillary (2021),about,co_apparatus,apparatus,,making the apparatus clear,batch_07,v40
+wk_hillary_2021,Hillary (2021),about,co_onto_epistemology,onto-epistemology,,inseparability of knowing/knower/known,batch_07,v40
+wk_andersen_2016,Making speculative technologies (2016),cited,wk_valente_2013,Valente (2013),,"Valente, 2013, as cited in Andersen (2016)",batch_07; batch_f06,final; v40
+pe_valente,Valente,created,wk_valente_2013,Valente (2013),2013,,batch_07; batch_f06,final; v40
+pe_kristina_andersen,Andersen (Kristina Andersen),developed,co_marking,marking,,borrowing 'marking' from dance rehearsal,batch_07; batch_f06,final; v40
+wk_andersen_2016,Making speculative technologies (2016),about,co_making_strange,making strange,,investigating magic machines leans on making strange (or othering),batch_07; batch_f06,final; v40
+wk_andersen_2016,Making speculative technologies (2016),about,co_magic_machines,magic machines,,,batch_07; batch_f06,final; v40
+pe_henk_borgdorff,Henk Borgdorff,created,wk_borgdorff_2012,Borgdorff (2012),2012,"Borgdorff, 2012",batch_07; batch_08; batch_f04,final; v40
+wk_borgdorff_2012,Borgdorff (2012),about,co_art_practice_as_research,art practice as research,,Borgdorff's claims about art practice as research,batch_07; batch_08,v40
+wk_borgdorff_2012,Borgdorff (2012),cited,wk_dublin_descriptors,Dublin Descriptors,,cites the Dublin Descriptors on inclusive understanding of research,batch_07; batch_f04,final; v40
+pe_graeme_sullivan,Graeme Sullivan,created,wk_sullivan_2006,Sullivan (2006),2006,research as transformative act,batch_07; batch_f01; batch_f04,final; v40
+wk_sullivan_2006,Sullivan (2006),about,co_art_practice_as_research,art practice as research,,art practice conceptualized as research,batch_07; batch_f04,final; v40
+pe_graeme_sullivan,Graeme Sullivan,developed,co_art_practice_as_research,art practice as research,2006,art practice conceptualized as a form of research,batch_07,v40
+pe_christopher_frayling,Christopher Frayling,created,wk_frayling_1993,Frayling (1993),1993,"(Frayling, 1993)",batch_07; batch_08; batch_f04,final; v40
+pe_christopher_frayling,Christopher Frayling,developed,co_research_small_r_big_r,research with a small r / big R,1993,distinguishes small-r from big-R research,batch_07; batch_f04,final; v40
+pe_georgios_kaounas,Georgios Kaounas,created,wk_kaounas_2024,Kaounas (2024),2024,Kaounas (2024) framework of artistic research as epistemic culture,batch_07; batch_08; batch_f05,final; v40
+pe_paulo_de_assis,Paulo de Assis,created,wk_de_assis_derrico_2019,de Assis & D'Errico (2019),2019,"de Assis & D'Errico, 2019",batch_08; batch_f04; batch_f06,final; v40
+pe_lucia_derrico,Lucia D'Errico,created,wk_de_assis_derrico_2019,de Assis & D'Errico (2019),2019,"de Assis & D'Errico, 2019",batch_08; batch_f04; batch_f06,final; v40
+pe_boel_christensen_scheel,Boel Christensen-Scheel,created,wk_christensen_scheel_et_al_2022,Christensen-Scheel et al. (2022),2022,"Christensen-Scheel et al., 2022",batch_08; batch_f04,final; v40
+pe_venke_aure,Venke Aure,created,wk_christensen_scheel_et_al_2022,Christensen-Scheel et al. (2022),2022,"Christensen-Scheel et al., 2022",batch_08; batch_f04,final; v40
+pe_kristin_bergaust,Kristin Bergaust,created,wk_christensen_scheel_et_al_2022,Christensen-Scheel et al. (2022),2022,"Christensen-Scheel et al., 2022",batch_08; batch_f04,final; v40
+pe_esa_kirkkopelto,Esa Kirkkopelto,created,wk_kirkkopelto_2015,Kirkkopelto (2015),2015,"Kirkkopelto, 2015",batch_08; batch_f04,final; v40
+pe_esa_kirkkopelto,Esa Kirkkopelto,created,wk_abandoning_art_in_the_name_of_art_2018,"""Abandoning Art in the Name of Art"" (2018)",2018,chapter 'Abandoning Art in the Name of Art',batch_08,v40
+pe_karin_knorr_cetina,Karin Knorr Cetina,created,wk_knorr_cetina_2007,Knorr Cetina (2007),2007,"Knorr Cetina, 2007",batch_08,v40
+pe_rosi_braidotti,Rosi Braidotti,created,wk_transpositions_braidotti,Transpositions (Braidotti),,"book Transpositions, undated in text",batch_08,v40
+pe_trinh_t_minh_ha,Trinh T. Minh-ha,created,wk_trinh_1992,Minh-ha (1992),1992,"Trinh, 1992",batch_08; batch_f03,final; v40
+pe_donna_haraway,Donna Haraway,created,wk_haraway_1992,Haraway (1992),1992,"Haraway, 1992",batch_08,v40
+pe_donna_haraway,Donna Haraway,created,wk_haraway_1988,Haraway (1988),1988,"Haraway, 1988",batch_08,v40
+pe_adrienne_rich,Adrienne Rich,created,wk_rich_1984,Rich (1984),1984,"Rich, 1984",batch_08,v40
+pe_barbara_bolt,Barbara Bolt,created,wk_bolt_2003,Bolt (2003),2003,"Bolt, 2003",batch_08,v40
+pe_barbara_bolt,Barbara Bolt,created,wk_art_beyond_representation_2004,Art Beyond Representation (2004),2004,"Art Beyond Representation, 2004",batch_08; batch_f05,final; v40
+pe_judith_butler,Judith Butler,created,wk_bodies_that_matter,Bodies That Matter,1993,"Bodies That Matter, undated in text",batch_08; batch_f05,final; v40
+pe_osborne,Osborne,created,wk_osborne_segal_1994,Osborne and Segal (1994),1994,Osborne and Segal 1994,batch_08,v40
+pe_segal,Segal,created,wk_osborne_segal_1994,Osborne and Segal (1994),1994,Osborne and Segal 1994,batch_08,v40
+pe_laura_cull_o_maoilearca,Cull Ó Maoilearca,created,wk_cull_o_maoilearca_2019,Cull Ó Maoilearca (2019),2019,Cull Ó Maoilearca (2019),batch_08; batch_f05,final; v40
+pe_christopher_frayling,Christopher Frayling,coined,co_research_into_art_and_design,Research into art and design,1993,"distinguishes the three categories (Frayling, 1993, p. 5)",batch_08,v40
+pe_christopher_frayling,Christopher Frayling,coined,co_research_through_art_and_design,Research through art and design,1993,"distinguishes the three categories (Frayling, 1993, p. 5)",batch_08,v40
+pe_christopher_frayling,Christopher Frayling,coined,co_research_for_art_and_design,Research for art and design,1993,"distinguishes the three categories (Frayling, 1993, p. 5)",batch_08,v40
+pe_karin_knorr_cetina,Karin Knorr Cetina,developed,co_epistemic_culture,epistemic culture,,text attributes the definition of epistemic cultures to Knorr Cetina (2007),batch_08; batch_f05,final; v40
+pe_georgios_kaounas,Georgios Kaounas,developed,co_machineries_of_knowing,machineries of knowing,2024,"three machineries of knowing (Kaounas, 2024, p. 10)",batch_08,v40
+pe_georgios_kaounas,Georgios Kaounas,developed,co_epistemic_subjects,epistemic subjects,2024,defines the machinery of epistemic subjects,batch_08,v40
+pe_georgios_kaounas,Georgios Kaounas,developed,co_epistemic_objects,epistemic objects,2024,defines the machinery of epistemic objects,batch_08,v40
+pe_georgios_kaounas,Georgios Kaounas,developed,co_epistemic_practices,epistemic practices,2024,defines the machinery of epistemic practices,batch_08,v40
+pe_esa_kirkkopelto,Esa Kirkkopelto,coined,co_transponent,transponent,2018,"the transposed element becomes the transponent (Kirkkopelto, 2018, pp. 37-38)",batch_08,v40
+pe_barbara_bolt,Barbara Bolt,coined,co_working_hot,working hot,2003,"Bolt names this condition of practice 'working hot' (Bolt, 2003, p. 276)",batch_08; batch_f05,final; v40
+pe_barbara_bolt,Barbara Bolt,developed,co_methexis,methexis,2003,develops her notion of methexis drawing on Carter,batch_08; batch_f05,final; v40
+pe_paul_carter,Paul Carter,coined,co_concurrent_actual_production,concurrent actual production,,Paul Carter's phrase,batch_08; batch_f05,final; v40
+pe_judith_butler,Judith Butler,developed,co_materialisation,materialisation,,materialisation through performance in Bodies That Matter,batch_08,v40
+pe_charles_sanders_peirce,Peirce,developed,co_index,index (Peirce),,Peirce's index; direct causal relation between thing and sign,batch_08; batch_f05,final; v40
+pe_rosi_braidotti,Rosi Braidotti,developed,co_nomadic_subjectivity,non-unitary (nomadic) subjectivity,2018,"non-unitary subjectivity as nomadic, embedded, embodied",batch_08,v40
+pe_david_pirro,David Pirrò,developed,co_facta,data as facta,2018,develops the notion of data through the facta argument,batch_08; batch_f05,final; v40
+wk_kaounas_2024,Kaounas (2024),cited,wk_knorr_cetina_2007,Knorr Cetina (2007),,"Knorr Cetina, 2007, p. 363, quoted in Kaounas, 2024, p. 9",batch_08,v40
+wk_bolt_2003,Bolt (2003),cited,wk_bodies_that_matter,Bodies That Matter,,Bolt quoting Butler's Bodies That Matter,batch_08,v40
+wk_bolt_2003,Bolt (2003),cited,wk_osborne_segal_1994,Osborne and Segal (1994),,"Butler in Osborne and Segal 1994, quoted in Bolt, 2003, p. 270",batch_08,v40
+wk_bolt_2003,Bolt (2003),cited,pe_paul_carter,Paul Carter,,drawing on Paul Carter's phrase,batch_08,v40
+wk_bolt_2003,Bolt (2003),cited,pe_charles_sanders_peirce,Peirce,,Bolt turns to Peirce's index,batch_08,v40
+pe_judith_butler,Judith Butler,influenced,pe_barbara_bolt,Barbara Bolt,,Butler provides the starting point for Bolt's account,batch_08,v40
+pe_judith_butler,Judith Butler,influenced,pe_karen_barad,Karen Barad,,posthumanist performativity as diffractive elaboration of Butler and Haraway,batch_08; batch_f01; batch_f05,final; v40
+pe_karin_knorr_cetina,Karin Knorr Cetina,influenced,pe_georgios_kaounas,Georgios Kaounas,,Kaounas uses Knorr Cetina's definition of epistemic cultures,batch_08; batch_f05,final; v40
+mv_indigenous_australian_painting,Indigenous Australian painting,influenced,pe_barbara_bolt,Barbara Bolt,,Bolt draws from Indigenous Australian painting,batch_08; batch_f05,final; v40
+wk_frayling_1993,Frayling (1993),about,mv_artistic_research,artistic research,,categories of research in art and design,batch_08,v40
+wk_de_assis_derrico_2019,de Assis & D'Errico (2019),about,mv_artistic_research,artistic research,,"describes artistic research as practice-based, practice-led, practice-driven",batch_08; batch_f04,final; v40
+wk_christensen_scheel_et_al_2022,Christensen-Scheel et al. (2022),about,mv_artistic_research,artistic research,,the field of artistic research is constituted not by one mode,batch_08; batch_f04,final; v40
+wk_kirkkopelto_2015,Kirkkopelto (2015),about,mv_artistic_research,artistic research,,what distinguishes artistic research from art practice,batch_08,v40
+wk_kaounas_2024,Kaounas (2024),about,mv_artistic_research,artistic research,,how participants make sense of artistic creation as research,batch_08; batch_f05,final; v40
+wk_kaounas_2024,Kaounas (2024),about,co_epistemic_culture,epistemic culture,,approaches artistic research as an epistemic culture,batch_08; batch_f05,final; v40
+wk_kaounas_2024,Kaounas (2024),about,co_tacit_knowledge,tacit knowledge,,one of three knowledge-producing practices identified,batch_08; batch_f05,final; v40
+wk_kaounas_2024,Kaounas (2024),about,co_circularity_of_artistic_research,circularity of artistic research,,circularity of artistic research as epistemic practice,batch_08; batch_f05,final; v40
+wk_documentary_is_not_a_name_1990,Documentary Is/Not a Name (1990),about,co_interval,the interval,,"the interval, a break without which meaning would be fixed",batch_08; batch_f03; batch_f05,final; v40
+wk_trinh_1992,Minh-ha (1992),about,co_speaking_nearby,speaking nearby,,speaking nearby described in the 1992 text,batch_08,v40
+wk_abandoning_art_in_the_name_of_art_2018,"""Abandoning Art in the Name of Art"" (2018)",about,co_transpositions,transpositions,,transposition of artistic procedure into another field,batch_08,v40
+wk_abandoning_art_in_the_name_of_art_2018,"""Abandoning Art in the Name of Art"" (2018)",about,co_transponent,transponent,,clearest account of the transponent,batch_08,v40
+wk_pirro_2018,Pirrò (2018),about,co_facta,data as facta,,data's double nature as facta,batch_08; batch_f05,final; v40
+wk_transpositions_braidotti,Transpositions (Braidotti),about,co_nomadic_subjectivity,non-unitary (nomadic) subjectivity,,deals with implications of non-unitary subjectivity for accountability,batch_08,v40
+wk_bolt_2003,Bolt (2003),about,co_performativity,performativity,,engages Butler's performativity and materialisation,batch_08,v40
+wk_bolt_2003,Bolt (2003),about,co_working_hot,working hot,,names working hot,batch_08,v40
+wk_art_beyond_representation_2004,Art Beyond Representation (2004),about,co_performativity,performativity,,"art is a performative, rather than merely a representational practice",batch_08; batch_f05,final; v40
+wk_cull_o_maoilearca_2019,Cull Ó Maoilearca (2019),about,mv_artistic_research,artistic research,,artistic research in performance; representationalist vs performative paradigms,batch_08,v40
+co_speaking_nearby,speaking nearby,part_of_movement,mv_diffractive_practice_family,diffractive practice (family of methods),,"interval, speaking nearby, partiality practiced before consolidated as named method",batch_08,v40
+co_apparatus,apparatus,part_of_movement,mv_new_materialism,new materialism,,apparatuses constitutive in new materialist accounts,batch_08,v40
+co_intra_action,intra-action,part_of_movement,mv_new_materialism,new materialism,,phenomena constituted through intra-action,batch_08,v40
+co_new_materialist_art_practice_as_research,new materialist art practice as research,part_of_movement,mv_new_materialism,new materialism,,new materialist art practice as research,batch_08,v40
+co_art_practice_as_research,art practice as research,part_of_movement,mv_artistic_research,artistic research,,inquiry conducted in and through artistic practice,batch_08,v40
+pe_barbara_bolt,Barbara Bolt,created,wk_performative_paradigm_creative_arts_2009,"""A Performative Paradigm for the Creative Arts?"" (2009)",2009,"Bolt, 'A Performative Paradigm for the Creative Arts?'",batch_09; batch_f05,final; v40
+pe_barbara_bolt,Barbara Bolt,created,wk_artistic_research_performative_paradigm_2016,"""Artistic Research: A Performative Paradigm?"" (2016)",2016,"Bolt, 'Artistic Research: A Performative Paradigm?'",batch_09; batch_f05; batch_f06,final; v40
+pe_barbara_bolt,Barbara Bolt,created,wk_bolt_appropriation_essay_2015,Bolt essay on appropriation (2015),2015,later essay on appropriation,batch_09,v40
+wk_performative_paradigm_creative_arts_2009,"""A Performative Paradigm for the Creative Arts?"" (2009)",about,co_performativity,performativity,,asks what performativity is,batch_09,v40
+wk_performative_paradigm_creative_arts_2009,"""A Performative Paradigm for the Creative Arts?"" (2009)",about,co_performative_research_paradigm,performative research paradigm,,what would be the characteristics of a performative research paradigm?,batch_09; batch_f05,final; v40
+wk_artistic_research_performative_paradigm_2016,"""Artistic Research: A Performative Paradigm?"" (2016)",about,co_performative_research_paradigm,performative research paradigm,,answers through the performative force of the research,batch_09; batch_f05,final; v40
+pe_barbara_bolt,Barbara Bolt,developed,co_repetition_with_difference,repetition with difference,2016,performative paradigm operates according to repetition with difference,batch_09,v40
+pe_riikka_makikoskela,Riikka Mäkikoskela,created,wk_from_far_to_close_2017,"""From Far to Close (and Back)"" (2017)",2017,2017 article on three-dimensional visual art practice,batch_09,v40
+pe_riikka_makikoskela,Riikka Mäkikoskela,created,wk_from_hand_to_mouth,From Hand to Mouth,,narrative work containing the candy lace passage,batch_09,v40
+pe_riikka_makikoskela,Riikka Mäkikoskela,coined,co_material_resistance,material resistance,2017,specified the resistance of the world into 'material resistance',batch_09,v40
+pe_riikka_makikoskela,Riikka Mäkikoskela,developed,co_artistic_thinking,artistic thinking,,movement between materiality and conceptuality,batch_09,v40
+wk_from_far_to_close_2017,"""From Far to Close (and Back)"" (2017)",about,co_material_resistance,material resistance,,material resistance as main element justifying artistic-research methodology,batch_09,v40
+wk_from_far_to_close_2017,"""From Far to Close (and Back)"" (2017)",about,co_chiasm,chiasm,,chiasmatic relationship between artist and work,batch_09,v40
+wk_from_far_to_close_2017,"""From Far to Close (and Back)"" (2017)",about,co_actant,actant,,examines material as an actant,batch_09,v40
+wk_from_far_to_close_2017,"""From Far to Close (and Back)"" (2017)",about,mv_artistic_research,artistic research,,example of how artistic research challenges research paradigms,batch_09,v40
+pe_riikka_makikoskela,Riikka Mäkikoskela,part_of_movement,mv_artistic_research,artistic research,,studies 3D art practice through the methodology of artistic research,batch_09; batch_f06,final; v40
+mv_new_materialism,new materialism,influenced,wk_from_far_to_close_2017,"""From Far to Close (and Back)"" (2017)",,new materialism adds the dimension of active material to her account,batch_09,v40
+pe_esa_kirkkopelto,Esa Kirkkopelto,developed,co_epistemic_thing,epistemic things,,artistic researcher stages invented concepts as epistemic things,batch_09,v40
+pe_jefferies,Jefferies,created,wk_enchantment_of_textiles_2019,The Enchantment of Textiles catalogue (2019),2019,"catalogue author (Jefferies, 2019)",batch_09,v40
+pe_bergen,Bergen,created,wk_enchantment_of_textiles_2019,The Enchantment of Textiles catalogue (2019),2019,"catalogue contributor (Bergen, 2019)",batch_09,v40
+wk_enchantment_of_textiles_2019,The Enchantment of Textiles catalogue (2019),about,co_research_creation,research-creation,,research-creation opens up new fields of understanding,batch_09,v40
+wk_enchantment_of_textiles_2019,The Enchantment of Textiles catalogue (2019),about,co_sensory_ethnography,sensory ethnography,,'Critical Methodologies' section on sensory ethnography,batch_09,v40
+wk_enchantment_of_textiles_2019,The Enchantment of Textiles catalogue (2019),about,co_distributed_agency,distributed agency,,agency not assigned to the human participant alone,batch_09,v40
+pe_bergen,Bergen,cited,pe_jane_bennett,Jane Bennett,,Bergen cites Bennett on bodies enhancing power in a heterogeneous assemblage,batch_09,v40
+pe_jane_bennett,Jane Bennett,developed,co_assemblage,assemblage,,bodies enhance their power in or as a heterogeneous assemblage,batch_09,v40
+pe_jorgensen,Jorgensen,created,wk_jorgensen_savat_2019,Jorgensen & Savat (2019),2019,co-author,batch_09,v40
+pe_savat,Savat,created,wk_jorgensen_savat_2019,Jorgensen & Savat (2019),2019,co-author,batch_09,v40
+wk_jorgensen_savat_2019,Jorgensen & Savat (2019),about,mv_bioart,bioart,,"SymbioticA bioart practice: ethics, permissions, care obligations as research",batch_09,v40
+wk_wolfe_2010,Wolfe (2010),about,pe_brian_eno,Brian Eno,,reads Eno's practice; quotes Eno on damaged camera and melodic speech,batch_09,v40
+wk_wolfe_2010,Wolfe (2010),about,pe_david_byrne,David Byrne,,reads Byrne's practice; quotes Byrne on throwing vocals against tracks,batch_09,v40
+wk_wolfe_2010,Wolfe (2010),cited,pe_jacques_derrida,Jacques Derrida,,draws on Derrida for analog/digital distinction,batch_09,v40
+wk_wolfe_2010,Wolfe (2010),cited,pe_bernard_stiegler,Stiegler,,draws on Stiegler for grammaticalization,batch_09,v40
+wk_wolfe_2010,Wolfe (2010),about,co_grammaticalization,grammaticalization,,digital media depend on grammaticalization vs analog real magnitudes,batch_09,v40
+pe_jacques_derrida,Jacques Derrida,influenced,pe_cary_wolfe,Cary Wolfe,,Wolfe drawing on Derrida,batch_09,v40
+pe_bernard_stiegler,Stiegler,influenced,pe_cary_wolfe,Cary Wolfe,,Wolfe drawing on Stiegler,batch_09,v40
+pe_brian_eno,Brian Eno,created,aw_my_life_in_the_bush_of_ghosts,My Life in the Bush of Ghosts,,co-creator of the record,batch_09,v40
+pe_david_byrne,David Byrne,created,aw_my_life_in_the_bush_of_ghosts,My Life in the Bush of Ghosts,,co-creator of the record,batch_09,v40
+pe_taguhi_torosyan,Taguhi Torosyan,created,wk_torosyan_et_al_2021,Torosyan et al. (2021),2021,"lead author (Torosyan et al., 2021)",batch_09; batch_f04,final; v40
+wk_torosyan_et_al_2021,Torosyan et al. (2021),about,co_co_becoming,co-becoming,,"blurring human/non-human, self/other, natural/cultural in co-becoming",batch_09,v40
+wk_torosyan_et_al_2021,Torosyan et al. (2021),about,co_implosive_writing,implosive writing,,framework incorporating an implosive writing method,batch_09,v40
+wk_torosyan_et_al_2021,Torosyan et al. (2021),about,mv_artistic_research,artistic research,,describes Becoming a Tomato as artistic research,batch_09,v40
+wk_torosyan_et_al_2021,Torosyan et al. (2021),cited,pe_pereira,Pereira,,discusses Pereira and Bruggave's performance piece,batch_09,v40
+wk_torosyan_et_al_2021,Torosyan et al. (2021),cited,pe_bruggave,Bruggave,,discusses Pereira and Bruggave's performance piece,batch_09,v40
+pe_karmen_franinovic,Karmen Franinović,created,wk_raw_flows_2016,Raw Flows (2016),2016,Franinović (2016) / Raw Flows,batch_09; batch_f06,final; v40
+pe_karmen_franinovic,Karmen Franinović,coined,co_seed_space,seeding / seeds for material events,2016,defines seed-spaces as constraints permanently open to change,batch_09,v40
+pe_karmen_franinovic,Karmen Franinović,coined,co_fluid_affordance,fluid affordance,2016,'Fluid affordance is the name she gives this',batch_09,v40
+pe_karmen_franinovic,Karmen Franinović,presented_at,ev_material_aktiv_denken,Material Aktiv Denken workshop,,organized/describes the Material Aktiv Denken workshop,batch_09; batch_f04; batch_f06,final; v40
+wk_raw_flows_2016,Raw Flows (2016),about,co_seed_space,seeding / seeds for material events,,seed-spaces for material events,batch_09; batch_f06,final; v40
+wk_raw_flows_2016,Raw Flows (2016),about,co_third_space,third space,,participatory workshops as third space producing shared knowledge,batch_09; batch_f06,final; v40
+pe_karmen_franinovic,Karmen Franinović,developed,co_seed_spaces,seed-spaces,2016,"seed-spaces workshops as pedagogy-as-apparatus, open to change and new iterations (Franinović, 2016)",batch_10,v40
+wk_interferences_of_the_multitude_2021,Interferences of the Multitude track text (2021),presented_at,ev_politics_of_the_machines_2021,"3rd Politics of the Machines Conference, Rogue Research edition (Berlin, 2021)",2021,track introduction presented during the Rogue Research edition,batch_10,v40
+ev_politics_of_the_machines_2021,"3rd Politics of the Machines Conference, Rogue Research edition (Berlin, 2021)",located_in,pl_berlin,Berlin,2021,"Berlin, September 2021",batch_10,v40
+wk_interferences_of_the_multitude_2021,Interferences of the Multitude track text (2021),cited,wk_meeting_the_universe_halfway_2007,Meeting the Universe Halfway (2007),,cites Barad's account of intra-action (Barad 2007),batch_10,v40
+wk_interferences_of_the_multitude_2021,Interferences of the Multitude track text (2021),cited,pe_donna_haraway,Donna Haraway,,'becoming with' (Haraway 2013); specific work not identifiable from text,batch_10,v40
+pe_donna_haraway,Donna Haraway,developed,co_becoming_with,becoming-with,,attributed via '(Haraway 2013)',batch_10,v40
+wk_interferences_of_the_multitude_2021,Interferences of the Multitude track text (2021),cited,pe_antonio_negri,Antonio Negri,,multitude drawn from Negri and Hardt,batch_10,v40
+wk_interferences_of_the_multitude_2021,Interferences of the Multitude track text (2021),cited,pe_michael_hardt,Michael Hardt,,multitude drawn from Negri and Hardt,batch_10,v40
+pe_antonio_negri,Antonio Negri,developed,co_multitude,multitude,,neo-Spinozist notion of multitude,batch_10,v40
+pe_michael_hardt,Michael Hardt,developed,co_multitude,multitude,,neo-Spinozist notion of multitude,batch_10,v40
+pe_antonio_negri,Antonio Negri,developed,co_potentia,potentia,,potentia/potestas distinction,batch_10,v40
+pe_michael_hardt,Michael Hardt,developed,co_potentia,potentia,,potentia/potestas distinction,batch_10,v40
+wk_interferences_of_the_multitude_2021,Interferences of the Multitude track text (2021),about,co_interference,interference,,interference at the center of their account,batch_10,v40
+wk_interferences_of_the_multitude_2021,Interferences of the Multitude track text (2021),about,co_diffraction,diffraction / diffractive methodology,,diffraction at the center of their account,batch_10,v40
+wk_interferences_of_the_multitude_2021,Interferences of the Multitude track text (2021),about,co_trans_feminist_hacking,trans-feminist hacking,,trans-feminist hacking as the practical form of the track,batch_10,v40
+wk_interferences_of_the_multitude_2021,Interferences of the Multitude track text (2021),about,co_techno_ecofeminist_imaginaries,techno-ecofeminist imaginaries,,arts-based research into new modes of techno-ecofeminist imaginaries,batch_10,v40
+wk_interferences_of_the_multitude_2021,Interferences of the Multitude track text (2021),about,co_multitude,multitude,,track grounded in the idea of multitude as agent(s) of potentia,batch_10,v40
+wk_interferences_of_the_multitude_2021,Interferences of the Multitude track text (2021),part_of_movement,mv_new_materialism,new materialism,,posthumanist and new materialist grounding,batch_10,v40
+wk_interferences_of_the_multitude_2021,Interferences of the Multitude track text (2021),part_of_movement,mv_posthumanism,feminist posthumanism,,posthumanist and new materialist grounding,batch_10,v40
+co_trans_feminist_hacking,trans-feminist hacking,part_of_movement,mv_diffractive_practice_family,diffractive practice (family of methods),,applies diffractive practice to bridge thinking of and doing with difference,batch_10,v40
+aw_collective_avatar_game,multiplayer game with collectively navigated avatar,presented_at,ev_politics_of_the_machines_2021,"3rd Politics of the Machines Conference, Rogue Research edition (Berlin, 2021)",2021,project gathered in the Interferences track,batch_10,v40
+aw_becoming_a_tomato,tomato-embodiment computational performance (Becoming a Tomato),presented_at,ev_politics_of_the_machines_2021,"3rd Politics of the Machines Conference, Rogue Research edition (Berlin, 2021)",2021,project gathered in the Interferences track,batch_10,v40
+aw_hydrocommons_barge_residency,floating barge artist residency (feminist hydro-commons),presented_at,ev_politics_of_the_machines_2021,"3rd Politics of the Machines Conference, Rogue Research edition (Berlin, 2021)",2021,project gathered in the Interferences track,batch_10,v40
+aw_vaginal_muscle_dance_performance,trans-feminist dance performance with vaginal muscle reader,presented_at,ev_politics_of_the_machines_2021,"3rd Politics of the Machines Conference, Rogue Research edition (Berlin, 2021)",2021,project gathered in the Interferences track,batch_10,v40
+wk_feminist_sextech_paper_2021,paper on open-source feminist sextech (2021),presented_at,ev_politics_of_the_machines_2021,"3rd Politics of the Machines Conference, Rogue Research edition (Berlin, 2021)",2021,paper gathered in the Interferences track,batch_10,v40
+pe_cher_hill,Hill (Cher Hill),developed,co_apparatus,apparatus,2017,"experimenting with a diffractive apparatus as onto-epistemological material practice (Hill, 2017)",batch_10,v40
+pe_cher_hill,Hill (Cher Hill),part_of_movement,mv_new_materialism,new materialism,,posthumanist and new materialist pedagogical methods (Part Two educational work),batch_10,v40
+pe_carol_taylor,Taylor (Carol A. Taylor),part_of_movement,mv_new_materialism,new materialism,,posthumanist and new materialist pedagogical methods (Part Two educational work),batch_10,v40
+pe_sofie_sauzet,Sauzet (Sofie Sauzet),part_of_movement,mv_new_materialism,new materialism,,posthumanist and new materialist pedagogical methods (Part Two educational work),batch_10,v40
+pe_nick_fox,Fox (Nick Fox),part_of_movement,mv_posthumanism,feminist posthumanism,,"Fox and Alldred are working within posthumanist methodology, not against it",batch_10; batch_f06,final; v40
+pe_pam_alldred,Alldred (Pam Alldred),part_of_movement,mv_posthumanism,feminist posthumanism,,"Fox and Alldred are working within posthumanist methodology, not against it",batch_10; batch_f06,final; v40
+pe_barbara_bolt,Barbara Bolt,part_of_movement,mv_artistic_research,artistic research,,writes on artistic research's credibility and its shadow relation to science-as-research (2016),batch_10,v40
+pe_michael_schwab,Schwab (Michael Schwab),part_of_movement,mv_artistic_research,artistic research,,on reflection demands in art education and artistic research contexts (2018),batch_10,v40
+pe_luc_dobereiner,Luc Döbereiner,part_of_movement,mv_artistic_research,artistic research,,artistic research challenges propositional semantics (2019),batch_10,v40
+pe_paulo_de_assis,Paulo de Assis,part_of_movement,mv_artistic_research,artistic research,,artistic research's resistance to definitions and closures (2019),batch_10,v40
+pe_lucia_derrico,Lucia D'Errico,part_of_movement,mv_artistic_research,artistic research,,artistic research's resistance to definitions and closures (2019),batch_10,v40
+wk_posthumanist_performativity_2003,Posthumanist Performativity (2003),about,co_representationalism,representationalism,2003,representationalism a prisoner of the problematic metaphysics it postulates,batch_10; batch_f06,final; v40
+pe_kristina_andersen,Andersen (Kristina Andersen),developed,co_dim_concern,dim concern,,concept sweep: attributed in text,batch_12,v40
+pe_karen_barad,Karen Barad,developed,co_diffractive_elaboration,diffractive elaboration,,concept sweep: attributed in text,batch_12,v40
+pe_samantha_frost,Samantha Frost,developed,co_subjectivist_potency,subjectivist potency,,concept sweep: attributed in text,batch_12,v40
+pe_gregory_bateson,Gregory Bateson,developed,co_recursiveness,recursiveness,,concept sweep: attributed in text,batch_12,v40
+pe_jane_bennett,Jane Bennett,developed,co_dull_matter,dull matter,,concept sweep: attributed in text,batch_12,v40
+co_dull_matter,dull matter,part_of_movement,mv_new_materialism,new materialism,,concept sweep,batch_12,v40
+pe_jane_bennett,Jane Bennett,developed,co_vibrant_life,vibrant life,,concept sweep: attributed in text,batch_12,v40
+co_vibrant_life,vibrant life,part_of_movement,mv_new_materialism,new materialism,,concept sweep,batch_12,v40
+pe_karen_barad,Karen Barad,developed,co_entanglement,entanglement,,concept sweep: attributed in text,batch_12,v40
+co_entanglement,entanglement,part_of_movement,mv_new_materialism,new materialism,,concept sweep,batch_12,v40
+pe_suresh_canagarajah,Suresh Canagarajah,developed,co_semiotic_resource,semiotic resources,,concept sweep: attributed in text,batch_12,v40
+pe_nigel_thrift,Nigel Thrift,developed,co_event_of_becoming,event of becoming,,concept sweep: attributed in text,batch_12,v40
+pe_james_coda,James Coda,developed,co_theoretico_methodological_experimentation,theoretico-methodological experimentation,,concept sweep: attributed in text,batch_12,v40
+pe_karen_barad,Karen Barad,developed,co_boundary_making_practice,boundary-making practices,,concept sweep: attributed in text,batch_12,v40
+pe_karen_barad,Karen Barad,developed,co_relata,relata,,concept sweep: attributed in text,batch_12,v40
+pe_jane_bennett,Jane Bennett,developed,co_vitality,vitality,,defines vitality as capacity of things to act as quasi agents,batch_12; batch_f02,final; v40
+pe_rosi_braidotti,Rosi Braidotti,developed,co_ethic_of_sustainability,ethics of sustainability,2006,an ethics of sustainability structures Transpositions,batch_12; batch_f02,final; v40
+pe_rosi_braidotti,Rosi Braidotti,developed,co_autopoietic_machine,autopoietic machine,,concept sweep: attributed in text,batch_12,v40
+pe_donna_haraway,Donna Haraway,developed,co_staying_with_the_trouble,staying with the trouble,2016,concept sweep: attributed in text,batch_12; batch_f02,final; v40
+pe_rosi_braidotti,Rosi Braidotti,developed,co_empirical_discursive_methodological_approach,empirical-discursive methodological approach,,concept sweep: attributed in text,batch_12,v40
+pe_theodor_adorno,Theodor Adorno,developed,co_ouroboran,ouroboran,,concept sweep: attributed in text,batch_12,v40
+pe_theodor_adorno,Theodor Adorno,developed,co_absolute,the absolute,,concept sweep: attributed in text,batch_12,v40
+pe_thomas_nail,Nail,developed,co_performative_new_materialism,performative new materialism,,concept sweep: attributed in text,batch_12,v40
+co_performative_new_materialism,performative new materialism,part_of_movement,mv_new_materialism,new materialism,,concept sweep,batch_12,v40
+pe_maurice_merleau_ponty,Maurice Merleau-Ponty,developed,co_reversibility,reversibility,,a reversibility that always miscarries at the last moment,batch_12; batch_f01,final; v40
+pe_maurice_merleau_ponty,Maurice Merleau-Ponty,developed,co_dehiscence,dehiscence,,concept sweep: attributed in text,batch_12,v40
+pe_maurice_merleau_ponty,Maurice Merleau-Ponty,developed,co_wild_being,wild Being,,concept sweep: attributed in text,batch_12,v40
+pe_maurice_merleau_ponty,Maurice Merleau-Ponty,developed,co_being_in_the_world,being-in-the-world,,concept sweep: attributed in text,batch_12,v40
+pe_n_katherine_hayles,N. Katherine Hayles,developed,co_congruence,congruence,,concept sweep: attributed in text,batch_12,v40
+pe_n_katherine_hayles,N. Katherine Hayles,developed,co_consistency,consistency,,replaces congruence with consistency as criterion for adequate representation,batch_12; batch_f02,final; v40
+pe_n_katherine_hayles,N. Katherine Hayles,developed,co_flux,flux,,concept sweep: attributed in text,batch_12,v40
+pe_n_katherine_hayles,N. Katherine Hayles,developed,co_cusp,cusp,,Hayles's cusp between concepts and flux,batch_12; batch_f02,final; v40
+pe_trinh_t_minh_ha,Trinh T. Minh-ha,developed,co_refusal_of_closure,refusal of closure,,concept sweep: attributed in text,batch_12,v40
+pe_rosi_braidotti,Rosi Braidotti,developed,co_resonance,resonance,,concept sweep: attributed in text,batch_12,v40
+pe_rosi_braidotti,Rosi Braidotti,developed,co_specie_ism,species-ism,,concept sweep: attributed in text,batch_12,v40
+co_specie_ism,species-ism,part_of_movement,mv_posthumanism,feminist posthumanism,,concept sweep,batch_12,v40
+pe_rosi_braidotti,Rosi Braidotti,developed,co_exceptionalist_anthropocentrism,exceptionalist anthropocentrism,,concept sweep: attributed in text,batch_12,v40
+co_exceptionalist_anthropocentrism,exceptionalist anthropocentrism,part_of_movement,mv_posthumanism,feminist posthumanism,,concept sweep,batch_12,v40
+pe_donna_haraway,Donna Haraway,developed,co_bounded_individualism,bounded individualism,,concept sweep: attributed in text,batch_12,v40
+pe_karen_barad,Karen Barad,developed,co_merely_philosophical,merely philosophical,,concept sweep: attributed in text,batch_12,v40
+pe_karen_barad,Karen Barad,developed,co_ontic_interpretation,ontic interpretation,,concept sweep: attributed in text,batch_12,v40
+co_ontic_interpretation,ontic interpretation,part_of_movement,mv_new_materialism,new materialism,,concept sweep,batch_12,v40
+pe_alfred_north_whitehead,Alfred North Whitehead,developed,co_self_denial_of_thought,self-denial of thought,,concept sweep: attributed in text,batch_12,v40
+co_agentivity,agentivity,part_of_movement,mv_new_materialism,new materialism,,concept sweep,batch_12,v40
+pe_gilles_deleuze,Gilles Deleuze,developed,co_ontology_of_chance,ontology of chance,,concept sweep: attributed in text,batch_12,v40
+pe_gilles_deleuze,Gilles Deleuze,developed,co_affirmative_power_of_difference,affirmative power of difference,,concept sweep: attributed in text,batch_12,v40
+pe_gilles_deleuze,Gilles Deleuze,developed,co_dice_throw,dice throw,,concept sweep: attributed in text,batch_12,v40
+pe_gilles_deleuze,Gilles Deleuze,developed,co_clamor_of_being,clamor of Being,,concept sweep: attributed in text,batch_12,v40
+pe_gilles_deleuze,Gilles Deleuze,developed,co_actualization,actualization,,concept sweep: attributed in text,batch_12,v40
+pe_jane_bennett,Jane Bennett,developed,co_foundational_comportment,foundational comportments,,concept sweep: attributed in text,batch_12,v40
+pe_karen_barad,Karen Barad,developed,co_constitutive_exclusion,constitutive exclusions,,concept sweep: attributed in text,batch_12,v40
+pe_cher_hill,Hill (Cher Hill),developed,co_experimenting_with_a_diffractive_apparatu,experimenting with a diffractive apparatus,,concept sweep: attributed in text,batch_12,v40
+pe_l_lambert,Louise Lambert,developed,co_otherwise_practice,otherwise practice,2021,diffraction as an otherwise practice,batch_12; batch_f03,final; v40
+pe_karen_barad,Karen Barad,developed,co_ontological_entanglement,ontological entanglements,,concept sweep: attributed in text,batch_12,v40
+pe_kirschner,Kirschner,developed,co_material_continuum,material continuum,,concept sweep: attributed in text,batch_12,v40
+co_material_continuum,material continuum,part_of_movement,mv_new_materialism,new materialism,,concept sweep,batch_12,v40
+pe_karen_barad,Karen Barad,developed,co_critique,critique,,concept sweep: attributed in text,batch_12,v40
+pe_michael_schwab,Schwab (Michael Schwab),developed,co_logic_of_representation,logic of representation,,concept sweep: attributed in text,batch_12,v40
+pe_michael_schwab,Schwab (Michael Schwab),developed,co_logic_of_transposition,logic of transposition,,concept sweep: attributed in text,batch_12,v40
+pe_rosi_braidotti,Rosi Braidotti,developed,co_ontology_of_becoming,ontology of becoming,,concept sweep: attributed in text,batch_12,v40
+pe_rosi_braidotti,Rosi Braidotti,developed,co_history_tattooed_on_your_body,history tattooed on your body,,concept sweep: attributed in text,batch_12,v40
+pe_carroll,Carroll,developed,co_embracing_alternative_ways_of_seeing_and_understanding_the_w,embracing alternative ways of seeing and understanding the world,,concept sweep: attributed in text,batch_12,v40
+co_embracing_alternative_ways_of_seeing_and_understanding_the_w,embracing alternative ways of seeing and understanding the world,part_of_movement,mv_posthumanism,feminist posthumanism,,concept sweep,batch_12,v40
+pe_carroll,Carroll,developed,co_assessing_and_critiquing_imaginary_formation,assessing and critiquing imaginary formations,,concept sweep: attributed in text,batch_12,v40
+co_assessing_and_critiquing_imaginary_formation,assessing and critiquing imaginary formations,part_of_movement,mv_posthumanism,feminist posthumanism,,concept sweep,batch_12,v40
+pe_carroll,Carroll,developed,co_preparing_to_make_the_creative_leap,preparing to make the creative leap,,concept sweep: attributed in text,batch_12,v40
+co_preparing_to_make_the_creative_leap,preparing to make the creative leap,part_of_movement,mv_posthumanism,feminist posthumanism,,concept sweep,batch_12,v40
+pe_carroll,Carroll,developed,co_accounting_for_location_and_positioning,accounting for locations and positioning,,concept sweep: attributed in text,batch_12,v40
+co_accounting_for_location_and_positioning,accounting for locations and positioning,part_of_movement,mv_posthumanism,feminist posthumanism,,concept sweep,batch_12,v40
+pe_carroll,Carroll,developed,co_storying_the_in_between_space,storying the in-between space,,concept sweep: attributed in text,batch_12,v40
+co_storying_the_in_between_space,storying the in-between space,part_of_movement,mv_posthumanism,feminist posthumanism,,concept sweep,batch_12,v40
+pe_kristina_andersen,Andersen (Kristina Andersen),developed,co_possibility_space,possibility space,,concept sweep: attributed in text,batch_12,v40
+co_possibility_space,possibility space,part_of_movement,mv_new_materialism,new materialism,,concept sweep,batch_12,v40
+pe_karen_barad,Karen Barad,developed,co_attunement,attunement,,concept sweep: attributed in text,batch_12,v40
+pe_jane_bennett,Jane Bennett,developed,co_anticipatory_receptivity,anticipatory receptivity,,concept sweep: attributed in text,batch_12,v40
+pe_theodor_adorno,Theodor Adorno,developed,co_four_adornian_technique,four Adornian techniques,,concept sweep: attributed in text,batch_12,v40
+pe_theodor_adorno,Theodor Adorno,developed,co_qualitative_singularitie,qualitative singularities,,concept sweep: attributed in text,batch_12,v40
+pe_theodor_adorno,Theodor Adorno,developed,co_clownish_trait,clownish traits,,concept sweep: attributed in text,batch_12,v40
+pe_gilles_deleuze,Gilles Deleuze,developed,co_logic_of_sense,logic of sense,,concept sweep: attributed in text,batch_12; batch_f04,final; v40
+pe_riikka_makikoskela,Riikka Mäkikoskela,developed,co_active_material,active material,,concept sweep: attributed in text,batch_12,v40
+co_active_material,active material,part_of_movement,mv_new_materialism,new materialism,,concept sweep,batch_12,v40
+pe_esther_monivas_mayor,Esther Moñivas Mayor,developed,co_discipline_of_emergent_processe,discipline of emergent processes,,concept sweep: attributed in text,batch_12,v40
+pe_hillary,Hillary,developed,co_handling,handling,,concept sweep: attributed in text,batch_12,v40
+pe_hillary,Hillary,developed,co_performative_utterance,performative utterances,,concept sweep: attributed in text,batch_12,v40
+pe_kristina_andersen,Andersen (Kristina Andersen),developed,co_performative_moment,performative moment,,concept sweep: attributed in text,batch_12,v40
+pe_esa_kirkkopelto,Esa Kirkkopelto,developed,co_conversion_of_the_artistic_medium_into_a_medium_of_research,conversion of the artistic medium into a medium of research,,names the condition under which art practice becomes research,batch_12; batch_f04,final; v40
+pe_georgios_kaounas,Georgios Kaounas,developed,co_experimentation_of_creating_art,experimentation of creating art,,concept sweep: attributed in text,batch_12,v40
+pe_esa_kirkkopelto,Esa Kirkkopelto,developed,co_active_maintenance,active maintenance,,concept sweep: attributed in text,batch_12,v40
+pe_esa_kirkkopelto,Esa Kirkkopelto,developed,co_transformative_communication,transformative communication,,concept sweep: attributed in text,batch_12,v40
+pe_barbara_bolt,Barbara Bolt,developed,co_performative_force,performative force,,concept sweep: attributed in text,batch_12,v40
+pe_cary_wolfe,Cary Wolfe,developed,co_real_magnitude,real magnitudes,,concept sweep: attributed in text,batch_12,v40
+pe_riikka_makikoskela,Riikka Mäkikoskela,developed,co_from_far_to_close_and_back,from far to close (and back),,title phrase names the movement organizing practice and research,batch_12; batch_f04; batch_f06,final; v40
+co_pedagogy_as_apparatu,pedagogy as apparatus,part_of_movement,mv_new_materialism,new materialism,,concept sweep,batch_12,v40
+pe_stefanie_wuschitz,Stefanie Wuschitz,developed,co_empathetic_technologie,empathetic technologies,,concept sweep: attributed in text,batch_12,v40
+pe_barbara_bolt,Barbara Bolt,developed,co_science_as_research,science-as-research,,concept sweep: attributed in text,batch_12,v40
+pe_christopher_frayling,Christopher Frayling,developed,co_action_research,action research,,concept sweep: attributed in text,batch_13,v40
+pe_blok,Blok,developed,co_conativity,conativity,,proposes conativity vs. responsivity as a corrective,batch_13; batch_f01,final; v40
+pe_carroll,Carroll,developed,co_developing_new_frame_of_resonance,developing new frames of resonance,,concept sweep: attributed in text,batch_13,v40
+co_developing_new_frame_of_resonance,developing new frames of resonance,part_of_movement,mv_posthumanism,feminist posthumanism,,concept sweep,batch_13,v40
+co_ethic_of_care,ethics of care,part_of_movement,mv_new_materialism,new materialism,,concept sweep,batch_13,v40
+co_generativity_over_closure,generativity over closure,part_of_movement,mv_new_materialism,new materialism,,concept sweep,batch_13,v40
+co_immanence,immanence,part_of_movement,mv_new_materialism,new materialism,,concept sweep,batch_13,v40
+co_knowing_in_the_doing,knowing in the doing,part_of_movement,mv_new_materialism,new materialism,,concept sweep,batch_13,v40
+pe_felix_guattari,Felix Guattari,developed,co_mechanosphere,mechanosphere,,concept sweep: attributed in text,batch_13,v40
+co_more_than_human,more-than-human,part_of_movement,mv_new_materialism,new materialism,,concept sweep,batch_13,v40
+pe_pheng_cheah,Pheng Cheah,developed,co_non_dialectical_materialism,non-dialectical materialism,,concept sweep: attributed in text,batch_13,v40
+pe_michael_schwab,Schwab (Michael Schwab),developed,co_non_knowledge,non-knowledge,,concept sweep: attributed in text,batch_13,v40
+co_passive_substance,passive substance,part_of_movement,mv_new_materialism,new materialism,,concept sweep,batch_13,v40
+pe_michael_schwab,Schwab (Michael Schwab),developed,co_positional_specificity,positional specificity,,concept sweep: attributed in text,batch_13,v40
+co_process_ontology,process ontology,part_of_movement,mv_new_materialism,new materialism,,concept sweep,batch_13,v40
+pe_blok,Blok,developed,co_responsivity,responsivity,,proposes conativity vs. responsivity as a corrective,batch_13; batch_f01,final; v40
+co_rhizomatic,rhizomatic,part_of_movement,mv_posthumanism,feminist posthumanism,,concept sweep,batch_13,v40
+co_sovereign_human_subject,sovereign human subject,part_of_movement,mv_posthumanism,feminist posthumanism,,concept sweep,batch_13,v40
+pe_donna_haraway,Donna Haraway,developed,co_technobiopower,technobiopower,,concept sweep: attributed in text,batch_13,v40
+pe_jane_bennett,Jane Bennett,developed,co_void,the void,,concept sweep: attributed in text,batch_13,v40
