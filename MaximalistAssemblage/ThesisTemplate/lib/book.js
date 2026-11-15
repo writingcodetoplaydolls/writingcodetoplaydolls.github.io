@@ -57,12 +57,20 @@ export function createBook({ page, host, onTurn }) {
 
   // .sheet is the page's black, behind its text: lib/windows.js cuts the
   // windows out of it so the room behind shows through.
-  const leafHtml = `<div class="sheet"></div><div class="leaf-head"></div><div class="leaf-body"></div><div class="leaf-foot"><span class="folio"></span></div>`
+  // .sheet is the page's black, behind its text. .leaf-slot is a reserved
+  // place for a figure or an inset quotation: it is furniture, a row in the
+  // page's flex column like the head and the foot, so pagination accounts for
+  // it without being told — it measures overflow on .leaf-body, and the body
+  // is simply shorter. Verso offers a figure, recto an inset quotation.
+  const leafHtml = kind => `<div class="sheet"></div><div class="leaf-head"></div>` +
+    `<div class="leaf-slot" data-slot="${kind}"><span>${kind === 'figure' ? 'figure' : 'inset quote'}</span></div>` +
+    `<div class="leaf-body"></div><div class="leaf-foot"><span class="folio"></span></div>`
 
   function makeSpread() {
     const el = document.createElement('div')
     el.className = 'spread'
-    el.innerHTML = `<div class="pages"><div class="leaf leaf--verso">${leafHtml}</div><div class="spine"></div><div class="leaf leaf--recto">${leafHtml}</div></div>`
+    el.innerHTML = `<div class="pages"><div class="leaf leaf--verso">${leafHtml('figure')}</div>`
+      + `<div class="spine"></div><div class="leaf leaf--recto">${leafHtml('quote')}</div></div>`
     const leaves = [...el.querySelectorAll('.leaf')].map(leaf => ({
       el: leaf,
       body: leaf.querySelector('.leaf-body'),

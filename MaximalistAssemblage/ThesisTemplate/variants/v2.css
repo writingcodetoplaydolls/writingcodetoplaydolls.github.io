@@ -1,0 +1,44 @@
+/* v2 — one column a page, and a place for a figure on each.
+ *
+ * One column gives 49 to 51 characters at 1024px and the 32rem cap holds it
+ * at 62 on a 1680px screen, inside the 45-to-75 the guidance gives. The type
+ * is 1.05rem, the size the scrolling layout already used, and the leading is
+ * 1.7, above the 1.5 WCAG 1.4.8 asks for, which a measure this long wants.
+ * Not justified, for the same criterion. Less on a page means more pages:
+ * chapter one goes from 13 spreads to 32.
+ */
+.leaf-body {
+  column-count: 1;
+  max-width: 32rem; margin-inline: auto; width: 100%;
+}
+body.book { font-size: 1.05rem; line-height: 1.7; }
+@media (max-width: 90rem) { body.book { font-size: 1rem; line-height: 1.6; } }
+body.book .leaf-body p { text-align: left; hyphens: auto; }
+
+/* ---- where a figure or an inset quotation would go -----------------------
+ * A draft instrument: every page reserves a place so the shape of the book
+ * can be seen before the figures exist. Delete this block, and the .leaf-slot
+ * line in book.js, to take them out.
+ *
+ * The box is marked as decorative to assistive technology: it is a hole where
+ * something will be, and announcing "figure" on every page would be noise. */
+.leaf-slot {
+  position: relative; z-index: 1;
+  flex: 0 0 auto;
+  height: 7.5rem;
+  margin: 0 0 .9rem;
+  border: 1px dashed var(--rule-soft);
+  border-radius: 3px;
+  display: grid; place-items: center;
+  color: var(--ink-faint);
+  font: .66rem/1 var(--sans);
+  letter-spacing: .14em; text-transform: uppercase;
+}
+.leaf-slot[data-slot="quote"] {
+  height: 5.5rem;
+  border-style: dashed;
+  border-left: 2px solid var(--mark);
+}
+/* a page given over to a figure has no room for a slot, and needs none */
+.leaf--plate .leaf-slot, .spread--plate .leaf-slot { display: none; }
+@media print { .leaf-slot { display: none; } }

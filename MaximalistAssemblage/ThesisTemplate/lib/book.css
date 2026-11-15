@@ -84,26 +84,22 @@ body.book.rail-open::after { content: ""; position: fixed; inset: 0; background:
 .leaf-foot { font: .7rem/1 var(--sans); color: var(--ink-faint); padding-top: .6rem; }
 .leaf--recto .leaf-foot { text-align: right; }
 
-/* the page itself: two columns, filled one after the other, clipped at the foot */
+/* The page itself. How many columns it has, how big the type is, how much
+ * leading it has, whether it is justified, and whether every page reserves a
+ * place for a figure are all decisions a variant makes: see
+ * thesis/variants/. This file holds what every version shares. */
 .leaf-body {
   flex: 1 1 auto; min-height: 0;
-  column-count: 2; column-gap: 1.8rem; column-fill: auto;
+  column-fill: auto;
   overflow: hidden;
 }
-
-/* ---- type in a narrow column --------------------------------------------
- * Four columns across a window is a tight measure. Below a wide window the
- * type and the margins both come in, to hold the line near 45 characters. */
-body.book { font-size: .95rem; line-height: 1.52; }
 @media (max-width: 90rem) {
-  body.book { font-size: .88rem; }
   .leaf { padding-left: 1.5rem; padding-right: 1.5rem; }
   .leaf--verso { padding-right: 2rem; }
   .leaf--recto { padding-left: 2rem; }
-  .leaf-body { column-gap: 1.5rem; }
 }
-body.book .leaf-body p { text-align: justify; hyphens: auto; margin: 0; }
-body.book .leaf-body p + p { text-indent: 1.2em; }    /* set as a book is set: indent, no gap */
+body.book .leaf-body p { margin: 0; }
+
 body.book .leaf-body h2 + p,
 body.book .leaf-body h3 + p,
 body.book .leaf-body h4 + p,
@@ -228,3 +224,4 @@ body.book .leaf--plate .fig-stage { flex: 1 1 auto; height: auto; aspect-ratio: 
   body.book .leaf--plate .fig-stage,
   .spread--plate .fig-stage { aspect-ratio: auto; height: auto; flex: none; }
 }
+
