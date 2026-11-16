@@ -3,6 +3,12 @@ published: false      # the pages are built from this; Jekyll should not render 
 title: Theory Breathes Practices and Methods
 ---
 
+## Black Mountain College: Albers, Rauschenberg, Motherwell, and Whitehead's process
+
+### Thread to recover: Whitehead, quantum physics, New York around 1920
+
+**Missing:** a documented link from Whitehead to Boas, Locke, or Harlem. If   find the old chat, paste it here and the thread can be rebuilt from it.
+
 ## Methodology: diffraction, transposition, making strange
 
 ### Differences that make a difference
@@ -116,5 +122,3 @@ To revisit: the top of Hayles p. 54 through Sapir-Whorf
 *Hayles, The Cosmic Web (1984), via HAYLES_ch1_additions_for_the_proposal.md, 29 Oct 2026*
 
 **\[Note\]** To revisit through Sapir-Whorf. The paragraph: "Although Bohr does not rely on linguistics in making this argument, it is possible to recapitulate his reasoning in these terms, through a consideration of the deep structure of Indo-European languages. To make a well-formed utterance in English, for example, is implicitly to acknowledge a structural division between **actee and actant**, as well as **the temporal progression implicit in verb tenses. Thus not only is a speaking subject posited in opposition to an 'outside' world, but that relationship is further defined as occurring at a particular place in time and space** . . . **to speak is to use a linguistic structure built on such distinctions**" (Hayles, 1984, pp. 53 to 54).
-
-**\[Note\]** The revisit does not start from zero, because Hayles has Whorf in the book twice with her own caveat attached both times. Her Introduction epigraph is Whorf on "the way we dissect nature and break up the flux of experience into objects and entities to construct propositions about"; her p. 16 uses him for exactly this claim; and her footnote 1 on p. 16 is the caveat: "**The problem with Whorf's thesis is that in some strains of European culture (for example, alchemical thought in sixteenth- and seventeenth-century England), very different world views have emerged, even though the language was essentially the same as that Newton spoke.**" Her reference is Benjamin Whorf, *Collected Papers on Metalinguistics* (Washington, D.C.: Foreign Service Institute, 1952), pp. 3 to 8 and 27 to 52. **Not held, and neither Sapir's nor Whorf's own writing is in the corpora**: Whorf 14 occurrences, Sapir 150 (almost all in two copies of one journal issue), "linguistic relativity" 2, across 1,117 documents. So this revisit needs a fetch.

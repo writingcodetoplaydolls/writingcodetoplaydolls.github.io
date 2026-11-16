@@ -3,6 +3,12 @@ published: false      # the pages are built from this; Jekyll should not render 
 title: Theory and Practice Read With Ontology/Ground
 ---
 
+## Art Practice as Research
+
+### Bridge: my practice as already enacting theory
+
+Critically, this vocabulary is not describing a new condition. It is naming what has always been operating. The Dada artists, Rauschenberg, Cage, Cézanne -- they did not anticipate posthumanism. They were enacting this ontological ground before anyone had vocabulary for it. Rauschenberg's combines were distributed assemblages of thing-power before Bennett named thing-power. Cage's 4'33" was an apparatus making visible the world's always-already sounding before Barad formalized what an apparatus does. The vocabulary reaches backward as well as forward -- it is retrospective and prospective simultaneously. This is why we can look across the history of art, science, and philosophy and recognize practitioners of what we are only now formalizing. The terms do not inaugurate the condition. They make the condition legible across time. The same retrospective illumination is available to students encountering this vocabulary for the first time: they are not learning something new about the world. They are receiving language for what their own making has always already been enacting.
+
 ## Assemblage: *agencement* in translation, read against the art term
 
 My framing also needs to trace the roots of the term assemblage as a translation from the French \[agencement\] see Deleuze read against the history of the term in art
@@ -108,5 +114,3 @@ On a sunny Tuesday morning on 4 June in the grate over the storm drain to the Ch
 **Nobody chose the storm drain.** Bennett's glove, pollen, rat, cap, and stick were gathered by water and a grate, not by an artist: found and assembled with no chooser, an *agencement* in the everyday sense of an arrangement.
 
 **Found text.** My reading site finds terms and sets them in relation across texts. Is that closer to the readymade (selection), to found poetry, or to assemblage (relation)?
-
-"the previous work begins with the potato bin." Is the potato bin a found object, an assemblage, or the apparatus that does the finding?

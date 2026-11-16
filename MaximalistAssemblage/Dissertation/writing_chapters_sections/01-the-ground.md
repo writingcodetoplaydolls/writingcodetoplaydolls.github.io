@@ -7,13 +7,27 @@ title: The Ground
 
 ### Update November 15, 2026 at 4:19PM
 
-## Assemblage/Agacement/Field Theory/Other science proof of entanglement
+“In a world that already feels overwhelmingly unfamiliar, making things stranger somehow allows me to inhabit that strangeness, as if it was mine” (Andersen, 2016, p. 47).
 
-## An equation
+"texts are like images, like scraps of colour and texture. I carry them with me, take them out, rearrange them, reconsider them" Kayla Andersen
 
-## Affect, virtual, real
+### My collection
 
-## Objectivity, agential realism
+Assemblage. Agacement. Field. Swarm. Primordial Swerve. Habitus. Climate of feeling.
+
+The Wild. The void. Zoe. Plane of immanence. The virtual. The real.
+
+The absolute. Non-identity. A life.
+
+|S| = |E(a, b) - E(a, b') + E(a', b) + E(a', b')| <= 2
+
+Affect. Potentia. Potesta. Transcorporeality.
+
+Agential realism. Accountability to the cut.
+
+Cartography. Apparatus. Affirmative Ethics.
+
+Making Strange. Transposition. Diffraction.
 
 ## Ontological commitments
 
@@ -32,30 +46,6 @@ Braidotti calls the force that moves through this ground Zoe: life as a cosmic f
 Haudenosaunee and Anishinaabe scholar Vanessa Watts names the same ground through Place-Thought: “the non-distinctive space where place and thought were never separated because they never could or can be separated. Place-Thought is based upon the premise that land is alive and thinking and that humans and non-humans derive agency through the extensions of these thoughts” (Watts, cited in Anderson, 2020, p. 211). Zoe Todd argues that Indigenous thinkers deserve recognition for “their millennia of engagement with sentient environments, with cosmologies that enmesh people into complex relationships between themselves and all relations, and with climates and atmospheres as important points of organization and action” (Todd, cited in Anderson, 2020, p. 210). Anderson, following Braidotti, argues that placing different orders of knowledge in dialogue “does not mean creating false equivalences” but instead “aims at amplifying possible resonances between them” (Braidotti, cited in Anderson, 2020, p. 205). Indigenous frameworks and new materialist ontology resonate at important points, and Anderson (Anderson, 2020) reports that Indigenous scholarship has been omitted from standard origin stories of new materialism.
 
 Trinh T. Minh-ha articulated the same ground in her 1989 text, Woman, Native, Other: Writing Postcoloniality and Feminism. Writing from Taoist, Zen, and Vietnamese frames against the Western mirror ontology, in the book section titled “The infinite play of empty mirrors,” she writes that “reality is not reconstituted, it is put into pieces so as to allow another world to rebuild (keep on unbuilding and rebuilding) itself with its debris” (Minh-ha, 1989, p. 23). The mirror is not the symbol of a pre-given vision but, in the Asian traditions she draws on, “the ‘symbol of the very void of symbols’”; “the perfect man’s mind is like a mirror,” Chuang Tzu observed, “it reflects things but does not retain them” (Minh-ha, 1989, p. 23) (citing Chuang Tzu). Trinh’s formulation, written from within artistic practice rather than from the philosophy of matter, is contemporaneous with Haraway’s 1988 “Situated Knowledges” and predates by more than a decade the posthumanist/new materialist vocabulary that would name what she was already articulating. Like Watts’s Place-Thought and Todd’s account of Indigenous engagement with sentient environments, Trinh’s relational ontology is part of the genealogy the standard origin story has tended to omit.
-
-### Bohr's viewpoint theory
-
-Hayles gives Bohr's position in five moves, and the sequence is the argument. **One**, the Uncertainty Relation is about language and not disturbance: Bohr "never endorsed the 'disturbance' concept of Heisenberg. Rather, in his view, **the Uncertainty Relation was deeply bound up with the limitations of language**," and Aage Petersen recounts that Bohr loved to repeat "**we are suspended in language**" (Hayles, 1984, p. 52).
-
-**Two**, complementarity in Bohr's own words: "The fundamental postulate of the indivisibility of the quantum of action . . . forces us to adopt a new mode of description designated as **complementary in the sense that any given application of classical concepts precludes the simultaneous use of other classical concepts which in a different connection are equally necessary for the elucidation of the phenomena**" (quoted, p. 52). **Three**, the classical terms cannot simply be dropped, because they "reflect the essential distinction between subject and object that is the absolute prerequisite for the process of observation to begin," and from that division "follows the meaning of every concept, or rather every word, **the meaning depending upon our arbitrary choice of viewpoint**" (p. 53).
-
-**Four**, the core: "**To speak is to speak from a position that is defined as separate and distinct from that which is spoken about. Language thus implies a viewpoint, a specific place at which the subject-object split is made.** But because of the Uncertainty Relation, this viewpoint will always result in an incomplete and partial description. To complete the description, another viewpoint is necessary which makes the subject-object split in a different place. **But these viewpoints will be mutually exclusive, because the subject-object split can only be made in one place at a time. Hence no matter which viewpoint is chosen, there will always be aspects of reality that can only be understood from another, mutually exclusive viewpoint. To switch to that new viewpoint will render indistinct and hence indeterminate aspects that may have been clear in the former viewpoint.**" With Bohr: "we must, in general, be prepared to accept the fact that **a complete elucidation of one and the same object may require diverse points of view which defy a unique description**" (pp. 53 and 53). And the generalisation: "any concept whatever, that is, **any definition of reality that is external to us, will have the same built-in limitations of viewpoint**" (p. 53).
-
-**Five**, and this is what makes it a method rather than a lament: "For Bohr, the fact that we remain 'suspended in language' does not mean that we cannot make progress . . . we progressively refine our viewpoints not by attempting the impossible, that is, **observing without a viewpoint, but by recognizing the ways in which our description of reality depends on the viewpoint we have chosen**" (pp. 54 to 55). Bohr's own account of the regress: even the most elementary concepts are "based on assumptions initially unnoticed," and an "explicit consideration" of them yields "a classification of more extended domains of experience" which in turn rests on further "unrecognized presuppositions" (quoted, p. 54). Hayles's conclusion: "**Thus progress is made not by ignoring or underplaying limitations of viewpoint, but by systematically examining and exploiting them**" (pp. 54 to 55).
-
-### Bohr's viewpoint theory (Hayles, pp. 52 to 55)
-
-This is the same claim as Barad's complementarity, which means "simultaneously 'mutually exclusive' and 'mutually necessary'," arriving from Bohr through a literary critic rather than through Barad. It also states the commitment about divergent readings in its procedural form, with an instruction attached: the divergence is not to be resolved, it is to be examined and exploited. Carries into 1.2 (Braidotti) and 2.2.
-
-### Becoming rather than Being (Hayles, p. 49 n. 32)
-
-Becoming rather than Being (Hayles, p. 49 n. 32)
-
-*Hayles, The Cosmic Web (1984), via HAYLES_ch1_additions_for_the_proposal.md, 29 Oct 2026*
-
-"The partiality of our own perspective should not be confused with the absolute spacetime projected through the Minkowski diagrams. David Bohm, in *The Special Theory of Relativity*, comments that when viewing Minkowski diagrams, 'almost unconsciously, one is led to adopt the point of view of an observer who is, as it were, standing outside of space and time . . . surveying the whole cosmos from beginning to end' (p. 173). But as Bohm points out, **the feeling is an illusion. Any human observer is necessarily in space and time, and so always in fact occupies a point *within* the diagram.** Similarly, the timeless nature of the Minkowski diagrams . . . should not lead us to think that this reality already pre-exists. **Relativity theory, insofar as it says anything about the future, is fully consonant with seeing it as a Becoming rather than a Being**" (Hayles, 1984, p. 49 n. 32, citing Bohm p. 173 and Capek pp. 214 to 243).
-
-Bohm, *The Special Theory of Relativity*, p. 173, and Milic Capek, *The Philosophical Impact of Contemporary Physics* (Princeton: Van Nostrand, 1961), pp. 214 to 243. To fetch.
 
 ### The arbitrarily chosen frame (Hayles, p. 46)
 
@@ -139,34 +129,6 @@ The lineage: New Literacy Studies → embodied and affective literacy → posthu
 
 This research approaches literacy broadly as situated practices of reading, composing, and making meaning through which relations among self, world, bodies, materials, technologies, memories, and other subjects become perceptible and are continually reconfigured. In this sense, literacy has an existential and phenomenological dimension: practices of reading and writing participate in the reading and writing of self.
 
-Sources with the links found (journal details to confirm):
-
-Street, B. (1992). Literacy practices and the construction of personhood. Conference proceedings, ERIC ED367779; the chapter begins on printed p. 35. [PDF](https://files.eric.ed.gov/fulltext/ED367779.pdf)
-
-Street, B. (2003). What's "new" in New Literacy Studies? Critical approaches to literacy in theory and practice. *Current Issues in Comparative Education*. [PDF](https://journals.library.columbia.edu/index.php/cice/article/download/11369/5716)
-
-Freire, P., & Macedo, D. (1987). *Literacy: Reading the word and the world*. [Publisher page](https://www.routledge.com/Literacy-Reading-the-Word-and-the-World-1st-Edition/Freire-Macedo/p/book/9780710214171)
-
-Bartlett, L. (2007). To seem and to feel: Situated identities and literacy practices. *Teachers College Record*. [ERIC record](https://eric.ed.gov/?id=EJ820419) · [Full text](https://www.researchgate.net/publication/283541160_Situated_identities_and_literacy_pratices_to_seem_and_to_feel_DOI_-_105752P2358-34282013v17n32p73)
-
-Leander, K., & Boldt, G. (2013). Rereading "A pedagogy of multiliteracies": Bodies, texts, and emergence. *Journal of Literacy Research*. [PDF](https://www.kevinleander.com/pubs/Leand_Boldt_2013_Rereading.pdf)
-
-Kuby, C. R., & Rowsell, J. (2017). Early literacy and the posthuman: Pedagogies and methodologies. *Journal of Early Childhood Literacy*. [Article](https://journals.sagepub.com/doi/10.1177/1468798417715720)
-
-Kuby, C. R., Spector, K., & Johnson Thiel, J. (Eds.). (2019). *Posthumanism and literacy education: Knowing/becoming/doing literacies*. Routledge. [Preview PDF](https://api.pageplace.de/preview/DT0400.9781351603096_A37552469/preview-9781351603096_A37552469.pdf)
-
-Truman, S. E., et al. (2021). The capaciousness of no: Affective refusals as literacy practices. *Reading Research Quarterly*. [PDF](https://ila.onlinelibrary.wiley.com/doi/pdf/10.1002/rrq.306)
-
-Lin, Z., & Li, G. (2021). A posthuman perspective on early literacy: A literature review. [Article](https://www.j-ces.com/index.php/jces/article/view/69)
-
-A 2024 systematic review of posthuman approaches to childhood literacy. [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S088303552400079X)
-
-On Street's legacy (2020). [Springer](https://link.springer.com/article/10.1007/s11159-020-09841-2)
-
-The chat's suggested reading order: Street (1992) → Leander and Boldt → Kuby and Rowsell → Truman.
-
-**\[Note\]** Where this meets the rest of the draft:
-
 Leander and Boldt read literacy through Deleuze and Guattari's assemblage. That meets 2.5, where *Kafka* puts speech in "collective assemblages of enunciation."
 
 Kuby, Spector, and Johnson Thiel include diffractive readings and writings: a lead for 2.0.
@@ -200,5 +162,3 @@ Fox and Alldred's (2021) work in applied research domains — education, health,
 (Fox & Alldred, 2021)
 
 This is a clean "practice case" because it shows: diffractive method is attractive precisely when the research situation is already an assemblage of institutions, bodies, technologies, and affects---and because it foregrounds the problem of how findings travel into policy/practice contexts.
-
-The institutional stakes of this position are not abstract. The traditional research evaluation framework demands a specific form of accountability: the research question is posed in advance, the methods are specified, the findings are reported, the conclusions are stated. This sequence assumes that knowledge is extractable from the encounter — that the researcher enters the field, gathers data, and produces conclusions that travel out of the context of their production. For new materialist art practice as research, every one of these assumptions enacts the suppression the framework is built to resist. The question that drives the research often cannot be fully articulated before the making begins. The methods are inseparable from the encounter. The findings are not propositional statements separable from the practice that generated them. The conclusion, in the traditional sense, is precisely what the practice withholds — because the interval that makes meaning possible cannot be closed without destroying what it was producing.

@@ -3,6 +3,12 @@ published: false      # the pages are built from this; Jekyll should not render 
 title: Reading With
 ---
 
+## Methodology: diffraction, transposition, making strange
+
+### To revisit: the top of Hayles p. 54 through Sapir-Whorf
+
+**\[Note\]** The revisit does not start from zero, because Hayles has Whorf in the book twice with her own caveat attached both times. Her Introduction epigraph is Whorf on "the way we dissect nature and break up the flux of experience into objects and entities to construct propositions about"; her p. 16 uses him for exactly this claim; and her footnote 1 on p. 16 is the caveat: "**The problem with Whorf's thesis is that in some strains of European culture (for example, alchemical thought in sixteenth- and seventeenth-century England), very different world views have emerged, even though the language was essentially the same as that Newton spoke.**" Her reference is Benjamin Whorf, *Collected Papers on Metalinguistics* (Washington, D.C.: Foreign Service Institute, 1952), pp. 3 to 8 and 27 to 52. **Not held, and neither Sapir's nor Whorf's own writing is in the corpora**: Whorf 14 occurrences, Sapir 150 (almost all in two copies of one journal issue), "linguistic relativity" 2, across 1,117 documents. So this revisit needs a fetch.
+
 ## First-Person Inquiry Without a Sovereign Subject
 
 The use of first-person writing in this research presents an apparent tension with its posthuman theoretical orientation. First-person accounts are conventionally associated with an individual subject who experiences, interprets, and narrates phenomena. Posthuman approaches, however, challenge the conception of the subject as autonomous, bounded, and independently constituted. This research does not resolve that tension by removing the first-person voice. Rather, it approaches the tension as a productive methodological problem: how might writing from a situated, embodied position participate in investigating subjectivities that are multiple, relational, and continuously becoming?
@@ -31,8 +37,6 @@ Bennett spoke of Derrida's call and response as how we intra-act with things in 
 
 Agential swarms/assemblages need a mechanism of intra-action. Actants are the individual elements that have the capacity to affect other entities and themselves be affected.
 
-*Pasted from comps v35, Protocols Under the Umbrella, pp. 46–47. The internal-consistency criterion in its last paragraph also serves 3.8.*
-
 The thinker-by-thinker account above describes how each major theorist has conceptualized diffractive practice at the level of orientation and commitment. What the practice looks like when operationalized as a protocol — when a researcher actually tries to work diffractively — has been developed by a range of practitioners working across fields, each arriving at similar structures through different routes.
 
 Lambert (submitted) develops five conceptual entry points for diffractive practice in teacher education: affect, intra-action, becoming-with, assemblage, and spacetimemattering. Each is a conceptual tool derived from posthumanist inquiry that reorients the practitioner away from the humanist, linear, product-oriented logic of reflective practice and toward an "otherwise" practice adequate to the complex, relational, non-linear nature of teaching encounters. Crucially, Lambert does not offer these as a protocol to replace reflection and explicitly avoids a recipe for implementation. They are entry points — ways of beginning to think differently, not steps to follow. Diffraction in Lambert's framing is an orientation, not a procedure: "not an 'either/or' alternative but an 'otherwise', expanded way of thinking" (Lambert, submitted, p. 3). This is consistent with the broader literature: every serious account of diffractive practice warns against treating it as a recipe precisely because a recipe reinstalls the linear, product-oriented, closure-seeking logic the practice is designed to resist.
@@ -45,15 +49,11 @@ The convergence of these protocols under the umbrella — Barad's apparatus work
 
 ## Apparatus, site, and the artifact
 
-*From the scaffold: a draft task statement built from what   described, to rewrite*
-
 I will make a multimodal, interactive, generative installation that lives in and out of digital space, with a website I build as its corpus, its body. My past works fold into that corpus as evidence that theory and abstraction have always been my diffraction grating, a dynamic part of my nomadic subjectivities. It will be made from \[3D scans, sound, video, image, interactivity, code, as in earlier assemblages?\] at \[sites\] between \[start\] and \[end\]. Making it will involve \[methods\]. The making will leave these traces: \[documentation\]. The work will be encountered by \[who\] in \[gallery or site\] at \[when\], and on the website continuously. The written component will \[its job\]. At the defense the committee will receive \[what\], and it will be deposited as \[format\].
 
 The Enchantment of Textiles catalog provides a concrete laboratory model for what new materialist interactivity looks like as research apparatus. The catalog describes the project as an interdisciplinary investigation of electronic cloth: studying historic textiles and transforming that knowledge into interactive objects that demonstrate what becomes possible when material languages meet digital culture (Jefferies, 2019, pp. 14–29). The lab is explicitly framed as a collaborative assemblage — artists, engineers, and researchers — with textiles as performative tools rather than passive substrates.
 
 The research apparatus generates an explicit distributed agency claim: users become collaborators; interaction creates "connections without hierarchy," where the spectator becomes a contributor imprinting subjectivity on the work (Ledesma Guadarrama, 2019, p. 6). Bergen grounds this directly in Bennett: "bodies enhance their power in or as a heterogeneous assemblage" (Bennett, 2010, p. 23, cited in Bergen, 2019, p. 10). The Enchantment of Textiles is NM conceptualization enacted rather than described — a research apparatus in which phenomena are generated through material-technological arrangements of signal, interference, body orientation, and craft technique, and in which the boundaries between researcher, maker, object, and participant are constitutively underdetermined. The co-constitutive is the condition, not the outcome: the assemblage does not produce co-constitution as a result; it begins from it.
-
-*Pasted from comps v35, What is Research?, pp. 49–51 (mostly cut from the final)*
 
 Fox and Alldred (2021) define research as an assemblage made of tools, recording and analysis technologies, software and hardware, theoretical frameworks, literatures, researchers, editors, ethics committees, end users, and the data outputs — where outputs "derive from the multiple affects between these human and non-human materialities." Under an agential realist account, this definition of research gains additional precision. Phenomena --- the basic units of reality for Barad --- "are not the mere result of laboratory exercises engineered by human subjects. Nor can the apparatuses that produce phenomena be understood as observational devices or mere laboratory instruments" (Barad, 2003, p. 815). Research is not the neutral observation of pre-existing objects but the co-constitution of phenomena through specific material-discursive arrangements. The apparatus is not separate from what it produces; it is part of the phenomenon itself. This means that the decisions a researcher makes --- what apparatus to build, what cut to enact, what to attend to and what to exclude --- are not methodological conveniences but ontological acts. Research, on this account, is world-making.
 
@@ -123,8 +123,6 @@ The commitments the document has traced are not positions to defend but conditio
 
 **\[Note\]** The specificity argument (“Specificity is not a limitation on generalizability”) is in the v35 passage in 1.2.
 
-*Pasted from comps v35, Limitations and Cautions, p. 48*
-
 Fox & Alldred also provide an essential caution: diffractive methodology can become highly researcher-centric and context-dependent if analytic cuts are treated as interpretive license rather than accountable apparatus-work. They note that DM may be "researcher-centric and context-dependent" and that this raises concerns about transferability and applicability in policy/practice contexts.
 
 Their abstract similarly points to the challenge of elucidating how analytic diffractions influence findings.
@@ -177,12 +175,6 @@ Its reconstructed elements, as listed in the chat:
 
 **Camera / framing / apparatus as a recurring operation:** the same operation recurs in scanning, installation, code, generative systems, virtual environments; bounding without claiming exhaustive capture; "put a pin in it" as a temporary coordinate: here, now, through this body, through this apparatus, under these conditions; then becoming continues.
 
-**Literacy as the LLSS disciplinary bridge:** see 1.6.
-
-**\[Note\]** Comparing this with the draft:
-
 Already here: the works (1.3); the camera, the Mamiya C3, and the refusal of the crop (1.1); the potato bin, kite, and kitchen (1.3); Trinh, Barad, Bennett, Braidotti, and Deleuze (Chapter 2); literacy (1.6).
 
 Not yet here: the seven-step sequence; Alaimo's transcorporeality; autism as method; maximalism as refusal of premature elimination; "put a pin in it" as a temporary coordinate. Used the same phrase with me on October 5 ("put a pin in this") for a definition of new materialist APAR.
-
-The sequence could also order Chapter 3's methods, since several steps already have sections there (framing in 3.3–3.4, diffracting in 3.6).

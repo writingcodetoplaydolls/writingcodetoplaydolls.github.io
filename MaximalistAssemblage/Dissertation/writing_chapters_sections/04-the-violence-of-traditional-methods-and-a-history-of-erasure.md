@@ -3,6 +3,12 @@ published: false      # the pages are built from this; Jekyll should not render 
 title: The Violence of Traditional Methods and a History of Erasure
 ---
 
+## Assemblage: *agencement* in translation, read against the art term
+
+### Diffraction: assemblage and the found object
+
+"the previous work begins with the potato bin." Is the potato bin a found object, an assemblage, or the apparatus that does the finding?
+
 ## The gap: a history of erasure
 
 **\[Note\]** This history is the genealogy of the violence the dissertation answers: the erasure of complexity, the insistence on the word and the one truth, the erasure of the female body. v35 and the final overlap from the atomists through Merleau-Ponty; merge them rather than choosing.
@@ -224,5 +230,3 @@ Thread to recover: Whitehead, quantum physics, New York around 1920
 **New York anthropology around 1920:** Franz Boas at Columbia; Zora Neale Hurston studied with him at Barnard in the later 1920s.
 
 **Harlem Renaissance:** Alain Locke, a pragmatist philosopher with a Harvard PhD (1918), edited *The New Negro* (1925), the same year as Whitehead's Lowell Lectures. That is a shared date, not a documented link.
-
-**Missing:** a documented link from Whitehead to Boas, Locke, or Harlem. If   find the old chat, paste it here and the thread can be rebuilt from it.
