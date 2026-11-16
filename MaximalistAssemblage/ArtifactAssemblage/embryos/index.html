@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Embryo Cell Division</title>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: #060845;          /* matches the sketch's black (6,8,69) */
+      overflow: hidden;
+    }
+    #embryo-sketch {
+      position: fixed;
+      inset: 0;                     /* fill the window / iframe */
+    }
+    #embryo-sketch canvas { display: block; }
+  </style>
+  <!-- p5.js 1.9.0, same version the Jekyll site already loads -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+</head>
+<body>
+  <div id="embryo-sketch"></div>
+  <script src="embryos.js"></script>
+</body>
+</html>
