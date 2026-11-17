@@ -120,6 +120,13 @@ export function createBook({ page, host, onTurn }) {
 
     newSpread()
     for (const block of blocks) {
+      // a page break asked for in the writing: start the next page here, and
+      // put nothing on this one. An empty page is not left behind, because a
+      // break at the top of a page it has not written on yet does nothing.
+      if (block.classList.contains('newpage')) {
+        if (!leafEmpty()) nextLeaf()
+        continue
+      }
       // a figure asking for the whole spread: a plate, with nothing else on it
       if (isSpreadPlate(block)) {
         dropIfEmpty()

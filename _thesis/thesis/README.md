@@ -381,6 +381,64 @@ Print does not use any of this: the stylesheet flattens the pages back into one
 flow. A page's blocks are in reading order inside it and the pages are in order,
 so the flattened document reads correctly either way.
 
+## Writing in the sheet
+
+The writing is in a Google Sheet and `thesis/sheet.mjs` turns it into the
+markdown below. Five columns are needed and three more are read if they are
+there, under any capitalisation:
+
+| Column | |
+|---|---|
+| `Chapter` | its number. Chapters are ordered by it, so moving one is a change to a column rather than to four hundred rows |
+| `Chapter Title` | written once, on the chapter's first row |
+| `Section Heading` | `##`, written once |
+| `Section Subheading` | `###`, written once |
+| `Section text` | one paragraph of markdown. Alt+Enter inside the cell starts another |
+| `Page` | a new page starts wherever this number changes |
+| `Figure` | this row is that figure; the `Section text` beside it is its caption |
+| `Notes` | `inline` joins this row to the paragraph above. Anything else written here is a note to yourself |
+
+Row order is the order of the writing. A blank `Chapter Title`, `Section
+Heading` or `Section Subheading` means "the same as the row above".
+
+### Page
+
+Type a number in `Page` and keep typing it until you want the page to turn.
+Where it changes, a page begins; where it repeats, the rows stay together.
+
+It is a break and not an address, because there is nothing stable for an
+address to point at: how many pages a chapter has depends on the window, the
+type size, and whether the reader has the book on at all. So the number says
+*start here*, and a page that fills up still turns on its own before the next
+one is asked for. A break asked for on a row that also starts a section is
+moved above that section's heading, so the heading leads its page instead of
+being stranded at the foot of the one before.
+
+In print it is a new sheet of paper. In the scrolling column it does nothing —
+there are no pages there to break.
+
+### Figure
+
+Put a sketch's name in `Figure` and the caption in `Section text`:
+
+| Figure | Section text |
+|---|---|
+| `embryos` | What the cells are doing. |
+| `embryos width=full` | A page to itself. |
+| `image=plan.jpg` | A photograph instead. |
+
+A cell whose first word already has an `=` is figure attributes written out, so
+anything in the table under **Figures** below can be written there. A name on
+its own is one of **The Processing sketches**.
+
+### Notes
+
+The parser reads one word from this column — `inline` — and ignores the rest,
+so it stays a column to think in. `inline` joins the row to the paragraph above
+instead of starting a new one, which is what the sorted blocks mostly need:
+they were cut as fragments, and two rows next to each other are often two
+halves of one paragraph.
+
 ## Writing a chapter
 
 Front matter, then markdown:
@@ -411,6 +469,7 @@ The caption, which takes inline markdown.
 |---|---|
 | `sketch=` | a file in `src/sketches/` — run inline, sharing the page |
 | `embed=` | a finished page of its own, in an iframe |
+| `processing=` | one of the Processing sketches by name -- see below |
 | (`:::window`) | an opening with nothing in it — see **Windows** above |
 | `video=` / `image=` | a video file, or a still |
 | `site-embed=` | use this page instead of the module once published (see below) |
@@ -422,6 +481,62 @@ The caption, which takes inline markdown.
 | `title=`, `label=`, `id=`, `poster=`, `params=` | the rest |
 
 `params=` is JSON, handed to the sketch as `ctx.params`; nothing reads it yet.
+
+## The Processing sketches
+
+Sixteen of Amy's Processing sketches, ported to p5.js, live in
+`thesis/processing/`. Each is a folder with its own `index.html`, so each is a
+small page that runs on its own, and a figure holds it in a frame.
+
+A figure asks for one by name:
+
+```
+:::figure processing=embryos
+The caption.
+:::
+```
+
+The name, the title and the shape come from `thesis/processing/sketches.json`.
+Nothing else knows the list: add a folder, add a line, and it can be asked for.
+Written attributes still win, so `width=full` or a `title=` of your own
+overrides what the registry says.
+
+Written in the sheet, that is three lines in one Section text cell --
+Alt+Enter between them. The line of three colons matters: without it the build
+warns and treats everything after it as the chapter rather than the caption.
+
+The build copies the folders to
+`MaximalistAssemblage/ArtifactAssemblage/processing/` and lists them in the
+manifest, so they are published and pruned like everything else it writes.
+They are not uploaded by hand.
+
+### A pause on every one
+
+Each folder carries `motion.js`, loaded before the sketch. It wraps the p5
+constructor to get hold of the instance and gives the page a **Pause / Play**
+button, which stops the drawing, any video used as a texture, and the audio
+context. A sketch that does not animate gets no button -- the four L-systems
+draw once and stop.
+
+WCAG 2.2.2 is the reason: content that moves by itself for more than five
+seconds beside other content has to be stoppable, and a sketch in a window
+beside a page of prose is exactly that. The figure's own start plate covers the
+reader who has asked for reduced motion; the button covers the one who has not
+but wants it still now.
+
+### Still open
+
+- **traylorcinema** does not run. It wants 465 frames in
+  `assets/images/housePlay0.png ...`, which are rendered output from the
+  PlayHouse sketch and were not in the zip. `ready: false` in the registry, so
+  the build says so rather than publishing a blank frame.
+- **Flashing is not measured.** `blackholestars`, both black-hole shaders and
+  `entanglement` flicker. WCAG 2.3.1 allows no more than three flashes a second
+  over a large enough area; nobody has sat through one with a meter.
+- **The keyboard controls are undocumented on the page.** The arrow keys in the
+  shaders, `space` in `switchscenes`: they only reach a sketch once the frame
+  has focus, and the page does not say they exist. `weight=` shows a line on the
+  start plate and could carry them.
 
 ## How a sketch runs inside a page
 
@@ -466,6 +581,12 @@ figure gave up its context.
 2. Set the figure up the way it should be seen.
 3. Press **poster** in the figure's bar (only there on the dev server).
 4. Move the file into `thesis/posters/` and build again.
+
+The **poster** button is only on a `sketch=` figure, which runs in the page
+where the build can reach its canvas. A `processing=` or `embed=` figure is an
+iframe, so its still is a screenshot: open the sketch's own page, size the
+window to the figure's shape, and save it as `thesis/posters/fig-<name>.jpg`.
+All fifteen runnable Processing sketches have one.
 
 The build lists every figure that has no poster yet. In print, the poster
 replaces the figure and the live address is printed under the caption, so
@@ -576,6 +697,15 @@ it the windows are empty.
 - **Citations.** Footnotes work. Pandoc-style `[@key]` citations against
   `apa.csl` do not: the build has no CSL processor. The methodology document
   still goes through `build.bat` for the APA `.docx`.
+- **Nothing says what goes in the `.leaf-slot` windows.** A figure that belongs
+  to a sentence is placed by the `Figure` column, in the flow, which is the
+  right way round for it. The reserved slot on every page of v2 is a different
+  thing: it is furniture, and where it falls depends on the window size, so it
+  cannot be filled from the writing. The slot addresses are already generated --
+  `node thesis/build.mjs --slots=x.csv` writes one row per window and figure,
+  keyed by an address that survives the sections being rearranged. What is
+  missing is the sheet tab to paste them into and the pass that reads it back.
+
 - **One figure has no poster.** The comps graph: it is an iframe to a page in
   the Pages repository, so it is blank on the dev server and there is nothing to
   capture. Every other figure has one.

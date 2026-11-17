@@ -11,18 +11,28 @@
 // mode, the navigator, print) works without knowing where the text came from,
 // and the generated files can be read to see exactly what the sheet became.
 //
-// Five columns, and nothing else:
+// Five columns are needed:
 //
-//   Chapter              1 … 5            one page each, and its number
-//   Chapter Title        The Ground       the page's title
+//   Chapter              1 … 5            one chapter each, and its number
+//   Chapter Title        The Ground       the chapter's title
 //   Section Heading      Ontological …    ##
 //   Section Subheading                    ###
 //   Section text         the prose        a paragraph of markdown
 //
-// Row order is document order. There is no type column: every row is a
-// paragraph. The text is markdown and goes through untouched, so a cell that
-// begins "- " is a bullet and one that begins "> " is a quotation — the marker
-// lives in the cell rather than in a column beside it.
+// and three more are read if they are there, by any capitalisation:
+//
+//   Page                 7                a new page starts where this changes
+//   Figure               embryos          this row is that figure; the text
+//                                         beside it is its caption
+//   Notes                inline           "inline" joins this row to the
+//                                         paragraph above; anything else in
+//                                         this column is a note to yourself
+//
+// Row order is document order. There is no type column: a row with a Figure is
+// a figure and every other row is a paragraph. The text is markdown and goes
+// through untouched, so a cell that begins "- " is a bullet and one that begins
+// "> " is a quotation — the marker lives in the cell rather than in a column
+// beside it.
 
 import fs from 'node:fs'
 import path from 'node:path'
@@ -121,13 +131,30 @@ function checkColumns(rows) {
   }
 }
 
+// Page, Figure and Notes are looked up without regard to case or spacing,
+// because "Page" and "page" are the same column to anyone typing it, and a
+// column that is only read when it happens to be there should not also insist
+// on a capital letter.
+const pick = (r, name) => {
+  const key = Object.keys(r).find(k => k.trim().toLowerCase() === name)
+  return key ? (r[key] ?? '').trim() : ''
+}
+
 const read = r => ({
   chapter: (r.Chapter ?? '').trim(),
   title: (r['Chapter Title'] ?? '').trim(),
   heading: (r['Section Heading'] ?? '').trim(),
   subheading: (r['Section Subheading'] ?? '').trim(),
   text: (r['Section text'] ?? '').trim(),
+  page: pick(r, 'page'),
+  figure: pick(r, 'figure'),
+  notes: pick(r, 'notes'),
 })
+
+// A page break, written as the directive the build reads. It closes itself —
+// there is nothing to put inside a page break — and it is one string so that
+// it travels as a block and can be recognised and lifted above a heading.
+const NEWPAGE = ':::newpage'
 
 /* ---- the chapters --------------------------------------------------------
  * Chapter Title, Section Heading and Section Subheading are written once, on
@@ -147,7 +174,8 @@ function chaptersFrom(rows) {
   checkColumns(rows)
   const chapters = new Map()
   let chapter = null, heading = null, subheading = null
-  let placed = 0, orphaned = 0
+  let pageNo = null, seenPages = new Set()
+  let placed = 0, orphaned = 0, breaks = 0, figures = 0, inlined = 0
 
   for (const raw of rows) {
     const r = read(raw)
@@ -156,6 +184,10 @@ function chaptersFrom(rows) {
       chapter = chapters.get(r.chapter) ?? { number: r.chapter, title: '', titles: new Set(), sections: new Map() }
       chapters.set(r.chapter, chapter)
       heading = subheading = null
+      // A chapter is its own document and starts on its own page, so the page
+      // numbering starts again with it rather than carrying a break across.
+      pageNo = null
+      seenPages = new Set()
     }
     if (!chapter) {
       if (r.text) orphaned++        // text above the first chapter is text on no page
@@ -171,6 +203,40 @@ function chaptersFrom(rows) {
         + ' Heading above it, so it has nothing to sit under')
     }
 
+    /* ---- Page: where a new page starts ---------------------------------
+     * The pages are measured in the browser. How many there are depends on
+     * the window, the type size, and whether the reader has the book on at
+     * all, so a page number cannot be an address -- there is nothing stable
+     * for it to address. A *change* in it can be an instruction, and this is
+     * that: start a new page here. Rows that repeat the number stay on it,
+     * and the page still breaks on its own if it fills up first. */
+    if (r.page && r.page !== pageNo) {
+      const first = pageNo === null
+      pageNo = r.page
+      if (!first) section(chapter, heading, subheading).push(NEWPAGE)
+      if (seenPages.has(r.page)) {
+        warn(`chapter ${chapter.number}: page "${r.page}" is started again further down the sheet`
+          + ' — the rows of one page have to be together, because row order is the order of the writing')
+      }
+      seenPages.add(r.page)
+      breaks++
+    }
+
+    /* ---- Figure: a figure of its own, in the flow ------------------------
+     * The cell names one of the Processing sketches -- "embryos" -- and may
+     * add attributes after it, "embryos width=full". A cell whose first word
+     * already has an = is written out in full and goes through as it is, so
+     * "image=plan.jpg" and "video=room.mp4" work too. The Section text beside
+     * it is the caption, not a paragraph. */
+    if (r.figure) {
+      const [head, ...rest] = r.figure.split(/\s+/)
+      const attrs = [head.includes('=') ? head : `processing=${head}`, ...rest].join(' ')
+      const lines = [`:::figure ${attrs}`, ...(r.text ? [r.text] : []), ':::']
+      section(chapter, heading, subheading).push(lines.join('\n'))
+      figures++
+      continue
+    }
+
     if (!r.text) {
       // An outline entry: a section that exists and has not been written yet.
       // Naming it is enough to make the heading appear, empty.
@@ -182,7 +248,26 @@ function chaptersFrom(rows) {
     // Sheets. Blank lines are dropped, so pressing it twice is the same as
     // once, and a trailing one leaves no empty paragraph behind.
     const paras = r.text.split(/\r?\n/).map(t => t.trim()).filter(Boolean)
-    for (const para of paras) section(chapter, heading, subheading).push(para)
+    const list = section(chapter, heading, subheading)
+
+    /* ---- Notes: "inline" runs the row on --------------------------------
+     * These blocks were sorted as fragments, so two rows next to each other
+     * are often two halves of one paragraph. "inline" in the Notes column
+     * joins this row onto the one above instead of starting a paragraph of
+     * its own. That one word is all the parser takes from this column:
+     * anything else written there is a note to yourself and is ignored. */
+    if (/\binline\b/i.test(r.notes)) {
+      const prev = list.length ? list[list.length - 1] : ''
+      if (prev && !prev.startsWith(':::')) {
+        list[list.length - 1] = `${prev} ${paras.join(' ')}`
+        inlined++
+        continue
+      }
+      warn(`chapter ${chapter.number}: a row marked "inline" has no paragraph above it to join, so`
+        + ` it starts one of its own — "${r.text.slice(0, 48)}${r.text.length > 48 ? '…' : ''}"`)
+    }
+
+    for (const para of paras) list.push(para)
     placed += paras.length
   }
 
@@ -194,7 +279,10 @@ function chaptersFrom(rows) {
         + [...ch.titles].map(t => `"${t}"`).join(', ') + ' — only the first is used')
     }
   }
-  console.log(`  ${placed} block(s) placed`)
+  console.log(`  ${placed} block(s) placed`
+    + (figures ? `, ${figures} figure(s)` : '')
+    + (breaks ? `, ${breaks} page(s)` : '')
+    + (inlined ? `, ${inlined} row(s) run on` : ''))
 
   // The Chapter column decides the order of the chapters, so that moving one
   // is a change to a column rather than to four hundred rows. Row order still
@@ -208,11 +296,21 @@ function chaptersFrom(rows) {
       + ordered.map(c => `"${c.number}"`).join(', '))
   }
 
+  // A page break asked for on the row that also starts a section belongs
+  // *above* that section's heading, not under it — otherwise the heading is
+  // left alone at the foot of the page the break was meant to end. The break
+  // was pushed into the section's blocks, so it is lifted back out here.
+  const liftBreak = (blocks, lines) => {
+    if (blocks[0] === NEWPAGE) lines.push('', blocks.shift())
+  }
+
   return ordered.map(ch => {
     const lines = []
     for (const [name, subs] of ch.sections) {
+      if (name) liftBreak(subs.values().next().value ?? [], lines)
       if (name) lines.push('', `## ${name}`)
       for (const [sub, blocks] of subs) {
+        if (sub) liftBreak(blocks, lines)
         if (sub) lines.push('', `### ${sub}`)
         for (const b of blocks) lines.push('', b)
       }

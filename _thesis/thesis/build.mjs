@@ -110,6 +110,22 @@ const OUT_WRITING = SITE_MODE ? under(SITE.writing) : null
 
 const doc = JSON.parse(fs.readFileSync(path.join(THESIS, 'thesis.json'), 'utf8'))
 
+/* ---- the Processing sketches ---------------------------------------------
+ * Amy's Processing sketches, ported to p5 and each published as its own small
+ * page, which a figure holds in a frame. They are named rather than linked:
+ *   :::figure processing=embryos
+ * so a cell in the sheet carries a name and not a URL that would have to be
+ * rewritten the next time the repository is rearranged.
+ *
+ * They are copied to the site by this build and listed in the manifest, so
+ * they are published and pruned like everything else it writes. */
+const PROCESSING_DIR = path.join(THESIS, 'processing')
+const PROCESSING = fs.existsSync(path.join(PROCESSING_DIR, 'sketches.json'))
+  ? JSON.parse(fs.readFileSync(path.join(PROCESSING_DIR, 'sketches.json'), 'utf8')).sketches ?? {}
+  : {}
+const PROCESSING_AT = SITE_MODE ? `${SITE.sketches}processing/` : '/thesis/preview/processing/'
+const OUT_PROCESSING = SITE_MODE ? under(PROCESSING_AT) : path.join(OUT, 'processing')
+
 /* ---- where the chapters come from ----------------------------------------
  * "chapters": "sheet" in thesis.json means the document is written in the
  * Google Sheet and thesis/sheet.mjs has turned it into markdown under
@@ -315,6 +331,27 @@ function parseAttrs(line) {
 
 let figureCount = 0
 function figure(attrs, caption, chapter) {
+  // processing=<name>: one of the ported sketches, which is an embed whose
+  // address, title and shape come from thesis/processing/sketches.json. An
+  // attribute written in the sheet still wins, so a caption can give a figure
+  // a different title or a different shape without touching the registry.
+  if (attrs.processing) {
+    const spec = PROCESSING[attrs.processing]
+    if (!spec) {
+      warn(`${chapter.slug}: no Processing sketch called "${attrs.processing}" — the names are in thesis/processing/sketches.json`)
+    } else {
+      if (spec.ready === false) {
+        warn(`${chapter.slug}: "${attrs.processing}" does not run yet — ${spec.why ?? 'it is not finished'}`)
+      }
+      attrs = {
+        id: `fig-${slug(attrs.processing)}`,
+        title: spec.title,
+        aspect: spec.aspect,
+        ...attrs,
+        embed: `${PROCESSING_AT}${attrs.processing}/`,
+      }
+    }
+  }
   // A figure can be a module here and a finished page there. The Bouquet is the
   // case: in src/sketches it is a sketch, but it is published as a one-file page
   // of its own (tools/build_bouquet_page.py --site) and kept out of the sketch
@@ -343,7 +380,8 @@ function figure(attrs, caption, chapter) {
     SLOTS.push({
       ...at, chapter: chapter.number || chapter.slug, kind: 'figure', id,
       // what it shows now, in the words the markdown used
-      shows: attrs.sketch || attrs.embed || attrs.video || attrs.image || '',
+      shows: attrs.processing ? `processing=${attrs.processing}`
+        : attrs.sketch || attrs.embed || attrs.video || attrs.image || '',
       title: attrs.title || attrs.label || '', caption: caption || '',
       width: attrs.width || 'wide', height: attrs.height || attrs.aspect || '',
     })
@@ -504,6 +542,30 @@ function render(body, chapter) {
     table = null
   }
   const flushAll = () => { flushPara(); flushList(); flushQuote(); flushTable() }
+  // Closing a directive block. It is a function because a block that is
+  // never closed is closed here anyway, at the end of the chapter: these
+  // are typed into a spreadsheet cell now, and a forgotten line of three
+  // colons used to swallow everything written after it.
+  const closeBlock = () => {
+    if (!block) return
+    // A page break. Nothing is drawn: it is an empty marker that book mode
+    // starts a new page at, and that print breaks the sheet of paper at. In
+    // the scrolling column it has no height and does nothing, because there
+    // are no pages there to break.
+    if (block.name === 'newpage') out.push('<div class="newpage" aria-hidden="true"></div>')
+    else if (block.name === 'figure') out.push(figure(block.attrs, blockLines.join(' ').trim(), chapter))
+    else if (block.name === 'window') out.push(windowBlock(block.attrs, blockLines.join(' ').trim(), chapter))
+    else if (block.name === 'epigraph') {
+      const [text, ...rest] = blockLines.join('\n').split(/^--\s*/m)
+      out.push(`<div class="epigraph"><p>${inline(text.trim(), notes)}</p>${rest.length ? `<cite>${inline(rest.join(' ').trim(), notes)}</cite>` : ''}</div>`)
+    } else {
+      const cls = ASIDE_KINDS[block.name] ?? ''
+      const title = block.attrs.title || (block.name === 'aside' ? '' : block.name)
+      out.push(`<div class="aside ${cls}">${title ? `<span class="aside-title">${esc(title)}</span>` : ''}` +
+        `${render(blockLines.join('\n'), chapter)}</div>`)
+    }
+    block = null; blockLines = []
+  }
   const cells = l => l.trim().replace(/^\||\|$/g, '').split('|').map(c => c.trim())
 
   for (const raw of lines) {
@@ -523,26 +585,21 @@ function render(body, chapter) {
 
     // a directive block, ended by a line of three colons
     if (block) {
-      if (line.trim() === ':::') {
-        if (block.name === 'figure') out.push(figure(block.attrs, blockLines.join(' ').trim(), chapter))
-        else if (block.name === 'window') out.push(windowBlock(block.attrs, blockLines.join(' ').trim(), chapter))
-        else if (block.name === 'epigraph') {
-          const [text, ...rest] = blockLines.join('\n').split(/^--\s*/m)
-          out.push(`<div class="epigraph"><p>${inline(text.trim(), notes)}</p>${rest.length ? `<cite>${inline(rest.join(' ').trim(), notes)}</cite>` : ''}</div>`)
-        } else {
-          const cls = ASIDE_KINDS[block.name] ?? ''
-          const title = block.attrs.title || (block.name === 'aside' ? '' : block.name)
-          out.push(`<div class="aside ${cls}">${title ? `<span class="aside-title">${esc(title)}</span>` : ''}` +
-            `${render(blockLines.join('\n'), chapter)}</div>`)
-        }
-        block = null; blockLines = []
-      } else blockLines.push(raw)
+      if (line.trim() === ':::') { closeBlock(); continue }
+      blockLines.push(raw)
       continue
     }
+    // a line of three colons with no block open: a closer for a block that
+    // was already closed, which is nothing rather than a paragraph of colons
+    if (line.trim() === ':::') continue
     const open = /^:::\s*([\w-]+)(.*)$/.exec(line.trim())
     if (open) {
       flushAll()
       block = { name: open[1], attrs: parseAttrs(open[2]) }
+      // ":::newpage" closes itself: there is nothing to put inside a page
+      // break, and a page number typed in the sheet should not need a line of
+      // three colons under it to mean anything.
+      if (block.name === 'newpage') { closeBlock(); continue }
       if (!(block.name === 'figure' || block.name === 'window' || block.name === 'epigraph' || block.name in ASIDE_KINDS)) {
         warn(`${chapter.slug}: unknown block ":::${block.name}" — treated as an aside`)
       }
@@ -610,7 +667,17 @@ function render(body, chapter) {
     para.push(line.trim())
   }
   flushAll()
-  if (block) warn(`${chapter.slug}: a ":::${block.name}" block was never closed`)
+  if (block) {
+    warn(`${chapter.slug}: a ":::${block.name}" block was never closed — add a line of three colons after it`)
+    // The caption is what was written under the directive, up to the first
+    // blank line; everything after that was meant to be the chapter and is
+    // rendered as such, rather than disappearing into a caption.
+    const gap = blockLines.findIndex(l => !l.trim())
+    const rest = gap >= 0 ? blockLines.slice(gap + 1) : []
+    if (gap >= 0) blockLines = blockLines.slice(0, gap)
+    closeBlock()
+    if (rest.some(l => l.trim())) out.push(render(rest.join('\n'), chapter))
+  }
   if (fence) warn(`${chapter.slug}: a code fence was never closed`)
 
   // any note cited but never flushed (inside a heading, say)
@@ -862,6 +929,21 @@ if (posters.length) {
   for (const f of posters) fs.copyFileSync(path.join(THESIS, 'posters', f), path.join(OUT_FIGS, f))
 }
 
+// the Processing sketches: whole folders, copied verbatim, each its own page
+let processingFiles = 0
+if (fs.existsSync(PROCESSING_DIR)) {
+  const copy = (from, to) => {
+    fs.mkdirSync(to, { recursive: true })
+    for (const e of fs.readdirSync(from, { withFileTypes: true })) {
+      if (e.name.startsWith('.')) continue
+      const a = path.join(from, e.name), b = path.join(to, e.name)
+      if (e.isDirectory()) copy(a, b)
+      else { fs.copyFileSync(a, b); processingFiles++ }
+    }
+  }
+  copy(PROCESSING_DIR, OUT_PROCESSING)
+}
+
 /* ---- the writing of record ----------------------------------------------
  * The markdown goes to the repository as well as the pages built from it, so
  * that what was written is there to read and to diff and not only what it was
@@ -910,6 +992,7 @@ for (const c of chapters) {
   console.log(`  ${c.slug}.html  ${c.figures} figure(s), ${c.sections.length} section(s)`)
 }
 console.log(`  index.html, lib/ (${fs.readdirSync(OUT_LIB).length} files), posters/ (${posters.length})`
+  + (processingFiles ? `, processing/ (${Object.keys(PROCESSING).length} sketches, ${processingFiles} files)` : '')
   + (written ? `, ${written} markdown file(s)` : ''))
 // the variant stylesheets, all of them: a version is only as good as the
 // sheet that makes it, and a missing one silently returns the page to book.css
