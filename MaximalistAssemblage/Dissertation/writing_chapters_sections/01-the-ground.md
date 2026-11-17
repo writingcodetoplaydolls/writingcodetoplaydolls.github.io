@@ -29,6 +29,10 @@ Cartography. Apparatus. Affirmative Ethics.
 
 Making Strange. Transposition. Diffraction.
 
+:::figure processing=entanglement width=spread
+Entanglement. 2024
+:::
+
 ## Ontological commitments
 
 Once the figure of Man and the figure of inert matter are both refused, what is left is not nothing “(while not being some thing), but it may in fact be the source of all that is, a womb that births existence” (Barad, 2012, p. 9). It is a world that has been there all along, now reportable because the frames that obscured it have been set down.
