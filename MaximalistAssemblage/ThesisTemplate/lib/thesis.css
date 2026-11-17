@@ -641,6 +641,13 @@ body.turning .sheetbox, body.turning .book-shell { opacity: .4; transition: opac
 .toc-list .blurb { color: var(--ink-soft); font-size: .9rem; margin: .3rem 0 .4rem; }
 .toc-list .figs { color: var(--ink-faint); font-size: .8rem; }
 
+/* ---- a page break --------------------------------------------------------
+ * Written in the sheet as a change of Page number. It draws nothing and takes
+ * up no room: book mode starts a new page where it finds one, print breaks the
+ * sheet of paper at it, and in the scrolling column there are no pages to
+ * break, so it does nothing at all. */
+.newpage { display: block; height: 0; margin: 0; padding: 0; }
+
 /* ---- print ---------------------------------------------------------------
  * The committee reads paper, and paper is the other way round: white, with
  * black type and no room behind it. The sheets and the world go; every window
@@ -682,6 +689,10 @@ body.turning .sheetbox, body.turning .book-shell { opacity: .4; transition: opac
   figcaption .liveat::before { content: "Live: "; }
   figcaption .permalink { display: none; }
   h1, h2, h3, h4 { break-after: avoid; }
+  /* a page break asked for in the writing. Not at the top of the document,
+     where it would print one blank sheet before anything else. */
+  .newpage { break-before: page; }
+  .newpage:first-child { break-before: auto; }
   pre, blockquote, table { break-inside: avoid; }
   a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 85%; color: #555; word-break: break-all; }
   .noteref { color: #000; }
