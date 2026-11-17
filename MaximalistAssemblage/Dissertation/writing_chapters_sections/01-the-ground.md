@@ -5,7 +5,7 @@ title: The Ground
 
 ## Maximalist Assemblage
 
-### Update November 16, 2026 at 3:00PM
+### Update November 16, 2026 at 6:12PM
 
 “In a world that already feels overwhelmingly unfamiliar, making things stranger somehow allows me to inhabit that strangeness, as if it was mine” (Andersen, 2016, p. 47).
 
