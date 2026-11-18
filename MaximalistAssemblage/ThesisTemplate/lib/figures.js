@@ -66,7 +66,14 @@ function register(el) {
     weight: el.dataset.weight || '',
     fullpage: el.dataset.fullpage || '',
     params: el.dataset.params ? safeJson(el.dataset.params) : {},
-    autoplay: el.dataset.autoplay !== 'false' && !reducedMotion && !saveData,
+    // autoplay=always starts the figure whatever the reader's machine asks
+    // for. It is the author's call, figure by figure, and it stays within AA:
+    // WCAG 2.2.2 wants moving content to be stoppable, which the figure's own
+    // pause is. Waiting for a click under reduced motion is a courtesy beyond
+    // that, and a sketch that is the argument rather than decoration loses
+    // more by sitting still than it gains by waiting.
+    autoplay: el.dataset.autoplay === 'always'
+      || (el.dataset.autoplay !== 'false' && !reducedMotion && !saveData),
     poster: stage.querySelector('.fig-poster'),
     hintEl: null, embed: null, iframe: null,
     seenAt: 0, booted: false,

@@ -57,13 +57,14 @@ export function createBook({ page, host, onTurn }) {
 
   // .sheet is the page's black, behind its text: lib/windows.js cuts the
   // windows out of it so the room behind shows through.
-  // .sheet is the page's black, behind its text. .leaf-slot is a reserved
-  // place for a figure or an inset quotation: it is furniture, a row in the
-  // page's flex column like the head and the foot, so pagination accounts for
-  // it without being told — it measures overflow on .leaf-body, and the body
-  // is simply shorter. Verso offers a figure, recto an inset quotation.
+  // .sheet is the page's black, behind its text. .leaf-slot is where an inset
+  // quotation stands: a row in the page's flex column like the head and the
+  // foot, so pagination accounts for it without being told — it measures
+  // overflow on .leaf-body, and the body is simply shorter. It is empty, and
+  // drawn as nothing, until something is put in it; the right-hand page is the
+  // one offered, so a quotation falls on the recto or not at all.
   const leafHtml = kind => `<div class="sheet"></div><div class="leaf-head"></div>` +
-    `<div class="leaf-slot" data-slot="${kind}"><span>${kind === 'figure' ? 'figure' : 'inset quote'}</span></div>` +
+    `<div class="leaf-slot" data-slot="${kind}"></div>` +
     `<div class="leaf-body"></div><div class="leaf-foot"><span class="folio"></span></div>`
 
   function makeSpread() {
@@ -76,6 +77,7 @@ export function createBook({ page, host, onTurn }) {
       body: leaf.querySelector('.leaf-body'),
       head: leaf.querySelector('.leaf-head'),
       folio: leaf.querySelector('.folio'),
+      slot: leaf.querySelector('.leaf-slot'),
     }))
     track.appendChild(el)
     return { el, leaves, plate: false }
@@ -116,7 +118,9 @@ export function createBook({ page, host, onTurn }) {
       return true
     }
     const nextLeaf = () => { if (leafIndex === 0) leafIndex = 1; else newSpread() }
-    const leafEmpty = () => !leaf().body.firstChild
+    // A page with a quotation standing on it is not empty, even with nothing
+    // written on it yet: a figure given the whole page would cover it.
+    const leafEmpty = () => !leaf().body.firstChild && !leaf().slot?.dataset.filled
 
     newSpread()
     for (const block of blocks) {
@@ -126,6 +130,26 @@ export function createBook({ page, host, onTurn }) {
       if (block.classList.contains('newpage')) {
         if (!leafEmpty()) nextLeaf()
         continue
+      }
+      // an inset quotation: it belongs in the box reserved on the right-hand
+      // page, not in the column. Only while that page is still empty — the
+      // box is furniture in the page's flex column, so filling it after text
+      // has been measured against it would push the foot of that text off the
+      // page. If there is no free box, or no box at all (v1 hides them, and
+      // so does print), it stays where it was written and sets in the column.
+      if (block.classList.contains('pullquote')) {
+        const target = spread.leaves[1]
+        const slot = target?.slot
+        if (slot && !slot.dataset.filled && !target.body.firstChild) {
+          slot.dataset.filled = '1'
+          slot.appendChild(block)
+          // v1 has no box, and neither has a layout with no variant
+          // stylesheet. Asking after putting it there is the only honest way
+          // to find out: the stylesheet decides, not this file.
+          if (getComputedStyle(slot).display !== 'none') continue
+          delete slot.dataset.filled
+          slot.removeChild(block)
+        }
       }
       // a figure asking for the whole spread: a plate, with nothing else on it
       if (isSpreadPlate(block)) {

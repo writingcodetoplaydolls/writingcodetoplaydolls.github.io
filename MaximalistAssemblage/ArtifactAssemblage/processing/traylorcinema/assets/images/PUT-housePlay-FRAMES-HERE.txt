@@ -1,0 +1,4 @@
+Place the 465 rendered frames here, named:
+  housePlay0.png, housePlay1.png, ... housePlay464.png
+(These are save-frame output from the PlayHouse sketch; the original zip's images/ folder was empty.)
+Adjust NUM_IMAGES in ../traylorcinema.js if the count differs.
