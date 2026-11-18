@@ -385,6 +385,24 @@ blockquote {
 blockquote p:last-child { margin-bottom: 0; }
 blockquote cite { display: block; font: .85rem/1.5 var(--sans); font-style: normal; color: var(--ink-faint); margin-top: .5rem; }
 hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+/* An inset quotation. In the book it is lifted into the box reserved at the
+   top of a page; everywhere else — the scrolling column, print, a page whose
+   box is already taken — it sets in the column where it was written, which is
+   what this styles. */
+.pullquote {
+  display: block;
+  margin: 1.6rem 0; padding: .1rem 0 .1rem 1.1rem;
+  border-left: 2px solid var(--mark);
+  font: italic 1.05rem/1.5 var(--serif);
+  /* no colour of its own: it takes the page's ink, so it sits at the same
+     measured contrast as the writing round it rather than a brighter white */
+}
+.pullquote p { margin: 0; }
+.pullquote cite {
+  display: block; margin-top: .45rem;
+  font: .82rem/1.5 var(--sans); font-style: normal; color: var(--ink-faint);
+}
+
 .epigraph { margin: 2rem 0 2.5rem; font-style: italic; color: var(--ink-soft); }
 .epigraph p { margin-bottom: .3rem; }
 .epigraph cite { font: .85rem/1.5 var(--sans); font-style: normal; color: var(--ink-faint); }
@@ -510,6 +528,10 @@ figure.fig--full .fig-stage { border-radius: 0; border-left: 0; border-right: 0;
   font: .85rem/1.5 var(--sans); color: var(--ink-soft); text-align: center;
 }
 .fig-stage.no-webgl .fig-fallback { display: flex; }
+/* Not a fallback but a fault: the figure was given nothing to show. It is
+   always visible, because the alternative is an empty frame with the room
+   behind it, which reads as a window rather than as a mistake. */
+.fig-missing { display: flex; }
 
 /* A window with nothing in it: an opening onto the room, where she may come
    and stand. Written in a chapter as  :::window

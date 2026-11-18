@@ -1,0 +1,35 @@
+{
+  "_comment": [
+    "The Processing sketches, ported to p5.js, that a figure can ask for by name:",
+    "",
+    "    :::figure processing=embryos",
+    "    An optional caption.",
+    "    :::",
+    "",
+    "title is the sketch's own <title>, and is what a screen reader is given for",
+    "the frame. aspect is the shape it was drawn in. ready false means it does",
+    "not run yet, and the build says so rather than publishing a blank frame.",
+    "",
+    "Adding a sketch: put its folder here and add a line. Nothing else knows the",
+    "list."
+  ],
+  "sketches": {
+    "aidanchevron":      { "title": "Chevron Donuts",              "aspect": "1 / 1",  "ready": true },
+    "blackholeshader14": { "title": "Black Hole Shader (July 14)", "aspect": "1 / 1",  "ready": true },
+    "blackholeshader16": { "title": "Black Hole Shader",           "aspect": "1 / 1",  "ready": true },
+    "blackholestars":    { "title": "Black Hole Stars",            "aspect": "16 / 9", "ready": true },
+    "embryos":           { "title": "Embryo Cell Division",        "aspect": "1 / 1",  "ready": true },
+    "entanglement":      { "title": "Entanglement",                "aspect": "1 / 1",  "ready": true },
+    "lsystems1":         { "title": "L-System 1",                  "aspect": "1 / 1",  "ready": true },
+    "lsystems2a":        { "title": "L-System 2a",                 "aspect": "1 / 1",  "ready": true },
+    "lsystems3":         { "title": "L-System 3",                  "aspect": "1 / 1",  "ready": true },
+    "lsystems3a":        { "title": "L-System 3a",                 "aspect": "1 / 1",  "ready": true },
+    "molnarshouse":      { "title": "Molnar's House",              "aspect": "1 / 1",  "ready": true },
+    "playhouse":         { "title": "Play House",                  "aspect": "16 / 9", "ready": true },
+    "sphereharmonics":   { "title": "Sphere Harmonics",            "aspect": "1 / 1",  "ready": true },
+    "switchscenes":      { "title": "Switch Scenes",               "aspect": "1 / 1",  "ready": true },
+    "tiltawhirl":        { "title": "Tilt-A-Whirl",                "aspect": "1 / 1",  "ready": true },
+    "traylorcinema":     { "title": "Traylor Cinema",              "aspect": "16 / 9", "ready": false,
+                           "why": "needs 465 frames in assets/images/ that are not here yet" }
+  }
+}

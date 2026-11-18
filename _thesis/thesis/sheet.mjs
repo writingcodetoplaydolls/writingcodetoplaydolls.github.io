@@ -151,6 +151,14 @@ const read = r => ({
   notes: pick(r, 'notes'),
 })
 
+// What a line of a cell is, for deciding whether the line under it belongs to
+// the same thing. Empty means plain prose, which is a paragraph of its own.
+const kindOf = line =>
+  /^>/.test(line) ? 'quote'
+  : /^([-*+]|\d+[.)])\s/.test(line) ? 'list'
+  : /^\|/.test(line) ? 'table'
+  : ''
+
 // A page break, written as the directive the build reads. It closes itself —
 // there is nothing to put inside a page break — and it is one string so that
 // it travels as a block and can be recognised and lifted above a heading.
@@ -175,7 +183,7 @@ function chaptersFrom(rows) {
   const chapters = new Map()
   let chapter = null, heading = null, subheading = null
   let pageNo = null, seenPages = new Set()
-  let placed = 0, orphaned = 0, breaks = 0, figures = 0, inlined = 0
+  let placed = 0, orphaned = 0, breaks = 0, figures = 0, inlined = 0, quotes = 0
 
   for (const raw of rows) {
     const r = read(raw)
@@ -237,6 +245,23 @@ function chaptersFrom(rows) {
       continue
     }
 
+    /* ---- Notes "quote": an inset quotation ------------------------------
+     * The box reserved on every page of v2. Write the quotation in Section
+     * text and "quote" in Notes; anything after the word is the attribution,
+     * so "quote Barad, 2007, p. 141" is the whole of it and there is no
+     * second line to remember. It stands in the page's reserved box when
+     * there is one free, and in the column where it was written when there
+     * is not -- and always in the column when the book is off, where there
+     * are no pages for a box to be reserved on. */
+    const asQuote = /^\s*(?:inset\s+)?quotes?\b[\s:,-]*(.*)$/i.exec(r.notes)
+    if (asQuote && r.text) {
+      const cite = asQuote[1].trim()
+      section(chapter, heading, subheading).push(
+        [':::pullquote', r.text, ...(cite ? [`-- ${cite}`] : []), ':::'].join('\n'))
+      quotes++
+      continue
+    }
+
     if (!r.text) {
       // An outline entry: a section that exists and has not been written yet.
       // Naming it is enough to make the heading appear, empty.
@@ -247,7 +272,20 @@ function chaptersFrom(rows) {
     // way to break one -- a row is a row -- and it is what Alt+Enter does in
     // Sheets. Blank lines are dropped, so pressing it twice is the same as
     // once, and a trailing one leaves no empty paragraph behind.
-    const paras = r.text.split(/\r?\n/).map(t => t.trim()).filter(Boolean)
+    //
+    // Except where the lines are one thing written over several of them. A
+    // quotation and its attribution, the items of a list, the rows of a table:
+    // splitting those into paragraphs puts a blank line between lines that
+    // have to touch, and markdown reads the result as several quotations, or
+    // several lists of one item. So a run of lines carrying the same marker
+    // stays together, and only plain prose is broken into paragraphs.
+    const paras = []
+    let runKind = null
+    for (const line of r.text.split(/\r?\n/).map(t => t.trim()).filter(Boolean)) {
+      const k = kindOf(line)
+      if (k && k === runKind) paras[paras.length - 1] += `\n${line}`
+      else { paras.push(line); runKind = k }
+    }
     const list = section(chapter, heading, subheading)
 
     /* ---- Notes: "inline" runs the row on --------------------------------
@@ -257,8 +295,10 @@ function chaptersFrom(rows) {
      * its own. That one word is all the parser takes from this column:
      * anything else written there is a note to yourself and is ignored. */
     if (/\binline\b/i.test(r.notes)) {
+      // Only prose runs on. A quotation, a list or a figure joined to the
+      // paragraph above with a space would stop being one.
       const prev = list.length ? list[list.length - 1] : ''
-      if (prev && !prev.startsWith(':::')) {
+      if (prev && !prev.startsWith(':::') && !kindOf(prev) && !kindOf(paras[0] ?? '')) {
         list[list.length - 1] = `${prev} ${paras.join(' ')}`
         inlined++
         continue
@@ -281,6 +321,7 @@ function chaptersFrom(rows) {
   }
   console.log(`  ${placed} block(s) placed`
     + (figures ? `, ${figures} figure(s)` : '')
+    + (quotes ? `, ${quotes} inset quote(s)` : '')
     + (breaks ? `, ${breaks} page(s)` : '')
     + (inlined ? `, ${inlined} row(s) run on` : ''))
 

@@ -337,19 +337,31 @@ function figure(attrs, caption, chapter) {
   // a different title or a different shape without touching the registry.
   if (attrs.processing) {
     const spec = PROCESSING[attrs.processing]
-    if (!spec) {
+    // No registry at all means the sketches have not been published yet, not
+    // that this name is wrong. The figure is still pointed at where the sketch
+    // will be, so that uploading the folder is the whole of the fix and the
+    // writing does not have to be touched again. Before this, a figure in that
+    // state was built with no source and no still: an empty frame with the
+    // room showing through it, which looks exactly like nothing at all.
+    if (!spec && !Object.keys(PROCESSING).length) {
+      warn(`${chapter.slug}: there is no thesis/processing/sketches.json, so "${attrs.processing}"`
+        + ' cannot be checked — the figure points at where the sketch would be')
+    } else if (!spec) {
       warn(`${chapter.slug}: no Processing sketch called "${attrs.processing}" — the names are in thesis/processing/sketches.json`)
-    } else {
-      if (spec.ready === false) {
-        warn(`${chapter.slug}: "${attrs.processing}" does not run yet — ${spec.why ?? 'it is not finished'}`)
-      }
+    } else if (spec.ready === false) {
+      warn(`${chapter.slug}: "${attrs.processing}" does not run yet — ${spec.why ?? 'it is not finished'}`)
+    }
+    if (spec || !Object.keys(PROCESSING).length) {
       attrs = {
         id: `fig-${slug(attrs.processing)}`,
-        title: spec.title,
-        aspect: spec.aspect,
+        ...(spec ? { title: spec.title, aspect: spec.aspect } : { title: attrs.processing }),
         ...attrs,
         embed: `${PROCESSING_AT}${attrs.processing}/`,
       }
+    } else {
+      // A name that is wrong: say so on the page, not only in the log, or it
+      // is an empty frame again and nothing says why.
+      attrs = { ...attrs, missing: `No sketch is called "${attrs.processing}".` }
     }
   }
   // A figure can be a module here and a finished page there. The Bouquet is the
@@ -435,6 +447,11 @@ function figure(attrs, caption, chapter) {
   }
   if (data.fig === 'sketch') {
     inner.push(`      <div class="fig-fallback">This figure is drawn with WebGL, which this browser is not offering. The still above is what it looks like.</div>`)
+  }
+  // A figure that could not be given anything to show says so where it is,
+  // rather than standing as an empty frame with the room showing through it.
+  if (attrs.missing) {
+    inner.push(`      <div class="fig-fallback fig-missing">${esc(attrs.missing)}</div>`)
   }
 
   const live = SITE_MODE && data.fullpage ? `https://writingcodetoplaydolls.github.io${data.fullpage}` : ''
@@ -555,6 +572,14 @@ function render(body, chapter) {
     if (block.name === 'newpage') out.push('<div class="newpage" aria-hidden="true"></div>')
     else if (block.name === 'figure') out.push(figure(block.attrs, blockLines.join(' ').trim(), chapter))
     else if (block.name === 'window') out.push(windowBlock(block.attrs, blockLines.join(' ').trim(), chapter))
+    // An inset quotation: the same shape as an epigraph, but it is furniture
+    // rather than part of the argument, so book mode may lift it out of the
+    // column and stand it in the box reserved on the page.
+    else if (block.name === 'pullquote') {
+      const [text, ...rest] = blockLines.join('\n').split(/^--\s*/m)
+      out.push(`<aside class="pullquote"><p>${inline(text.trim(), notes)}</p>` +
+        `${rest.length ? `<cite>${inline(rest.join(' ').trim(), notes)}</cite>` : ''}</aside>`)
+    }
     else if (block.name === 'epigraph') {
       const [text, ...rest] = blockLines.join('\n').split(/^--\s*/m)
       out.push(`<div class="epigraph"><p>${inline(text.trim(), notes)}</p>${rest.length ? `<cite>${inline(rest.join(' ').trim(), notes)}</cite>` : ''}</div>`)
@@ -600,7 +625,8 @@ function render(body, chapter) {
       // break, and a page number typed in the sheet should not need a line of
       // three colons under it to mean anything.
       if (block.name === 'newpage') { closeBlock(); continue }
-      if (!(block.name === 'figure' || block.name === 'window' || block.name === 'epigraph' || block.name in ASIDE_KINDS)) {
+      if (!(block.name === 'figure' || block.name === 'window' || block.name === 'epigraph'
+        || block.name === 'pullquote' || block.name in ASIDE_KINDS)) {
         warn(`${chapter.slug}: unknown block ":::${block.name}" — treated as an aside`)
       }
       continue

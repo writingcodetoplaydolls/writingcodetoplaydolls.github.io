@@ -396,7 +396,7 @@ there, under any capitalisation:
 | `Section text` | one paragraph of markdown. Alt+Enter inside the cell starts another |
 | `Page` | a new page starts wherever this number changes |
 | `Figure` | this row is that figure; the `Section text` beside it is its caption |
-| `Notes` | `inline` joins this row to the paragraph above. Anything else written here is a note to yourself |
+| `Notes` | `inline` joins this row to the paragraph above; `quote` makes it an inset quotation. Anything else written here is a note to yourself |
 
 Row order is the order of the writing. A blank `Chapter Title`, `Section
 Heading` or `Section Subheading` means "the same as the row above".
@@ -433,11 +433,33 @@ its own is one of **The Processing sketches**.
 
 ### Notes
 
-The parser reads one word from this column — `inline` — and ignores the rest,
-so it stays a column to think in. `inline` joins the row to the paragraph above
-instead of starting a new one, which is what the sorted blocks mostly need:
-they were cut as fragments, and two rows next to each other are often two
-halves of one paragraph.
+The parser reads two words from this column and ignores the rest, so it stays a
+column to think in.
+
+**`inline`** joins the row to the paragraph above instead of starting a new
+one, which is what the sorted blocks mostly need: they were cut as fragments,
+and two rows next to each other are often two halves of one paragraph.
+
+**`quote`** makes the row an inset quotation. The quotation goes in `Section
+text`, and anything written after the word is the attribution — all on one
+line, so there is nothing to remember:
+
+| Section text | Notes |
+|---|---|
+| The apparatus does not merely detect, it enacts the cut. | `quote Barad, 2007, p. 141` |
+| An unattributed one. | `quote` |
+
+In the book it stands in a box at the top of the right-hand page. One page
+offers a box; a second quotation falling on the same spread sets in the column
+where it was written instead, and so does every quotation when the book is off,
+or in v1, or on paper — there are no pages there for a box to be on.
+
+A page that has nothing in its box has no box. Both pages used to show a dashed
+placeholder, a draft instrument from when there was nothing to put in them; the
+box is drawn now only when something is standing in it, and takes up no room
+when it is empty. Filling one is done before any text is poured onto that page,
+which is what keeps the measuring honest: a box that appeared afterwards would
+push the foot of the text off the bottom.
 
 ## Writing a chapter
 
@@ -697,14 +719,15 @@ it the windows are empty.
 - **Citations.** Footnotes work. Pandoc-style `[@key]` citations against
   `apa.csl` do not: the build has no CSL processor. The methodology document
   still goes through `build.bat` for the APA `.docx`.
-- **Nothing says what goes in the `.leaf-slot` windows.** A figure that belongs
-  to a sentence is placed by the `Figure` column, in the flow, which is the
-  right way round for it. The reserved slot on every page of v2 is a different
-  thing: it is furniture, and where it falls depends on the window size, so it
-  cannot be filled from the writing. The slot addresses are already generated --
-  `node thesis/build.mjs --slots=x.csv` writes one row per window and figure,
-  keyed by an address that survives the sections being rearranged. What is
-  missing is the sheet tab to paste them into and the pass that reads it back.
+- **A figure cannot stand in a page's box, only a quotation can.** Both are
+  written in the sheet now -- `Figure` puts a figure in the flow, `quote` in
+  `Notes` lifts a quotation into the box on the right-hand page -- but a figure
+  asked for in the writing always sets in the column. Giving a figure the box
+  would mean deciding what happens when the one on that spread is taken and the
+  figure is a running sketch that cannot be moved cheaply. The slot addresses
+  are generated -- `node thesis/build.mjs --slots=x.csv` writes one row per
+  window and figure, keyed by an address that survives the sections being
+  rearranged -- and the sheet tab to paste them into is still not written.
 
 - **One figure has no poster.** The comps graph: it is an iframe to a page in
   the Pages repository, so it is blank on the dev server and there is nothing to

@@ -15,30 +15,20 @@ body.book { font-size: 1.05rem; line-height: 1.7; }
 @media (max-width: 90rem) { body.book { font-size: 1rem; line-height: 1.6; } }
 body.book .leaf-body p { text-align: left; hyphens: auto; }
 
-/* ---- where a figure or an inset quotation would go -----------------------
- * A draft instrument: every page reserves a place so the shape of the book
- * can be seen before the figures exist. Delete this block, and the .leaf-slot
- * line in book.js, to take them out.
+/* ---- where an inset quotation stands -------------------------------------
+ * A page reserves nothing until something is put on it. An empty box is not
+ * drawn and takes up no room; a filled one is a row in the page's flex column
+ * like the head and the foot, so the body is simply shorter and pagination
+ * accounts for it without being told.
  *
- * The box is marked as decorative to assistive technology: it is a hole where
- * something will be, and announcing "figure" on every page would be noise. */
-.leaf-slot {
+ * That holds only because book.js fills a page's box before it pours any text
+ * onto that page. Filling one afterwards would push the foot of text already
+ * measured against the taller body off the bottom of the page. */
+.leaf-slot { display: none; }
+.leaf-slot[data-filled] {
+  display: block;
   position: relative; z-index: 1;
   flex: 0 0 auto;
-  height: 7.5rem;
-  margin: 0 0 .9rem;
-  border: 1px dashed var(--rule-soft);
-  border-radius: 3px;
-  display: grid; place-items: center;
-  color: var(--ink-faint);
-  font: .66rem/1 var(--sans);
-  letter-spacing: .14em; text-transform: uppercase;
+  margin: 0 0 1.1rem;
 }
-.leaf-slot[data-slot="quote"] {
-  height: 5.5rem;
-  border-style: dashed;
-  border-left: 2px solid var(--mark);
-}
-/* a page given over to a figure has no room for a slot, and needs none */
-.leaf--plate .leaf-slot, .spread--plate .leaf-slot { display: none; }
-@media print { .leaf-slot { display: none; } }
+.leaf-slot[data-filled] .pullquote { margin: 0; }
