@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Read Along</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#2c5f52">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<style>
+:root {
+  /* Layout: one reading column between a slim top bar and a fixed player; marks open in a sheet. */
+  --bg: #f1f3ef;
+  --surface: #ffffff;
+  --ink: #1c2430;
+  --muted: #5b6573;
+  --line: #d6dad3;
+  --accent: #2c5f52;
+  --accent-ink: #ffffff;
+  --now: rgba(44, 95, 82, 0.15);
+  --hl-yellow: #ffe58a;
+  --hl-pink: #ffc7d6;
+  --hl-green: #c3eab4;
+  --hl-blue: #bcdcff;
+  --danger: #a13a2f;
+  --font-read: "Literata", Georgia, "Times New Roman", serif;
+  --font-ui: "Atkinson Hyperlegible", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --read-size: 19px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14181c; --surface: #1c2227; --ink: #e7e9ea; --muted: #9aa4ae; --line: #2d353c;
+    --accent: #86c9b3; --accent-ink: #10201b; --now: rgba(134, 201, 179, 0.2);
+    --hl-yellow: #6b5a14; --hl-pink: #6e2f42; --hl-green: #2f5a2a; --hl-blue: #254a70;
+    --danger: #e08a7e;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14181c; --surface: #1c2227; --ink: #e7e9ea; --muted: #9aa4ae; --line: #2d353c;
+  --accent: #86c9b3; --accent-ink: #10201b; --now: rgba(134, 201, 179, 0.2);
+  --hl-yellow: #6b5a14; --hl-pink: #6e2f42; --hl-green: #2f5a2a; --hl-blue: #254a70;
+  --danger: #e08a7e;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-ui); font-size: 16px; }
+button, select, input, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.appwrap { height: 100%; display: flex; flex-direction: column; }
+
+/* top bar */
+header { display: flex; align-items: center; gap: 8px; padding: 8px 12px; background: var(--surface); border-bottom: 1px solid var(--line); }
+header .book { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+#bookName { font-size: 13px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#chapterSel { width: 100%; max-width: 420px; padding: 6px 8px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); font-weight: 700; }
+.btn { border: 1px solid var(--line); background: var(--surface); border-radius: 8px; padding: 8px 12px; min-height: 40px; }
+.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 700; }
+.btn.quiet { border-color: transparent; background: transparent; }
+.btn.danger { color: var(--danger); }
+.btn[disabled] { opacity: 0.45; cursor: default; }
+.count { display: inline-block; min-width: 20px; padding: 0 6px; margin-left: 6px; border-radius: 10px; background: var(--now); font-size: 13px; }
+
+/* reading column */
+main { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; position: relative; }
+#notice { margin: 12px auto 0; max-width: 680px; padding: 0 16px; }
+#notice .card { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 8px; padding: 12px 14px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+#notice p { margin: 0; flex: 1 1 240px; font-size: 15px; }
+#text { max-width: 680px; margin: 0 auto; padding: 20px 20px 40vh; font-family: var(--font-read); font-size: var(--read-size); line-height: 1.65; }
+#text h2 { font-size: 1.45em; line-height: 1.25; margin: 0.4em 0 1em; text-wrap: balance; font-weight: 600; }
+#text p { margin: 0 0 1em; }
+#text p.head { font-weight: 600; margin-top: 1.8em; text-wrap: balance; }
+#text span[data-k] { border-radius: 3px; cursor: pointer; }
+#text .now { background: var(--now); box-shadow: 0 0 0 3px var(--now); }
+#text .hl { padding: 1px 0; }
+#text .hl.yellow { background: var(--hl-yellow); }
+#text .hl.pink { background: var(--hl-pink); }
+#text .hl.green { background: var(--hl-green); }
+#text .hl.blue { background: var(--hl-blue); }
+#text .hl.noted { border-bottom: 2px dotted var(--ink); }
+#text .bm { display: inline-block; width: 0.7em; height: 1em; margin-right: 0.25em; vertical-align: -0.12em; border: 0; padding: 0; background: var(--accent); clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 72%, 0 100%); }
+
+#follow { position: sticky; bottom: 12px; display: none; justify-content: center; pointer-events: none; }
+#follow button { pointer-events: auto; box-shadow: 0 2px 10px rgba(0,0,0,0.25); }
+#follow.show { display: flex; }
+
+/* selection bar */
+#selbar { display: none; gap: 10px; align-items: center; padding: 8px 12px; background: var(--surface); border-top: 1px solid var(--line); }
+#selbar.show { display: flex; }
+#selbar .lbl { font-size: 14px; color: var(--muted); margin-right: auto; }
+.dot { width: 34px; height: 34px; border-radius: 50%; border: 2px solid var(--line); padding: 0; }
+.dot.yellow { background: var(--hl-yellow); } .dot.pink { background: var(--hl-pink); }
+.dot.green { background: var(--hl-green); } .dot.blue { background: var(--hl-blue); }
+.dot[aria-pressed="true"] { border-color: var(--ink); }
+
+/* player */
+footer { background: var(--surface); border-top: 1px solid var(--line); padding: 8px 12px calc(8px + env(safe-area-inset-bottom, 0px)); }
+.scrub { display: flex; align-items: center; gap: 10px; font-variant-numeric: tabular-nums; font-size: 14px; color: var(--muted); }
+.scrub input { flex: 1; accent-color: var(--accent); min-width: 0; }
+.controls { display: flex; align-items: center; justify-content: space-between; gap: 6px; margin-top: 4px; }
+.controls .mid { display: flex; align-items: center; gap: 6px; }
+.icon { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface); display: grid; place-items: center; padding: 0; font-size: 13px; font-weight: 700; }
+.icon.play { width: 54px; height: 54px; background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.icon svg { width: 22px; height: 22px; fill: currentColor; }
+#rate { padding: 8px 6px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+#status { font-size: 12.5px; color: var(--muted); margin-top: 4px; min-height: 16px; text-align: center; }
+
+/* sheets */
+#backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.4); display: none; align-items: flex-end; justify-content: center; z-index: 10; }
+#backdrop.show { display: flex; }
+#sheet { background: var(--surface); width: 100%; max-width: 640px; max-height: 86%; overflow-y: auto; border-radius: 14px 14px 0 0; padding: 16px 16px calc(16px + env(safe-area-inset-bottom, 0px)); display: flex; flex-direction: column; gap: 12px; }
+#sheet h3 { margin: 0; font-size: 18px; }
+#sheet p { margin: 0; color: var(--muted); font-size: 15px; }
+#sheet .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+#sheet textarea { width: 100%; min-height: 110px; border: 1px solid var(--line); border-radius: 8px; padding: 10px; background: var(--bg); resize: vertical; }
+#sheet blockquote { margin: 0; padding: 8px 12px; border-left: 4px solid var(--line); font-family: var(--font-read); font-size: 16px; max-height: 8.5em; overflow-y: auto; }
+#sheet ol.steps { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 15px; }
+.tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+.tabs button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.marks { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.marks li { border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; display: flex; flex-direction: column; gap: 4px; cursor: pointer; }
+.marks .meta { font-size: 13px; color: var(--muted); display: flex; gap: 8px; align-items: center; font-variant-numeric: tabular-nums; }
+.marks .swatch { width: 12px; height: 12px; border-radius: 3px; border: 1px solid var(--line); }
+.marks .quote { font-family: var(--font-read); font-size: 15.5px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.marks .note { font-size: 15px; white-space: pre-wrap; }
+.empty { border: 1px dashed var(--line); border-radius: 8px; padding: 14px; color: var(--muted); font-size: 15px; }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+
+/* bookshelf */
+#shelf { height: 100%; overflow-y: auto; }
+#shelf .wrap { max-width: 760px; margin: 0 auto; padding: 20px 16px 60px; display: flex; flex-direction: column; gap: 16px; }
+#shelf h1 { font-family: var(--font-read); font-size: 28px; margin: 0; font-weight: 600; }
+#shelf .top { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; }
+#shelf .sub { color: var(--muted); font-size: 14.5px; margin: 0; }
+#books { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
+#books li { background: var(--surface); border: 1px solid var(--line); border-left: 6px solid var(--accent); border-radius: 8px; padding: 14px; display: flex; flex-direction: column; gap: 8px; cursor: pointer; min-height: 150px; }
+#books li.example { border-left-color: var(--line); }
+#books .title { font-family: var(--font-read); font-size: 19px; line-height: 1.3; font-weight: 600; overflow-wrap: anywhere; }
+#books .facts { font-size: 14px; color: var(--muted); display: flex; flex-direction: column; gap: 2px; font-variant-numeric: tabular-nums; }
+#books .row { display: flex; gap: 6px; margin-top: auto; flex-wrap: wrap; }
+#books .btn { padding: 6px 10px; min-height: 36px; font-size: 14.5px; }
+#shelfStatus { font-size: 14.5px; min-height: 20px; }
+#shelf details { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 10px 14px; font-size: 15px; }
+#shelf details summary { cursor: pointer; font-weight: 700; }
+#shelf details ol { margin: 8px 0 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+[hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<section id="shelf">
+  <div class="wrap">
+    <div class="top">
+      <h1>Read Along</h1>
+      <div class="row" style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn primary" id="addBtn" type="button">Add a book or files</button>
+        <button class="btn" id="folderBtn" type="button" hidden>Add from a folder</button>
+        <button class="btn" id="installBtn" type="button" hidden>Install app</button>
+      </div>
+    </div>
+    <p class="sub" id="shelfStatus" role="status"></p>
+    <ul id="books"></ul>
+    <details>
+      <summary>How to add a book</summary>
+      <ol>
+        <li>Press Add a book or files and pick the book's reading script, the file ending in _reading_script.txt.</li>
+        <li>In the same step, or later, pick each chapter's MP3 and its .timings.json file from the book's _audio folder. You can pick many at once.</li>
+        <li>To bring marks from another device, pick the marks file you saved there, ending in _marks.json.</li>
+      </ol>
+      <p class="sub" style="margin-top:8px">Books are copied into this browser's storage on this device. Nothing is uploaded.</p>
+    </details>
+    <p class="sub" id="space"></p>
+    <p class="sub" id="offline"></p>
+  </div>
+</section>
+
+<div id="reader" class="appwrap" hidden>
+
+  <header>
+    <button class="btn" id="shelfBtn" type="button" aria-label="Back to the bookshelf">Shelf</button>
+    <div class="book">
+      <div id="bookName">Example text</div>
+      <select id="chapterSel" aria-label="Chapter"></select>
+    </div>
+    <button class="btn" id="marksBtn" type="button">Marks<span class="count" id="marksCount">0</span></button>
+    <button class="btn" id="menuBtn" type="button" aria-label="Book options">Book</button>
+  </header>
+
+  <main id="main">
+    <div id="notice"></div>
+    <article id="text" aria-live="off"></article>
+    <div id="follow"><button class="btn primary" id="followBtn" type="button">Return to the voice</button></div>
+  </main>
+
+  <div id="selbar" role="toolbar" aria-label="Mark the selected text">
+    <span class="lbl">Highlight</span>
+    <button class="dot yellow" data-color="yellow" type="button" aria-label="Highlight yellow"></button>
+    <button class="dot pink" data-color="pink" type="button" aria-label="Highlight pink"></button>
+    <button class="dot green" data-color="green" type="button" aria-label="Highlight green"></button>
+    <button class="dot blue" data-color="blue" type="button" aria-label="Highlight blue"></button>
+    <button class="btn" id="selNote" type="button">Add note</button>
+  </div>
+
+  <footer>
+    <div class="scrub">
+      <span id="tNow">0:00</span>
+      <input id="seek" type="range" min="0" max="100" step="1" value="0" aria-label="Position in the audio">
+      <span id="tEnd">0:00</span>
+    </div>
+    <div class="controls">
+      <select id="rate" aria-label="Reading speed">
+        <option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1x</option>
+        <option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option>
+        <option value="1.75">1.75x</option><option value="2">2x</option>
+      </select>
+      <div class="mid">
+        <button class="icon" id="back" type="button" aria-label="Back 15 seconds">-15</button>
+        <button class="icon play" id="play" type="button" aria-label="Play"><svg viewBox="0 0 24 24" id="playIcon"><path d="M7 4.5v15l13-7.5z"/></svg></button>
+        <button class="icon" id="fwd" type="button" aria-label="Forward 15 seconds">+15</button>
+      </div>
+      <button class="btn" id="bmBtn" type="button">Bookmark</button>
+    </div>
+    <div id="status"></div>
+  </footer>
+</div>
+
+<div id="backdrop"><div id="sheet" role="dialog" aria-modal="true"></div></div>
+<input id="filePick" type="file" multiple hidden accept=".txt,.json,.mp3,.wav,.m4a,audio/*,text/plain,application/json">
+<audio id="audio" preload="metadata"></audio>
+
+<script>
+"use strict";
+/* ---------------------------------------------------------------- helpers */
+const $ = (id) => document.getElementById(id);
+const el = (tag, attrs, ...kids) => {
+  const n = document.createElement(tag);
+  for (const k in (attrs || {})) {
+    if (k === "class") n.className = attrs[k];
+    else if (k === "text") n.textContent = attrs[k];
+    else if (k.startsWith("on")) n.addEventListener(k.slice(2), attrs[k]);
+    else n.setAttribute(k, attrs[k]);
+  }
+  for (const c of kids) if (c != null) n.append(c);
+  return n;
+};
+const fmt = (t) => {
+  t = Math.max(0, Math.floor(t || 0));
+  const h = Math.floor(t / 3600), m = Math.floor((t % 3600) / 60), s = t % 60;
+  return (h ? h + ":" + String(m).padStart(2, "0") : m) + ":" + String(s).padStart(2, "0");
+};
+const hash = (s) => { let h = 2166136261; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return (h >>> 0).toString(16); };
+const uid = () => "m" + Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+const ls = {
+  get(k, d) { try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+};
+/* The library lives in this browser's own storage (IndexedDB), so it works with no internet. */
+let dbp = null;
+function openDB() {
+  if (dbp) return dbp;
+  dbp = new Promise((res) => {
+    try {
+      const r = indexedDB.open("readalong-library", 1);
+      r.onupgradeneeded = () => { const d = r.result; for (const s of ["books", "audio", "timings", "marks"]) if (!d.objectStoreNames.contains(s)) d.createObjectStore(s); };
+      r.onsuccess = () => res(r.result);
+      r.onerror = () => res(null);
+    } catch (e) { res(null); }
+  });
+  return dbp;
+}
+async function dbDo(store, mode, fn) {
+  const d = await openDB(); if (!d) return undefined;
+  return new Promise((res) => {
+    try { const tx = d.transaction(store, mode); const q = fn(tx.objectStore(store)); tx.oncomplete = () => res(q ? q.result : true); tx.onerror = tx.onabort = () => res(undefined); }
+    catch (e) { res(undefined); }
+  });
+}
+const lib = {
+  get: (s, k) => dbDo(s, "readonly", (o) => o.get(k)),
+  put: (s, k, v) => dbDo(s, "readwrite", (o) => o.put(v, k)).then((r) => r !== undefined),
+  del: (s, k) => dbDo(s, "readwrite", (o) => o.delete(k)),
+  keys: (s) => dbDo(s, "readonly", (o) => o.getAllKeys()).then((r) => r || []),
+};
+
+/* ---------------------------------------------------------------- text and timings */
+function parseScript(text) {
+  const paras = text.replace(/\r/g, "").split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
+  const chapters = [];
+  for (const p of paras) {
+    if (p.startsWith("# ")) chapters.push({ title: p.slice(2).trim(), paras: [] });
+    else {
+      if (!chapters.length) chapters.push({ title: "Text", paras: [] });
+      chapters[chapters.length - 1].paras.push(p.split(/\s+/).join(" "));
+    }
+  }
+  return chapters.filter((c) => c.paras.length);
+}
+function isHeading(p) { return p.length < 70 && !/[.?!”"]$/.test(p.trim()); }
+
+/* Without a timings file: split into sentence groups and spread them over the audio by length. */
+function estimatePieces(ch, duration) {
+  const raw = [{ p: -1, a: 0, b: ch.title.length, w: ch.title.length + 18 }];
+  ch.paras.forEach((t, pi) => {
+    const sents = t.match(/[^.?!]+(?:[.?!]+["”’)\]]*\s*|$)/g) || [t];
+    let a = 0, cur = 0;
+    const flush = (end, last) => { if (end > a) { raw.push({ p: pi, a, b: end, w: (end - a) + (last ? (isHeading(t) ? 18 : 10) : 4) }); a = end; } };
+    let pos = 0;
+    for (const s of sents) {
+      if (cur && cur + s.length > 280) { flush(pos, false); cur = 0; }
+      cur += s.length; pos += s.length;
+    }
+    flush(t.length, true);
+  });
+  const total = raw.reduce((x, r) => x + r.w, 0) || 1;
+  const dur = duration && isFinite(duration) ? duration : total / 15;
+  let t = 0;
+  return { pieces: raw.map((r) => { const s = t; t += r.w / total * dur; return { p: r.p, a: r.a, b: r.b, s, e: t }; }), duration: dur, exact: false };
+}
+function timedPieces(ch, tm) {
+  const out = [{ p: -1, a: 0, b: ch.title.length, s: tm.title_piece[0], e: tm.title_piece[1] }];
+  for (const [pi, list] of tm.paras) {
+    let a = 0;
+    for (const [c, s, e] of list) { out.push({ p: pi, a, b: c, s, e }); a = c; }
+  }
+  for (let i = 0; i < out.length - 1; i++) out[i].e = out[i + 1].s;   // a passage stays lit through its pause
+  return { pieces: out, duration: tm.duration, exact: !!tm.exact };
+}
+function timingFits(ch, tm) {
+  return tm && tm.nparas === ch.paras.length && tm.nchars === ch.paras.reduce((n, p) => n + p.length, 0);
+}
+
+/* ---------------------------------------------------------------- state */
+const DEMO = "# Example. Listening while reading\n\n" +
+  "This is example text, so you can see how the page works before you add your own books.\n\n" +
+  "When a voice reads a page aloud, the eye and the ear arrive at each sentence together. The passage being spoken is tinted, and the page moves to keep it in view.\n\n" +
+  "How to mark a passage\n\n" +
+  "Select a few words with your finger or mouse. A bar appears above the player. Pick a color to highlight the words, or choose Add note to write a thought next to them.\n\n" +
+  "Tap any sentence to move the voice there. Tap a highlight to change its color, edit its note, or remove it. The Bookmark button marks the place the voice has reached.\n\n" +
+  "Everything you mark is listed under Marks, where you can jump back to it or save the whole list as a file.";
+const DEMO_MARKS = [
+  { id: "demo1", c: 0, type: "h", p: 1, s: 0, e: 36, color: "yellow", note: "", m: 1 },
+  { id: "demo2", c: 0, type: "h", p: 3, s: 0, e: 46, color: "green", note: "Example note: notes sit under a dotted line.", m: 2 },
+  { id: "demo3", c: 0, type: "b", p: 4, s: 0, e: 0, note: "", m: 3 },
+];
+
+const S = {
+  bookKey: "demo", bookName: "Example", isDemo: true,
+  chapters: [], ci: 0,
+  marks: [], pos: {},
+  timing: null, audioName: "",
+  pieces: [], byPara: new Map(), duration: 0, exact: false, hasAudio: false,
+  cur: -1, follow: true, lastColor: "yellow",
+  settings: ls.get("ra.settings", { size: 19, rate: 1 }),
+};
+const audio = $("audio");
+const bookKeyOf = (fileName) => "b" + hash(cleanName(fileName).toLowerCase());
+const cleanName = (fileName) => fileName.replace(/^[0-9a-f]{8}-/i, "").replace(/\.txt$/i, "").replace(/_reading_script$/i, "").replace(/_/g, " ").trim() || "Book";
+
+/* A silent clock stands in when no audio is loaded, so the page still follows along. */
+const clock = { t: 0, playing: false, last: 0 };
+const P = {
+  get time() { return S.hasAudio ? audio.currentTime : clock.t; },
+  get playing() { return S.hasAudio ? !audio.paused : clock.playing; },
+  seek(t) { t = Math.max(0, Math.min(t, S.duration || 0)); if (S.hasAudio) audio.currentTime = t; else clock.t = t; tick(true); },
+  play() { if (S.hasAudio) audio.play().catch(() => setStatus("The browser blocked playback. Press play again.")); else { clock.playing = true; clock.last = performance.now(); } paintPlay(); },
+  pause() { if (S.hasAudio) audio.pause(); else clock.playing = false; paintPlay(); savePos(true); },
+};
+
+/* ---------------------------------------------------------------- marks storage */
+const liveMarks = () => S.marks.filter((m) => !m.del);
+const chapterMarks = () => liveMarks().filter((m) => m.c === S.ci);
+function mergeMarks(a, b) {
+  const map = new Map();
+  for (const m of [...(a || []), ...(b || [])]) { const o = map.get(m.id); if (!o || (m.m || 0) > (o.m || 0)) map.set(m.id, m); }
+  return [...map.values()];
+}
+let marksTimer = null, marksOk = true;
+function writeMarks() {
+  if (S.isDemo) return Promise.resolve();
+  const key = S.bookKey, rec = { name: S.bookName, marks: S.marks, pos: S.pos, ci: S.ci, updated: Date.now() };
+  return lib.put("marks", key, rec).then((ok) => { marksOk = ok; paintSaved(); });
+}
+function saveMarks() {
+  paintCount();
+  if (S.isDemo) return;
+  clearTimeout(marksTimer); marksTimer = setTimeout(writeMarks, 400);
+}
+function paintSaved() {
+  if (S.isDemo) { setStatus("Marks on the example are not saved.", true); return; }
+  const n = liveMarks().length, count = n + (n === 1 ? " mark" : " marks");
+  setStatus((S.exact || !S.hasAudio ? "" : "Timing is estimated. ") + (marksOk ? count + " saved on this device" : "Could not save marks on this device. Save a marks file from Marks to be safe."), true);
+}
+let statusTimer = null, baseStatus = "";
+function setStatus(msg, base) {
+  if (base) { baseStatus = msg; $("status").textContent = msg; return; }
+  $("status").textContent = msg; clearTimeout(statusTimer);
+  statusTimer = setTimeout(() => { $("status").textContent = baseStatus; }, 5000);
+}
+let posSaved = 0;
+function savePos(force) {
+  if (S.isDemo) return;
+  S.pos[S.ci] = Math.floor(P.time);
+  if (force || Date.now() - posSaved > 10000) { posSaved = Date.now(); clearTimeout(marksTimer); marksTimer = setTimeout(writeMarks, force ? 50 : 400); }
+}
+
+/* ---------------------------------------------------------------- rendering */
+function buildPieces() {
+  const ch = S.chapters[S.ci];
+  const tm = S.timing;
+  const dur = S.hasAudio && isFinite(audio.duration) ? audio.duration : 0;
+  const r = (S.hasAudio && timingFits(ch, tm)) ? timedPieces(ch, tm) : estimatePieces(ch, dur);
+  S.pieces = r.pieces; S.exact = r.exact; S.duration = dur || r.duration;
+  S.byPara = new Map();
+  S.pieces.forEach((pc, gi) => { if (!S.byPara.has(pc.p)) S.byPara.set(pc.p, []); S.byPara.get(pc.p).push(gi); });
+  $("seek").max = Math.max(1, Math.floor(S.duration));
+  $("tEnd").textContent = fmt(S.duration);
+}
+function paraNode(pi) {
+  const ch = S.chapters[S.ci];
+  const t = ch.paras[pi];
+  const node = el("p", { "data-p": pi, class: isHeading(t) ? "head" : "" });
+  const gis = S.byPara.get(pi) || [];
+  const marks = chapterMarks().filter((m) => m.p === pi);
+  const hls = marks.filter((m) => m.type === "h").sort((x, y) => (x.m || 0) - (y.m || 0));
+  const bms = marks.filter((m) => m.type === "b");
+  const cuts = new Set([0, t.length]);
+  gis.forEach((gi) => { cuts.add(S.pieces[gi].a); cuts.add(S.pieces[gi].b); });
+  hls.forEach((h) => { cuts.add(Math.max(0, Math.min(h.s, t.length))); cuts.add(Math.max(0, Math.min(h.e, t.length))); });
+  bms.forEach((b) => cuts.add(Math.max(0, Math.min(b.s, t.length))));
+  const pts = [...cuts].sort((x, y) => x - y);
+  for (let i = 0; i < pts.length - 1; i++) {
+    const a = pts[i], b = pts[i + 1];
+    if (b <= a) continue;
+    for (const bm of bms) if (bm.s === a) node.append(el("button", { class: "bm", "data-b": bm.id, type: "button", "aria-label": "Bookmark" }));
+    const sp = el("span", { "data-o": a, text: t.slice(a, b) });
+    const gi = gis.find((g) => S.pieces[g].a <= a && a < S.pieces[g].b);
+    if (gi != null) sp.setAttribute("data-k", gi);
+    const cover = hls.filter((h) => h.s <= a && b <= h.e);
+    if (cover.length) {
+      const h = cover[cover.length - 1];
+      sp.className = "hl " + (h.color || "yellow") + (h.note ? " noted" : "");
+      sp.setAttribute("data-h", h.id);
+    }
+    if (gi === S.cur) sp.classList.add("now");
+    node.append(sp);
+  }
+  return node;
+}
+function renderText() {
+  const ch = S.chapters[S.ci];
+  const box = $("text");
+  box.textContent = "";
+  const h = el("h2", {}, el("span", { "data-k": 0, "data-o": 0, text: ch.title }));
+  box.append(h);
+  ch.paras.forEach((_, pi) => box.append(paraNode(pi)));
+  S.cur = -1; tick(true);
+}
+function rerenderPara(pi) {
+  const old = $("text").querySelector('p[data-p="' + pi + '"]');
+  if (old) old.replaceWith(paraNode(pi));
+}
+function paintCount() { $("marksCount").textContent = chapterMarks().length; }
+function paintPlay() {
+  const playing = P.playing;
+  $("playIcon").innerHTML = playing ? '<path d="M6 4.5h4.5v15H6zM13.5 4.5H18v15h-4.5z"/>' : '<path d="M7 4.5v15l13-7.5z"/>';
+  $("play").setAttribute("aria-label", playing ? "Pause" : "Play");
+}
+function paintChapters() {
+  const sel = $("chapterSel"); sel.textContent = "";
+  S.chapters.forEach((c, i) => sel.append(el("option", { value: i, text: c.title })));
+  sel.value = S.ci;
+  $("bookName").textContent = S.bookName;
+}
+function paintNotice() {
+  const box = $("notice"); box.textContent = "";
+  let msg = "";
+  if (S.isDemo) msg = "This is the example. Go back to the shelf to add your own book.";
+  else if (!S.hasAudio) msg = "This chapter has no audio on this device yet, so the page follows a silent clock. Add the chapter's MP3 and timings file.";
+  else if (!S.exact) msg = "This chapter has no timings file, so the tint can run ahead of or behind the voice. Add the file ending in .timings.json.";
+  if (!msg) return;
+  box.append(el("div", { class: "card" }, el("p", { text: msg }),
+    el("button", { class: "btn primary", type: "button", text: S.isDemo ? "Back to shelf" : "Add files", onclick: () => (S.isDemo ? showShelf() : pickFiles(S.bookKey)) })));
+}
+
+/* ---------------------------------------------------------------- following the voice */
+function pieceAt(t) {
+  const ps = S.pieces; let lo = 0, hi = ps.length - 1, ans = 0;
+  while (lo <= hi) { const mid = (lo + hi) >> 1; if (ps[mid].s <= t) { ans = mid; lo = mid + 1; } else hi = mid - 1; }
+  return ans;
+}
+let followPaused = false;
+function tick(force) {
+  if (!S.pieces.length) return;
+  if (!S.hasAudio && clock.playing) {
+    const now = performance.now(); clock.t += (now - clock.last) / 1000 * (S.settings.rate || 1); clock.last = now;
+    if (clock.t >= S.duration) { clock.t = S.duration; clock.playing = false; paintPlay(); }
+  }
+  const t = P.time;
+  if (!seeking) { $("seek").value = Math.floor(t); $("tNow").textContent = fmt(t); }
+  const k = pieceAt(t);
+  if (k !== S.cur || force) {
+    $("text").querySelectorAll(".now").forEach((n) => n.classList.remove("now"));
+    const nodes = $("text").querySelectorAll('[data-k="' + k + '"]');
+    nodes.forEach((n) => n.classList.add("now"));
+    S.cur = k;
+    if (nodes.length && S.follow && !followPaused && !selecting() && (P.playing || force === "jump")) {
+      const reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+      nodes[0].scrollIntoView({ block: "center", behavior: reduce ? "auto" : "smooth" });
+    }
+  }
+  if (P.playing) savePos(false);
+}
+setInterval(() => tick(false), 200);
+const selecting = () => { const s = window.getSelection(); return s && !s.isCollapsed; };
+function pauseFollow() { if (P.playing && !followPaused) { followPaused = true; $("follow").classList.add("show"); } }
+$("main").addEventListener("wheel", pauseFollow, { passive: true });
+$("main").addEventListener("touchmove", pauseFollow, { passive: true });
+$("followBtn").addEventListener("click", () => { followPaused = false; $("follow").classList.remove("show"); tick("jump"); });
+
+function timeOfMark(m) {
+  if (m.p < 0) return 0;
+  const gis = S.byPara.get(m.p) || [];
+  const gi = gis.find((g) => S.pieces[g].a <= m.s && m.s < S.pieces[g].b);
+  return gi != null ? S.pieces[gi].s : (gis.length ? S.pieces[gis[0]].s : 0);
+}
+function jumpToMark(m) {
+  followPaused = false; $("follow").classList.remove("show");
+  P.seek(timeOfMark(m) + 0.01); tick("jump");
+}
+
+/* ---------------------------------------------------------------- selecting and marking */
+let pendingSel = null;
+function locate(node, offset) {
+  if (node.nodeType === 3) {
+    const sp = node.parentElement && node.parentElement.closest("span[data-o]");
+    const p = sp && sp.closest("p[data-p]");
+    if (sp && p) return { p: +p.dataset.p, o: +sp.dataset.o + offset };
+    return null;
+  }
+  const p = node.closest ? node.closest("p[data-p]") : null;
+  if (!p) return null;
+  if (node === p) {
+    let o = 0, i = 0;
+    for (const c of p.childNodes) { if (i++ >= offset) break; if (c.dataset && c.dataset.o != null) o = +c.dataset.o + c.textContent.length; }
+    return { p: +p.dataset.p, o };
+  }
+  const sp = node.closest("span[data-o]");
+  return sp ? { p: +p.dataset.p, o: +sp.dataset.o + (offset ? sp.textContent.length : 0) } : null;
+}
+function readSelection() {
+  const sel = window.getSelection();
+  if (!sel || sel.isCollapsed || !sel.rangeCount) return null;
+  const r = sel.getRangeAt(0);
+  if (!$("text").contains(r.commonAncestorContainer)) return null;
+  const a = locate(r.startContainer, r.startOffset), b = locate(r.endContainer, r.endOffset);
+  if (!a || !b) return null;
+  const ch = S.chapters[S.ci], out = [];
+  for (let p = a.p; p <= b.p; p++) {
+    const s = p === a.p ? a.o : 0, e = p === b.p ? b.o : ch.paras[p].length;
+    if (e > s) out.push({ p, s, e });
+  }
+  return out.length ? out : null;
+}
+let selTimer = null;
+document.addEventListener("selectionchange", () => {
+  clearTimeout(selTimer);
+  selTimer = setTimeout(() => {
+    const r = readSelection();
+    if (r) { pendingSel = r; $("selbar").classList.add("show"); }
+    else if (!$("selbar").matches(":hover")) { $("selbar").classList.remove("show"); }
+  }, 250);
+});
+function addHighlights(color, thenNote) {
+  if (!pendingSel) return;
+  const group = uid(), made = [];
+  for (const r of pendingSel) {
+    const m = { id: uid(), c: S.ci, type: "h", p: r.p, s: r.s, e: r.e, color, note: "", g: group, m: Date.now() };
+    S.marks.push(m); made.push(m); rerenderPara(r.p);
+  }
+  S.lastColor = color; pendingSel = null;
+  try { window.getSelection().removeAllRanges(); } catch (e) {}
+  $("selbar").classList.remove("show");
+  saveMarks();
+  if (thenNote && made.length) openMarkSheet(made[0]);
+}
+$("selbar").addEventListener("pointerdown", (e) => { if (e.target.closest("button")) e.preventDefault(); });
+$("selbar").querySelectorAll(".dot").forEach((b) => b.addEventListener("click", () => addHighlights(b.dataset.color, false)));
+$("selNote").addEventListener("click", () => addHighlights(S.lastColor, true));
+
+$("text").addEventListener("click", (e) => {
+  if (selecting()) return;
+  const bm = e.target.closest(".bm");
+  if (bm) { const m = S.marks.find((x) => x.id === bm.dataset.b); if (m) openMarkSheet(m); return; }
+  const h = e.target.closest("span[data-h]");
+  if (h) { const m = S.marks.find((x) => x.id === h.dataset.h); if (m) openMarkSheet(m); return; }
+  const k = e.target.closest("[data-k]");
+  if (k) { followPaused = false; $("follow").classList.remove("show"); P.seek(S.pieces[+k.dataset.k].s + 0.01); }
+});
+function addBookmark() {
+  const pc = S.pieces[Math.max(0, S.cur)];
+  if (!pc) return;
+  const p = pc.p < 0 ? 0 : pc.p, s = pc.p < 0 ? 0 : pc.a;
+  if (chapterMarks().some((m) => m.type === "b" && m.p === p && m.s === s)) { setStatus("This place is already bookmarked."); return; }
+  const m = { id: uid(), c: S.ci, type: "b", p, s, e: s, note: "", m: Date.now() };
+  S.marks.push(m); rerenderPara(p); saveMarks();
+  setStatus("Bookmark added at " + fmt(P.time) + ".");
+}
+function markText(m) {
+  const t = (S.chapters[m.c] || { paras: [] }).paras[m.p] || "";
+  if (m.type === "h") return t.slice(m.s, m.e);
+  return t.slice(m.s, m.s + 140) + (t.length > m.s + 140 ? "…" : "");
+}
+function updateMark(m, changes) { Object.assign(m, changes, { m: Date.now() }); if (m.c === S.ci) rerenderPara(m.p); saveMarks(); }
+function deleteMark(m) {
+  const group = m.g ? S.marks.filter((x) => x.g === m.g) : [m];
+  for (const x of group) { x.del = true; x.note = ""; x.m = Date.now(); if (x.c === S.ci) rerenderPara(x.p); }
+  saveMarks();
+}
+
+/* ---------------------------------------------------------------- sheets */
+function openSheet(...kids) { const s = $("sheet"); s.textContent = ""; s.append(...kids); $("backdrop").classList.add("show"); const f = s.querySelector("textarea, button"); if (f && f.tagName === "BUTTON") f.focus(); }
+function closeSheet() { $("backdrop").classList.remove("show"); }
+$("backdrop").addEventListener("click", (e) => { if (e.target === $("backdrop")) closeSheet(); });
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeSheet(); });
+
+function openMarkSheet(m) {
+  const ta = el("textarea", { id: "noteBox", placeholder: "Write a note" });
+  ta.value = m.note || "";
+  const colors = el("div", { class: "row" });
+  if (m.type === "h") for (const c of ["yellow", "pink", "green", "blue"]) {
+    colors.append(el("button", { class: "dot " + c, type: "button", "aria-label": c, "aria-pressed": String(m.color === c),
+      onclick: (e) => { updateMark(m, { color: c }); colors.querySelectorAll(".dot").forEach((d) => d.setAttribute("aria-pressed", "false")); e.currentTarget.setAttribute("aria-pressed", "true"); } }));
+  }
+  let confirm = false;
+  const del = el("button", { class: "btn danger", type: "button", text: "Remove", onclick: () => {
+    if (!confirm) { confirm = true; del.textContent = "Tap again to remove"; return; }
+    deleteMark(m); closeSheet();
+  } });
+  openSheet(
+    el("h3", { text: (m.type === "h" ? "Highlight" : "Bookmark") + " at " + fmt(m.c === S.ci ? timeOfMark(m) : 0) }),
+    el("blockquote", { text: markText(m) }),
+    m.type === "h" ? colors : null,
+    el("label", { for: "noteBox", text: "Note" }), ta,
+    el("div", { class: "row" },
+      el("button", { class: "btn primary", type: "button", text: "Save note", onclick: () => { updateMark(m, { note: ta.value.trim() }); closeSheet(); } }),
+      el("button", { class: "btn", type: "button", text: "Play from here", onclick: () => { if (ta.value.trim() !== (m.note || "")) updateMark(m, { note: ta.value.trim() }); closeSheet(); goToMark(m, true); } }),
+      del)
+  );
+}
+function goToMark(m, play) {
+  if (m.c !== S.ci) { loadChapter(m.c).then(() => { jumpToMark(m); }); return; }
+  jumpToMark(m); if (play && !P.playing) P.play();
+}
+let marksFilter = "chapter";
+function openMarksSheet() {
+  const all = liveMarks();
+  const list = (marksFilter === "chapter" ? all.filter((m) => m.c === S.ci) : marksFilter === "notes" ? all.filter((m) => m.note) : all)
+    .slice().sort((a, b) => a.c - b.c || a.p - b.p || a.s - b.s);
+  const tab = (key, label) => el("button", { class: "btn", type: "button", text: label, "aria-pressed": String(marksFilter === key), onclick: () => { marksFilter = key; openMarksSheet(); } });
+  const ul = el("ul", { class: "marks" });
+  for (const m of list) {
+    const ch = S.chapters[m.c];
+    const meta = el("div", { class: "meta" },
+      m.type === "h" ? el("span", { class: "swatch", style: "background: var(--hl-" + (m.color || "yellow") + ")" }) : el("span", { class: "bm", style: "display:inline-block;width:10px;height:14px;background:var(--accent);clip-path:polygon(0 0,100% 0,100% 100%,50% 72%,0 100%)" }),
+      el("span", { text: (m.type === "h" ? "Highlight" : "Bookmark") + (m.c === S.ci ? " at " + fmt(timeOfMark(m)) : "") + (marksFilter !== "chapter" && ch ? " · " + ch.title : "") }));
+    ul.append(el("li", { onclick: (e) => { if (e.target.closest("button")) return; closeSheet(); goToMark(m, false); } },
+      meta, el("div", { class: "quote", text: markText(m) }), m.note ? el("div", { class: "note", text: m.note }) : null,
+      el("div", { class: "row" }, el("button", { class: "btn quiet", type: "button", text: "Edit", onclick: () => openMarkSheet(m) }))));
+  }
+  openSheet(
+    el("h3", { text: "Marks" }),
+    el("div", { class: "tabs" }, tab("chapter", "This chapter"), tab("all", "Whole book"), tab("notes", "Notes only")),
+    list.length ? ul : el("div", { class: "empty", text: "Nothing marked here yet. Select text to highlight it, or press Bookmark while listening." }),
+    el("div", { class: "row" },
+      el("button", { class: "btn", type: "button", text: "Save as a file", onclick: openExportSheet }),
+      el("button", { class: "btn quiet", type: "button", text: "Close", onclick: closeSheet }))
+  );
+}
+function exportRows() {
+  return liveMarks().slice().sort((a, b) => a.c - b.c || a.p - b.p || a.s - b.s).map((m) => ({
+    chapter: (S.chapters[m.c] || {}).title || "", type: m.type === "h" ? "highlight" : "bookmark",
+    time: m.c === S.ci ? fmt(timeOfMark(m)) : "", paragraph: m.p + 1, color: m.type === "h" ? (m.color || "yellow") : "",
+    text: markText(m), note: m.note || "", marked: new Date(m.m || Date.now()).toISOString().slice(0, 10) }));
+}
+function exportData(kind) {
+  const rows = exportRows(), base = S.bookName.replace(/[^\w\- ]+/g, "").trim().slice(0, 60) || "marks";
+  if (kind === "csv") {
+    const q = (v) => '"' + String(v).replace(/"/g, '""') + '"';
+    const cols = ["chapter", "type", "time", "paragraph", "color", "text", "note", "marked"];
+    return { filename: base + " marks.csv", data: "﻿" + [cols.join(","), ...rows.map((r) => cols.map((c) => q(r[c])).join(","))].join("\r\n") };
+  }
+  if (kind === "md") {
+    let out = "# Marks: " + S.bookName + "\n", last = null;
+    for (const r of rows) {
+      if (r.chapter !== last) { out += "\n## " + r.chapter + "\n"; last = r.chapter; }
+      out += "\n> " + r.text + "\n\n" + (r.note ? r.note + "\n\n" : "") + "*" + r.type + (r.time ? ", " + r.time : "") + ", paragraph " + r.paragraph + "*\n";
+    }
+    return { filename: base + " marks.md", data: out };
+  }
+  return { filename: (base.replace(/ /g, "_") + "_marks.json"), data: JSON.stringify({ readalong_marks: 1, book: S.bookName, bookKey: S.bookKey, marks: S.marks, pos: S.pos }, null, 1) };
+}
+async function openExportSheet() {
+  const out = el("textarea", { readonly: "", "aria-label": "File contents", style: "display:none" });
+  const msg = el("p", { text: "" });
+  const save = async (kind) => {
+    const f = exportData(kind);
+    const r = await saveFile(f.filename, f.data);
+    if (r === "saved") { msg.textContent = "Saved " + f.filename + ". Look in your Downloads folder."; return; }
+    if (r === "declined") { msg.textContent = "Nothing was saved."; return; }
+    out.style.display = ""; out.value = f.data;
+    try { await navigator.clipboard.writeText(f.data); msg.textContent = "This view cannot save files, so the contents were copied. Paste them into a new file named " + f.filename + "."; }
+    catch (e) { msg.textContent = "This view cannot save files. Copy the text below into a new file named " + f.filename + "."; out.focus(); out.select(); }
+  };
+  openSheet(
+    el("h3", { text: "Save your marks as a file" }),
+    el("p", { text: "The spreadsheet and the notes document hold the passages you marked with your notes. The marks file can be added on another device to bring your marks there." }),
+    el("div", { class: "row" },
+      el("button", { class: "btn primary", type: "button", text: "Marks file (to reopen here)", onclick: () => save("json") }),
+      el("button", { class: "btn", type: "button", text: "Spreadsheet (CSV)", onclick: () => save("csv") }),
+      el("button", { class: "btn", type: "button", text: "Notes document (Markdown)", onclick: () => save("md") })),
+    msg, out,
+    el("div", { class: "row" }, el("button", { class: "btn quiet", type: "button", text: "Back to marks", onclick: openMarksSheet }))
+  );
+}
+function openBookSheet() {
+  openSheet(
+    el("h3", { text: S.bookName }),
+    el("p", { text: S.isDemo ? "The example cannot take files. Add your own book from the shelf." : "Add more chapters as you make them: pick their MP3 and .timings.json files. To bring marks from another device, pick its marks file." }),
+    el("div", { class: "row" },
+      S.isDemo ? null : el("button", { class: "btn primary", type: "button", text: "Add files to this book", onclick: () => { closeSheet(); pickFiles(S.bookKey); } }),
+      el("button", { class: "btn", type: "button", text: "Back to shelf", onclick: () => { closeSheet(); showShelf(); } })),
+    el("div", { class: "row" },
+      el("span", { text: "Text size" }),
+      el("button", { class: "btn", type: "button", text: "Smaller", onclick: () => setSize(-1) }),
+      el("button", { class: "btn", type: "button", text: "Larger", onclick: () => setSize(1) })),
+    el("div", { class: "row" }, el("button", { class: "btn quiet", type: "button", text: "Close", onclick: closeSheet }))
+  );
+}
+function setSize(d) {
+  S.settings.size = Math.max(15, Math.min(28, (S.settings.size || 19) + d));
+  document.documentElement.style.setProperty("--read-size", S.settings.size + "px");
+  ls.set("ra.settings", S.settings);
+}
+
+/* ---------------------------------------------------------------- saving a file */
+async function saveFile(filename, data) {
+  try {
+    const blob = new Blob([data], { type: "application/octet-stream" });
+    const url = URL.createObjectURL(blob);
+    const a = el("a", { href: url, download: filename }); document.body.append(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+    return "saved";
+  } catch (e) { return "copy"; }
+}
+
+/* ---------------------------------------------------------------- library: adding books and files */
+const canPickFolder = typeof window.showDirectoryPicker === "function";
+const SKIP_DIRS = /^(tts|readenv|book_settings|_parts|__pycache__|node_modules|\..*)$/i;
+const isAudioName = (n) => /\.(mp3|wav|m4a|ogg|aac)$/i.test(n);
+async function scanDir(dir, depth, path, out) {
+  for await (const [name, h] of dir.entries()) {
+    if (h.kind === "file") out.push({ name, handle: h, path: path + name });
+    else if (depth < 3 && !SKIP_DIRS.test(name)) await scanDir(h, depth + 1, path + name + "/", out);
+  }
+  return out;
+}
+const fileOf = (e) => (e.file ? Promise.resolve(e.file) : e.handle.getFile());
+let pickTarget = null;
+function pickFiles(targetKey) { pickTarget = targetKey || null; $("filePick").click(); }
+async function pickFolder() {
+  try { const dir = await window.showDirectoryPicker(); shelfSay("Looking through " + dir.name + "\u2026"); await importEntries(await scanDir(dir, 0, "", []), null); }
+  catch (e) { if (!e || e.name !== "AbortError") shelfSay("This browser would not open a folder. Use Add files instead."); }
+}
+function shelfSay(msg) { $("shelfStatus").textContent = msg; if (!$("reader").hidden) setStatus(msg); }
+
+/* entries: [{name, path, file | handle}]. targetKey: the book that loose audio and timings belong to. */
+async function importEntries(entries, targetKey) {
+  try { if (navigator.storage && navigator.storage.persist) navigator.storage.persist(); } catch (e) {}
+  const scripts = entries.filter((e) => /_reading_script\.txt$/i.test(e.name));
+  if (!scripts.length) scripts.push(...entries.filter((e) => /\.txt$/i.test(e.name)));
+  const done = { books: 0, audio: 0, timings: 0, marks: 0, skipped: [] };
+  const added = [];
+  for (const sc of scripts) {
+    const text = await (await fileOf(sc)).text();
+    const chapters = parseScript(text);
+    if (!chapters.length) { done.skipped.push(sc.name + " (no text)"); continue; }
+    const key = bookKeyOf(sc.name);
+    const ok = await lib.put("books", key, { key, name: cleanName(sc.name), text, chapters: chapters.map((c) => c.title), added: Date.now() });
+    if (!ok) { shelfSay("Could not store the book. This device may be out of space."); return done; }
+    added.push({ key, stem: sc.name.replace(/_reading_script\.txt$/i, "").replace(/\.txt$/i, ""), n: chapters.length });
+    done.books++;
+  }
+  const nCh = new Map(added.map((a) => [a.key, a.n]));
+  const bookFor = (e) => {
+    const byPath = added.find((a) => (e.path || "").indexOf(a.stem + "_audio/") >= 0);
+    if (byPath) return byPath.key;
+    if (added.length === 1) return added[0].key;
+    return added.length ? null : targetKey;
+  };
+  const chaptersOf = async (key) => { if (!nCh.has(key)) { const b = await lib.get("books", key); nCh.set(key, b ? b.chapters.length : 0); } return nCh.get(key); };
+  const rest = entries.filter((e) => !scripts.includes(e));
+  let i = 0;
+  for (const e of rest) {
+    i++;
+    if (/\.json$/i.test(e.name)) {
+      let j = null;
+      try { j = JSON.parse(await (await fileOf(e)).text()); } catch (err) {}
+      if (j && j.readalong_marks && j.bookKey) {
+        const cur = (await lib.get("marks", j.bookKey)) || { marks: [], pos: {}, ci: 0 };
+        cur.marks = mergeMarks(cur.marks, j.marks || []); for (const k in (j.pos || {})) if (cur.pos[k] == null) cur.pos[k] = j.pos[k];
+        cur.updated = Date.now(); cur.name = cur.name || j.book;
+        await lib.put("marks", j.bookKey, cur); done.marks++;
+        if (!S.isDemo && S.bookKey === j.bookKey) { S.marks = mergeMarks(S.marks, cur.marks); }
+      } else if (j && j.paras && j.audio && j.chapter) {
+        const key = bookFor(e);
+        if (!key) { done.skipped.push(e.name + " (which book?)"); continue; }
+        if (/ sample$/i.test(j.audio)) continue;
+        await lib.put("timings", key + "|" + (j.chapter - 1), j); done.timings++;
+      }
+      continue;
+    }
+    if (!isAudioName(e.name)) continue;
+    const stem = e.name.replace(/\.[^.]+$/, "");
+    if (/ sample$/i.test(stem)) continue;
+    const key = bookFor(e);
+    if (!key) { done.skipped.push(e.name + " (which book?)"); continue; }
+    const n = await chaptersOf(key), m = e.name.match(/^(\d+) /);
+    const ci = m ? +m[1] - 1 : (n === 1 ? 0 : -1);
+    if (ci < 0 || ci >= n) { done.skipped.push(e.name + " (no chapter number)"); continue; }
+    const have = await lib.get("audio", key + "|" + ci);
+    const isMp3 = /\.mp3$/i.test(e.name);
+    if (have && /\.mp3$/i.test(have.name) && !isMp3) continue;        // keep the smaller MP3
+    shelfSay("Adding audio " + i + " of " + rest.length + "\u2026");
+    const f = await fileOf(e);
+    const ok = await lib.put("audio", key + "|" + ci, { name: e.name, blob: f, size: f.size });
+    if (!ok) { shelfSay("Stopped: this device ran out of space while adding " + e.name + "."); await renderShelf(); return done; }
+    done.audio++;
+  }
+  const parts = [];
+  if (done.books) parts.push(done.books + (done.books === 1 ? " book" : " books"));
+  if (done.audio) parts.push(done.audio + " audio " + (done.audio === 1 ? "chapter" : "chapters"));
+  if (done.timings) parts.push(done.timings + " timings");
+  if (done.marks) parts.push("marks");
+  let msg = parts.length ? "Added " + parts.join(", ") + "." : "Nothing was added.";
+  if (!parts.length && !added.length && !targetKey && rest.some((e) => isAudioName(e.name))) msg = "Add the reading script first (the file ending in _reading_script.txt), or open a book and add its audio there.";
+  if (done.skipped.length) msg += " Skipped: " + done.skipped.slice(0, 4).join("; ") + (done.skipped.length > 4 ? "\u2026" : "") + ".";
+  shelfSay(msg);
+  await renderShelf();
+  if (!$("reader").hidden && !S.isDemo) { audio.dataset.name = "\u0000"; await loadChapter(S.ci); }
+  return done;
+}
+$("filePick").addEventListener("change", (e) => {
+  const fs = [...e.target.files].map((f) => ({ name: f.name, path: f.webkitRelativePath || f.name, file: f }));
+  e.target.value = "";
+  if (fs.length) importEntries(fs, pickTarget);
+});
+document.addEventListener("dragover", (e) => e.preventDefault());
+document.addEventListener("drop", (e) => {
+  e.preventDefault();
+  const fs = [...(e.dataTransfer ? e.dataTransfer.files : [])].map((f) => ({ name: f.name, path: f.name, file: f }));
+  if (fs.length) importEntries(fs, $("reader").hidden ? null : (S.isDemo ? null : S.bookKey));
+});
+
+/* ---------------------------------------------------------------- bookshelf */
+const mb = (n) => (n >= 1e9 ? (n / 1e9).toFixed(1) + " GB" : Math.max(1, Math.round(n / 1e6)) + " MB");
+async function renderShelf() {
+  const keys = await lib.keys("books");
+  const audioKeys = await lib.keys("audio");
+  const ul = $("books"); ul.textContent = "";
+  const books = [];
+  for (const k of keys) { const b = await lib.get("books", k); if (b) { b.marksRec = (await lib.get("marks", k)) || null; books.push(b); } }
+  books.sort((a, b) => ((b.marksRec && b.marksRec.updated) || b.added) - ((a.marksRec && a.marksRec.updated) || a.added));
+  for (const b of books) {
+    const withAudio = audioKeys.filter((k) => String(k).startsWith(b.key + "|")).length;
+    const marks = b.marksRec ? b.marksRec.marks.filter((m) => !m.del).length : 0;
+    const at = b.marksRec && b.chapters[b.marksRec.ci] ? "Last open: " + b.chapters[b.marksRec.ci] : "Not opened yet";
+    let confirm = false;
+    const rm = el("button", { class: "btn quiet danger", type: "button", text: "Remove", onclick: async (ev) => {
+      ev.stopPropagation();
+      if (!confirm) { confirm = true; rm.textContent = "Tap again to remove"; return; }
+      await lib.del("books", b.key);
+      for (const k of audioKeys) if (String(k).startsWith(b.key + "|")) await lib.del("audio", k);
+      for (const k of await lib.keys("timings")) if (String(k).startsWith(b.key + "|")) await lib.del("timings", k);
+      shelfSay("Removed " + b.name + ". Its marks are kept, and return if you add the book again.");
+      renderShelf();
+    } });
+    ul.append(el("li", { onclick: () => openBook(b.key) },
+      el("div", { class: "title", text: b.name }),
+      el("div", { class: "facts" },
+        el("span", { text: b.chapters.length + (b.chapters.length === 1 ? " chapter" : " chapters") + ", audio for " + withAudio }),
+        el("span", { text: marks + (marks === 1 ? " mark" : " marks") }),
+        el("span", { text: at })),
+      el("div", { class: "row" },
+        el("button", { class: "btn primary", type: "button", text: "Open", onclick: (ev) => { ev.stopPropagation(); openBook(b.key); } }),
+        el("button", { class: "btn", type: "button", text: "Add files", onclick: (ev) => { ev.stopPropagation(); pickFiles(b.key); } }),
+        rm)));
+  }
+  ul.append(el("li", { class: "example", onclick: () => openBook("demo") },
+    el("div", { class: "title", text: "Example: listening while reading" }),
+    el("div", { class: "facts" }, el("span", { text: "A short page to try the controls. No audio." })),
+    el("div", { class: "row" }, el("button", { class: "btn", type: "button", text: "Open", onclick: (ev) => { ev.stopPropagation(); openBook("demo"); } }))));
+  try {
+    const est = navigator.storage && navigator.storage.estimate ? await navigator.storage.estimate() : null;
+    $("space").textContent = est && est.quota ? "Using " + mb(est.usage || 0) + " of about " + mb(est.quota) + " this browser allows on this device." : "";
+  } catch (e) {}
+}
+function showShelf() {
+  if (P.playing) P.pause();
+  if (!S.isDemo) { clearTimeout(marksTimer); writeMarks().then(renderShelf); } else renderShelf();
+  $("reader").hidden = true; $("shelf").hidden = false;
+  if (location.hash === "#read") { try { history.replaceState(null, "", location.pathname + location.search); } catch (e) { location.hash = ""; } }
+}
+async function openBook(key) {
+  let text = DEMO, name = "Example", rec = null;
+  if (key !== "demo") {
+    const b = await lib.get("books", key);
+    if (!b) { shelfSay("That book is no longer on this device."); return renderShelf(); }
+    text = b.text; name = b.name; rec = await lib.get("marks", key);
+  }
+  S.isDemo = key === "demo"; S.bookKey = key; S.bookName = name; S.chapters = parseScript(text);
+  S.marks = S.isDemo ? JSON.parse(JSON.stringify(DEMO_MARKS)) : (rec ? rec.marks || [] : []);
+  S.pos = rec ? rec.pos || {} : {}; S.ci = rec && rec.ci < S.chapters.length ? rec.ci : 0;
+  $("shelf").hidden = true; $("reader").hidden = false;
+  if (location.hash !== "#read") location.hash = "#read";
+  audio.dataset.name = "\u0000";
+  await loadChapter(S.ci);
+}
+window.addEventListener("hashchange", () => { if (location.hash !== "#read" && !$("reader").hidden) showShelf(); });
+
+/* ---------------------------------------------------------------- loading a chapter */
+async function attachAudio() {
+  const rec = S.isDemo ? null : await lib.get("audio", S.bookKey + "|" + S.ci);
+  S.timing = S.isDemo ? null : ((await lib.get("timings", S.bookKey + "|" + S.ci)) || null);
+  const tag = rec ? S.bookKey + "|" + S.ci + "|" + rec.name : "";
+  if (audio.dataset.name === tag) return;
+  if (audio.src) { try { URL.revokeObjectURL(audio.src); } catch (e) {} }
+  audio.dataset.name = tag; S.audioName = rec ? rec.name : "";
+  if (!rec) { audio.removeAttribute("src"); audio.load(); S.hasAudio = false; return; }
+  await new Promise((res) => {
+    const done = () => { audio.removeEventListener("loadedmetadata", ok); audio.removeEventListener("error", bad); res(); };
+    const ok = () => { S.hasAudio = true; audio.playbackRate = S.settings.rate || 1; done(); };
+    const bad = () => { S.hasAudio = false; setStatus("This browser could not play " + rec.name + "."); done(); };
+    audio.addEventListener("loadedmetadata", ok); audio.addEventListener("error", bad);
+    audio.src = URL.createObjectURL(rec.blob);
+    setTimeout(done, 8000);
+  });
+}
+async function loadChapter(ci) {
+  if (P.playing) P.pause();
+  S.ci = Math.max(0, Math.min(ci, S.chapters.length - 1));
+  clock.t = 0; clock.playing = false;
+  await attachAudio();
+  buildPieces(); paintChapters(); renderText(); paintCount(); paintNotice(); paintPlay(); paintSaved();
+  const t = S.pos[S.ci];
+  if (t && t < S.duration - 2) P.seek(t);
+  $("main").scrollTop = 0; followPaused = false; $("follow").classList.remove("show");
+  tick("jump");
+  if (!S.isDemo) saveMarks();
+}
+
+/* ---------------------------------------------------------------- controls */
+$("play").addEventListener("click", () => { if (P.playing) P.pause(); else { if (P.time >= S.duration - 0.2) P.seek(0); followPaused = false; $("follow").classList.remove("show"); P.play(); } });
+$("back").addEventListener("click", () => P.seek(P.time - 15));
+$("fwd").addEventListener("click", () => P.seek(P.time + 15));
+$("bmBtn").addEventListener("click", addBookmark);
+$("marksBtn").addEventListener("click", openMarksSheet);
+$("menuBtn").addEventListener("click", openBookSheet);
+$("shelfBtn").addEventListener("click", showShelf);
+$("chapterSel").addEventListener("change", (e) => loadChapter(+e.target.value));
+$("rate").addEventListener("change", (e) => { S.settings.rate = +e.target.value; audio.playbackRate = S.settings.rate; ls.set("ra.settings", S.settings); });
+let seeking = false;
+$("seek").addEventListener("input", (e) => { seeking = true; $("tNow").textContent = fmt(+e.target.value); });
+$("seek").addEventListener("change", (e) => { seeking = false; followPaused = false; $("follow").classList.remove("show"); P.seek(+e.target.value); tick("jump"); });
+audio.addEventListener("play", paintPlay);
+audio.addEventListener("pause", () => { paintPlay(); savePos(true); });
+audio.addEventListener("ended", paintPlay);
+document.addEventListener("visibilitychange", () => { if (document.hidden && !$("reader").hidden) { savePos(true); } });
+
+/* ---------------------------------------------------------------- start */
+let installEvent = null;
+window.addEventListener("beforeinstallprompt", (e) => { e.preventDefault(); installEvent = e; $("installBtn").hidden = false; });
+$("installBtn").addEventListener("click", async () => { if (!installEvent) return; installEvent.prompt(); try { await installEvent.userChoice; } catch (e) {} installEvent = null; $("installBtn").hidden = true; });
+$("addBtn").addEventListener("click", () => pickFiles(null));
+$("folderBtn").addEventListener("click", pickFolder);
+async function start() {
+  document.documentElement.style.setProperty("--read-size", (S.settings.size || 19) + "px");
+  $("rate").value = String(S.settings.rate || 1);
+  $("folderBtn").hidden = !canPickFolder;
+  if (location.hash === "#read") { try { history.replaceState(null, "", location.pathname + location.search); } catch (e) {} }
+  await renderShelf();
+  if ("serviceWorker" in navigator && /^https?:$/.test(location.protocol)) {
+    try {
+      const reg = await navigator.serviceWorker.register("./sw.js");
+      await navigator.serviceWorker.ready;
+      $("offline").textContent = "Ready to use without internet.";
+      reg.addEventListener("updatefound", () => { const w = reg.installing; if (w) w.addEventListener("statechange", () => { if (w.state === "installed" && navigator.serviceWorker.controller) $("offline").textContent = "A newer version is ready. Close and reopen the app to get it."; }); });
+    } catch (e) { $("offline").textContent = "Offline use could not be set up in this browser."; }
+  } else if (location.protocol === "file:") $("offline").textContent = "Opened as a file: works without internet on this computer.";
+}
+start();
+</script>
+</body>
+</html>
