@@ -3,10 +3,6 @@ published: false      # the pages are built from this; Jekyll should not render 
 title: We have always been posthuman. I have always been posthuman.
 ---
 
-## Instruments for a maximalist assemblage
-
-**\[Note\]** The arbitrary-restrictions material in 2.2 bears directly on this section: a restriction set in advance on what may count as meaningful is also a restriction on what a literature review may contain. Hayles's account of the positivist programme, pp. 37 to 40, is the worked case, and Bohr's method at pp. 54 to 55 is the procedural alternative.
-
 ## Nomadic subjectivities and APAR meet previously absent theory and texts
 
 ## Trancorporeality
