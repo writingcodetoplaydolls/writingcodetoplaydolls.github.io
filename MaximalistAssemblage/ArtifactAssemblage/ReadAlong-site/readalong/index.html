@@ -414,7 +414,8 @@ function buildPieces() {
   const ch = S.chapters[S.ci];
   const tm = S.timing;
   const dur = S.hasAudio && isFinite(audio.duration) ? audio.duration : 0;
-  const r = (S.hasAudio && timingFits(ch, tm)) ? timedPieces(ch, tm) : estimatePieces(ch, dur);
+  S.timingState = !S.hasAudio ? "noaudio" : !tm ? "none" : !timingFits(ch, tm) ? "mismatch" : !tm.exact ? "estimate" : "exact";
+  const r = (S.timingState === "exact" || S.timingState === "estimate") ? timedPieces(ch, tm) : estimatePieces(ch, dur);
   S.pieces = r.pieces; S.exact = r.exact; S.duration = dur || r.duration;
   S.byPara = new Map();
   S.pieces.forEach((pc, gi) => { if (!S.byPara.has(pc.p)) S.byPara.set(pc.p, []); S.byPara.get(pc.p).push(gi); });
@@ -482,7 +483,9 @@ function paintNotice() {
   let msg = "";
   if (S.isDemo) msg = "This is the example. Go back to the shelf to add your own book.";
   else if (!S.hasAudio) msg = "This chapter has no audio on this device yet, so the page follows a silent clock. Add the chapter's MP3 and timings file.";
-  else if (!S.exact) msg = "This chapter has no timings file, so the tint can run ahead of or behind the voice. Add the file ending in .timings.json.";
+  else if (S.timingState === "none") msg = "No timings file has been added for this chapter, so the tint can run ahead of or behind the voice. Add this chapter's file ending in .timings.json.";
+  else if (S.timingState === "mismatch") msg = "This chapter's timings file was made from a different version of the reading script, so it cannot be used. Run the timings step again on the desktop, then add the new file.";
+  else if (S.timingState === "estimate") msg = "This chapter's timings file is itself an estimate, so the tint can drift. Run the timings step again on the desktop with the newer make_timings.py, then add the new file.";
   if (!msg) return;
   box.append(el("div", { class: "card" }, el("p", { text: msg }),
     el("button", { class: "btn primary", type: "button", text: S.isDemo ? "Back to shelf" : "Add files", onclick: () => (S.isDemo ? showShelf() : pickFiles(S.bookKey)) })));

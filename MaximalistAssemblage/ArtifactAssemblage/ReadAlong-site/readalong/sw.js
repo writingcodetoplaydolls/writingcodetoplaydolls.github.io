@@ -1,6 +1,6 @@
 /* Read Along: keeps the app itself on the device so it opens with no internet.
    Books, audio and marks are not handled here. They live in the browser's own storage. */
-const VERSION = "readalong-v1";
+const VERSION = "readalong-v2";
 const SHELL = ["./", "./index.html", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png", "./icon-maskable-512.png"];
 const FONT_HOSTS = ["fonts.googleapis.com", "fonts.gstatic.com"];
 
