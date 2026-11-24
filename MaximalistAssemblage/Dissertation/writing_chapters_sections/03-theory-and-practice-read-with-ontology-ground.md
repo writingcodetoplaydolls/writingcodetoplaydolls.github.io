@@ -93,8 +93,6 @@ Reading the two strands through each other
 
 **Said at the assemblage show.** Duchamp gave "Apropos of 'Readymades'" at MoMA's *The Art of Assemblage: A Symposium* on October 19, 1961: the choice was "based on a reaction of visual indifference, with at the same time a total absence of good or bad taste" (quoted in Tate, n.d.). The readymade's own account was given inside the exhibition that canonized assemblage.
 
-**Whose choice.** Irene Gammel first proposed that Elsa von Freytag-Loringhoven made *Fountain*; Glyn Thompson and Julian Spalding argue it. Dawn Adès and Bradley Bailey disputed it in the *Burlington Magazine* (2019): "there is not a single piece of direct evidence that ties her to *Fountain*" (Whiddington, 2023).
-
 **Bennett's found assemblage.** *Vibrant Matter* opens thing-power with debris in a storm drain:
 
 On a sunny Tuesday morning on 4 June in the grate over the storm drain to the Chesapeake Bay in front of Sam's Bagels on Cold Spring Lane in Baltimore, there was: one large men's black plastic work glove one dense mat of oak pollen one unblemished dead rat one white plastic bottle cap one smooth stick of wood (Bennett, 2010, p. 4)
@@ -102,8 +100,6 @@ On a sunny Tuesday morning on 4 June in the grate over the storm drain to the Ch
 **Found material as teaching.** Albers taught at Black Mountain with everyday materials such as leaves, paper, and wire; confirm in Horowitz and Danilowitz (2006). See 2.6.
 
 **Found language.** Found poetry is made from existing text. Prendergast (2006) uses it as a literature review, and Butler-Kisber (2002) traces it in qualitative research: a lead for 2.0.
-
-**\[Note\]** Interference points to test:
 
 **One chooser or many relations.** The readymade puts the act in a single choice and the frame that receives it ("He CHOSE it"). Assemblage puts it in the relations among many found things (Deleuze and Parnet's "co-functioning"). The v35 phrase about Rauschenberg is "the refusal of a sovereign authoring subject." Does the readymade keep the sovereign chooser that assemblage gives up?
 

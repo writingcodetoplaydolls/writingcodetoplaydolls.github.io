@@ -5,7 +5,7 @@ title: The Ground
 
 ## Maximalist Assemblage
 
-### Update November 16, 2026 at 6:12PM
+### Update November 24, 2026 at 10:01AM
 
 “In a world that already feels overwhelmingly unfamiliar, making things stranger somehow allows me to inhabit that strangeness, as if it was mine” (Andersen, 2016, p. 47).
 
@@ -29,7 +29,7 @@ Cartography. Apparatus. Affirmative Ethics.
 
 Making Strange. Transposition. Diffraction.
 
-:::figure processing=entanglement width=spread
+:::figure processing=entanglement width=600
 Entanglement. 2024
 :::
 

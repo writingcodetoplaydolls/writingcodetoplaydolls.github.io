@@ -3,12 +3,6 @@ published: false      # the pages are built from this; Jekyll should not render 
 title: The Violence of Traditional Methods and a History of Erasure
 ---
 
-## Assemblage: *agencement* in translation, read against the art term
-
-### Diffraction: assemblage and the found object
-
-"the previous work begins with the potato bin." Is the potato bin a found object, an assemblage, or the apparatus that does the finding?
-
 ## The gap: a history of erasure
 
 **\[Note\]** This history is the genealogy of the violence the dissertation answers: the erasure of complexity, the insistence on the word and the one truth, the erasure of the female body. v35 and the final overlap from the atomists through Merleau-Ponty; merge them rather than choosing.
@@ -90,8 +84,6 @@ Ferrando (Ferrando, 2014) specifies what was installed in the figure of that uni
 Posthumanism is not anti humanism, and should not be confused with transhumanism. Transhumanism is antihumanism’s mirror: it claims to transcend the human while intensifying the very figure posthumanism rejects. Transhumanism, associated with figures such as Nick Bostrom and Hans Moravec, seeks the enhancement of human intellectual, physical, and emotional capacities, the elimination of disease and suffering, and the extension of human life span, all in service of a figure of the human whose “basic capacities so radically exceed those of present humans as to no longer be unambiguously human by our current standards” (Bostrom, cited in Wolfe, 2010, p. xiii). Wolfe describes transhumanism as “an intensification of humanism” because it extends the prerogatives of the autonomous liberal subject rather than questioning that subject as the basic unit of analysis (Wolfe, 2010, p. xiv). Moravec’s fantasy of downloading consciousness into a computer in pursuit of technological immortality continues the humanist investment in disembodied rationality. Posthumanism instead opposes “the fantasies of disembodiment and autonomy, inherited from humanism itself” and insists on embodiment, embeddedness, and materiality (Wolfe, 2010, p. xiv).
 
 ### The Critique of Inert Matter
-
-3.2 The Critique of Inert Matter
 
 Western metaphysics inherited from the atomists (Leucippus, Democritus, Epicurus), a model of matter as inert: tiny, indivisible, passive particles moving through the void, their shapes fixed, their combinations determined by collision. Matter moved when struck. It produced only what its given characteristics permitted (Bennett, 2010). Gamble, Hanan, and Nail (2019) argue that Lucretius, in his De Rerum Natura, moves beyond earlier atomism and anticipates performative new materialism by treating matter as something that ceaselessly constitutes novel entities and relations (pp. 112–113), but the line that endured was the one that served mechanism.
 
